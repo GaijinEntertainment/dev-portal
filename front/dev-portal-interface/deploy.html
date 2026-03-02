@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deploy Configs</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="User Management" href="user_management.html" />
+    <link rel="prev" title="Workspace Configs" href="workspace_configs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Deploy Configs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sort-tags">Sort Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-new-or-update-tag">Add New or Update Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-tag-data-source">Select Tag Data Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-tag-data">Edit Tag Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-tags">Filter Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#validate-tags">Validate Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-configs-to-buffer">Copy Configs to Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#restore-configs-from-tag">Restore Configs from Tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-tags">Delete Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-tag-configs">View Tag Configs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-tag-comments">Editing Tag Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deploy-configs-from-tag">Deploy Configs from Tag</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#history">History</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#filter-history">Filter History</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compare">Compare</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compare-tags">Compare Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-differences">View Differences</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Deploy Configs</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="deploy-configs">
+<h1>Deploy Configs<a class="headerlink" href="#deploy-configs" title="Link to this heading"></a></h1>
+<p>The <strong>Deploy Configs</strong> section is used to manage, validate, compare, and deploy
+configuration sets (tags) to services.</p>
+<p>To open this section, select the corresponding menu item.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_menu.png"><img alt="Deploy" class="align-center" src="../../_images/deploy_menu.png" style="width: 15em;" />
+</a>
+<p>The <strong>Deploy Configs</strong> window consists of three main sections:</p>
+<ul class="simple">
+<li><p><strong>Tags</strong></p></li>
+<li><p><strong>History</strong></p></li>
+<li><p><strong>Compare</strong></p></li>
+</ul>
+<section id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading"></a></h2>
+<p>Each tab in the <strong>Tags</strong> section allows you to:</p>
+<ul class="simple">
+<li><p>Create and update tags</p></li>
+<li><p>Upload configurations from an existing tag</p></li>
+<li><p>Export configurations from a tag</p></li>
+<li><p>Validate and deploy configurations</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/deploy_tag_list_tab.png"><img alt="Tag list" class="align-center" src="../../_images/deploy_tag_list_tab.png" style="width: 60em;" />
+</a>
+<section id="sort-tags">
+<h3>Sort Tags<a class="headerlink" href="#sort-tags" title="Link to this heading"></a></h3>
+<p>To sort the tags table, click a column header.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_tag_list_sort.png"><img alt="Tag list sort" class="align-center" src="../../_images/deploy_tag_list_sort.png" style="width: 60em;" />
+</a>
+</section>
+<section id="add-new-or-update-tag">
+<h3>Add New or Update Tag<a class="headerlink" href="#add-new-or-update-tag" title="Link to this heading"></a></h3>
+<p>To create a new tag or update an existing one, click <strong>Add/Update Tag</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_add_tag.png"><img alt="Add tag" class="align-center" src="../../_images/deploy_add_tag.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_add_tag_modal.png"><img alt="Add tag modal" class="align-center" src="../../_images/deploy_add_tag_modal.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To overwrite an existing tag, enter its name manually or select it from the
+list.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_overwrite_modal.png"><img alt="Add tag modal" class="align-center" src="../../_images/deploy_overwrite_modal.png" style="width: 25em;" />
+</a>
+</div>
+</section>
+<section id="select-tag-data-source">
+<h3>Select Tag Data Source<a class="headerlink" href="#select-tag-data-source" title="Link to this heading"></a></h3>
+<p>Use the <strong>Source</strong> selector to choose where the tag data should be taken from:</p>
+<ul class="simple">
+<li><p><strong>Use Current Configs</strong> — use the currently active configurations</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/deploy_current_configs.png"><img alt="Current configs data" class="align-center" src="../../_images/deploy_current_configs.png" style="width: 60em;" />
+</a>
+<ul class="simple">
+<li><p><strong>Import tag data</strong> — use data from another tag</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/deploy_tag_data.png"><img alt="Tag data" class="align-center" src="../../_images/deploy_tag_data.png" style="width: 60em;" />
+</a>
+</section>
+<section id="edit-tag-data">
+<h3>Edit Tag Data<a class="headerlink" href="#edit-tag-data" title="Link to this heading"></a></h3>
+<p>To modify the tag data use the editor.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_insert_data.png"><img alt="Insert data" class="align-center" src="../../_images/deploy_insert_data.png" style="width: 60em;" />
+</a>
+<p>Enable <strong>With defaults</strong> to include default values.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_with_default.png"><img alt="With default" class="align-center" src="../../_images/deploy_with_default.png" style="width: 60em;" />
+</a>
+<p>Add a description in the <strong>Add comment</strong> field.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_add_comment.png"><img alt="Add comment" class="align-center" src="../../_images/deploy_add_comment.png" style="width: 60em;" />
+</a>
+</section>
+<section id="filter-tags">
+<h3>Filter Tags<a class="headerlink" href="#filter-tags" title="Link to this heading"></a></h3>
+<p>Use the filter input to narrow down the tags list.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_filter_tags_list.png"><img alt="Filter tags list" class="align-center" src="../../_images/deploy_filter_tags_list.png" style="width: 60em;" />
+</a>
+<p>To filter by time:</p>
+<ol class="arabic simple">
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">create_t</span></code> or <code class="docutils literal notranslate"><span class="pre">update_t</span></code> value as a timestamp.</p></li>
+<li><p>Paste it into the filter input.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/deploy_copy_as_timestamp.png"><img alt="Copy as timestamp" class="align-center" src="../../_images/deploy_copy_as_timestamp.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_filter_by_time.png"><img alt="Filter tags by time" class="align-center" src="../../_images/deploy_filter_by_time.png" style="width: 60em;" />
+</a>
+<p>Click the <strong>Help</strong> icon to view filtering hints.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_open_filter_hint.png"><img alt="Open filter block hint" class="align-center" src="../../_images/deploy_open_filter_hint.png" style="width: 60em;" />
+</a>
+<p>To clear all filters, click <strong>Clear Filter</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_clear_filter.png"><img alt="Clear filter" class="align-center" src="../../_images/deploy_clear_filter.png" style="width: 60em;" />
+</a>
+</section>
+<section id="validate-tags">
+<h3>Validate Tags<a class="headerlink" href="#validate-tags" title="Link to this heading"></a></h3>
+<p>To validate a single tag, click the <strong>Validate</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_validate_tag.png"><img alt="Validate tag" class="align-center" src="../../_images/deploy_validate_tag.png" style="width: 60em;" />
+</a>
+<p>To validate all tags in the list, click the <strong>Valid All</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_valid_all.png"><img alt="Valid all" class="align-center" src="../../_images/deploy_valid_all.png" style="width: 60em;" />
+</a>
+<p>If validation errors occur, they are displayed in the <strong>Validation Errors</strong>
+section.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_validation_errors_section.png"><img alt="Validation errors section" class="align-center" src="../../_images/deploy_validation_errors_section.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_validation_errors.png"><img alt="Validation errors" class="align-center" src="../../_images/deploy_validation_errors.png" style="width: 60em;" />
+</a>
+<p>Validation status is also indicated by the background color of each row.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_validation_success.png"><img alt="Validation success" class="align-center" src="../../_images/deploy_validation_success.png" style="width: 60em;" />
+</a>
+</section>
+<section id="copy-configs-to-buffer">
+<h3>Copy Configs to Buffer<a class="headerlink" href="#copy-configs-to-buffer" title="Link to this heading"></a></h3>
+<p>To copy configurations from a tag to the buffer, click <strong>Copy to Buffer</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_copy_tag_to_buffer.png"><img alt="Copy to buffer" class="align-center" src="../../_images/deploy_copy_tag_to_buffer.png" style="width: 60em;" />
+</a>
+<p>You can also copy the currently active configurations to the buffer.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_copy_current.png"><img alt="Copy current" class="align-center" src="../../_images/deploy_copy_current.png" style="width: 60em;" />
+</a>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is useful for transferring configurations between different game
+environments (test, staging, production) or between different games.</p>
+</div>
+</section>
+<section id="restore-configs-from-tag">
+<h3>Restore Configs from Tag<a class="headerlink" href="#restore-configs-from-tag" title="Link to this heading"></a></h3>
+<p>To replace all current configurations with those from a tag, click <strong>Set current
+from tag</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_restore_tag.png"><img alt="Restore tag" class="align-center" src="../../_images/deploy_restore_tag.png" style="width: 60em;" />
+</a>
+</section>
+<section id="delete-tags">
+<h3>Delete Tags<a class="headerlink" href="#delete-tags" title="Link to this heading"></a></h3>
+<p>To delete a single tag, click <strong>Delete</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_delete_tag.png"><img alt="Delete tag" class="align-center" src="../../_images/deploy_delete_tag.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_delete_tag_modal.png"><img alt="Delete tag modal" class="align-center" src="../../_images/deploy_delete_tag_modal.png" style="width: 20em;" />
+</a>
+<p>To delete multiple tags:</p>
+<ol class="arabic simple">
+<li><p>Select the required rows.</p></li>
+<li><p>Click <strong>Delete selected</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/deploy_delete_selected.png"><img alt="Delete selected" class="align-center" src="../../_images/deploy_delete_selected.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_delete_selected_modal.png"><img alt="Delete selected modal" class="align-center" src="../../_images/deploy_delete_selected_modal.png" style="width: 20em;" />
+</a>
+</section>
+<section id="view-tag-configs">
+<h3>View Tag Configs<a class="headerlink" href="#view-tag-configs" title="Link to this heading"></a></h3>
+<p>Click the expand (arrow) button to display the configurations of a tag.
+Configurations are grouped by sections.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_view_tag.png"><img alt="View tag" class="align-center" src="../../_images/deploy_view_tag.png" style="width: 60em;" />
+</a>
+<p>To open a configuration, click the section name.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_view_tag_config.png"><img alt="View tags config" class="align-center" src="../../_images/deploy_view_tag_config.png" style="width: 60em;" />
+</a>
+<p>You can also view the resolved block after it includes elements.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_includes_tag.png"><img alt="View tags config" class="align-center" src="../../_images/deploy_includes_tag.png" style="width: 60em;" />
+</a>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see
+<a class="reference internal" href="workspace_configs.html#includes"><span class="std std-ref">Includes</span></a>.</p>
+</div>
+<p>To open the configuration in full-screen mode, click <strong>Full Screen</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_fullscreen_tag.png"><img alt="Full screen mode for tag" class="align-center" src="../../_images/deploy_fullscreen_tag.png" style="width: 60em;" />
+</a>
+</section>
+<section id="editing-tag-comments">
+<h3>Editing Tag Comments<a class="headerlink" href="#editing-tag-comments" title="Link to this heading"></a></h3>
+<p>To edit comment open the <strong>Comments</strong> section, enter desired text, and click th
+<strong>Save</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_edit_comment_button.png"><img alt="Edit comment" class="align-center" src="../../_images/deploy_edit_comment_button.png" style="width: 60em;" />
+</a>
+</section>
+<section id="deploy-configs-from-tag">
+<h3>Deploy Configs from Tag<a class="headerlink" href="#deploy-configs-from-tag" title="Link to this heading"></a></h3>
+<p>To deploy configs from a tag, click the <strong>Deploy</strong> button and confirm the
+deployment.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_deploy_tag.png"><img alt="Deploy tag" class="align-center" src="../../_images/deploy_deploy_tag.png" style="width: 60em;" />
+</a>
+<p>To ignore warnings during deployment, enable <strong>Ignore warnings</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_deploy_tag_confirm.png"><img alt="Deploy tag confirm" class="align-center" src="../../_images/deploy_deploy_tag_confirm.png" style="width: 25em;" />
+</a>
+<p>After deployment starts, progress and status information is displayed.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_deploy_progress.png"><img alt="Deploy progress" class="align-center" src="../../_images/deploy_deploy_progress.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_deploy_progress_result.png"><img alt="Deploy progress result" class="align-center" src="../../_images/deploy_deploy_progress_result.png" style="width: 60em;" />
+</a>
+<p>The most recently deployed tag is shown at the top of the tags list.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_last_deployed_tag.png"><img alt="Last deployed tag" class="align-center" src="../../_images/deploy_last_deployed_tag.png" style="width: 25em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tags with the <code class="docutils literal notranslate"><span class="pre">FROZEN</span></code> status cannot be validated, deleted, or deployed.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_frozen_tag.png"><img alt="Frozen tag" class="align-center" src="../../_images/deploy_frozen_tag.png" style="width: 60em;" />
+</a>
+</div>
+</section>
+</section>
+<section id="history">
+<h2>History<a class="headerlink" href="#history" title="Link to this heading"></a></h2>
+<p>The <strong>History</strong> section displays a list of all deployment events.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_history.png"><img alt="Deploy history" class="align-center" src="../../_images/deploy_history.png" style="width: 60em;" />
+</a>
+<p>To see full information of a record from the history table, click the button.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_history_rows_info.png"><img alt="Sort history rows info" class="align-center" src="../../_images/deploy_history_rows_info.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visibility and ordering of columns follow the settings defined in
+<a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
+</div>
+<section id="filter-history">
+<h3>Filter History<a class="headerlink" href="#filter-history" title="Link to this heading"></a></h3>
+<p>To filter history by tag, selecting a tag from the list.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_history_filter_by_tag.png"><img alt="Filter by tag" class="align-center" src="../../_images/deploy_history_filter_by_tag.png" style="width: 60em;" />
+</a>
+<p>To filter history by time range, use the date picker.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_history_filter_by_time.png"><img alt="Filter by time" class="align-center" src="../../_images/deploy_history_filter_by_time.png" style="width: 60em;" />
+</a>
+<p>To filter history with additional filters, use the filter input.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_history_filter.png"><img alt="Sort history table" class="align-center" src="../../_images/deploy_history_filter.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+<section id="compare">
+<h2>Compare<a class="headerlink" href="#compare" title="Link to this heading"></a></h2>
+<p>The <strong>Compare</strong> section allows you to view differences between two tags.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_compare_tab.png"><img alt="Compare tags" class="align-center" src="../../_images/deploy_compare_tab.png" style="width: 60em;" />
+</a>
+<section id="compare-tags">
+<h3>Compare Tags<a class="headerlink" href="#compare-tags" title="Link to this heading"></a></h3>
+<p>To compare two tags:</p>
+<ol class="arabic simple">
+<li><p>Select the <strong>Before</strong> and <strong>After</strong> tags.</p></li>
+<li><p>Click <strong>Compare</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/deploy_compare_tags.png"><img alt="Compare tags selector" class="align-center" src="../../_images/deploy_compare_tags.png" style="width: 60em;" />
+</a>
+</section>
+<section id="view-differences">
+<h3>View Differences<a class="headerlink" href="#view-differences" title="Link to this heading"></a></h3>
+<p>Comparison results are grouped by configuration sections.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_compare_tags_result.png"><img alt="Compare tags result" class="align-center" src="../../_images/deploy_compare_tags_result.png" style="width: 60em;" />
+</a>
+<p>Click a section name to view detailed differences.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_compare_tags_result_stats.png"><img alt="Compare tags result stats" class="align-center" src="../../_images/deploy_compare_tags_result_stats.png" style="width: 60em;" />
+</a>
+<p>Large blocks of identical lines are collapsed by default. Use the context
+selector to display additional unchanged lines.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_tags_diff_rows.png"><img alt="Tags diff rows" class="align-center" src="../../_images/deploy_tags_diff_rows.png" style="width: 60em;" />
+</a>
+<p>To compare <strong>resolved</strong> block (with <code class="docutils literal notranslate"><span class="pre">include</span></code> values) against tag data, enable
+the corresponding checkbox.</p>
+<a class="reference internal image-reference" href="../../_images/deploy_compare_with_resolved.png"><img alt="Compare with resolved" class="align-center" src="../../_images/deploy_compare_with_resolved.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/deploy_compare_with_resolved_result.png"><img alt="Compare with resolved result" class="align-center" src="../../_images/deploy_compare_with_resolved_result.png" style="width: 60em;" />
+</a>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see
+<a class="reference internal" href="workspace_configs.html#includes"><span class="std std-ref">Includes</span></a>.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="workspace_configs.html" class="btn btn-neutral float-left" title="Workspace Configs" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="user_management.html" class="btn btn-neutral float-right" title="User Management" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="workspace_configs.html" class="btn btn-neutral float-left" title="Workspace Configs" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="user_management.html" class="btn btn-neutral float-right" title="User Management" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

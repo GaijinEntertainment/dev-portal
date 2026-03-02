@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workspaces: Environments</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Workspaces: Services" href="services.html" />
+    <link rel="prev" title="Dev Portal Interface" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Workspaces: Environments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#management">Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-and-remove-environment">Create and Remove Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configure-environment">Configure Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#service-management">Service Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-and-upload-operations">Copy and Upload Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changes-management">Changes Management</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compare-environments">Compare Environments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Workspaces: Environments</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="workspaces-environments">
+<h1>Workspaces: Environments<a class="headerlink" href="#workspaces-environments" title="Link to this heading"></a></h1>
+<p>The <strong>Environments</strong> workspace is designed for managing game deployment
+environments and their service configurations. Each environment represents a
+deployment configuration containing multiple services with their settings.</p>
+<a class="reference internal image-reference" href="../../_images/env_tab.png"><img alt="Environments tab" class="align-center" src="../../_images/env_tab.png" style="width: 15em;" />
+</a>
+<p>The <strong>Environments</strong> interface displays all game environments with their
+configured services, versions, and health status.</p>
+<p>You can create and delete environments, add or remove services, edit service
+configurations, view service versions and health status, compare configurations
+with diff view, and copy/upload environment configurations between environments.</p>
+<section id="management">
+<h2>Management<a class="headerlink" href="#management" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/env_management.png"><img alt="Management" class="align-center" src="../../_images/env_management.png" style="width: 15em;" />
+</a>
+<p>Each environment is displayed as an accordion item with the following elements:</p>
+<ul class="simple">
+<li><p><strong>Environment name</strong> – Unique identifier</p></li>
+<li><p><strong>Remove</strong> button – Deletes the environment</p></li>
+<li><p><strong>Copy</strong>/<strong>Upload</strong> buttons – Bulk configuration operations</p></li>
+<li><p><strong>Fullscreen</strong> button – Expands to fullscreen mode</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/env_item.png"><img alt="Environment" class="align-center" src="../../_images/env_item.png" style="width: 60em;" />
+</a>
+<section id="create-and-remove-environment">
+<h3>Create and Remove Environment<a class="headerlink" href="#create-and-remove-environment" title="Link to this heading"></a></h3>
+<p>To create a new environment:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Create</strong> button at the top of the page.</p></li>
+<li><p>Enter the environment name.</p></li>
+<li><p>Add services using the <strong>Add new service</strong> button.</p></li>
+</ol>
+<p>To remove an environment:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>X</strong> button in the top-right corner.</p></li>
+<li><p>Confirm the removal.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/env_create.png"><img alt="Environment creation" class="align-center" src="../../_images/env_create.png" style="width: 60em;" />
+</a>
+</section>
+<section id="configure-environment">
+<h3>Configure Environment<a class="headerlink" href="#configure-environment" title="Link to this heading"></a></h3>
+<p>To configure environment:</p>
+<ol class="arabic simple">
+<li><p>Configure service settings as needed.</p></li>
+<li><p>Click <strong>Save</strong> to save the new environment.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/env_configure.png"><img alt="Environment configuration" class="align-center" src="../../_images/env_configure.png" style="width: 20em;" />
+</a>
+</section>
+<section id="service-management">
+<h3>Service Management<a class="headerlink" href="#service-management" title="Link to this heading"></a></h3>
+<p>Each service within an environment displays:</p>
+<ul class="simple">
+<li><p><strong>Green checkmark (left)</strong> – Service is found and correctly identified in the
+system</p></li>
+<li><p><strong>Service ID</strong> – Unique identifier</p></li>
+<li><p><strong>Service Type</strong> – Type of service (shown in green italics)</p></li>
+<li><p><strong>Circuit</strong> – Circuit where the service is deployed</p></li>
+<li><p><strong>Version</strong> – Current service version</p></li>
+<li><p><strong>Health status (right)</strong> – Green checkmark if healthy, red warning if errors</p></li>
+<li><p><strong>Reload</strong> button – Discard local changes and reload from server</p></li>
+<li><p><strong>Checkbox</strong> – Select service for bulk copy operations</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/env_service.png"><img alt="Service" class="align-center" src="../../_images/env_service.png" style="width: 60em;" />
+</a>
+<p>To add a service:</p>
+<ol class="arabic simple">
+<li><p>Expand the environment.</p></li>
+<li><p>Click the <strong>Add new service</strong> button.</p></li>
+<li><p>Select a circuit from the dropdown.</p></li>
+<li><p>Choose the service type and service ID.</p></li>
+<li><p>Click <strong>Add</strong> to include the service in the environment.</p></li>
+</ol>
+<p>To remove a service:</p>
+<ul class="simple">
+<li><p>Click the <strong>Remove</strong> button next to the service.</p></li>
+</ul>
+<p>Services that support configuration editing can be expanded to view and edit
+their settings. Configurations are loaded automatically when expanded. Edit the
+content in the Code editor with schema validation; changes are tracked
+automatically.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes are stored locally until <strong>Save</strong> is clicked. Use <strong>Save</strong> button to
+apply all changes.</p>
+</div>
+<p>The Code editor provides:</p>
+<ul class="simple">
+<li><p>Syntax highlighting for JSON</p></li>
+<li><p>Schema-based autocomplete</p></li>
+<li><p>Error detection and markers</p></li>
+<li><p>Line numbers and change indicators</p></li>
+</ul>
+<p>Toggle the <strong>Show diff</strong> option to enable side-by-side comparison view. This
+shows the deployed version on the left and your current changes on the right,
+with highlighting for additions, deletions, and modifications.</p>
+<a class="reference internal image-reference" href="../../_images/env_diff.png"><img alt="Environment diff" class="align-center" src="../../_images/env_diff.png" style="width: 75em;" />
+</a>
+</section>
+<section id="copy-and-upload-operations">
+<h3>Copy and Upload Operations<a class="headerlink" href="#copy-and-upload-operations" title="Link to this heading"></a></h3>
+<p><strong>Copy</strong> and <strong>Upload</strong> operations allow transferring configurations between
+environments.</p>
+<p>Use checkboxes to select services, then click the <strong>Copy</strong> button. Selected
+service configs are copied to clipboard in JSON format.</p>
+<p>To upload, click the <strong>Upload</strong> button and paste JSON data containing service
+configurations. Confirm the upload and matching service configurations will be
+updated with the new content.</p>
+<a class="reference internal image-reference" href="../../_images/copy_upload.png"><img alt="Copy and upload" class="align-center" src="../../_images/copy_upload.png" style="width: 5em;" />
+</a>
+<p>Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;serviceType1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;config content...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;serviceType2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Uploaded configurations are not automatically saved. Click <strong>Save</strong> to apply
+changes.</p>
+</div>
+</section>
+<section id="changes-management">
+<h3>Changes Management<a class="headerlink" href="#changes-management" title="Link to this heading"></a></h3>
+<p>Service configuration status is shown through background colors:</p>
+<ul class="simple">
+<li><p><strong>Green background</strong> – Configuration has unsaved changes</p></li>
+<li><p><strong>Red background</strong> – Configuration has validation errors</p></li>
+<li><p><strong>Standard background</strong> – Configuration matches saved version</p></li>
+</ul>
+</section>
+</section>
+<section id="compare-environments">
+<h2>Compare Environments<a class="headerlink" href="#compare-environments" title="Link to this heading"></a></h2>
+<p><strong>Compare environments</strong> tool compares game environments.</p>
+<a class="reference internal image-reference" href="../../_images/env_compare.png"><img alt="Compare" class="align-center" src="../../_images/env_compare.png" style="width: 15em;" />
+</a>
+<p>The interface works as described in
+<a class="reference internal" href="compare.html#how-comparison-works"><span class="std std-ref">How Comparison Works</span></a>, where:</p>
+<ul class="simple">
+<li><p><strong>Items to compare</strong>: Game environments</p></li>
+<li><p><strong>Grouped by type</strong>: Environment type</p></li>
+<li><p><strong>Elements</strong>: Environment configurations</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="index.html" class="btn btn-neutral float-left" title="Dev Portal Interface" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="services.html" class="btn btn-neutral float-right" title="Workspaces: Services" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="index.html" class="btn btn-neutral float-left" title="Dev Portal Interface" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="services.html" class="btn btn-neutral float-right" title="Workspaces: Services" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logs</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Leaderboard" href="leaderboard.html" />
+    <link rel="prev" title="User Management" href="user_management.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Logs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#log-viewer">Log Viewer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#export-logs">Export Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-management">Column Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters-management">Filters Management</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#time-range">Time Range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filters">Filters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-new-filter">Add New Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disable-filter">Disable Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-filter">Delete Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-groups">Filter Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#log-viewer-chart">Log Viewer Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-viewer-table">Log Viewer Table</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#log-details">Log Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagination">Pagination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-width">Column Width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#table-settings">Table Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Logs</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="logs">
+<h1>Logs<a class="headerlink" href="#logs" title="Link to this heading"></a></h1>
+<p>The <strong>Logs</strong> section provides access to service logs and tools for filtering,
+viewing, and exporting log data.</p>
+<p>To open logs, select the corresponding menu item.</p>
+<a class="reference internal image-reference" href="../../_images/logs_menu.png"><img alt="Logs menu" class="align-center" src="../../_images/logs_menu.png" style="width: 15em;" />
+</a>
+<p>The service supports two log types:</p>
+<ul class="simple">
+<li><p><strong>Environment logs</strong></p></li>
+<li><p><strong>Common logs</strong></p></li>
+</ul>
+<section id="log-viewer">
+<h2>Log Viewer<a class="headerlink" href="#log-viewer" title="Link to this heading"></a></h2>
+<p>The <strong>Log Viewer</strong> displays log records and provides controls for managing
+columns, filters, and data export.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer.png"><img alt="Log Viewer" class="align-center" src="../../_images/log_viewer.png" style="width: 60em;" />
+</a>
+<section id="export-logs">
+<h3>Export Logs<a class="headerlink" href="#export-logs" title="Link to this heading"></a></h3>
+<p>To export log data to a CSV file, click the <strong>Export</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv.png"><img alt="Log Viewer export" class="align-center" src="../../_images/log_viewer_export_csv.png" style="width: 60em;" />
+</a>
+</section>
+<section id="column-management">
+<h3>Column Management<a class="headerlink" href="#column-management" title="Link to this heading"></a></h3>
+<p>To change the column order, open the column settings window and drag columns to
+the required position.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_order.png"><img alt="Log Viewer export order columns" class="align-center" src="../../_images/log_viewer_export_csv_order.png" style="width: 60em;" />
+</a>
+<p>To add a column, click the <strong>+ Column</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_add_column.png"><img alt="Log Viewer export add column" class="align-center" src="../../_images/log_viewer_export_csv_add_column.png" style="width: 60em;" />
+</a>
+<p>Select the required column names from the list.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_add_column_list.png"><img alt="Log Viewer export add column list" class="align-center" src="../../_images/log_viewer_export_csv_add_column_list.png" style="width: 25em;" />
+</a>
+<p>To remove a column, click the <strong>Cross</strong> icon next to the column name.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_delete_column.png"><img alt="Log Viewer export delete column" class="align-center" src="../../_images/log_viewer_export_csv_delete_column.png" style="width: 60em;" />
+</a>
+<p>To export log data to a CSV file, click the <strong>Export</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_export_button.png"><img alt="Log Viewer export button" class="align-center" src="../../_images/log_viewer_export_csv_export_button.png" style="width: 60em;" />
+</a>
+</section>
+<section id="filters-management">
+<h3>Filters Management<a class="headerlink" href="#filters-management" title="Link to this heading"></a></h3>
+<p>To copy the current filters, click the <strong>Copy</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_copy_filters.png"><img alt="Log Viewer copy filters" class="align-center" src="../../_images/log_viewer_copy_filters.png" style="width: 60em;" />
+</a>
+<p>To upload filters from a JSON file, click the <strong>Upload</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_upload_filters.png"><img alt="Log Viewer upload filters" class="align-center" src="../../_images/log_viewer_upload_filters.png" style="width: 60em;" />
+</a>
+<p>Set JSON filters and click the <strong>Load</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_upload_filters_modal.png"><img alt="Log Viewer upload filters modal" class="align-center" src="../../_images/log_viewer_upload_filters_modal.png" style="width: 50em;" />
+</a>
+<p>To reload logs and fetch the latest data, click <strong>Reload</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_reload_logs.png"><img alt="Log Viewer reload logs" class="align-center" src="../../_images/log_viewer_reload_logs.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filters can be restored from a URL. If the address bar contains data after the
+<code class="docutils literal notranslate"><span class="pre">resource</span></code> parameter, filter values are automatically restored from it.</p>
+</div>
+</section>
+</section>
+<section id="time-range">
+<h2>Time Range<a class="headerlink" href="#time-range" title="Link to this heading"></a></h2>
+<p>The <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a> section allows you to define the time interval for log
+queries.</p>
+<p>To select a time range, open the date range menu.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_date_range.png"><img alt="Log Viewer date range" class="align-center" src="../../_images/log_viewer_date_range.png" style="width: 60em;" />
+</a>
+<p>If data cannot be loaded for the selected time range, an error message is
+displayed.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_time_range_error.png"><img alt="Log Viewer time range error" class="align-center" src="../../_images/log_viewer_time_range_error.png" style="width: 50em;" />
+</a>
+</section>
+<section id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h2>
+<p>Filters allow you to narrow down log records based on specific criteria.</p>
+<section id="add-new-filter">
+<h3>Add New Filter<a class="headerlink" href="#add-new-filter" title="Link to this heading"></a></h3>
+<p>To add a new filter, click <strong>Add filter</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter.png"><img alt="Log Viewer add filter" class="align-center" src="../../_images/log_viewer_add_filter.png" style="width: 15em;" />
+</a>
+<p>Select a filter name from the list.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_field_list.png"><img alt="Log Viewer add filter modal field list" class="align-center" src="../../_images/log_viewer_add_filter_field_list.png" style="width: 15em;" />
+</a>
+<p>Select an operator from the list.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_operator_list.png"><img alt="Log Viewer add filter modal operator list" class="align-center" src="../../_images/log_viewer_add_filter_operator_list.png" style="width: 15em;" />
+</a>
+<p>Enter a value in the <strong>Value</strong> field.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_value.png"><img alt="Log Viewer add filter modal value" class="align-center" src="../../_images/log_viewer_add_filter_value.png" style="width: 15em;" />
+</a>
+<p>Click <strong>Save</strong> to add the filter.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_button.png"><img alt="Log Viewer add filter button" class="align-center" src="../../_images/log_viewer_add_filter_button.png" style="width: 15em;" />
+</a>
+</section>
+<section id="disable-filter">
+<h3>Disable Filter<a class="headerlink" href="#disable-filter" title="Link to this heading"></a></h3>
+<p>To disable a filter, use the toggle switch.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_switch.png"><img alt="Log Viewer switch" class="align-center" src="../../_images/log_viewer_switch.png" style="width: 30em;" />
+</a>
+</section>
+<section id="delete-filter">
+<h3>Delete Filter<a class="headerlink" href="#delete-filter" title="Link to this heading"></a></h3>
+<p>To remove a filter, click the <strong>Delete</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_delete_filter.png"><img alt="Log Viewer delete filter" class="align-center" src="../../_images/log_viewer_delete_filter.png" style="width: 30em;" />
+</a>
+</section>
+<section id="filter-groups">
+<h3>Filter Groups<a class="headerlink" href="#filter-groups" title="Link to this heading"></a></h3>
+<p>Filters can be grouped and enabled or disabled as a group.</p>
+<p>To create a new group, click <strong>Add new group</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_groups.png"><img alt="Log Viewer groups filters" class="align-center" src="../../_images/log_viewer_groups.png" style="width: 30em;" />
+</a>
+<p>Enable or disable a group using the toggle switch.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_toggle_group.png"><img alt="Log Viewer groups toggle" class="align-center" src="../../_images/log_viewer_toggle_group.png" style="width: 30em;" />
+</a>
+<p>To add a filter to a group, click <strong>Add filter</strong> within the group.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_group_filter.png"><img alt="Log Viewer add group filter" class="align-center" src="../../_images/log_viewer_add_group_filter.png" style="width: 30em;" />
+</a>
+<p>Filters can also be added directly from a log row using the filter icon.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filters_from_table.png"><img alt="Log Viewer add filter from table" class="align-center" src="../../_images/log_viewer_add_filters_from_table.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/log_viewer_add_filters_from_table_details.png"><img alt="Log Viewer add filter from table details" class="align-center" src="../../_images/log_viewer_add_filters_from_table_details.png" style="width: 60em;" />
+</a>
+<p>Values that match active filters are highlighted in the log table.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_highlighted_values.png"><img alt="Log Viewer highlighted values" class="align-center" src="../../_images/log_viewer_highlighted_values.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+<section id="log-viewer-chart">
+<h2>Log Viewer Chart<a class="headerlink" href="#log-viewer-chart" title="Link to this heading"></a></h2>
+<p>The chart visualizes log distribution over time.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_chart.png"><img alt="Log Viewer chart" class="align-center" src="../../_images/log_viewer_chart.png" style="width: 60em;" />
+</a>
+<p>To apply a time range from the chart, select a range using the cursor.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_chart_set_range.png"><img alt="Log Viewer chart set range" class="align-center" src="../../_images/log_viewer_chart_set_range.png" style="width: 60em;" />
+</a>
+<p>To view logs for a specific chart value, click the corresponding data point.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_chart_one_value.png"><img alt="Log Viewer chart set one value" class="align-center" src="../../_images/log_viewer_chart_one_value.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To return to the previous filter state, use the browser <strong>Back</strong> and <strong>Forward</strong>
+buttons.</p>
+</div>
+</section>
+<section id="log-viewer-table">
+<h2>Log Viewer Table<a class="headerlink" href="#log-viewer-table" title="Link to this heading"></a></h2>
+<section id="log-details">
+<h3>Log Details<a class="headerlink" href="#log-details" title="Link to this heading"></a></h3>
+<p>To view detailed information for a log entry, click the <strong>Details</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_full_info.png"><img alt="Log Viewer full info" class="align-center" src="../../_images/log_viewer_full_info.png" style="width: 60em;" />
+</a>
+<p>To copy a value to the clipboard, click the <strong>Copy</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_copy_value.png"><img alt="Log Viewer copy value" class="align-center" src="../../_images/log_viewer_copy_value.png" style="width: 60em;" />
+</a>
+</section>
+<section id="pagination">
+<h3>Pagination<a class="headerlink" href="#pagination" title="Link to this heading"></a></h3>
+<p>Use the <strong>Previous</strong> and <strong>Next</strong> buttons to navigate between pages.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_prev_next_buttons.png"><img alt="Log Viewer previous/next buttons" class="align-center" src="../../_images/log_viewer_prev_next_buttons.png" style="width: 60em;" />
+</a>
+<p>To jump to a specific page, enter the page number in the input field.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_go_to_page.png"><img alt="Log Viewer go to page" class="align-center" src="../../_images/log_viewer_go_to_page.png" style="width: 60em;" />
+</a>
+<p>If the requested page cannot be loaded, an error message is displayed.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_error.png"><img alt="Log Viewer error" class="align-center" src="../../_images/log_viewer_error.png" style="width: 15em;" />
+</a>
+</section>
+<section id="column-width">
+<h3>Column Width<a class="headerlink" href="#column-width" title="Link to this heading"></a></h3>
+<p>To resize a column, hover over the column divider and drag it to the desired
+width.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_resize.png"><img alt="Log Viewer resize" class="align-center" src="../../_images/log_viewer_resize.png" style="width: 60em;" />
+</a>
+</section>
+<section id="table-settings">
+<h3>Table Settings<a class="headerlink" href="#table-settings" title="Link to this heading"></a></h3>
+<p>To open the table settings menu, click the <strong>Table settings</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_table_settings.png"><img alt="Log Viewer table settings" class="align-center" src="../../_images/log_viewer_table_settings.png" style="width: 60em;" />
+</a>
+<p>The settings window displays the number of hidden columns.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_hidden_columns.png"><img alt="Log Viewer hidden columns" class="align-center" src="../../_images/log_viewer_hidden_columns.png" style="width: 60em;" />
+</a>
+<p>Manage column visibility using the visibility selector.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_change_visibility.png"><img alt="Log Viewer change visibility" class="align-center" src="../../_images/log_viewer_change_visibility.png" style="width: 60em;" />
+</a>
+<p>Column visibility can also be changed directly from the table.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_change_visibility_from_table.png"><img alt="Log Viewer change visibility from table" class="align-center" src="../../_images/log_viewer_change_visibility_from_table.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At least one column must remain visible.</p>
+<a class="reference internal image-reference" href="../../_images/tables_hide_last_column.png"><img alt="Column visibility" class="align-center" src="../../_images/tables_hide_last_column.png" style="width: 15em;" />
+</a>
+</div>
+<p>To reorder columns, drag them to the required position in the settings panel.</p>
+<a class="reference internal image-reference" href="../../_images/log_viewer_change_order_columns.png"><img alt="Log Viewer change order" class="align-center" src="../../_images/log_viewer_change_order_columns.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="user_management.html" class="btn btn-neutral float-left" title="User Management" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="leaderboard.html" class="btn btn-neutral float-right" title="Leaderboard" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="user_management.html" class="btn btn-neutral float-left" title="User Management" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="leaderboard.html" class="btn btn-neutral float-right" title="Leaderboard" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

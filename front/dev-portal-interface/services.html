@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workspaces: Services</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Workspace Configs" href="workspace_configs.html" />
+    <link rel="prev" title="Workspaces: Environments" href="environments.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Workspaces: Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#service-circuits">Service Circuits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#services-configs">Services Configs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-features">Main Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#circuit-management">Circuit Management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#view-circuit">View Circuit</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#deploy-circuit-configs">Deploy Circuit Configs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#view-options">View Options</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#show-diff">Show Diff</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#group-by-projectid">Group by ProjectID</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#service-management">Service Management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#view-service">View Service</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-management">Configuration Management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#view-configurations">View Configurations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#edit-configurations">Edit Configurations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#domain-configurations">Domain Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-and-upload-operations">Copy and Upload Operations</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#copy-configurations">Copy Configurations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#upload-configurations">Upload Configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#changes-management">Changes Management</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#status-indicators">Status Indicators</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#track-changes">Track Changes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#deploy-changes">Deploy Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#error-display">Error Display</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#compare-configs">Compare Configs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Workspaces: Services</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="workspaces-services">
+<h1>Workspaces: Services<a class="headerlink" href="#workspaces-services" title="Link to this heading"></a></h1>
+<p>The <strong>Services</strong> workspace is designed for working with service configurations
+across different deployment environments, called <strong>circuits</strong>. This workspace
+provides tools for editing, comparing, copying, and deploying configurations, as
+well as tracking configuration changes at different levels.</p>
+<section id="service-circuits">
+<h2>Service Circuits<a class="headerlink" href="#service-circuits" title="Link to this heading"></a></h2>
+<p><strong>Service circuits</strong> is a tab for managing and comparing service configurations
+across different deployment environments (circuits).</p>
+<a class="reference internal image-reference" href="../../_images/services_tab.png"><img alt="Services tab" class="align-center" src="../../_images/services_tab.png" style="width: 15em;" />
+</a>
+<p>Each circuit represents a deployment environment containing multiple services
+with their configurations.</p>
+<p>The <strong>Service circuits</strong> tab contains sub-tabs:</p>
+<ul class="simple">
+<li><p><strong>Services configs</strong> – Main interface for viewing, editing and deploying
+service configurations</p></li>
+<li><p><strong>Compare configs</strong> – Tool for comparing configurations between different
+circuits</p></li>
+</ul>
+</section>
+<section id="services-configs">
+<h2>Services Configs<a class="headerlink" href="#services-configs" title="Link to this heading"></a></h2>
+<p>Services configs is the main interface for working with service configurations.</p>
+<a class="reference internal image-reference" href="../../_images/services_conf_tab.png"><img alt="Services configs tab" class="align-center" src="../../_images/services_conf_tab.png" style="width: 15em;" />
+</a>
+<p>The <strong>Services configs</strong> interface displays a hierarchical structure:</p>
+<ul class="simple">
+<li><p><strong>Circuits</strong> – Top level deployment environments</p></li>
+<li><p><strong>Services</strong> – Individual services within each circuit</p></li>
+<li><p><strong>Configs</strong> – Configuration files for each service</p></li>
+</ul>
+<section id="main-features">
+<h3>Main Features<a class="headerlink" href="#main-features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>View and edit service configurations across different circuits</p></li>
+<li><p>Deploy configuration changes to services</p></li>
+<li><p>Copy and paste configurations between services</p></li>
+<li><p>Compare configuration differences (diff view)</p></li>
+</ul>
+</section>
+<section id="circuit-management">
+<h3>Circuit Management<a class="headerlink" href="#circuit-management" title="Link to this heading"></a></h3>
+<section id="view-circuit">
+<h4>View Circuit<a class="headerlink" href="#view-circuit" title="Link to this heading"></a></h4>
+<p>Each circuit is displayed as an accordion item with:</p>
+<ul class="simple">
+<li><p><strong>Circuit name</strong> with color-coded background (production circuits have a
+distinct color)</p></li>
+<li><p><strong>Deploy</strong> button – Deploys all changed configurations in the circuit</p></li>
+<li><p><strong>Copy</strong>/<strong>Upload</strong> buttons – Bulk configuration operations</p></li>
+<li><p><strong>Fullscreen</strong> button – Expands the circuit to fullscreen mode for easier
+viewing and editing</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/services_circuit_elements.png"><img alt="Services configs tab" class="align-center" src="../../_images/services_circuit_elements.png" style="width: 60em;" />
+</a>
+</section>
+<section id="deploy-circuit-configs">
+<h4>Deploy Circuit Configs<a class="headerlink" href="#deploy-circuit-configs" title="Link to this heading"></a></h4>
+<p>To deploy all changed configurations across all services in a circuit:</p>
+<ol class="arabic simple">
+<li><p>Make changes to one or more configurations in any services.</p></li>
+<li><p>Click the <strong>Deploy</strong> button.</p></li>
+<li><p>Confirm the deployment action.</p></li>
+<li><p>For production circuits, you will need to type a confirmation phrase to
+prevent accidental changes.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/services_circuit_deploy.png"><img alt="Services circuit deploy" class="align-center" src="../../_images/services_circuit_deploy.png" style="width: 60em;" />
+</a>
+</section>
+<section id="view-options">
+<h4>View Options<a class="headerlink" href="#view-options" title="Link to this heading"></a></h4>
+<p>At the top of the <strong>Services configs</strong>, there are two view options available as
+checkboxes that control how configurations are displayed: <strong>Show diff</strong> and
+<strong>Group by projectid</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/services_settings.png"><img alt="Services settings" class="align-center" src="../../_images/services_settings.png" style="width: 50em;" />
+</a>
+<section id="show-diff">
+<h5>Show Diff<a class="headerlink" href="#show-diff" title="Link to this heading"></a></h5>
+<p>Toggle the <strong>Show diff</strong> option to enable side-by-side comparison view:</p>
+<ul class="simple">
+<li><p>Shows the original (deployed) version on the left</p></li>
+<li><p>Shows your current changes on the right</p></li>
+<li><p>Highlights additions, deletions, and modifications</p></li>
+</ul>
+</section>
+<section id="group-by-projectid">
+<h5>Group by ProjectID<a class="headerlink" href="#group-by-projectid" title="Link to this heading"></a></h5>
+<p>Toggle <strong>Group by projectid</strong> to organize configurations:</p>
+<ul class="simple">
+<li><p>When enabled: Configurations are sorted alphabetically by their project ID</p></li>
+<li><p>When disabled: Configurations are sorted alphabetically by name</p></li>
+</ul>
+<p>This helps when working with multiple projects within the same service.</p>
+</section>
+</section>
+</section>
+<section id="service-management">
+<h3>Service Management<a class="headerlink" href="#service-management" title="Link to this heading"></a></h3>
+<section id="view-service">
+<h4>View Service<a class="headerlink" href="#view-service" title="Link to this heading"></a></h4>
+<p>Each service within a circuit displays:</p>
+<ul class="simple">
+<li><p><strong>Service ID</strong> – Unique identifier for the service</p></li>
+<li><p><strong>Service Type</strong> – Type of service (shown in green italics)</p></li>
+<li><p><strong>Service URL</strong> – Endpoint URL with copy button. Click the copy icon to copy
+URL to clipboard</p></li>
+<li><p><strong>Deploy</strong> button – Deploys all changed configs for this service</p></li>
+<li><p><strong>Copy</strong>/<strong>Upload</strong> buttons – Copy selected configs to clipboard or upload new
+config data</p></li>
+<li><p><strong>Select All</strong> checkbox – Select/deselect all configurations in the service.
+Selected configurations can be bulk copied</p></li>
+<li><p><strong>Fullscreen</strong> button – Expands the service to fullscreen mode</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/services_service.png"><img alt="Service" class="align-center" src="../../_images/services_service.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+<section id="configuration-management">
+<h3>Configuration Management<a class="headerlink" href="#configuration-management" title="Link to this heading"></a></h3>
+<section id="view-configurations">
+<h4>View Configurations<a class="headerlink" href="#view-configurations" title="Link to this heading"></a></h4>
+<p>Each configuration displays:</p>
+<ul class="simple">
+<li><p><strong>Config name</strong> – Name of the configuration file</p></li>
+<li><p><strong>Project ID</strong> – Associated project identifier (if applicable)</p></li>
+<li><p><strong>Status indicator</strong> – Green background indicates unsaved changes</p></li>
+<li><p><strong>Deploy</strong> button – Deploy this specific config</p></li>
+<li><p><strong>Refresh</strong> button – Discard local changes and reload config from server</p></li>
+<li><p><strong>Checkbox</strong> – Select config for bulk copy/paste operations</p></li>
+<li><p><strong>Fullscreen</strong> button – Expands the config editor to fullscreen mode</p></li>
+<li><p><strong>Code editor</strong> – Built-in editor with syntax highlighting, automatic
+formatting, error detection and change indicators</p></li>
+</ul>
+</section>
+<section id="edit-configurations">
+<h4>Edit Configurations<a class="headerlink" href="#edit-configurations" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Expand the configuration accordion item to view/edit</p></li>
+<li><p>Configurations are loaded automatically when expanded or selected</p></li>
+<li><p>Edit the content in the Code editor</p></li>
+<li><p>Click <strong>Deploy</strong> button to save changes to the server</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/services_config_edit.png"><img alt="Config edit" class="align-center" src="../../_images/services_config_edit.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes are stored locally until deployed. Page refresh may lose unsaved
+changes.</p>
+</div>
+</section>
+<section id="domain-configurations">
+<h4>Domain Configurations<a class="headerlink" href="#domain-configurations" title="Link to this heading"></a></h4>
+<p>Some configurations have domain-specific sub-configurations (domain configs):</p>
+<ul class="simple">
+<li><p>Displayed as nested items under the main configuration</p></li>
+<li><p>Each domain config can be edited independently</p></li>
+<li><p>Root config and domain configs can be deployed separately</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/services_domain_configs.png"><img alt="Domain configs" class="align-center" src="../../_images/services_domain_configs.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+<section id="copy-and-upload-operations">
+<h3>Copy and Upload Operations<a class="headerlink" href="#copy-and-upload-operations" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/copy_upload.png"><img alt="Copy and upload" class="align-center" src="../../_images/copy_upload.png" style="width: 5em;" />
+</a>
+<p><strong>Copy</strong> and <strong>Upload</strong> operations allow transferring configurations between
+services and circuits.</p>
+<p>When uploading configurations, paste them at the same hierarchy level where they
+were copied from, using the <strong>Upload</strong> button next to the <strong>Copy</strong> button. For
+example:</p>
+<ul class="simple">
+<li><p>Configs copied from a service must be uploaded to a service</p></li>
+<li><p>Configs copied from a circuit must be uploaded to a circuit</p></li>
+<li><p>You cannot copy from service level and upload to circuit level</p></li>
+</ul>
+<section id="copy-configurations">
+<h4>Copy Configurations<a class="headerlink" href="#copy-configurations" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Select configurations using checkboxes or <strong>Select all</strong> button</p></li>
+<li><p>Click the <strong>Copy</strong> button</p></li>
+<li><p>Selected configs are copied to clipboard in JSON format</p></li>
+</ol>
+</section>
+<section id="upload-configurations">
+<h4>Upload Configurations<a class="headerlink" href="#upload-configurations" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Navigate to the same hierarchy level where the configs were copied from</p></li>
+<li><p>Click the <strong>Upload</strong> button</p></li>
+<li><p>Paste JSON data containing configurations</p></li>
+<li><p>Confirm the upload</p></li>
+<li><p>Matching configurations will be updated with the new content</p></li>
+</ol>
+<p>Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;configName1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;config content...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;domainConfigs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;domain1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;domain config content...&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;configName2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;config content...&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Uploaded configurations are not automatically deployed. You must deploy them
+after upload.</p>
+</div>
+</section>
+</section>
+<section id="changes-management">
+<h3>Changes Management<a class="headerlink" href="#changes-management" title="Link to this heading"></a></h3>
+<section id="status-indicators">
+<h4>Status Indicators<a class="headerlink" href="#status-indicators" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Green background</strong> – Configuration has unsaved changes</p></li>
+<li><p><strong>Standard background</strong> – Configuration matches deployed version</p></li>
+</ul>
+</section>
+<section id="track-changes">
+<h4>Track Changes<a class="headerlink" href="#track-changes" title="Link to this heading"></a></h4>
+<p>The system tracks:</p>
+<ul class="simple">
+<li><p>Which configurations have been modified</p></li>
+<li><p>Which configurations are selected for operations</p></li>
+<li><p>Open/closed state of accordions (persisted across sessions)</p></li>
+</ul>
+</section>
+<section id="deploy-changes">
+<h4>Deploy Changes<a class="headerlink" href="#deploy-changes" title="Link to this heading"></a></h4>
+<p>You can deploy changes at three levels:</p>
+<ol class="arabic simple">
+<li><p><strong>Circuit level</strong> – Deploys all changed configs across all services</p></li>
+<li><p><strong>Service level</strong> – Deploys all changed configs for one service</p></li>
+<li><p><strong>Config level</strong> – Deploys a single configuration</p></li>
+</ol>
+</section>
+</section>
+<section id="error-display">
+<h3>Error Display<a class="headerlink" href="#error-display" title="Link to this heading"></a></h3>
+<p>Errors may occur during:</p>
+<ul class="simple">
+<li><p>Configuration loading</p></li>
+<li><p>Configuration deployment</p></li>
+<li><p>Domain config retrieval</p></li>
+</ul>
+<p>Errors are displayed:</p>
+<ul class="simple">
+<li><p>In error messages at the configuration level</p></li>
+<li><p>In console at the bottom of the page</p></li>
+<li><p>In deployment result notifications</p></li>
+<li><p>As validation markers in the Code editor</p></li>
+</ul>
+</section>
+</section>
+<section id="compare-configs">
+<h2>Compare Configs<a class="headerlink" href="#compare-configs" title="Link to this heading"></a></h2>
+<p><strong>Compare configs</strong> tool compares service configurations between different
+circuits (deployment environments).</p>
+<a class="reference internal image-reference" href="../../_images/services_compare_tab.png"><img alt="Compare configs" class="align-center" src="../../_images/services_compare_tab.png" style="width: 15em;" />
+</a>
+<p>The interface works as described in
+<a class="reference internal" href="compare.html#how-comparison-works"><span class="std std-ref">How Comparison Works</span></a>, where:</p>
+<ul class="simple">
+<li><p><strong>Items to compare</strong>: Circuits</p></li>
+<li><p><strong>Grouped by type</strong>: Service type</p></li>
+<li><p><strong>Elements</strong>: Service configurations</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For deployment operations, use the
+<a class="reference internal" href="#services-configs"><strong>Services configs</strong></a> tab.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="environments.html" class="btn btn-neutral float-left" title="Workspaces: Environments" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="workspace_configs.html" class="btn btn-neutral float-right" title="Workspace Configs" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="environments.html" class="btn btn-neutral float-left" title="Workspaces: Environments" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="workspace_configs.html" class="btn btn-neutral float-right" title="Workspace Configs" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+﻿/* ==========================================================================
+   Custom CSS for sphinx_rtd_theme
+   Purpose: Style adjustments and custom UI elements
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Root Variables (CSS Custom Properties)
+   -------------------------------------------------------------------------- */
+
+:root {
+    /* Custom color variables for consistent theming */
+    --sd-color-muted: #f5f5f5;
+    --sd-color-muted-text: #212529;
+}
+
+/* --------------------------------------------------------------------------
+   2. Sidebar & Top Navigation
+   -------------------------------------------------------------------------- */
+
+/* Background color for sidebar and top nav */
+.wy-side-nav-search, .wy-nav-top {
+    background: #1a1c1e;
+}
+
+/* Text color for sidebar section headers (e.g., "CONTENTS:") */
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: #01f9c6;
+}
+
+/* Border color for search input field */
+.wy-side-nav-search input[type="text"] {
+    border-color: #1a1c1e;
+}
+
+/* Max width for sidebar logo */
+.wy-side-nav-search .wy-dropdown > a img.logo, .wy-side-nav-search > a img.logo {
+    max-width: 50%;
+}
+
+/* --------------------------------------------------------------------------
+   3. Layout & Content Width
+   -------------------------------------------------------------------------- */
+
+/* Width content area */
+.wy-nav-content{
+    max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. Media Elements (audio, video, canvas)
+   -------------------------------------------------------------------------- */
+
+/* Layout and spacing for embedded media elements */
+audio, canvas, video {
+    display: block;
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Code Styling
+   -------------------------------------------------------------------------- */
+
+/* Inline code only */
+.rst-content code.literal {
+    font-family: monospace, serif;
+    font-size: 0.95em;
+    color: #0e5a6f !important;
+    background-color: #eef7f9;
+    padding: 0.15em 0.35em;
+    border-radius: 4px;
+}
+
+/* Syntax-highlighted and literal code blocks font and layout*/
+.rst-content .linenodiv pre,
+.rst-content div[class^=highlight] pre,
+.rst-content pre.literal-block {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, Courier, monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   6. Images, Paragraphs & Structural Spacing
+   --------------------------------------------------------------------------
+
+/* Centered image spacing */
+.rst-content .align-center {
+    margin-bottom: 14px;
+}
+
+/* Left-aligned image spacing */
+.rst-content .align-left {
+    margin: 0 14px 14px 0;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 14px;
+}
+
+/* Nested list spacing: restore vertical space after a UL inside an OL.
+   sphinx_rtd_theme sets margin-bottom: 0, causing the next list item
+   to appear too close. */
+.rst-content ol li ul {
+    margin-bottom: 12px !important;
+}
+
+/* Vertical spacing before and after all heading levels and toctree captions,
+   preventing them from sticking to adjacent blocks. */
+
+.rst-content .toctree-wrapper > p.caption,
+.rst-content h1,
+.rst-content h2,
+.rst-content h3,
+.rst-content h4,
+.rst-content h5,
+.rst-content h6 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* Spacing for all admonition types.
+   RTD does not add a top margin by default, so margin-top: 24px creates
+   a clean vertical gap and improves readability. */
+
+.rst-content .admonition,
+.rst-content .admonition-todo,
+.rst-content .attention,
+.rst-content .caution,
+.rst-content .danger,
+.rst-content .error,
+.rst-content .hint,
+.rst-content .important,
+.rst-content .note,
+.rst-content .seealso,
+.rst-content .tip,
+.rst-content .warning,
+.wy-alert {
+    padding: 12px;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Image Utilities
+   -------------------------------------------------------------------------- */
+
+/* Right-side spacing between images aligned in a horizontal row.
+   Use on the first image to visually separate it from the next one. */
+.image-gap {
+    margin-right: 1em;  /* Adjust spacing as needed */
+}
+
+/* Horizontally centers a single standalone image with equal side margins. */
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   8. Icons
+   -------------------------------------------------------------------------- */
+
+/* The CHECK icon appearance */
+.sd-octicon-check {
+    display: inline-block;
+    fill: #28a745;
+    vertical-align: middle;
+}
+
+/* The X iconappearance */
+.sd-octicon-x {
+    display: inline-block;
+    fill: #dc3545;
+    vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   9. Inline Numbered Circle (Steps, References)
+   -------------------------------------------------------------------------- */
+
+.cnum {
+    display: inline-block;        /* Inline element with box model */
+    background-color: #ffff00;  /* Yellow background */
+    color: #000;                /* Black text */
+    font-weight: bold;            /* Bold font */
+    border-radius: 50%;           /* Circular shape */
+    width: 1.5em; height: 1.5em;  /* Size */
+    line-height: 1.5em;           /* Vertical centering */
+    text-align: center;           /* Horizontal centering */
+    vertical-align: middle;       /* Align with text */
+    font-family: sans-serif;      /* Simple font */
+    font-size: 0.9em;             /* Slightly smaller size */
+    margin: 0 0.2em;              /* Horizontal spacing */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Light shadow */
+}
+
+/* --------------------------------------------------------------------------
+   10. Breadcrumbs & GitHub Icon
+   -------------------------------------------------------------------------- */
+
+/* Layout for breadcrumbs */
+.wy-breadcrumbs {
+    display: flex; /* Display elements in a row */
+    justify-content: flex-start; /* Align all breadcrumb items to the left */
+    align-items: center; /* Vertically center items */
+    width: 100%; /* Make sure the container takes full width */
+}
+
+.wy-breadcrumbs li {
+    margin-right: 10px; /* Space between breadcrumb items */
+}
+
+/* Right-aligned "View page source" link and GitHub icon */
+.wy-breadcrumbs .wy-breadcrumbs-aside {
+    margin-left: auto; /* Push "View page source" and icon to the right */
+    display: flex; /* Display them in a single row */
+    align-items: center; /* Vertically center the items */
+}
+
+.wy-breadcrumbs-aside.github-icon img {
+    height: 1.5em; /* Set the icon size */
+    vertical-align: middle; /* Align icon with surrounding text */
+}
+
+/* --------------------------------------------------------------------------
+   11. Dropdowns (summary/details)
+   -------------------------------------------------------------------------- */
+
+/* Allow text selection inside <summary> dropdowns */
+details.sd-dropdown summary.sd-summary-title {
+    user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -webkit-user-select: text;
+}
+
+/* Move the dropdown toggle arrow to the left of the summary text */
+.sd-dropdown > summary {
+    display: flex;                /* Enable flexbox layout */
+    flex-direction: row;          /* Horizontal alignment */
+    align-items: center;          /* Vertical alignment */
+    justify-content: flex-start;  /* Align all content to the left */
+}
+
+/* Reorder the toggle icon to appear before the text */
+.sd-summary-state-marker {
+    order: -1;                    /* Move icon before text */
+    margin-right: 0.5em;          /* Space between icon and text */
+    margin-left: 0;               /* Remove any left spacing */
+}
+
+/* --------------------------------------------------------------------------
+   12. Base Badges & Labels
+   -------------------------------------------------------------------------- */
+
+/* Base badge appearance */
+.sd-badge {
+    /* display: inline-block; */
+    padding: .25em .55em;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: .5rem;
+}
+
+/* Dark outline badge border thickness */
+.sd-outline-dark {
+    border-width: 0.15em !important;
+}
+
+/* --------------------------------------------------------------------------
+   13. Custom Badges with Color Modifiers
+   -------------------------------------------------------------------------- */
+
+/* Custom badge appearance */
+.bdg {
+    display: inline-block;
+    padding: .25em .55em;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: .5rem;
+    color: white; /* default text color*/
+}
+
+/* Small badge appearance */
+.bdg-s {
+  opacity: 0.7;
+  font-size: .7em;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, Courier, monospace;
+}
+
+/* Color modifiers */
+
+.bdg-blue-light    { background-color: #0097e6; }
+.bdg-green-light   { background-color: #44bd32; }
+.bdg-grey-light    { background-color: #747d8c; }
+.bdg-magenta-light { background-color: #e056fd; }
+.bdg-orange-light  { background-color: #ff7226; }
+.bdg-pink-light    { background-color: #e84393; }
+.bdg-purple-light  { background-color: #8854d0; }
+.bdg-red-light     { background-color: #eb4d4b; }
+.bdg-yellow-light  { background-color: #f6e58d; color: #212529; }
+
+.bdg-blue    { background-color: #289ed9; }
+.bdg-green   { background-color: #28a745; }
+.bdg-grey    { background-color: #6c757d; }
+.bdg-orange  { background-color: #ff5a00; }
+.bdg-purple  { background-color: #6f42c1; }
+.bdg-red     { background-color: #dc3545; }
+.bdg-yellow  { background-color: #ffde31; color: black; }
+
+/* --------------------------------------------------------------------------
+   14. Admonition Styling
+   -------------------------------------------------------------------------- */
+
+/* Rounded corners for all admonition containers */
+.rst-content .admonition,
+.rst-content .wy-alert {
+    border-radius: 0.5rem; /* Smooth rounded corners */
+    overflow: hidden;      /* Ensures title corners display correctly */
+}
+
+/* Rounded corners for admonition titles */
+.rst-content .admonition-title,
+.rst-content .wy-alert-title {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+/* Icon Spacing and Alignment*/
+.rst-content .admonition-title::before {
+  margin-right: 7px;
+}
+
+/* Icon Definitions by Admonition Type */
+/* INFO (note) */
+.rst-content .note .admonition-title::before{
+  content: "\f06a"; /* fa-circle-exclamation */
+  font-family: FontAwesome;
+}
+
+/* INFO (seealso) */
+.rst-content .seealso .admonition-title::before {
+  content: "\f27a"; /* fa-message */
+  font-family: FontAwesome;
+}
+
+/* SUCCESS (hint, tip, important) */
+.rst-content .hint .admonition-title::before,
+.rst-content .tip .admonition-title::before,
+.rst-content .important .admonition-title::before {
+  content: "\f0eb"; /* fa-lightbulb */
+  font-family: FontAwesome;
+}
+
+/* WARNING (warning, caution, attention, todo) */
+.rst-content .warning .admonition-title::before,
+.rst-content .caution .admonition-title::before,
+.rst-content .attention .admonition-title::before,
+.rst-content .admonition-todo .admonition-title::before {
+  content: "\f071"; /* fa-exclamation-triangle */
+  font-family: FontAwesome;
+}
+
+/* DANGER (error, danger) */
+.rst-content .error .admonition-title::before,
+.rst-content .danger .admonition-title::before {
+  content: "\f0e7"; /* fa-bolt */
+  font-family: FontAwesome;
+}
+
+/* --------------------------------------------------------------------------
+   15. Code Block Captions
+   -------------------------------------------------------------------------- */
+
+/* Styling for captions above code blocks */
+.rst-content .code-block-caption {
+    font-size: 1rem;           /* Match base text size */
+    font-weight: bold;         /* Emphasize caption */
+    font-style: normal;        /* Remove italic style */
+    line-height: 1;            /* Tight spacing */
+    padding: 0.5em 0;          /* Vertical spacing */
+    text-align: center;        /* Center-align caption */
+}
+
+/* --------------------------------------------------------------------------
+   16. Link Colors (Visited vs Unvisited)
+   -------------------------------------------------------------------------- */
+
+/* Ensure visited links have the same color as unvisited ones for consistency */
+.rst-content a,
+.rst-content a:visited {
+    color: #2980B9; /* keep the same color for visited links */
+    text-decoration: none;
+}
+
+.rst-content a:hover,
+.rst-content a:focus {
+    text-decoration: underline;
+}

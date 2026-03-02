@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Services Info" href="services_info.html" />
+    <link rel="prev" title="Logs" href="logs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Leaderboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-leaderboard">Open Leaderboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-leaderboard-data">Get Leaderboard Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pagination">Pagination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-data">Export Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-by-user-id">Search by User ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-leaderboards-between-requests">Save Leaderboards Between Requests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-saved-leaderboard">Delete Saved Leaderboard</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Leaderboard</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="leaderboard">
+<h1>Leaderboard<a class="headerlink" href="#leaderboard" title="Link to this heading"></a></h1>
+<p>The <strong>Leaderboard</strong> section allows you to view, filter, and manage leaderboard
+data based on configurable parameters.</p>
+<section id="open-leaderboard">
+<h2>Open Leaderboard<a class="headerlink" href="#open-leaderboard" title="Link to this heading"></a></h2>
+<p>To open the leaderboard, select the corresponding menu item.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_menu.png"><img alt="Leaderboard menu" class="align-center" src="../../_images/leaderboard_menu.png" style="width: 15em;" />
+</a>
+</section>
+<section id="get-leaderboard-data">
+<h2>Get Leaderboard Data<a class="headerlink" href="#get-leaderboard-data" title="Link to this heading"></a></h2>
+<p>To retrieve leaderboard data, configure the required parameters and click the
+<strong>Get Leaderboard</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_filters.png"><img alt="Leaderboard filters" class="align-center" src="../../_images/leaderboard_filters.png" style="width: 60em;" />
+</a>
+<p>The following parameters are available:</p>
+<ul>
+<li><p><strong>table</strong> — Displays the leaderboard for a specific table.
+<a class="reference internal" href="../../back/configs_format/tables-config-format.html#tables-config-format"><span class="std std-ref">(more info)</span></a>.</p></li>
+<li><p><strong>mode</strong> — Displays the leaderboard for a specific mode.
+<a class="reference internal" href="../../back/configs_format/modes-config-format.html#mode-format"><span class="std std-ref">(more info)</span></a>.</p></li>
+<li><p><strong>group</strong> — Uses the special statistic value <code class="docutils literal notranslate"><span class="pre">__leaderboard</span></code>.
+<a class="reference internal" href="../../back/configs_format/stats-config-format.html#leaderboard-group"><span class="std std-ref">(more info)</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Leave this field empty if a leaderboard group is not used.</p>
+</div>
+</li>
+<li><p><strong>platform</strong> — Filters the leaderboard by platform (PC, Xbox, PlayStation).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Leave this field empty if platform filtering is not required.</p>
+</div>
+</li>
+<li><p><strong>prevSeason</strong> — Displays leaderboard data for the previous season.</p></li>
+<li><p><strong>count</strong> — Specifies the number of users displayed per leaderboard page.</p></li>
+<li><p><strong>User Id</strong> — Retrieves leaderboard data for a specific user.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Leave this field empty if a specific user is not required.</p>
+</div>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/leaderboard_result.png"><img alt="Leaderboard result" class="align-center" src="../../_images/leaderboard_result.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visibility and ordering of columns follow the settings defined in
+<a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
+</div>
+</section>
+<section id="pagination">
+<h2>Pagination<a class="headerlink" href="#pagination" title="Link to this heading"></a></h2>
+<p>Use the pagination controls to navigate between leaderboard pages.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_pagination.png"><img alt="Leaderboard pagination" class="align-center" src="../../_images/leaderboard_pagination.png" style="width: 60em;" />
+</a>
+</section>
+<section id="export-data">
+<h2>Export Data<a class="headerlink" href="#export-data" title="Link to this heading"></a></h2>
+<p>To export the current leaderboard page as a CSV file, click the <strong>Export to
+csv</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_csv.png"><img alt="Leaderboard export to csv" class="align-center" src="../../_images/leaderboard_csv.png" style="width: 60em;" />
+</a>
+</section>
+<section id="search-by-user-id">
+<h2>Search by User ID<a class="headerlink" href="#search-by-user-id" title="Link to this heading"></a></h2>
+<p>To find a user by a specific ID, enter it in the <strong>User Id</strong> field and click
+<strong>Get Leaderboard</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_userId.png"><img alt="Leaderboard search by user id" class="align-center" src="../../_images/leaderboard_userId.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a specific user is not required, leave this field empty.</p>
+</div>
+</section>
+<section id="save-leaderboards-between-requests">
+<h2>Save Leaderboards Between Requests<a class="headerlink" href="#save-leaderboards-between-requests" title="Link to this heading"></a></h2>
+<p>After clicking <strong>Get Leaderboard</strong>, the selected filters are saved to your user
+profile.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_saved_list.png"><img alt="Leaderboard saved list" class="align-center" src="../../_images/leaderboard_saved_list.png" style="width: 60em;" />
+</a>
+<p>To add a new leaderboard to the saved list, click the corresponding button.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_add_item.png"><img alt="Leaderboard add item" class="align-center" src="../../_images/leaderboard_add_item.png" style="width: 20em;" />
+</a>
+<p>After a new leaderboard is added, an empty table item is displayed.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_add_item_new_table.png"><img alt="Leaderboard add item new table" class="align-center" src="../../_images/leaderboard_add_item_new_table.png" style="width: 20em;" />
+</a>
+<p>Configure the required filters and click <strong>Get Leaderboard</strong> to retrieve data
+and save the leaderboard.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_empty_table.png"><img alt="Leaderboard empty table" class="align-center" src="../../_images/leaderboard_empty_table.png" style="width: 60em;" />
+</a>
+<p>To switch between saved leaderboards, use the top navigation menu.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_saved_list_switch.png"><img alt="Leaderboard switch between saved list" class="align-center" src="../../_images/leaderboard_saved_list_switch.png" style="width: 20em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The saved leaderboard name is generated from the filter values.</p>
+</div>
+</section>
+<section id="delete-saved-leaderboard">
+<h2>Delete Saved Leaderboard<a class="headerlink" href="#delete-saved-leaderboard" title="Link to this heading"></a></h2>
+<p>To delete a saved leaderboard, click the delete button.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_saved_list_switch_delete.png"><img alt="Leaderboard switch between saved list" class="align-center" src="../../_images/leaderboard_saved_list_switch_delete.png" style="width: 20em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In a saved leaderboard, filter values are replaced after clicking
+<strong>Get Leaderboard</strong>.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="logs.html" class="btn btn-neutral float-left" title="Logs" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="services_info.html" class="btn btn-neutral float-right" title="Services Info" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="logs.html" class="btn btn-neutral float-left" title="Logs" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="services_info.html" class="btn btn-neutral float-right" title="Services Info" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

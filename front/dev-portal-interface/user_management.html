@@ -1,0 +1,1107 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Logs" href="logs.html" />
+    <link rel="prev" title="Deploy Configs" href="deploy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">User Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#single-user">Single User</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#favorite-actions">Favorite Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-data">User Data</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#search-within-user-data">Search Within User Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reload-user-data">Reload User Data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#copy-parameters-and-values">Copy Parameters and Values</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#view-data-size">View Data Size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#edit-service-data">Edit Service Data</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#edit-parameters">Edit Parameters</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#save-changes">Save Changes</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#apply-changes-to-all-services">Apply Changes to All Services</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#import-and-export">Import and Export</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#manage-watched-values">Manage Watched Values</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#actions">Actions</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#admin-actions">Admin Actions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#important-actions">Important Actions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id1">Favorite Actions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#profile-admin-actions">Profile Admin Actions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#users-history">User’s History</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#load-history">Load History</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#expand-history">Expand History</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#load-details">Load Details</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#copy-parameter-values">Copy Parameter Values</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#add-parameters-as-table-columns">Add Parameters as Table Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#grouped-history">Grouped History</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filter-history">Filter History</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#bans">Bans</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id2">Bans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#load-bans">Load Bans</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#ban-fields-description">Ban Fields Description</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#expand-bans">Expand Bans</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id3">Add Parameters as Table Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#add-ban">Add Ban</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#presets">Presets</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#revoke-ban">Revoke Ban</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#complaints-offender">Complaints (Offender)</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#filter-complaints">Filter Complaints</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#expand-complaints">Expand Complaints</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id4">Add Parameters as Table Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#add-ban-on-complaint">Add Ban on Complaint</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#reject-complaint">Reject Complaint</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#complaints-submitted">Complaints (Submitted)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#notes">Notes</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#add-note">Add Note</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#delete-note">Delete Note</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-users">Multiple Users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#userid-list">Userid List</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#load-ids-from-csv-file">Load IDs from CSV File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#load-ids-from-text-string">Load IDs from Text String</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#my-favorite-actions">My Favorite Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">User Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Bans</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#banhammer">Banhammer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#load-offenders">Load Offenders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-ban-list">Load Ban List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#moderator-summaries">Moderator Summaries</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#load-data">Load Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">User Management</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="user-management">
+<h1>User Management<a class="headerlink" href="#user-management" title="Link to this heading"></a></h1>
+<p>The <strong>User Management</strong> section provides access to a set of administrative tools
+used to search, review, and manage user accounts within the Dev Portal service.
+The navigation menu includes the following items:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#single-user"><strong>Single User</strong></a>: Opens the interface for locating and managing
+an individual user account. This tool allows administrators to view profile
+data, inspect account status, and perform user-specific administrative
+actions.</p></li>
+<li><p><a class="reference internal" href="#multiple-users"><strong>Multiple Users</strong></a>: Provides functionality for bulk
+operations. Administrators can perform multi-user searches or apply actions to
+multiple accounts simultaneously.</p></li>
+<li><p><a class="reference internal" href="#banhammer"><strong>Banhammer</strong></a>: Contains tools for managing user access
+restrictions, including issuing bans, lifting bans, and reviewing ban history.</p></li>
+<li><p><a class="reference internal" href="#moderator-summaries"><strong>Moderator Summaries</strong></a>: Displays aggregated
+moderation data, including reports, actions taken by moderators, and summary
+statistics.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/user_man_menu.png"><img alt="User Management" class="align-center" src="../../_images/user_man_menu.png" style="width: 15em;" />
+</a>
+<section id="single-user">
+<h2>Single User<a class="headerlink" href="#single-user" title="Link to this heading"></a></h2>
+<p>The <strong>Single User</strong> section provides tools for locating and inspecting an
+individual user account. To access it, select the corresponding menu item:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user.png"><img alt="Single User" class="align-center" src="../../_images/user_man_single_user.png" style="width: 15em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This interface displays data collected from multiple platform services.
+Availability of certain information may depend on the user’s activity and
+service-specific configurations.</p>
+</div>
+<p>You can search for a user by the following identifiers:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">userid</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nick</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">login</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">steamid</span></code></p></li>
+</ul>
+<p>Enter one of the available identifiers in the search field and click <strong>View user
+profile</strong> to get the user information:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_search.png"><img alt="Search for a user" class="align-center" src="../../_images/user_man_single_search.png" style="width: 30em;" />
+</a>
+<div class="tip admonition">
+<p class="admonition-title">Switching Between Users</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_history_clear.png"><img alt="Switching between users" class="align-right" src="../../_images/user_man_single_history_clear.png" style="width: 30em;" />
+</a>
+<p>When you search for a user that has not been queried before, the system adds
+that user to the selection menu.</p>
+<p>This allows you to quickly switch between previously viewed users.</p>
+<p>You can select any user from the history list to load their profile instantly,
+or clear the search history by clicking the <svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-x sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg> icon.</p>
+</div>
+<p>After retrieving the user data, the <strong>User management</strong> window displays the
+following sections:</p>
+<ul class="simple">
+<li><p><strong>My favorite actions</strong>: Frequently used actions for the selected user.</p></li>
+<li><p><strong>User’s data by services</strong>: User-related information aggregated from platform
+services:</p>
+<ul>
+<li><p>userstat</p></li>
+<li><p>profile</p></li>
+<li><p>contacts</p></li>
+<li><p>inventory</p></li>
+<li><p>currency</p></li>
+</ul>
+</li>
+<li><p><strong>User’s history</strong>: User activity and event history.</p></li>
+<li><p><strong>Bans</strong>: Information about active and historical restrictions.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_data.png"><img alt="User Management window" class="align-center" src="../../_images/user_man_single_user_data.png" style="width: 75em;" />
+</a>
+<p>Each section header includes the <strong>Open fullscreen mode</strong> button that expands
+the selected section into full-screen mode:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_fullscreen_button.png"><img alt="Full-screen view" class="align-center" src="../../_images/user_man_single_user_fullscreen_button.png" style="width: 75em;" />
+</a>
+<section id="favorite-actions">
+<h3>Favorite Actions<a class="headerlink" href="#favorite-actions" title="Link to this heading"></a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see
+<a class="reference internal" href="#actions">Actions</a>.</p>
+</div>
+</section>
+<section id="user-data">
+<h3>User Data<a class="headerlink" href="#user-data" title="Link to this heading"></a></h3>
+<p>The <strong>User Data</strong> section displays detailed information aggregated from the
+following services:</p>
+<ul class="simple">
+<li><p>userstat</p></li>
+<li><p>profile</p></li>
+<li><p>contacts</p></li>
+<li><p>inventory</p></li>
+<li><p>currency</p></li>
+</ul>
+<p>Data is presented in a structured tree-view format, allowing administrators to
+inspect nested keys and values:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_tree_data.png"><img alt="Tree-view format" class="align-center" src="../../_images/user_man_single_tree_data.png" style="width: 60em;" />
+</a>
+<section id="search-within-user-data">
+<h4>Search Within User Data<a class="headerlink" href="#search-within-user-data" title="Link to this heading"></a></h4>
+<p>To search for parameters or values, enter your query into the search field above
+the tree:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_search_in_tree.png"><img alt="Search user parameters" class="align-center" src="../../_images/user_man_single_search_in_tree.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The search applies to all tree nodes, including collapsed ones.</p>
+</div>
+</section>
+<section id="reload-user-data">
+<h4>Reload User Data<a class="headerlink" href="#reload-user-data" title="Link to this heading"></a></h4>
+<p>To manually reload the user data, click the <strong>Reload</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_reload_user_data.png"><img alt="Reload user data manually" class="align-center" src="../../_images/user_man_single_reload_user_data.png" style="width: 40em;" />
+</a>
+<p>User data is automatically refreshed after performing actions that modify the
+user. To disable automatic reload, click the <strong>Auto-Reload</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_autoreload.png"><img alt="Disable automatically reload data" class="align-center" src="../../_images/user_man_single_autoreload.png" style="width: 40em;" />
+</a>
+</section>
+<section id="copy-parameters-and-values">
+<h4>Copy Parameters and Values<a class="headerlink" href="#copy-parameters-and-values" title="Link to this heading"></a></h4>
+<p>You can copy parameter names and values directly from the tree view.</p>
+<p>To copy a <strong>parameter name</strong>, click the <strong>Copy</strong> icon next to the name:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_copy_name.png"><img alt="Copy parameter name" class="align-center" src="../../_images/user_man_single_copy_name.png" style="width: 40em;" />
+</a>
+<p>To copy a <strong>parameter value</strong>, click the <strong>Copy</strong> icon next to the value:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_copy_value.png"><img alt="Copy parameter value" class="align-center" src="../../_images/user_man_single_copy_value.png" style="width: 40em;" />
+</a>
+</section>
+<section id="view-data-size">
+<h4>View Data Size<a class="headerlink" href="#view-data-size" title="Link to this heading"></a></h4>
+<p>To display the size of a parameter’s payload (bytes, KB, MB), click the <strong>Size</strong>
+icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_get_size.png"><img alt="View data size" class="align-center" src="../../_images/user_man_single_get_size.png" style="width: 40em;" />
+</a>
+</section>
+<section id="edit-service-data">
+<h4>Edit Service Data<a class="headerlink" href="#edit-service-data" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Editing service data requires the appropriate permissions.</p>
+</div>
+<section id="edit-parameters">
+<h5>Edit Parameters<a class="headerlink" href="#edit-parameters" title="Link to this heading"></a></h5>
+<p>To edit a parameter in the tree, click the <strong>Edit</strong> icon next to the parameter.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_edit_icon.png"><img alt="Edit icon" class="align-center" src="../../_images/user_man_single_edit_icon.png" style="width: 40em;" />
+</a>
+<p>In the modal window, you can update the parameter value and review the
+differences compared to the default value.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_edit_modal.png"><img alt="Edit modal" class="align-center" src="../../_images/user_man_single_edit_modal.png" style="width: 60em;" />
+</a>
+<p>To switch to full-screen mode, click the <strong>Full screen</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_edit_modal_fullscreen.png"><img alt="Edit modal fullscreen" class="align-center" src="../../_images/user_man_single_edit_modal_fullscreen.png" style="width: 60em;" />
+</a>
+<p>To apply the changes, click <strong>Apply changes</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_edit_modal_apply.png"><img alt="Edit modal apply" class="align-center" src="../../_images/user_man_single_edit_modal_apply.png" style="width: 60em;" />
+</a>
+<p>Modified parameters are highlighted in the tree.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_changed_parameter.png"><img alt="Edit modal changed parameter" class="align-center" src="../../_images/user_man_single_changed_parameter.png" style="width: 40em;" />
+</a>
+<p>To revert changes click to the icon.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_revert_changes.png"><img alt="Edit modal changed parameter" class="align-center" src="../../_images/user_man_revert_changes.png" style="width: 40em;" />
+</a>
+</section>
+<section id="save-changes">
+<h5>Save Changes<a class="headerlink" href="#save-changes" title="Link to this heading"></a></h5>
+<p>To submit the modified data, click <strong>Send</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_send_changed_data.png"><img alt="Send changed data" class="align-center" src="../../_images/user_man_single_send_changed_data.png" style="width: 40em;" />
+</a>
+<p>Before saving, review the differences between the current and previous values.
+To save the changes, click <strong>Save profile</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_save_data.png"><img alt="Save changed data" class="align-center" src="../../_images/user_man_single_save_data.png" style="width: 60em;" />
+</a>
+<p>To open the editor in full-screen mode, click the <strong>Full screen</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_save_data_fullscreen.png"><img alt="Save changed data fullscreen" class="align-center" src="../../_images/user_man_single_save_data_fullscreen.png" style="width: 60em;" />
+</a>
+</section>
+<section id="apply-changes-to-all-services">
+<h5>Apply Changes to All Services<a class="headerlink" href="#apply-changes-to-all-services" title="Link to this heading"></a></h5>
+<p>To submit modified data for all services, click <strong>Send to all services</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_save_all_services.png"><img alt="Save changed for all services" class="align-center" src="../../_images/user_man_single_save_all_services.png" style="width: 25em;" />
+</a>
+<p>To save the changes for all services, click <strong>Save all</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_save_all_data.png"><img alt="Save all changed data" class="align-center" src="../../_images/user_man_single_save_all_data.png" style="width: 60em;" />
+</a>
+<p>To open the editor in full-screen mode, click the <strong>Full screen</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_save_all_data_fullscreen.png"><img alt="Save all changed data fullscreen" class="align-center" src="../../_images/user_man_single_save_all_data_fullscreen.png" style="width: 60em;" />
+</a>
+<p>Large blocks of identical lines are collapsed by default. Use the context selector to display additional unchanged lines.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_context_selector.png"><img alt="Save all context selector" class="align-center" src="../../_images/user_man_single_context_selector.png" style="width: 60em;" />
+</a>
+</section>
+<section id="import-and-export">
+<h5>Import and Export<a class="headerlink" href="#import-and-export" title="Link to this heading"></a></h5>
+<p>Service data can be exported and imported using JSON format.</p>
+<p>To copy the current service data, click <strong>Copy</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_copy_current_data.png"><img alt="Copy current data" class="align-center" src="../../_images/user_man_single_copy_current_data.png" style="width: 40em;" />
+</a>
+<p>To upload service data from a JSON file, click <strong>Upload JSON</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_upload_data.png"><img alt="Upload data" class="align-center" src="../../_images/user_man_single_upload_data.png" style="width: 40em;" />
+</a>
+<p>Paste the JSON content into the input field and click <strong>Load</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_upload_data_modal.png"><img alt="Upload data modal" class="align-center" src="../../_images/user_man_single_upload_data_modal.png" style="width: 40em;" />
+</a>
+</section>
+</section>
+<section id="manage-watched-values">
+<h4>Manage Watched Values<a class="headerlink" href="#manage-watched-values" title="Link to this heading"></a></h4>
+<p>The <strong>Watched</strong> feature allows you to track frequently used or critical data
+fields.</p>
+<p>To <strong>add</strong> a value to the watched list, click the <strong>Add</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_to_watched.png"><img alt="Add a value to the watched list" class="align-center" src="../../_images/user_man_single_add_to_watched.png" style="width: 40em;" />
+</a>
+<p>To <strong>remove</strong> a value from the watched block, click the <strong>Remove</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_remove_from_watched.png"><img alt="Remove a value to the watched list" class="align-center" src="../../_images/user_man_single_remove_from_watched.png" style="width: 40em;" />
+</a>
+<p>To <strong>view all</strong> watched values, click the button next to the watched section:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_all_watched.png"><img alt="See all watched values" class="align-center" src="../../_images/user_man_single_all_watched.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/user_man_single_watched_block.png"><img alt="See all watched values" class="align-center" src="../../_images/user_man_single_watched_block.png" style="width: 75em;" />
+</a>
+</section>
+<section id="actions">
+<h4>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h4>
+<section id="admin-actions">
+<h5>Admin Actions<a class="headerlink" href="#admin-actions" title="Link to this heading"></a></h5>
+<p>Available actions are grouped by their corresponding backend services
+(userstat, profile, contacts, inventory, currency, etc.):</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_actions.png"><img alt="Admin actions" class="align-center" src="../../_images/user_man_single_actions.png" style="width: 75em;" />
+</a>
+</section>
+<section id="important-actions">
+<h5>Important Actions<a class="headerlink" href="#important-actions" title="Link to this heading"></a></h5>
+<p>Administrative actions that may lead to irreversible changes or have a high
+operational impact are visually marked in <strong>red</strong>:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_important_actions.png"><img alt="Important actions" class="align-center" src="../../_images/user_man_single_important_actions.png" style="width: 30em;" />
+</a>
+</section>
+<section id="id1">
+<h5>Favorite Actions<a class="headerlink" href="#id1" title="Link to this heading"></a></h5>
+<p>Frequently used actions can be pinned to the <strong>Favorite Actions</strong> block for
+quick access.</p>
+<p>To <strong>add</strong> an action to favorites, click the <strong>Add to favorite actions</strong> icon
+next to the action:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_to_favorite_actions.png"><img alt="Important actions" class="align-center" src="../../_images/user_man_single_add_to_favorite_actions.png" style="width: 30em;" />
+</a>
+<p>Pinned actions appear in the first panel of the <strong>Admin Actions</strong> section.</p>
+<p>To <strong>remove</strong> an action from favorites, click the <strong>Remove from Favorites</strong>
+icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_remove_from_favorite_actions.png"><img alt="Favorite actions" class="align-center" src="../../_images/user_man_single_remove_from_favorite_actions.png" style="width: 20em;" />
+</a>
+</section>
+<section id="profile-admin-actions">
+<h5>Profile Admin Actions<a class="headerlink" href="#profile-admin-actions" title="Link to this heading"></a></h5>
+<p>To enable <strong>profile</strong> actions in the admin panel, the action definition in
+daScript must include the <code class="docutils literal notranslate"><span class="pre">admin_panel</span></code> tag.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see:
+<a class="reference internal" href="../../back/configs_format/profile-config-format.html#scripts-config-format"><span class="std std-ref">Action declaration on daScript</span></a>.</p>
+</div>
+<p>To execute a profile action:</p>
+<ol class="arabic simple">
+<li><p>Select the action, for example: <code class="docutils literal notranslate"><span class="pre">das.admin_add</span></code>.</p></li>
+<li><p>Fill in the required action parameters: <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
+<li><p>Click <strong>Send action</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/user_man_single_send_admin_actions.png"><img alt="Send action" class="align-center" src="../../_images/user_man_single_send_admin_actions.png" style="width: 25em;" />
+</a>
+<p>The result of the executed action is displayed in the console output:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_admin_actions_result.png"><img alt="Send action result" class="align-center" src="../../_images/user_man_single_admin_actions_result.png" style="width: 75em;" />
+</a>
+<!-- #### Userstat Admin Actions -->
+<!-- Not supported yet, will be added nearest time. -->
+</section>
+</section>
+</section>
+<section id="users-history">
+<h3>User’s History<a class="headerlink" href="#users-history" title="Link to this heading"></a></h3>
+<p>The <strong>User’s History</strong> section provides a chronological overview of user-related
+events and actions. You can filter, expand, inspect, and copy individual event
+details directly from the table.</p>
+<section id="load-history">
+<h4>Load History<a class="headerlink" href="#load-history" title="Link to this heading"></a></h4>
+<p>To load history records:</p>
+<ol class="arabic simple">
+<li><p>Select the desired <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a>.</p></li>
+<li><p>Click the <strong>Load</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_filters.png"><img alt="Load history data" class="align-center" src="../../_images/user_man_single_user_history_filters.png" style="width: 75em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visibility and ordering of columns follow the settings defined in
+<a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
+</div>
+</section>
+<section id="expand-history">
+<h4>Expand History<a class="headerlink" href="#expand-history" title="Link to this heading"></a></h4>
+<p>To view detailed information for a specific history entry, click the <strong>Expand
+Row</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_expand_data.png"><img alt="Expand row to display history entry details" class="align-center" src="../../_images/user_man_single_user_history_expand_data.png" style="width: 30em;" />
+</a>
+</section>
+<section id="load-details">
+<h4>Load Details<a class="headerlink" href="#load-details" title="Link to this heading"></a></h4>
+<p>Some entries contain additional nested data. To load extended details, click the
+<strong>Load Details</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_expand_details.png"><img alt="Load detailed history entry information" class="align-center" src="../../_images/user_man_single_user_history_expand_details.png" style="width: 30em;" />
+</a>
+</section>
+<section id="copy-parameter-values">
+<h4>Copy Parameter Values<a class="headerlink" href="#copy-parameter-values" title="Link to this heading"></a></h4>
+<p>To copy the value of any parameter in the expanded history entry, click the
+<strong>Copy</strong> icon located next to the value:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_expand_data_copy_value.png"><img alt="Copy value from history entry" class="align-center" src="../../_images/user_man_single_user_history_expand_data_copy_value.png" style="width: 30em;" />
+</a>
+<section id="add-parameters-as-table-columns">
+<h5>Add Parameters as Table Columns<a class="headerlink" href="#add-parameters-as-table-columns" title="Link to this heading"></a></h5>
+<p>You can add a parameter from the expanded data directly as a new table column.
+To add a parameter to the table, click the <strong>Eye</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_expand_data_visibility.png"><img alt="Add parameter as a table column" class="align-center" src="../../_images/user_man_single_user_history_expand_data_visibility.png" style="width: 30em;" />
+</a>
+</section>
+</section>
+<section id="grouped-history">
+<h4>Grouped History<a class="headerlink" href="#grouped-history" title="Link to this heading"></a></h4>
+<p>Some history records are grouped logically and highlighted to improve
+readability:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_grouped.png"><img alt="Grouped history entries" class="align-center" src="../../_images/user_man_single_user_history_grouped.png" style="width: 30em;" />
+</a>
+</section>
+<section id="filter-history">
+<h4>Filter History<a class="headerlink" href="#filter-history" title="Link to this heading"></a></h4>
+<p>To filter records, open the filter panel and enter a search value:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_user_history_filtering.png"><img alt="Filtering user history entries" class="align-center" src="../../_images/user_man_single_user_history_filtering.png" style="width: 55em;" />
+</a>
+</section>
+</section>
+<section id="bans">
+<h3>Bans<a class="headerlink" href="#bans" title="Link to this heading"></a></h3>
+<p>The <strong>Bans</strong> section allows administrators to manage user penalties, offender
+complaints, submitted complaints, and notes. Data is organized into separate
+tabs for each category:</p>
+<ul class="simple">
+<li><p><strong>Bans</strong>: Active and historical bans.</p></li>
+<li><p><strong>Complaints (offender)</strong>: Complaints filed against the user.</p></li>
+<li><p><strong>Complaints (submitted)</strong>: Complaints submitted by the user.</p></li>
+<li><p><strong>Notes</strong>: Administrative notes regarding the user.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/user_man_single_bans_tables.png"><img alt="Bans panel with separate tabs" class="align-center" src="../../_images/user_man_single_bans_tables.png" style="width: 45em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visibility and ordering of columns follow the settings defined in
+<a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
+</div>
+<section id="id2">
+<h4>Bans<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<section id="load-bans">
+<h5>Load Bans<a class="headerlink" href="#load-bans" title="Link to this heading"></a></h5>
+<p>To load ban records:</p>
+<ol class="arabic simple">
+<li><p>Select the desired <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a>.</p></li>
+<li><p>Enter any <strong>filter values</strong>.</p></li>
+<li><p>Click the <strong>Load</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/user_man_single_bans_load.png"><img alt="Load bans data with filters" class="align-center" src="../../_images/user_man_single_bans_load.png" style="width: 75em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, filters are empty and all bans are displayed for the entire period.</p>
+</div>
+</section>
+<section id="ban-fields-description">
+<h5>Ban Fields Description<a class="headerlink" href="#ban-fields-description" title="Link to this heading"></a></h5>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ban ID</strong></td>
+<td>Unique penalty identifier</td>
+</tr>
+<tr>
+<td><strong>Offender ID</strong></td>
+<td>ID of the user who received the penalty</td>
+</tr>
+<tr>
+<td><strong>Banned By</strong></td>
+<td>User ID of the administrator who issued the penalty</td>
+</tr>
+<tr>
+<td><strong>Complainer ID</strong></td>
+<td>User ID of the complainer whose complaint caused the penalty (<code>null</code> if the user was banned manually by an administrator)</td>
+</tr>
+<tr>
+<td><strong>Revoked By</strong></td>
+<td>User ID of administrator who revoked the penalty (<code>null</code> if the penalty has never been revoked)</td>
+</tr>
+<tr>
+<td><strong>Start</strong></td>
+<td>Time when the penalty started; if <code>Start On Login</code> is enabled, before the user logs in it equals the time when the penalty was created (displayed in UTC)</td>
+</tr>
+<tr>
+<td><strong>Till</strong></td>
+<td>Time when the penalty expires (displayed in UTC)</td>
+</tr>
+<tr>
+<td><strong>Last Update</strong></td>
+<td>Last update time (penalty created, revoked, etc.) (displayed in UTC)</td>
+</tr>
+<tr>
+<td><strong>Duration (sec)</strong></td>
+<td>Total duration of the penalty, in seconds</td>
+</tr>
+<tr>
+<td><strong>Left (sec)</strong></td>
+<td>Remaining time before the penalty expires, or an infinite placeholder value if <code>Start On Login</code> is enabled and the user hasn't logged in yet, in seconds</td>
+</tr>
+<tr>
+<td><strong>Start On Login</strong></td>
+<td>Whether the penalty starts immediately or on the user's next login</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td>Category of the violation that caused the penalty (Cheating, Abuse, etc.)</td>
+</tr>
+<tr>
+<td><strong>Penalty</strong></td>
+<td>Penalty type (Ban, Devoice, etc.)</td>
+</tr>
+<tr>
+<td><strong>Complaint ID</strong></td>
+<td>Identifier of the complaint that caused the penalty</td>
+</tr>
+<tr>
+<td><strong>Visible Comment</strong></td>
+<td>Comment displayed to the penalized user in the game client</td>
+</tr>
+<tr>
+<td><strong>Hidden Comment</strong></td>
+<td>Internal comment (not shown to the penalized user)</td>
+</tr>
+<tr>
+<td><strong>Details</strong></td>
+<td>May contain additional penalty details, such as <code>AUTOKICK(AUTOBAN)</code> flag</td>
+</tr>
+<tr>
+<td><strong>Transaction ID</strong></td>
+<td>Internal technical field</td>
+</tr>
+<tr>
+<td><strong>Tribunal Key</strong></td>
+<td>Internal technical field</td>
+</tr>
+<tr>
+<td><strong>Complainer Nick</strong></td>
+<td>Nickname of the complainer whose complaint caused the penalty (<code>null</code> if the user was banned manually by an administrator)</td>
+</tr>
+<tr>
+<td><strong>Complainer E-mail</strong></td>
+<td>E-mail address of the complainer whose complaint caused the penalty (<code>null</code> if the user was banned manually by an administrator). <strong>Requires additional permission to view</strong>.</td>
+</tr>
+<tr>
+<td><strong>Banned By (Nick)</strong></td>
+<td>User nickname of the administrator who issued the penalty</td>
+</tr>
+<tr>
+<td><strong>Banned By (E-mail)</strong></td>
+<td>E-mail address of the administrator who issued the penalty. <strong>Requires additional permission to view.</strong></td>
+</tr>
+<tr>
+<td><strong>Revoked By (Nick)</strong></td>
+<td>Nickname of the administrator who revoked the penalty (<code>null</code> if the penalty has never been revoked)</td>
+</tr>
+<tr>
+<td><strong>Revoked By (E-mail)</strong></td>
+<td>E-mail address of the administrator who revoked the penalty (<code>null</code> if the penalty has never been revoked). <strong>Requires additional permission to view.</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="expand-bans">
+<h5>Expand Bans<a class="headerlink" href="#expand-bans" title="Link to this heading"></a></h5>
+<p>To view detailed information about a ban and related complaint, click the
+<strong>Expand Row</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_bans_expanded_data.png"><img alt="Expanded ban row with details" class="align-center" src="../../_images/user_man_single_bans_expanded_data.png" style="width: 75em;" />
+</a>
+<section id="id3">
+<h6>Add Parameters as Table Columns<a class="headerlink" href="#id3" title="Link to this heading"></a></h6>
+<p>To add a parameter from expanded data as a table column, click the <strong>Eye</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_bans_expand_data_visibility.png"><img alt="Add ban parameter as table column" class="align-center" src="../../_images/user_man_single_bans_expand_data_visibility.png" style="width: 55em;" />
+</a>
+</section>
+</section>
+<section id="add-ban">
+<h5>Add Ban<a class="headerlink" href="#add-ban" title="Link to this heading"></a></h5>
+<p>To add a ban:</p>
+<ol class="arabic">
+<li><p>Click the <strong>Ban</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_from_bans.png"><img alt="Add ban from Bans" class="align-center" src="../../_images/user_man_single_add_ban_from_bans.png" style="width: 75em;" />
+</a>
+</li>
+<li><p>Fill in required fields (see <a class="reference internal" href="#ban-fields-description">fields description</a>):</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal.png"><img alt="Add ban modal form" class="align-center" src="../../_images/user_man_single_add_ban_modal.png" style="width: 35em;" />
+</a>
+</li>
+</ol>
+<section id="presets">
+<h6>Presets<a class="headerlink" href="#presets" title="Link to this heading"></a></h6>
+<p>Use preset comments to quickly fill the comment field.</p>
+<p>Open presets with the <strong>Settings</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal_presets_button.png"><img alt="Open comment presets" class="align-center" src="../../_images/user_man_single_add_ban_modal_presets_button.png" style="width: 35em;" />
+</a>
+<p>Presets window:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal_presets_window.png"><img alt="Presets selection window" class="align-center" src="../../_images/user_man_single_add_ban_modal_presets_window.png" style="width: 35em;" />
+</a>
+<p>Use available tags for filtering presets:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal_presets_tags.png"><img alt="Filter presets by tag" class="align-center" src="../../_images/user_man_single_add_ban_modal_presets_tags.png" style="width: 35em;" />
+</a>
+<p>To add preset to comment click the icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal_presets_add.png"><img alt="Add preset to comment" class="align-center" src="../../_images/user_man_single_add_ban_modal_presets_add.png" style="width: 55em;" />
+</a>
+<p>To edit preset click the icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal_presets_edit.png"><img alt="Edit preset" class="align-center" src="../../_images/user_man_single_add_ban_modal_presets_edit.png" style="width: 55em;" />
+</a>
+<p>To delete preset click the icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal_presets_delete.png"><img alt="Delete preset" class="align-center" src="../../_images/user_man_single_add_ban_modal_presets_delete.png" style="width: 55em;" />
+</a>
+</section>
+</section>
+<section id="revoke-ban">
+<h5>Revoke Ban<a class="headerlink" href="#revoke-ban" title="Link to this heading"></a></h5>
+<p>To revoke a ban, click the <strong>Revoke</strong> icon and confirm the action:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_revoke_ban.png"><img alt="Revoke ban button" class="align-center" src="../../_images/user_man_single_revoke_ban.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/user_man_single_confirm_revoke_ban.png"><img alt="Confirm revoke ban" class="align-center" src="../../_images/user_man_single_confirm_revoke_ban.png" style="width: 25em;" />
+</a>
+</section>
+</section>
+<section id="complaints-offender">
+<h4>Complaints (Offender)<a class="headerlink" href="#complaints-offender" title="Link to this heading"></a></h4>
+<section id="filter-complaints">
+<h5>Filter Complaints<a class="headerlink" href="#filter-complaints" title="Link to this heading"></a></h5>
+<p>To filter complaints:</p>
+<ol class="arabic simple">
+<li><p>Open the <strong>Filter</strong> panel.</p></li>
+<li><p>Select the <strong>date range</strong>.</p></li>
+<li><p>Enter filter criteria.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/user_man_single_compl_filters.png"><img alt="Offender complaints filters" class="align-center" src="../../_images/user_man_single_compl_filters.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, all complaints are displayed for the entire period.</p>
+</div>
+</section>
+<section id="expand-complaints">
+<h5>Expand Complaints<a class="headerlink" href="#expand-complaints" title="Link to this heading"></a></h5>
+<p>To view details of a complaint and associated penalty (if applicable), click the
+<strong>Expand Row</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_compl_expanded_data.png"><img alt="Expanded complaint row" class="align-center" src="../../_images/user_man_single_compl_expanded_data.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/user_man_single_compl_expanded_data_opened.png"><img alt="Complaint details opened" class="align-center" src="../../_images/user_man_single_compl_expanded_data_opened.png" style="width: 75em;" />
+</a>
+<section id="id4">
+<h6>Add Parameters as Table Columns<a class="headerlink" href="#id4" title="Link to this heading"></a></h6>
+<p>To add a parameter from the expanded data as a table column, click the <strong>Eye</strong>
+icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_compl_expanded_data_visibility.png"><img alt="Add complaint parameter as table column" class="align-center" src="../../_images/user_man_single_compl_expanded_data_visibility.png" style="width: 75em;" />
+</a>
+</section>
+</section>
+<section id="add-ban-on-complaint">
+<h5>Add Ban on Complaint<a class="headerlink" href="#add-ban-on-complaint" title="Link to this heading"></a></h5>
+<p>To add a ban based on the complaint:</p>
+<ol class="arabic">
+<li><p>Click the <strong>Ban</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban.png"><img alt="Add ban from complaint" class="align-center" src="../../_images/user_man_single_add_ban.png" style="width: 45em;" />
+</a>
+</li>
+<li><p>Fill in required fields:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_modal.png"><img alt="Add ban modal form" class="align-center" src="../../_images/user_man_single_add_ban_modal.png" style="width: 35em;" />
+</a>
+</li>
+</ol>
+<p>Use preset comments to quickly fill the comment field.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information on how to use presets, see <a class="reference internal" href="#presets">Presets</a>.</p>
+</div>
+</section>
+<section id="reject-complaint">
+<h5>Reject Complaint<a class="headerlink" href="#reject-complaint" title="Link to this heading"></a></h5>
+<p>To reject remaining complaints set the checkbox:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_reject_remaining_compl.png"><img alt="Reject remaining complaints" class="align-center" src="../../_images/user_man_single_reject_remaining_compl.png" style="width: 35em;" />
+</a>
+<p>To reject a single complaint click the <strong>Reject</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_reject_compl.png"><img alt="Reject single complaint" class="align-center" src="../../_images/user_man_single_reject_compl.png" style="width: 55em;" />
+</a>
+<p>To reject remaining complaints at the same time set the checkbox:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_reject_remaining_compl_button.png"><img alt="Reject all remaining complaints" class="align-center" src="../../_images/user_man_single_reject_remaining_compl_button.png" style="width: 25em;" />
+</a>
+</section>
+</section>
+<section id="complaints-submitted">
+<h4>Complaints (Submitted)<a class="headerlink" href="#complaints-submitted" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is under development. Content will be added in a future update.</p>
+</div>
+</section>
+<section id="notes">
+<h4>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h4>
+<section id="add-note">
+<h5>Add Note<a class="headerlink" href="#add-note" title="Link to this heading"></a></h5>
+<p>To add a new note, click the <strong>Add note</strong> button and fill in the required
+fields:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_new_note.png"><img alt="Add new note button" class="align-center" src="../../_images/user_man_single_add_new_note.png" style="width: 35em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_new_note_modal.png"><img alt="Add new note modal" class="align-center" src="../../_images/user_man_single_add_new_note_modal.png" style="width: 25em;" />
+</a>
+</section>
+<section id="delete-note">
+<h5>Delete Note<a class="headerlink" href="#delete-note" title="Link to this heading"></a></h5>
+<p>To delete a note, click the <strong>Delete</strong> button and confirm:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_delete_note.png"><img alt="Delete note button" class="align-center" src="../../_images/user_man_single_delete_note.png" style="width: 35em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/user_man_single_delete_note_modal.png"><img alt="Confirm delete note modal" class="align-center" src="../../_images/user_man_single_delete_note_modal.png" style="width: 25em;" />
+</a>
+</section>
+</section>
+</section>
+</section>
+<section id="multiple-users">
+<h2>Multiple Users<a class="headerlink" href="#multiple-users" title="Link to this heading"></a></h2>
+<p>The <strong>Multiple Users</strong> section provides tools for performing bulk operations on
+user accounts. This interface allows administrators to load a list of user
+identifiers, review the selection, and apply actions to multiple users
+simultaneously.</p>
+<p>To access it, open the corresponding menu item:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_users.png"><img alt="Multiple User" class="align-center" src="../../_images/user_man_multi_users.png" style="width: 15em;" />
+</a>
+<p>The <strong>Multiple Users</strong> window displays the following sections:</p>
+<ul class="simple">
+<li><p><strong>Userid list</strong>: Contains all user identifiers included in the bulk operation.
+This section allows administrators to review the list, add or remove IDs, load
+identifiers from external sources (CSV or text), and specify which ID should
+be used when retrieving action metadata.</p></li>
+<li><p><strong>My favorite actions</strong>: Frequently used bulk actions that can be applied to
+all users in the current list.</p></li>
+<li><p><strong>Actions by services</strong>: Actions aggregated from platform services:</p>
+<ul>
+<li><p>userstat</p></li>
+<li><p>profile</p></li>
+<li><p>contacts</p></li>
+<li><p>currency</p></li>
+</ul>
+</li>
+<li><p><strong>Bans</strong>: Tools and information for applying or removing restrictions across
+multiple users.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_sections.png"><img alt="Multiple users sections" class="align-center" src="../../_images/user_man_multi_user_sections.png" style="width: 75em;" />
+</a>
+<section id="userid-list">
+<h3>Userid List<a class="headerlink" href="#userid-list" title="Link to this heading"></a></h3>
+<p>The <strong>User ID list</strong> section reveals the input area where you can provide
+multiple user identifiers:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_userid_list.png"><img alt="Multiple users userids list" class="align-center" src="../../_images/user_man_multi_user_userid_list.png" style="width: 75em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The number of user IDs must be greater than 0 and must not exceed 10000.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Specific User ID for Action Retrieval</p>
+<p>If a specific user ID is required to retrieve the list of available actions,
+enter it into the <strong>Id for getting action</strong> field and click the <strong>Get API</strong>
+button:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_get_API_button.png"><img alt="Multiple users get API button" class="align-center" src="../../_images/user_man_multi_user_get_API_button.png" style="width: 75em;" />
+</a>
+<p>If this field is left empty, action metadata will be requested using the first
+identifier in the list.</p>
+</div>
+<p>After the identifiers are provided, all selected actions will be applied to
+every user included in the list.</p>
+<section id="load-ids-from-csv-file">
+<h4>Load IDs from CSV File<a class="headerlink" href="#load-ids-from-csv-file" title="Link to this heading"></a></h4>
+<p>To load multiple user IDs from a CSV file, click the <strong>Load from CSV</strong> button
+and select the required file:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_load_from_csv.png"><img alt="Multiple users load from csv modal" class="align-center" src="../../_images/user_man_multi_user_load_from_csv.png" style="width: 75em;" />
+</a>
+<p>Specify the column containing user IDs and press the <strong>Load File</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_load_from_csv_load.png"><img alt="Multiple users load from CSV" class="align-center" src="../../_images/user_man_multi_user_load_from_csv_load.png" style="width: 75em;" />
+</a>
+</section>
+<section id="load-ids-from-text-string">
+<h4>Load IDs from Text String<a class="headerlink" href="#load-ids-from-text-string" title="Link to this heading"></a></h4>
+<p>To load user IDs from a plain text string, click the <strong>Add ids from string
+data</strong> button</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_load_from_string.png"><img alt="Multiple users load from string button" class="align-center" src="../../_images/user_man_multi_user_load_from_string.png" style="width: 75em;" />
+</a>
+<p>and paste the list of identifiers separated by any of the supported delimiters:
+<code class="docutils literal notranslate"><span class="pre">,</span></code>, <code class="docutils literal notranslate"><span class="pre">\t</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">;</span></code>, or a space, and click <strong>Add ids</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_load_from_string_add_ids.png"><img alt="Multiple users load from string" class="align-center" src="../../_images/user_man_multi_user_load_from_string_add_ids.png" style="width: 30em;" />
+</a>
+<p>After confirming the input, the parsed user IDs will appear in the <strong>Input
+userid list</strong> field:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_load_from_string_added_ids.png"><img alt="Multiple users load from string" class="align-center" src="../../_images/user_man_multi_user_load_from_string_added_ids.png" style="width: 75em;" />
+</a>
+</section>
+</section>
+<section id="my-favorite-actions">
+<h3>My Favorite Actions<a class="headerlink" href="#my-favorite-actions" title="Link to this heading"></a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see
+<a class="reference internal" href="#actions">Actions</a>.</p>
+</div>
+</section>
+<section id="id5">
+<h3>User Data<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see
+<a class="reference internal" href="#user-data">User Data</a>.</p>
+</div>
+</section>
+<section id="id6">
+<h3>Bans<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information, see
+<a class="reference internal" href="#add-ban">Add ban</a>.</p>
+</div>
+</section>
+</section>
+<section id="banhammer">
+<h2>Banhammer<a class="headerlink" href="#banhammer" title="Link to this heading"></a></h2>
+<p>The Banhammer section allows administrators to manage offenders and bans for all
+users. Data is organized into separate tabs for each category:</p>
+<ul class="simple">
+<li><p><strong>Offenders</strong>: List of offenders</p></li>
+<li><p><strong>Ban list</strong>: All bans</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_sections.png"><img alt="Banhammer section" class="align-center" src="../../_images/user_man_banhammer_sections.png" style="width: 17em;" />
+</a>
+<section id="load-offenders">
+<h3>Load Offenders<a class="headerlink" href="#load-offenders" title="Link to this heading"></a></h3>
+<p>To load offenders records:</p>
+<ol class="arabic simple">
+<li><p>Select the desired <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a>.</p></li>
+<li><p>Enter any <strong>filter values</strong>.</p></li>
+<li><p>Click the <strong>Load</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_offenders_load.png"><img alt="Load offenders" class="align-center" src="../../_images/user_man_banhammer_offenders_load.png" style="width: 55em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, filters are empty and all bans are displayed for the entire period.</p>
+</div>
+<p>You can hide filters block for better visibility:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_closed_filters.png"><img alt="Close filters" class="align-center" src="../../_images/user_man_banhammer_closed_filters.png" style="width: 55em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visibility and ordering of columns follow the settings defined in
+<a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
+</div>
+<p>To view user information, click the <strong>View</strong> button. You will be redirected to
+the <strong>Single User</strong> section displaying this user’s data.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_user_data.png"><img alt="View user data" class="align-center" src="../../_images/user_man_banhammer_view_user_data.png" style="width: 55em;" />
+</a>
+</section>
+<section id="load-ban-list">
+<h3>Load Ban List<a class="headerlink" href="#load-ban-list" title="Link to this heading"></a></h3>
+<p>The ban list provides the same functionality as the <a class="reference internal" href="#bans">Bans</a> section.</p>
+<p>To view user information, click the <strong>View</strong> button. You will be redirected to
+the <strong>Single User</strong> section displaying this user’s data.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_ban_list_view_user_data.png"><img alt="View user data in ban list" class="align-center" src="../../_images/user_man_banhammer_ban_list_view_user_data.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+<section id="moderator-summaries">
+<h2>Moderator Summaries<a class="headerlink" href="#moderator-summaries" title="Link to this heading"></a></h2>
+<p>The <strong>Moderator Summaries</strong> section contains users actions info in charts and
+tables.</p>
+<section id="load-data">
+<h3>Load Data<a class="headerlink" href="#load-data" title="Link to this heading"></a></h3>
+<p>To load summary data:</p>
+<ol class="arabic simple">
+<li><p>Select the desired <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a>.</p></li>
+<li><p>Click the <strong>Load</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/user_man_moderator_summaries_block.png"><img alt="View user data in ban list" class="align-center" src="../../_images/user_man_moderator_summaries_block.png" style="width: 75em;" />
+</a>
+<p>The <strong>Bucket Size</strong> <span class="cnum">3</span> option controls how the data is showed in the
+chart.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Large date ranges combined with very small buckets may make the chart harder to
+read. Increase the bucket size if needed.</p>
+</div>
+<p>After loading the data, the interface displays the <strong>Users Info</strong> <span class="cnum">4</span>
+block, the <strong>Total Data</strong> <span class="cnum">5</span> block, and the <strong>Actions Table</strong> <span class="cnum">6</span>.
+When hovering over the chart <span class="cnum">7</span>, additional chart data is shown:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_moderator_summaries_data_by_chart.png"><img alt="View user data in ban list" class="align-center" src="../../_images/user_man_moderator_summaries_data_by_chart.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="deploy.html" class="btn btn-neutral float-left" title="Deploy Configs" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="logs.html" class="btn btn-neutral float-right" title="Logs" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="deploy.html" class="btn btn-neutral float-left" title="Deploy Configs" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="logs.html" class="btn btn-neutral float-right" title="Logs" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

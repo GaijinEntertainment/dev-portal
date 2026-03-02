@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables config format</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Unlocks config format" href="unlocks-config-format.html" />
+    <link rel="prev" title="Stats config format" href="stats-config-format.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Scripts config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats config format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tables config format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#statistic-tables">Statistic tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#table-format">Table format</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#table-description-format">Table description format</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#required-fields">Required fields</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#optional-fields">Optional fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#table-examples">Table examples</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#global-table">Global table</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#season-tables">Season tables</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#index-offset">Index offset</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#periodic">Periodic</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#slave-tables">Slave tables</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#auto-slave-tables">Auto slave tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks config format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
+      <li class="breadcrumb-item active">Tables config format</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="tables-config-format">
+<h1>Tables config format<a class="headerlink" href="#tables-config-format" title="Link to this heading"></a></h1>
+<section id="statistic-tables">
+<h2>Statistic tables<a class="headerlink" href="#statistic-tables" title="Link to this heading"></a></h2>
+<p>Tables combined with <a class="reference internal" href="modes-config-format.html"><span class="std std-doc">modes</span></a> make working with <a class="reference internal" href="stats-config-format.html"><span class="std std-doc">user statistic</span></a> very flexible and abstract. Table is a time period container for statistics, e.g:</p>
+<ul class="simple">
+<li><p>day</p></li>
+<li><p>week</p></li>
+<li><p>season</p></li>
+<li><p>global</p></li>
+</ul>
+<p>Each table contains all game modes which contain user statistics.
+Thus, you can use user statistics in each table independently, for
+<a class="reference internal" href="../../front/dev-portal-interface/leaderboard.html#leaderboard"><span class="std std-ref">Leaderboards</span></a>
+or for
+<a class="reference internal" href="unlocks-config-format.html"><span class="std std-doc">User achievements</span></a>.</p>
+<p>You can read about the interaction between the game and the statistics server here:
+.</p>
+<section id="table-format">
+<h3>Table format<a class="headerlink" href="#table-format" title="Link to this heading"></a></h3>
+<p>To use and store statistics, you need to add tables description to
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">tables config</span></a>,
+and
+<a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">deploy configs</span></a>
+to services.</p>
+<section id="table-description-format">
+<h4>Table description format<a class="headerlink" href="#table-description-format" title="Link to this heading"></a></h4>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;season&quot;</span><span class="p">,</span><span class="w">                                                               </span><span class="c1">// required</span>
+
+<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span><span class="w">                                                        </span><span class="c1">// optional, default = &quot;NONE&quot;</span>
+<span class="w">  </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">                                                                </span><span class="c1">// optional, default = false</span>
+<span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6w&quot;</span><span class="p">,</span><span class="w">                                                                 </span><span class="c1">// optional</span>
+<span class="w">  </span><span class="nt">&quot;indexOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">                                                               </span><span class="c1">// optional, default = 0</span>
+<span class="w">  </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-01T00:00:00Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2030-01-01T00:00:00Z&quot;</span><span class="p">}],</span><span class="w"> </span><span class="c1">// optional</span>
+<span class="w">  </span><span class="nt">&quot;slave&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;master&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;season&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timeOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2w&quot;</span><span class="w"> </span><span class="p">},</span><span class="w">        </span><span class="c1">// optional</span>
+<span class="w">  </span><span class="nt">&quot;autoSlaves&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">&quot;period&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1w&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;week&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;persistent&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}]</span><span class="w">         </span><span class="c1">// optional</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="required-fields">
+<h5>Required fields<a class="headerlink" href="#required-fields" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<em>string</em>) – name of the table, must be unique.</p></li>
+</ul>
+</section>
+<section id="optional-fields">
+<h5>Optional fields<a class="headerlink" href="#optional-fields" title="Link to this heading"></a></h5>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code> (<em>string</em>) – type of the leaderboard creating for this table, possible values:</p>
+<ul class="simple">
+<li><p>“NONE” – leaderboard will not be generated for this table.</p></li>
+<li><p>“SIMPLE” – generate leaderboard without <em>groups</em> for this table.</p></li>
+<li><p>“GROUPING” – generate groups leaderboard for this table. Group can be used to implement leagues or buckets in leaderboard. See <a class="reference internal" href="stats-config-format.html#leaderboard-group"><span class="std std-ref">Leaderboard group</span></a>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<em>bool</em>) – determines whether the stats for this table should be visible to another user.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This works only for stats with <code class="docutils literal notranslate"><span class="pre">showForAll</span></code> = <em>true</em> and <em>public</em> modes.
+To request another user statistics use
+
+action.</p>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> (<em>string</em>) – the period of the table, next season will start automatically after period time. Used only with <code class="docutils literal notranslate"><span class="pre">timeline</span></code> parameter. <a class="reference internal" href="#periodic">Example</a>. Format: number 1-16 digits and postfix (<code class="docutils literal notranslate"><span class="pre">s</span></code> - seconds, <code class="docutils literal notranslate"><span class="pre">m</span></code> - minutes, <code class="docutils literal notranslate"><span class="pre">h</span></code> - hours, <code class="docutils literal notranslate"><span class="pre">d</span></code> - days, <code class="docutils literal notranslate"><span class="pre">w</span></code> - weeks). For example: <code class="docutils literal notranslate"><span class="pre">12h</span></code>, <code class="docutils literal notranslate"><span class="pre">1d</span></code>, <code class="docutils literal notranslate"><span class="pre">1w</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexOffset</span></code> (<em>int</em>) – table index offset, useful if you want to remove the old season. Only used with <code class="docutils literal notranslate"><span class="pre">timeline</span></code> parameter. <a class="reference internal" href="#index-offset">Example</a>.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can use only one parameter per table: <code class="docutils literal notranslate"><span class="pre">timeline</span></code>, <code class="docutils literal notranslate"><span class="pre">autoSlaves</span></code>, <code class="docutils literal notranslate"><span class="pre">slave</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">timeline</span></code> (<em>array</em>) – array of table time periods that are set manually. <a class="reference internal" href="#season-tables">Example</a>.
+Array parameter is a json object that has the following fields:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<em>string</em>) – date of the table time period start. Date example: <code class="docutils literal notranslate"><span class="pre">2020-05-15T11:00:00Z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<em>string</em>) – date of the table time period end. Optional parameter, if not set table will be exist always.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slave</span></code> (<em>json object</em>) – block of parameters to create dependent table. See <a class="reference internal" href="#slave-tables">Example</a>.
+Slave table parameters:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">master</span></code> – name of the master table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> – duration (<code class="docutils literal notranslate"><span class="pre">end</span></code>–<code class="docutils literal notranslate"><span class="pre">start</span></code>) of the table timeline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOffset</span></code> – offset of slave start time from master table start time.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoSlaves</span></code> (<em>array</em>) – array of the table generators. Each array element generates a sequence of tables. See <a class="reference internal" href="#auto-slave-tables">Examples</a>.
+Array parameter is a json object that has the following fields:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> – the period of generated tables, each generated table will have <code class="docutils literal notranslate"><span class="pre">duration</span></code> = <code class="docutils literal notranslate"><span class="pre">period</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> – the prefix of the name of generated tables, index will be added automatically. For example <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;:&quot;week&quot;</span></code> will generate tables: <em>week1</em>, <em>week2</em>, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">persistent</span></code> – if true all generated tables will have end as master table, otherwise <code class="docutils literal notranslate"><span class="pre">end</span></code> = <code class="docutils literal notranslate"><span class="pre">start</span></code> + <code class="docutils literal notranslate"><span class="pre">period</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When the table is ended, all table statistics are cleared. In the next time period of the table all statistics will be accumulated again.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="table-examples">
+<h3>Table examples<a class="headerlink" href="#table-examples" title="Link to this heading"></a></h3>
+<section id="global-table">
+<h4>Global table<a class="headerlink" href="#global-table" title="Link to this heading"></a></h4>
+<p>This table always exists:</p>
+<p><strong>Global table</strong>, not used for Leaderboard, not public.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Global lb table</strong>, with Leaderboard and public.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global_lb&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="season-tables">
+<h4>Season tables<a class="headerlink" href="#season-tables" title="Link to this heading"></a></h4>
+<p><strong>season</strong> – table with 4 seasons, last season is active now. Active season has index = 4.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;season&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2022-10-01T00:00:00Z&quot;</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-12-31T00:00:00Z&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2022-12-31T00:00:00Z&quot;</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-02-10T00:00:00Z&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2023-03-10T00:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-15T00:00:00ZZ&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2023-05-01T00:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2030-01-01T00:00:00ZZ&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="index-offset">
+<h5>Index offset<a class="headerlink" href="#index-offset" title="Link to this heading"></a></h5>
+<p>If old season timeline information not important for you, use <code class="docutils literal notranslate"><span class="pre">indexOffset</span></code> parameter for shorter.</p>
+<p><strong>season</strong> – table with 4 seasons, first 2 removed and used <code class="docutils literal notranslate"><span class="pre">indexOffset</span></code>. So active season has index = 4.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;season&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;indexOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2023-03-10T00:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-15T00:00:00ZZ&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2023-05-01T00:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2030-01-01T00:00:00ZZ&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="periodic">
+<h5>Periodic<a class="headerlink" href="#periodic" title="Link to this heading"></a></h5>
+<p><strong>week</strong> – periodic table starts in <code class="docutils literal notranslate"><span class="pre">2022-10-17T00:00:00Z</span></code> and repeats each week.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;week&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1w&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-10-17T00:00:00Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>day</strong> – periodic table starts in <code class="docutils literal notranslate"><span class="pre">2022-10-17T00:00:00Z</span></code> and repeats each day.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;day&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;period&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1d&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-10-17T00:00:00Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="slave-tables">
+<h4>Slave tables<a class="headerlink" href="#slave-tables" title="Link to this heading"></a></h4>
+<p>Slave tables help to implement difficult mechanics.</p>
+<p><strong>first 3 days</strong> – save statistics for the first 3 days of the start of each season:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;first_3_days_of_season&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;slave&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;duration&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3d&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;master&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;season&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Or if you need to save statistics only <em>after first 3 days</em>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;after_first_3_days&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;slave&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;master&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;season&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;timeOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3d&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When you add new season, and all slave tables will work automatically.</p>
+</section>
+<section id="auto-slave-tables">
+<h4>Auto slave tables<a class="headerlink" href="#auto-slave-tables" title="Link to this heading"></a></h4>
+<p><strong>tournament daily</strong> – generates daily tables for the tournament.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tournament&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-01T12:00:00ZZ&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-10T23:00:00ZZ&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;autoSlaves&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;period&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1d&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tournament_day&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Will be generated 10 tables:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tournament_day1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-01T12:00:00ZZ&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-02T12:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tournament_day2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-02T12:00:00ZZ&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-03T12:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tournament_day10&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;timeline&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-10T12:00:00ZZ&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-05-10T23:00:00ZZ&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Maximum number of automatically generated slave tables = <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="stats-config-format.html" class="btn btn-neutral float-left" title="Stats config format" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="unlocks-config-format.html" class="btn btn-neutral float-right" title="Unlocks config format" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="stats-config-format.html" class="btn btn-neutral float-left" title="Stats config format" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="unlocks-config-format.html" class="btn btn-neutral float-right" title="Unlocks config format" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

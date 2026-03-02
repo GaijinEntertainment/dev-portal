@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workspace Configs</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deploy Configs" href="deploy.html" />
+    <link rel="prev" title="Workspaces: Services" href="services.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Workspace Configs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multi-element-configurations">Multi-Element Configurations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-new-configuration">Add New Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-configuration">Delete Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-configuration">Edit Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-differences">Show differences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bulk-edit-configuration">Bulk Edit Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-configurations">Upload Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-configurations">Download Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-configurations">Filter Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#view-namespaces">View Namespaces</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#add-namespace">Add Namespace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#single-configurations">Single Configurations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Edit Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-configuration">Upload Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-configuration">Download Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#includes">Includes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namespace-includes">Namespace Includes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#script-configurations">Script Configurations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scripts-upload-download-and-validation">Scripts Upload, Download, and Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scripts-archive">Scripts Archive</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#scripts-tree">Scripts Tree</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#search-scripts">Search Scripts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#create-new-file">Create New File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#create-new-folder">Create New Folder</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#rename-files-and-folders">Rename Files and Folders</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#delete-files-and-folders">Delete Files and Folders</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#save-script-changes">Save Script Changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Workspace Configs</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="workspace-configs">
+<h1>Workspace Configs<a class="headerlink" href="#workspace-configs" title="Link to this heading"></a></h1>
+<p>The <strong>Workspace Configs</strong> section is the primary interface for managing game
+service configurations within the Dev Portal. It provides access to all
+configuration types used by the game services, organized by logical domains and
+namespaces.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man.png"><img alt="Workspace configs" class="align-center" src="../../_images/conf_man.png" style="width: 15em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the Dev Portal interface, <strong>configs</strong> refer to configuration entities
+described in this documentation as <strong>configurations</strong>.</p>
+</div>
+<p>Workspace configurations are grouped into the following sections:</p>
+<ul class="simple">
+<li><p><strong>userstst</strong></p></li>
+<li><p><strong>profile</strong></p></li>
+<li><p><strong>contacts</strong></p></li>
+<li><p><strong>currency</strong></p></li>
+<li><p><strong>common</strong></p></li>
+</ul>
+<p>To open a specific section, select it from the navigation panel:</p>
+<a class="reference internal image-reference" href="../../_images/conf_opened.png"><img alt="Workspace configs opened" class="align-center" src="../../_images/conf_opened.png" style="width: 15em;" />
+</a>
+<p>Each section contains tabs with all related game configurations.</p>
+<p>The workspace supports several configuration types, grouped by their structure
+and editing behavior.</p>
+<section id="multi-element-configurations">
+<h2>Multi-Element Configurations<a class="headerlink" href="#multi-element-configurations" title="Link to this heading"></a></h2>
+<p>Multi-element configurations consist of an array of homogeneous elements (for
+example, stats or tables). All multi-element configurations share the same
+editing workflow.</p>
+<p>Supported multi-element configuration types:</p>
+<ul class="simple">
+<li><p>Stats <a class="reference internal" href="../../back/configs_format/stats-config-format.html#stats-config-format"><span class="std std-ref">(see format)</span></a></p></li>
+<li><p>Unlocks <a class="reference internal" href="../../back/configs_format/unlocks-config-format.html#unlocks-config-format"><span class="std std-ref">(see format)</span></a></p></li>
+<li><p>Modes <a class="reference internal" href="../../back/configs_format/modes-config-format.html#modes-config-format"><span class="std std-ref">(see format)</span></a></p></li>
+<li><p>Tables <a class="reference internal" href="../../back/configs_format/tables-config-format.html#tables-config-format"><span class="std std-ref">(see format)</span></a></p></li>
+<li><p>Triggers (coming soon)</p></li>
+<li><p>Currencies (coming soon)</p></li>
+<li><p>Includes (coming soon)</p></li>
+<li><p>Purchases (coming soon)</p></li>
+<li><p>Schedule (coming soon)</p></li>
+<li><p>Queues (coming soon)</p></li>
+<li><p>Lobby Templates (coming soon)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visibility and order of table columns follow the settings defined in
+<a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
+</div>
+<p>The element configuration management described below uses the <strong>userstat &gt;
+stats</strong> configuration as an example.</p>
+<section id="add-new-configuration">
+<h3>Add New Configuration<a class="headerlink" href="#add-new-configuration" title="Link to this heading"></a></h3>
+<p>To add a new configuration element:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Add stat</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_add_element.png"><img alt="Add element" class="align-center" src="../../_images/conf_add_element.png" style="width: 60em;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>A new element will be created with default values.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_added_element.png"><img alt="Added element" class="align-center" src="../../_images/conf_added_element.png" style="width: 60em;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Fill in the required fields.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_add_element_save.png"><img alt="Add element name" class="align-center" src="../../_images/conf_add_element_save.png" style="width: 60em;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>Click the <strong>Save</strong> button to persist the changes.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/leave_page_modal.png"><img alt="Leave page modal" class="align-center" src="../../_images/leave_page_modal.png" style="width: 20em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes are not saved automatically.
+If the page is reloaded before clicking <strong>Save</strong>, all unsaved changes will be
+lost.</p>
+</div>
+</section>
+<section id="delete-configuration">
+<h3>Delete Configuration<a class="headerlink" href="#delete-configuration" title="Link to this heading"></a></h3>
+<p>To delete a single configuration element:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Remove</strong> button in the corresponding row.</p></li>
+<li><p>Confirm the action in the modal dialog.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_remove_element.png"><img alt="Remove element" class="align-center" src="../../_images/conf_remove_element.png" style="width: 60em;" />
+</a>
+<p>To delete multiple elements:</p>
+<ol class="arabic simple">
+<li><p>Select the required elements using checkboxes.</p></li>
+<li><p>Click the <strong>Delete selected</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_remove_elements.png"><img alt="Remove several elements" class="align-center" src="../../_images/conf_remove_elements.png" style="width: 60em;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Confirm the deletion in the modal dialog.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_remove_elements_confirm.png"><img alt="Confirm the action" class="align-center" src="../../_images/conf_remove_elements_confirm.png" style="width: 20em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Deletion must be explicitly confirmed in the confirmation dialog.</p>
+</div>
+</section>
+<section id="edit-configuration">
+<h3>Edit Configuration<a class="headerlink" href="#edit-configuration" title="Link to this heading"></a></h3>
+<p>To edit config element, use <a class="reference internal" href="code_editor.html"><span class="std std-doc">Code Editor</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/conf_edit_element.png"><img alt="Edit element" class="align-center" src="../../_images/conf_edit_element.png" style="width: 60em;" />
+</a>
+<p>To open the Code Editor, click the <strong>arrow</strong> icon (a chevron located at the left
+side of each row).</p>
+<a class="reference internal image-reference" href="../../_images/conf_edit_element_open.png"><img alt="Edit element open" class="align-center" src="../../_images/conf_edit_element_open.png" style="width: 60em;" />
+</a>
+<p>The editor supports syntax highlighting, code completion, error markers, and
+change markers.</p>
+<p>Changes can be saved in two ways:</p>
+<ul class="simple">
+<li><p>Click the <strong>Save</strong> button in the row to save the current configuration</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/conf_save.png"><img alt="Edit element open" class="align-center" src="../../_images/conf_save.png" style="width: 60em;" />
+</a>
+<ul class="simple">
+<li><p>Click the <strong>Save All</strong> button at the top of the table to save all modified
+configurations</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/conf_save_all.png"><img alt="Edit element open" class="align-center" src="../../_images/conf_save_all.png" style="width: 60em;" />
+</a>
+</section>
+<section id="show-differences">
+<h3>Show differences<a class="headerlink" href="#show-differences" title="Link to this heading"></a></h3>
+<p>To see differences choose checkbox in the <code class="docutils literal notranslate"><span class="pre">UI</span> <span class="pre">Settings</span></code> menu.</p>
+<a class="reference internal image-reference" href="../../_images/conf_show_diff_block.png"><img alt="Show diff block" class="align-center" src="../../_images/conf_show_diff_block.png" style="width: 60em;" />
+</a>
+<p>Differences block is displayed in the right side.</p>
+<a class="reference internal image-reference" href="../../_images/conf_diff_block.png"><img alt="Show diff block displayed" class="align-center" src="../../_images/conf_diff_block.png" style="width: 60em;" />
+</a>
+</section>
+<section id="bulk-edit-configuration">
+<h3>Bulk Edit Configuration<a class="headerlink" href="#bulk-edit-configuration" title="Link to this heading"></a></h3>
+<p>To edit multiple configurations at once:</p>
+<ol class="arabic simple">
+<li><p>Select configurations in the table.</p></li>
+<li><p>Click the <strong>Change selected</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_checked_for_edit.png"><img alt="Checked configs for edit" class="align-center" src="../../_images/conf_checked_for_edit.png" style="width: 60em;" />
+</a>
+<p>To preview differences between the current and original data click the <strong>Show
+diff</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_change_checked_configs_modal.png"><img alt="Change checked configs modal" class="align-center" src="../../_images/conf_change_checked_configs_modal.png" style="width: 60em;" />
+</a>
+<p>To apply changes click the <strong>Save</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_change_checked_configs_diff.png"><img alt="Change checked configs diff" class="align-center" src="../../_images/conf_change_checked_configs_diff.png" style="width: 60em;" />
+</a>
+</section>
+<section id="upload-configurations">
+<h3>Upload Configurations<a class="headerlink" href="#upload-configurations" title="Link to this heading"></a></h3>
+<p>To upload configurations from a local file:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Upload config</strong> button.</p></li>
+<li><p>Select the file from your local filesystem.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_upload.png"><img alt="Upload config" class="align-center" src="../../_images/conf_upload.png" style="width: 60em;" />
+</a>
+</section>
+<section id="download-configurations">
+<h3>Download Configurations<a class="headerlink" href="#download-configurations" title="Link to this heading"></a></h3>
+<p>To download configurations:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Download config</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_download.png"><img alt="Download config" class="align-center" src="../../_images/conf_download.png" style="width: 60em;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>(Optional) Choose whether to group configurations by namespace.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_download_modal.png"><img alt="Download config modal" class="align-center" src="../../_images/conf_download_modal.png" style="width: 30em;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Confirm the download.</p></li>
+</ol>
+</section>
+<section id="filter-configurations">
+<h3>Filter Configurations<a class="headerlink" href="#filter-configurations" title="Link to this heading"></a></h3>
+<p>To filter configurations:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Filter</strong> button to open the filter panel.</p></li>
+<li><p>Specify filter parameters.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_open_filter.png"><img alt="Open filter block" class="align-center" src="../../_images/conf_open_filter.png" style="width: 60em;" />
+</a>
+<p>Hover over the <strong>Info</strong> icon to see hints for filling in filter fields.</p>
+<a class="reference internal image-reference" href="../../_images/conf_open_filter_hint.png"><img alt="Open filter block hint" class="align-center" src="../../_images/conf_open_filter_hint.png" style="width: 60em;" />
+</a>
+</section>
+<section id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h3>
+<p>Configurations are logically grouped by <strong>namespaces</strong>.</p>
+<section id="view-namespaces">
+<h4>View Namespaces<a class="headerlink" href="#view-namespaces" title="Link to this heading"></a></h4>
+<p>To open the namespace list, click the <strong>Current namespace:</strong> dropdown.</p>
+<a class="reference internal image-reference" href="../../_images/conf_namespaces_list.png"><img alt="Namespaces list" class="align-center" src="../../_images/conf_namespaces_list.png" style="width: 60em;" />
+</a>
+<p>Select a namespace to display only configurations that belong to it.</p>
+<a class="reference internal image-reference" href="../../_images/conf_select_namespace.png"><img alt="Select namespace" class="align-center" src="../../_images/conf_select_namespace.png" style="width: 60em;" />
+</a>
+</section>
+<section id="add-namespace">
+<h4>Add Namespace<a class="headerlink" href="#add-namespace" title="Link to this heading"></a></h4>
+<p>To create a new namespace:</p>
+<ol class="arabic simple">
+<li><p>Click <strong>Add Namespace</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_add_namespace_button.png"><img alt="Add namespace button" class="align-center" src="../../_images/conf_add_namespace_button.png" style="width: 15em;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>Enter the namespace name.</p></li>
+<li><p>Click <strong>OK</strong> to confirm.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/conf_add_namespace_confirm.png"><img alt="Add namespace confirm" class="align-center" src="../../_images/conf_add_namespace_confirm.png" style="width: 30em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only namespaces created in the current workspace can be removed.</p>
+<a class="reference internal image-reference" href="../../_images/conf_remove_namespace.png"><img alt="Remove namespace" class="align-center" src="../../_images/conf_remove_namespace.png" style="width: 15em;" />
+</a>
+</div>
+</section>
+</section>
+</section>
+<section id="single-configurations">
+<h2>Single Configurations<a class="headerlink" href="#single-configurations" title="Link to this heading"></a></h2>
+<p>A single configuration is represented as a JSON object and may contain fields of
+different types. To edit a single configuration, use the <a class="reference internal" href="code_editor.html"><span class="std std-doc">Code
+Editor</span></a>.</p>
+<p>Supported single configuration types:</p>
+<ul class="simple">
+<li><p>Contacts <a class="reference internal" href="../../back/configs_format/contacts-config-format.html#contacts-config-format"><span class="std std-ref">(see format)</span></a></p></li>
+<li><p>Tribunal (coming soon)</p></li>
+<li><p>Cloud (see format)</p></li>
+</ul>
+<section id="id1">
+<h3>Edit Configuration<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/conf_single_edit.png"><img alt="Single config edit" class="align-center" src="../../_images/conf_single_edit.png" style="width: 60em;" />
+</a>
+<p>To save the changes, click the <strong>Save</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_single_save_button.png"><img alt="Single config save" class="align-center" src="../../_images/conf_single_save_button.png" style="width: 60em;" />
+</a>
+</section>
+<section id="upload-configuration">
+<h3>Upload Configuration<a class="headerlink" href="#upload-configuration" title="Link to this heading"></a></h3>
+<p>To upload configurations from a local directory, click the <strong>Upload config</strong>
+button and select a file.</p>
+<a class="reference internal image-reference" href="../../_images/conf_single_upload.png"><img alt="Upload single config" class="align-center" src="../../_images/conf_single_upload.png" style="width: 60em;" />
+</a>
+</section>
+<section id="download-configuration">
+<h3>Download Configuration<a class="headerlink" href="#download-configuration" title="Link to this heading"></a></h3>
+<p>To download configurations to a local directory, click the <strong>Download config</strong>
+button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_single_download.png"><img alt="Download single config" class="align-center" src="../../_images/conf_single_download.png" style="width: 60em;" />
+</a>
+<p>The editor supports syntax highlighting, code completion, error markers, and
+change markers.</p>
+</section>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading"></a></h2>
+<p>The <strong>Includes</strong> mechanism enables reuse and sharing of common configuration
+parts across multiple configs. It is structured in the same way as a standard
+multi-element configuration.</p>
+<p>For example, if multiple stat elements require identical minimum and maximum
+limits, these values can be defined once in the <strong>Includes</strong> section and reused
+across all relevant elements instead of being duplicated.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_01.png"><img alt="Include elements" class="align-center" src="../../_images/conf_man_includes_ex_01.png" style="width: 75em;" />
+</a>
+<p>After an include is defined, it can be referenced in a stat element by its name.
+The resulting element, validated against the schema, can be viewed by enabling
+the <strong>UI settings / Show resolved block</strong> option.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_02.png"><img alt="Stat element with includes" class="align-center" src="../../_images/conf_man_includes_ex_02.png" style="width: 75em;" />
+</a>
+<p>Include templates can be created either for entire elements or for specific
+fields. This is done by selecting the appropriate schema in the <code class="docutils literal notranslate"><span class="pre">schemaPath</span></code>
+values. To view the list of available schemas, start typing or press
+<span class="sd-sphinx-override sd-badge sd-outline-dark sd-text-dark">Ctrl</span>+<span class="sd-sphinx-override sd-badge sd-outline-dark sd-text-dark">Space</span>.</p>
+<p>An include may reference another include; however, the nesting depth is limited.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_03.png"><img alt="Nested includes" class="align-center" src="../../_images/conf_man_includes_ex_03.png" style="width: 75em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Root-level key values have the highest priority and override values defined in
+includes.</p></li>
+<li><p>The include list is merged before being applied to the element. If the same
+keys are defined in multiple includes, values from later includes override
+those from earlier ones.</p></li>
+</ul>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">environment</span></code> placeholder can be used to define environment-specific
+variables. This allows the same configuration to be reused across multiple
+environments.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_04.png"><img alt="Environment placeholder example 1" class="align-center" src="../../_images/conf_man_includes_ex_04.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_05.png"><img alt="Environment placeholder example 2" class="align-center" src="../../_images/conf_man_includes_ex_05.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_06.png"><img alt="Environment placeholder example 3" class="align-center" src="../../_images/conf_man_includes_ex_06.png" style="width: 75em;" />
+</a>
+<p>As a result, the same tag can be deployed to different environments:</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_07.png"><img alt="Environment placeholder example 4" class="align-center" src="../../_images/conf_man_includes_ex_07.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_08.png"><img alt="Environment placeholder example 5" class="align-center" src="../../_images/conf_man_includes_ex_08.png" style="width: 75em;" />
+</a>
+<p>Includes are fully resolved during the validation stage. Therefore, creating and
+validating a tag remains the recommended way to ensure configuration consistency
+and correctness.</p>
+</section>
+<section id="namespace-includes">
+<h2>Namespace Includes<a class="headerlink" href="#namespace-includes" title="Link to this heading"></a></h2>
+<p>The namespace includes mechanism is conceptually similar to
+<a class="reference internal" href="#includes">Includes</a> but has additional specifics. It is intended for splitting
+a large configuration into multiple namespace-based sections.</p>
+<p>Consider a configuration defined as a single file:</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_ns_includes_ex_01.png"><img alt="Namespace includes example 1" class="align-center" src="../../_images/conf_man_ns_includes_ex_01.png" style="width: 75em;" />
+</a>
+<p>When a configuration becomes large and contains many branches, managing and
+formatting it as a single monolithic structure can be difficult. In such cases,
+namespace includes can be used to improve organization.</p>
+<p>The configuration can be split into multiple elements across different
+namespaces using base templates:</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_ns_includes_ex_02.png"><img alt="Namespace includes example 2" class="align-center" src="../../_images/conf_man_ns_includes_ex_02.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_man_ns_includes_ex_03.png"><img alt="Namespace includes example 3" class="align-center" src="../../_images/conf_man_ns_includes_ex_03.png" style="width: 75em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_man_ns_includes_ex_04.png"><img alt="Namespace includes example 4" class="align-center" src="../../_images/conf_man_ns_includes_ex_04.png" style="width: 75em;" />
+</a>
+<p>All parts can then be combined using the <code class="docutils literal notranslate"><span class="pre">#include_namespace</span></code> keyword by listing
+the namespaces to be included:</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_ns_includes_ex_05.png"><img alt="Namespace includes example 5" class="align-center" src="../../_images/conf_man_ns_includes_ex_05.png" style="width: 75em;" />
+</a>
+</section>
+<section id="script-configurations">
+<h2>Script Configurations<a class="headerlink" href="#script-configurations" title="Link to this heading"></a></h2>
+<p>Script configurations are used to manage executable logic associated with player
+profiles.</p>
+<ul class="simple">
+<li><p>Scripts <a class="reference internal" href="../../back/configs_format/profile-config-format.html#player-scripts-profile"><span class="std std-ref">(see format)</span></a></p></li>
+</ul>
+<p>The profile server uses script configurations written in the
+<a class="reference external" href="https://dascript.org/">daScript</a> language.</p>
+<section id="scripts-upload-download-and-validation">
+<h3>Scripts Upload, Download, and Validation<a class="headerlink" href="#scripts-upload-download-and-validation" title="Link to this heading"></a></h3>
+<p>Scripts are uploaded and downloaded as a ZIP archive containing a directory with
+script files:</p>
+<ul class="simple">
+<li><p><strong>Upload ZIP</strong> — Uploads scripts as a ZIP archive containing a directory with
+script files.</p></li>
+<li><p><strong>Download ZIP</strong> — Downloads the current scripts as a ZIP archive.</p></li>
+<li><p><strong>Upload from directory</strong> — Uploads scripts by creating a ZIP archive directly
+from a local directory (supported only in Chrome and Edge).</p></li>
+<li><p><strong>Check scripts compilation</strong> — Checks that all uploaded scripts compile
+successfully.</p></li>
+<li><p><strong>Save all</strong> — Saves all changes made to the scripts.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/conf_scripts_management.png"><img alt="Scripts Management" class="align-center" src="../../_images/conf_scripts_management.png" style="width: 75em;" />
+</a>
+</section>
+<section id="scripts-archive">
+<h3>Scripts Archive<a class="headerlink" href="#scripts-archive" title="Link to this heading"></a></h3>
+<section id="scripts-tree">
+<h4>Scripts Tree<a class="headerlink" href="#scripts-tree" title="Link to this heading"></a></h4>
+<p>Scripts are displayed as a directory tree.</p>
+<a class="reference internal image-reference" href="../../_images/conf_scripts_tree.png"><img alt="Scripts tree" class="align-center" src="../../_images/conf_scripts_tree.png" style="width: 60em;" />
+</a>
+</section>
+<section id="search-scripts">
+<h4>Search Scripts<a class="headerlink" href="#search-scripts" title="Link to this heading"></a></h4>
+<p>To search for a script file, enter its name in the search field.</p>
+<a class="reference internal image-reference" href="../../_images/conf_scripts_tree_search.png"><img alt="Search script" class="align-center" src="../../_images/conf_scripts_tree_search.png" style="width: 60em;" />
+</a>
+</section>
+<section id="create-new-file">
+<h4>Create New File<a class="headerlink" href="#create-new-file" title="Link to this heading"></a></h4>
+<p>To create a new file in the selected directory, click the <strong>New File</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_create_new_file.png"><img alt="Create new file" class="align-center" src="../../_images/conf_create_new_file.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_create_new_file_modal.png"><img alt="Create new file modal" class="align-center" src="../../_images/conf_create_new_file_modal.png" style="width: 25em;" />
+</a>
+</section>
+<section id="create-new-folder">
+<h4>Create New Folder<a class="headerlink" href="#create-new-folder" title="Link to this heading"></a></h4>
+<p>To create a new folder in the selected directory, click the <strong>New Folder</strong>
+button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_create_new_folder.png"><img alt="Create new folder" class="align-center" src="../../_images/conf_create_new_folder.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_create_new_folder_modal.png"><img alt="Create new folder modal" class="align-center" src="../../_images/conf_create_new_folder_modal.png" style="width: 25em;" />
+</a>
+</section>
+<section id="rename-files-and-folders">
+<h4>Rename Files and Folders<a class="headerlink" href="#rename-files-and-folders" title="Link to this heading"></a></h4>
+<p>To rename a file or folder, click the <strong>Rename</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_rename_file_or_folder.png"><img alt="Rename file or folder" class="align-center" src="../../_images/conf_rename_file_or_folder.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_rename_file_or_folder_modal.png"><img alt="Rename file or folder modal" class="align-center" src="../../_images/conf_rename_file_or_folder_modal.png" style="width: 25em;" />
+</a>
+</section>
+<section id="delete-files-and-folders">
+<h4>Delete Files and Folders<a class="headerlink" href="#delete-files-and-folders" title="Link to this heading"></a></h4>
+<p>To delete a file or folder, click the <strong>Delete</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_delete_file_or_folder.png"><img alt="Delete file or folder" class="align-center" src="../../_images/conf_delete_file_or_folder.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/conf_delete_file_or_folder_modal.png"><img alt="Delete file or folder modal" class="align-center" src="../../_images/conf_delete_file_or_folder_modal.png" style="width: 25em;" />
+</a>
+</section>
+<section id="save-script-changes">
+<h4>Save Script Changes<a class="headerlink" href="#save-script-changes" title="Link to this heading"></a></h4>
+<p>To save script changes, click the <strong>Save</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_save_script.png"><img alt="Save script" class="align-center" src="../../_images/conf_save_script.png" style="width: 60em;" />
+</a>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="services.html" class="btn btn-neutral float-left" title="Workspaces: Services" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="deploy.html" class="btn btn-neutral float-right" title="Deploy Configs" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="services.html" class="btn btn-neutral float-left" title="Workspaces: Services" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="deploy.html" class="btn btn-neutral float-right" title="Deploy Configs" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

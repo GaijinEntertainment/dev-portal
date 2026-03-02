@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Time range" href="timerange.html" />
+    <link rel="prev" title="Console" href="console.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#record-count">Record Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#column-order">Column Order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#column-visibility">Column Visibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hide-column">Hide Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-settings-menu">Column Settings Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#column-merging">Column Merging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#merge-columns">Merge Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#merged-column-appearance">Merged Column Appearance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#empty-values">Empty Values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-columns">Split Columns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sorting">Sorting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#column-width">Column Width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#table-settings">Table Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hidden-columns-indicator">Hidden Columns Indicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rotated-header">Rotated Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#column-visibility-control">Column Visibility Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Column Merging</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#import-and-export-settings">Import and Export Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Tables</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="tables">
+<h1>Tables<a class="headerlink" href="#tables" title="Link to this heading"></a></h1>
+<p>Tables across the Dev Portal share a common set of features and behaviors. This
+section describes the available table controls and how to use them.</p>
+<section id="record-count">
+<h2>Record Count<a class="headerlink" href="#record-count" title="Link to this heading"></a></h2>
+<p>The total number of records is displayed above the table:</p>
+<a class="reference internal image-reference" href="../../_images/tables_total.png"><img alt="Record count" class="align-center" src="../../_images/tables_total.png" style="width: 65em;" />
+</a>
+</section>
+<section id="column-order">
+<h2>Column Order<a class="headerlink" href="#column-order" title="Link to this heading"></a></h2>
+<p>To change the column order, hover over a column header and use the arrow buttons
+on either side of the header to move the column left or right relative to
+adjacent columns:</p>
+<a class="reference internal image-reference" href="../../_images/tables_change_order.png"><img alt="Column order" class="align-center" src="../../_images/tables_change_order.png" style="width: 35em;" />
+</a>
+</section>
+<section id="column-visibility">
+<h2>Column Visibility<a class="headerlink" href="#column-visibility" title="Link to this heading"></a></h2>
+<section id="hide-column">
+<h3>Hide Column<a class="headerlink" href="#hide-column" title="Link to this heading"></a></h3>
+<p>To hide a column, click the <strong>Eye</strong> icon in the column header:</p>
+<a class="reference internal image-reference" href="../../_images/tables_hide_column.png"><img alt="Hide column" class="align-center" src="../../_images/tables_hide_column.png" style="width: 35em;" />
+</a>
+</section>
+<section id="column-settings-menu">
+<h3>Column Settings Menu<a class="headerlink" href="#column-settings-menu" title="Link to this heading"></a></h3>
+<p>To open the column settings menu, click the <strong>Settings</strong> icon in the column
+header:</p>
+<a class="reference internal image-reference" href="../../_images/tables_column_settings.png"><img alt="Column settings menu" class="align-center" src="../../_images/tables_column_settings.png" style="width: 35em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/tables_column_settings_open.png"><img alt="Column settings menu" class="align-center" src="../../_images/tables_column_settings_open.png" style="width: 35em;" />
+</a>
+</section>
+</section>
+<section id="column-merging">
+<h2>Column Merging<a class="headerlink" href="#column-merging" title="Link to this heading"></a></h2>
+<section id="merge-columns">
+<h3>Merge Columns<a class="headerlink" href="#merge-columns" title="Link to this heading"></a></h3>
+<p>To merge one column into another, select a column name from the list of
+available columns and click the <strong>Merge</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/tables_merge_columns.png"><img alt="Merge columns" class="align-center" src="../../_images/tables_merge_columns.png" style="width: 25em;" />
+</a>
+</section>
+<section id="merged-column-appearance">
+<h3>Merged Column Appearance<a class="headerlink" href="#merged-column-appearance" title="Link to this heading"></a></h3>
+<p>After columns are merged, colors can be assigned to each merged column:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 center-grid docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-col sd-d-flex-row sd-align-major-center center-cell docutils">
+<a class="image-gap reference internal image-reference" href="../../_images/tables_merge_columns_set_color.png"><img alt="Set color" class="image-gap" src="../../_images/tables_merge_columns_set_color.png" style="height: 25em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/tables_merge_columns_colored.png"><img alt="Columns colored" src="../../_images/tables_merge_columns_colored.png" style="height: 25em;" />
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="empty-values">
+<h3>Empty Values<a class="headerlink" href="#empty-values" title="Link to this heading"></a></h3>
+<p>For merged columns, a custom value can be specified to represent empty values:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 center-grid docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-col sd-d-flex-row sd-align-major-center center-cell docutils">
+<a class="image-gap reference internal image-reference" href="../../_images/tables_merge_columns_set_empty_value.png"><img alt="Set empty value" class="image-gap" src="../../_images/tables_merge_columns_set_empty_value.png" style="height: 25em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/tables_merge_columns_empty_value.png"><img alt="Empty value example" src="../../_images/tables_merge_columns_empty_value.png" style="height: 25em;" />
+</a>
+</div>
+</div>
+</div>
+</section>
+<section id="split-columns">
+<h3>Split Columns<a class="headerlink" href="#split-columns" title="Link to this heading"></a></h3>
+<p>To split a merged column back into individual columns, click the <strong>Split</strong>
+button:</p>
+<a class="reference internal image-reference" href="../../_images/tables_split_columns.png"><img alt="Split columns" class="align-center" src="../../_images/tables_split_columns.png" style="width: 23em;" />
+</a>
+</section>
+</section>
+<section id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Link to this heading"></a></h2>
+<p>Some columns support filtering by column value.</p>
+<p>To apply a filter, click the <strong>Filter</strong> icon in the column header, enter a
+value, and click <strong>Apply filter</strong>:</p>
+<a class="reference internal image-reference" href="../../_images/tables_filter_column.png"><img alt="Filtering" class="align-center" src="../../_images/tables_filter_column.png" style="width: 30em;" />
+</a>
+<p>To clear the filter value, click the button:</p>
+<a class="reference internal image-reference" href="../../_images/tables_clear_filters_value.png"><img alt="Filtering" class="align-center" src="../../_images/tables_clear_filters_value.png" style="width: 30em;" />
+</a>
+</section>
+<section id="sorting">
+<h2>Sorting<a class="headerlink" href="#sorting" title="Link to this heading"></a></h2>
+<p>Some columns support sorting by value.</p>
+<p>To sort the table, click the column header:</p>
+<a class="reference internal image-reference" href="../../_images/tables_sort_column.png"><img alt="Sorting" class="align-center" src="../../_images/tables_sort_column.png" style="width: 20em;" />
+</a>
+</section>
+<section id="column-width">
+<h2>Column Width<a class="headerlink" href="#column-width" title="Link to this heading"></a></h2>
+<p>To resize a column, hover over the column divider and drag it to the desired
+width:</p>
+<a class="reference internal image-reference" href="../../_images/tables_resize_column.png"><img alt="Resize column" class="align-center" src="../../_images/tables_resize_column.png" style="width: 35em;" />
+</a>
+<p>When the column width is small, all settings buttons are hidden in the drop-down
+menu:</p>
+<a class="reference internal image-reference" href="../../_images/tables_hide_column_settings.png"><img alt="Hide column settings" class="align-center" src="../../_images/tables_hide_column_settings.png" style="width: 25em;" />
+</a>
+</section>
+<section id="table-settings">
+<h2>Table Settings<a class="headerlink" href="#table-settings" title="Link to this heading"></a></h2>
+<p>To open the table settings menu, click the table <strong>Settings</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/tables_table_settings.png"><img alt="Table settings" class="align-center" src="../../_images/tables_table_settings.png" style="width: 65em;" />
+</a>
+<section id="hidden-columns-indicator">
+<h3>Hidden Columns Indicator<a class="headerlink" href="#hidden-columns-indicator" title="Link to this heading"></a></h3>
+<p>The table settings window displays the number of currently hidden columns:</p>
+<a class="reference internal image-reference" href="../../_images/tables_count_hidden_columns.png"><img alt="Hidden column indicator" class="align-center" src="../../_images/tables_count_hidden_columns.png" style="width: 65em;" />
+</a>
+</section>
+<section id="rotated-header">
+<h3>Rotated Header<a class="headerlink" href="#rotated-header" title="Link to this heading"></a></h3>
+<p>To rotate the table header, enable the <strong>Rotate table header</strong> option:</p>
+<a class="reference internal image-reference" href="../../_images/tables_rotate_header.png"><img alt="Rotate header" class="align-center" src="../../_images/tables_rotate_header.png" style="width: 65em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/tables_rotated_header.png"><img alt="Rotated header" class="align-center" src="../../_images/tables_rotated_header.png" style="width: 25em;" />
+</a>
+<p>The height of the rotated header can be adjusted using the input <strong>Height for
+header</strong> field:</p>
+<a class="reference internal image-reference" href="../../_images/tables_rotate_header_height.png"><img alt="Rotated header height" class="align-center" src="../../_images/tables_rotate_header_height.png" style="width: 65em;" />
+</a>
+</section>
+<section id="column-visibility-control">
+<h3>Column Visibility Control<a class="headerlink" href="#column-visibility-control" title="Link to this heading"></a></h3>
+<p>Column visibility can be managed using the visibility selector:</p>
+<a class="reference internal image-reference" href="../../_images/tables_change_visibility_selector.png"><img alt="Column visibility" class="align-center" src="../../_images/tables_change_visibility_selector.png" style="width: 65em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The last remaining column cannot be hidden.</p>
+<a class="reference internal image-reference" href="../../_images/tables_hide_last_column.png"><img alt="Column visibility" class="align-center" src="../../_images/tables_hide_last_column.png" style="width: 15em;" />
+</a>
+</div>
+</section>
+<section id="id1">
+<h3>Column Merging<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Columns can also be merged from the table settings menu.</p>
+<p>To merge columns, click the <strong>Merge</strong> button, select the column names from the
+list, and confirm the action.</p>
+<a class="reference internal image-reference" href="../../_images/tables_merge_columns_table_settings.png"><img alt="Merge columns settings" class="align-center" src="../../_images/tables_merge_columns_table_settings.png" style="width: 22em;" />
+</a>
+<p>After merging, colors can be assigned to each merged column:</p>
+<a class="reference internal image-reference" href="../../_images/tables_merge_column_set_color.png"><img alt="Merge columns set color" class="align-center" src="../../_images/tables_merge_column_set_color.png" style="width: 22em;" />
+</a>
+<p>To split a merged column, click the <strong>Split</strong> button:</p>
+<a class="reference internal image-reference" href="../../_images/tables_split_columns_table_settings.png"><img alt="Split columns settings" class="align-center" src="../../_images/tables_split_columns_table_settings.png" style="width: 22em;" />
+</a>
+</section>
+</section>
+<section id="import-and-export-settings">
+<h2>Import and Export Settings<a class="headerlink" href="#import-and-export-settings" title="Link to this heading"></a></h2>
+<p>You can import and export column settings using the buttons shown below:</p>
+<ul class="simple">
+<li><p><strong>Export to CSV</strong>: exports the current column settings to a CSV file.</p></li>
+<li><p><strong>Load from CSV</strong>: loads column settings from a CSV file.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/tables_import_export_csv.png"><img alt="Import and export column settings" class="align-center" src="../../_images/tables_import_export_csv.png" style="width: 65em;" />
+</a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="console.html" class="btn btn-neutral float-left" title="Console" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="timerange.html" class="btn btn-neutral float-right" title="Time range" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="console.html" class="btn btn-neutral float-left" title="Console" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="timerange.html" class="btn btn-neutral float-right" title="Time range" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

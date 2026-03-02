@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/hoverxref.js"></script>
+      <script src="_static/js/tooltipster.bundle.min.js"></script>
+      <script src="_static/js/micromodal.min.js"></script>
+      <script src="_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Unlocks config format" href="back/configs_format/unlocks-config-format.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="front/getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="back/configs_format/index.html">Dev Portal Configs Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.24.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.23.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.22.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3.21.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">3.20.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">3.19.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">3.18.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">3.17.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">3.16.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">3.15.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">3.14.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">3.13.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">3.12.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">3.11.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">3.10.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">3.9.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">3.8.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">3.7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">3.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">3.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">3.4.0</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Changelog</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h1>
+<hr class="docutils" />
+<section id="id1">
+<h2>3.24.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">listHeight</span></code> prop to Combobox for controlling dropdown list height</p></li>
+<li><p>Column filter for all table columns</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Fix error grouping in the <code class="docutils literal notranslate"><span class="pre">includes</span></code> configs</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">loadCustomSchema</span></code> call when <code class="docutils literal notranslate"><span class="pre">schemaPath</span></code> changes</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Matching <code class="docutils literal notranslate"><span class="pre">build_version</span></code> now has format <code class="docutils literal notranslate"><span class="pre">X.X.X.X</span></code> where <code class="docutils literal notranslate"><span class="pre">X</span></code> is integer number (up to 9 digits)</p></li>
+<li><p>Init value for matching action <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">build</span> <span class="pre">version</span></code>, <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">build</span> <span class="pre">version</span> <span class="pre">wildcard</span></code> added</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h2>3.23.0<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Column “create_t” to the list of default columns for config tables</p></li>
+<li><p>Default sorting by the “create_t” column</p></li>
+<li><p>Icon for revert to the changed element in the user manager data tree</p></li>
+<li><p>Ability to extend user session and view token expiration time</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">Wildcard</span></code> for game build version into matchmaking tab</p></li>
+<li><p>Disable scripts if they are the same in both versions of tags in the <code class="docutils literal notranslate"><span class="pre">Compare</span></code> tags tab</p></li>
+<li><p>Display errors in the Compare tags tab</p></li>
+<li><p>Tooltips to the <code class="docutils literal notranslate"><span class="pre">Scripts</span></code> editor buttons</p></li>
+<li><p>Filter by <code class="docutils literal notranslate"><span class="pre">currency_code</span></code> in History table in the User management tab</p></li>
+<li><p>Cached tags data to prevent redundant API calls in Compare tags tab</p></li>
+<li><p>Constraint (max and min values) for the <code class="docutils literal notranslate"><span class="pre">userid</span></code> and <code class="docutils literal notranslate"><span class="pre">steamid</span></code> input field in the User Manager tab</p></li>
+<li><p>Custom table component to the Deploy history tab</p></li>
+<li><p>Enable Save button in the Configure environment modal if circuit has error</p></li>
+<li><p>Button to clear filter value in the custom table component</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Hidden dragged column in drag and drop order columns</p></li>
+<li><p><strong>Send action</strong> button not sending action to backend</p></li>
+<li><p>Wrong order in the diff block in the Compare configs and Compare environments</p></li>
+<li><p>Displaying number values in the Logs table</p></li>
+<li><p>Code editor tooltips and hints not displaying correctly</p></li>
+<li><p>Table column width calculation: removed hardcoded action/checkbox widths from fixed constants, made first and last column widths dynamic parameters</p></li>
+<li><p>Layout shift on last deployed tag click</p></li>
+<li><p>Discrepancy between the column width and the header width in some resizing cases.</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Legacy time range filters replaced with Grafana-based TimePicker component across all pages (User History, Bans, Moderator Summaries, Banhammer)</p></li>
+<li><p>Increase service ids container width in Environments</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>3.22.0<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Custom field <code class="docutils literal notranslate"><span class="pre">meta</span></code> for Table, Mode, Stat in profile server Userstat config
+section</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexOffset</span></code> param to userstat table for profile server config</p></li>
+<li><p>Context selector to the diff in the edit user manager modal</p></li>
+<li><p>User ID and nickname of the logged in user to the developer portal header</p></li>
+<li><p>Unsaved change modal when reload data in user manager</p></li>
+<li><p>Clearing filters after switching to another tab in deploy section</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Close expanded config after remove config</p></li>
+<li><p>Default width for config table</p></li>
+<li><p>Default namespace in configs table (after re-login or clear storages)</p></li>
+<li><p><strong>Fix load from csv</strong> button in the multiple user management</p></li>
+<li><p><strong>Fix load from csv</strong> button in table settings modal</p></li>
+<li><p>Text overflowing from the block in the logs expanded block</p></li>
+<li><p>Config action buttons in <strong>Services</strong> unintentionally triggering accordion
+expansion</p></li>
+<li><p>Tables’ rotated header layout</p></li>
+<li><p>Changing an order when use <strong>Save all</strong> to add a lot of elements to config
+(Stats, Items, etc.)</p></li>
+<li><p>Hide Total and chart when get_logs return error</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Sort environment and circuits (test, dev, staging, … , production)</p></li>
+<li><p>Returned save buttons to the scripts (save one script)</p></li>
+<li><p>Update configs data in editor with backend data on save</p></li>
+<li><p>Replace “configs” to the configName in the table settings tooltip</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>3.21.0<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Autoscroll on last deployed tag click</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Reload scripts when environment changed</p></li>
+<li><p>Tooltip value for <code class="docutils literal notranslate"><span class="pre">Send</span> <span class="pre">to</span> <span class="pre">user</span> <span class="pre">data</span></code> in user management element</p></li>
+<li><p>Changing parameter in user tree with search</p></li>
+<li><p>Display of multi-line objects in the user manager tree</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>In user profile editing mode, display all fields (ignoring the filter)</p></li>
+<li><p>Updated queue schemas for matchmaking</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>3.20.0<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Info about deployed configs in tag history</p></li>
+<li><p>Compare for environments</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Tribunal config default values</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Updated mm queue schema</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>3.19.0<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Filter(search) in User management works with big letters now</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>3.18.0<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Time range picker UI in log viewer</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id8">
+<h2>3.17.0<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Full screen to compare config</p></li>
+<li><p>Currency purchases config</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Code mirror</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>3.16.0<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Generate currency notifications config to deploy</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>BUG: code mirror</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Set buildVersion param as optional in matching action</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>3.15.0<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>User manager edit mode for tree element</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>The default sorting of tags is done by update_t</p></li>
+<li><p>Icon for UI settings was changed</p></li>
+<li><p>Rename reset user profile action for userstat</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>3.14.0<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Ability to select duration units when adding a ban</p></li>
+<li><p>CSV export from logs</p></li>
+<li><p>Licenses info</p></li>
+<li><p><strong>Collapse</strong>/<strong>Expand</strong> buttons in the Actions block of the User Manager</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Fixed incorrect default sorting after changing column display order</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Change logger to native python</p></li>
+<li><p>Automatic unit test DB dropping</p></li>
+</ul>
+<p><span class="bdg bdg-grey">DEPRECATED</span></p>
+<ul class="simple">
+<li><p>Init toggle in Environment Register</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id12">
+<h2>3.13.0<a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Parameters for cross platform Leaderboard to userstat service config</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Add group button in table configuration window</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Rename <strong>Favorite actions</strong> to <strong>My favorite actions</strong></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h2>3.12.0<a class="headerlink" href="#id13" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Tribunal config</p></li>
+<li><p>Ability to input page number directly in log viewer</p></li>
+<li><p>Check to prevent hiding the last column in table data</p></li>
+<li><p>Autofocus to the ID input field in User Manager</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Red border when opening the presets after ban validation</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Auto register configs during create/change environment</p></li>
+<li><p>Changed time range picker in logs</p></li>
+<li><p>Separate errors for missing User ID in User Management</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h2>3.11.0<a class="headerlink" href="#id14" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Validator to check that includes do not contain a namespace field</p></li>
+<li><p>Table component to the history table</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Column display in tables when changing the order</p></li>
+<li><p>Error display on the last page of logs</p></li>
+<li><p>JSON.parse error display in <code class="docutils literal notranslate"><span class="pre">configs.js</span></code></p></li>
+<li><p>Re-validation of include schemas after reopening new elements</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Register/Upload tribunal config as part of contacts service</p></li>
+<li><p>Display UTC time in the bans table</p></li>
+<li><p>Replaced icons in hints in Environments</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id15">
+<h2>3.10.0<a class="headerlink" href="#id15" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Confirmation when updating a user profile in the production environment</p></li>
+<li><p>Hints for init buttons in Environments</p></li>
+<li><p>Green hover color to table expand icons</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Display of <code class="docutils literal notranslate"><span class="pre">undefined</span></code> in the Remove Penalty modal</p></li>
+<li><p>Navigation issue when opening Moderator Summaries</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Corrected schema re-request and application when opening a row in the Includes
+config</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id16">
+<h2>3.9.0<a class="headerlink" href="#id16" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">update_t</span></code> changing when editing a tag comment</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id17">
+<h2>3.8.0<a class="headerlink" href="#id17" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">any</span></code> type for Cloud content types</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Cloud config</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+</section>
+<hr class="docutils" />
+<section id="id18">
+<h2>3.7.0<a class="headerlink" href="#id18" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>limitedAccess in contacts game config</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Matching cycle job info support</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id19">
+<h2>3.6.0<a class="headerlink" href="#id19" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Namespace includes to the profile config</p></li>
+<li><p>Namespace placeholders to include names</p></li>
+<li><p>Errors grouping in the code editor by type (oneOf, anyOf)</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Unintended updates of update_t during validation</p></li>
+<li><p>Warnings for default cloud config</p></li>
+<li><p>Expanded blocks in the tables</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Optimized JSON validation during config editing</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id20">
+<h2>3.5.0<a class="headerlink" href="#id20" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Leaderboard environment config validation</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Display errors list into service info tab</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id21">
+<h2>3.4.0<a class="headerlink" href="#id21" title="Link to this heading"></a></h2>
+<p><span class="bdg bdg-green">ADDED</span></p>
+<ul class="simple">
+<li><p>Cloud config</p></li>
+<li><p>Parameters aliases, platform in Leaderboard config</p></li>
+</ul>
+<p><span class="bdg bdg-orange">FIXED</span></p>
+<ul class="simple">
+<li><p>Completions inside [] and {} in the editor</p></li>
+<li><p>Schema assignment in Single Configs</p></li>
+</ul>
+<p><span class="bdg bdg-blue">IMPROVED</span></p>
+<ul class="simple">
+<li><p>Updated error display for SSO errors</p></li>
+<li><p>Unified the look of all accordions and updated hover behavior</p></li>
+<li><p>Improved interaction with log filters</p></li>
+<li><p>Read-only editor no longer allows modifying checkbox values</p></li>
+<li><p>Switching between tabs is prohibited if the configuration files contain
+unsaved changes</p></li>
+<li><p>In Scripts, folders are now sorted alphabetically first, followed by files</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="back/configs_format/unlocks-config-format.html" class="btn btn-neutral float-left" title="Unlocks config format" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="back/configs_format/unlocks-config-format.html" class="btn btn-neutral float-left" title="Unlocks config format" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

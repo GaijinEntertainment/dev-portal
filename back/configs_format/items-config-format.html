@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Items config format</title>
+  <title>Items Config Format</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,8 +41,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Modes config format" href="modes-config-format.html" />
-    <link rel="prev" title="Contacts config format" href="contacts-config-format.html" /> 
+    <link rel="next" title="Modes Config Format" href="modes-config-format.html" />
+    <link rel="prev" title="Contacts Config Format" href="contacts-config-format.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,27 +74,44 @@
 <li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts config format</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Items config format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#required-fields">Required fields</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#optional-fields">Optional fields</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#available-localization-languages">Available localization languages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#exchange-format">Exchange format</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bundle-format">Bundle format</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#issuing-with-shuffling">Issuing with shuffling</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#issuing-with-a-limited-number-of-times">Issuing with a limited number of times</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#issuing-with-item-existence-check">Issuing with item existence check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts Config Format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Items Config Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-items-config">Adding Items Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#item-description-format">Item Description Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#localization">Localization</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#available-localization-languages">Available Localization Languages</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#required-items-format">Required items format</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#price-format">Price format</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#inventory-behavior">Inventory Behavior</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#crafting">Crafting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#store">Store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#purchases">Purchases</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#market">Market</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#visuals">Visuals</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Scripts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks config format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exchange-format">Exchange Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundle-format">Bundle Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bundles-and-delayed-exchanges">Bundles and Delayed Exchanges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generators">Generators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#item-postfixes">Item Postfixes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shuffle-calculation">Shuffle Calculation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#required-items-format">Required Items Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#price-format">Price Format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Profile Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-scripts.html">Profile Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks Config Format</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -115,7 +132,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
-      <li class="breadcrumb-item active">Items config format</li>
+      <li class="breadcrumb-item active">Items Config Format</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -135,208 +152,468 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="items-config-format">
-<h1>Items config format<a class="headerlink" href="#items-config-format" title="Link to this heading"></a></h1>
-<section id="required-fields">
-<h2>Required fields<a class="headerlink" href="#required-fields" title="Link to this heading"></a></h2>
+<h1>Items Config Format<a class="headerlink" href="#items-config-format" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Items are the core building blocks of the inventory system. Each item has a
+unique identifier and a type that determines its behavior when obtained by a
+player.</p>
+<p>To learn how the game interacts with the inventory service, see the
+.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-items-config">
+<h2>Adding Items Config<a class="headerlink" href="#adding-items-config" title="Link to this heading"></a></h2>
+<p>To use items, you need to:</p>
+<ol class="arabic simple">
+<li><p>Add item descriptions to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">items config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+<p>The config supports up to 10,000 items.</p>
+</section>
+<hr class="docutils" />
+<section id="item-description-format">
+<h2>Item Description Format<a class="headerlink" href="#item-description-format" title="Link to this heading"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name_english&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sword&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;itemdefid&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;item&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<dl class="simple myst">
+<dt><span id="name-english"><code class="docutils literal notranslate"><span class="pre">name_english</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="name_english" href="#name_english" class="headerlink" title="Link to this parameter"></a></dt><dd><p>English name of the item. Used as fallback if a localized name is not
+available. Length: 1–64 characters.</p>
+</dd>
+<dt><span id="itemdefid"><code class="docutils literal notranslate"><span class="pre">itemdefid</span></code></span> positive int <span class="bdg bdg-s bdg-yellow">required</span> <a id="itemdefid" href="#itemdefid" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Unique identifier of the item within the game. Used in recipes, generators,
+and bundles.</p>
+</dd>
+<dt><span id="type"><code class="docutils literal notranslate"><span class="pre">type</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="type" href="#type" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of the item. Determines its behavior when obtained.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">item</span></code> –  A regular item that appears in the user’s inventory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bundle</span></code> – When obtained, immediately unfolds into a set of items defined in
+the <a class="reference internal" href="#bundle"><code class="docutils literal notranslate"><span class="pre">bundle</span></code></a> field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generator</span></code> – When obtained, issues one item randomly selected from the list
+in the <a class="reference internal" href="#bundle"><code class="docutils literal notranslate"><span class="pre">bundle</span></code></a> field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delayedexchange</span></code> – A special bundle with a non-zero
+<a class="reference internal" href="#lifetime"><code class="docutils literal notranslate"><span class="pre">lifetime</span></code></a>.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">delayedexchange</span></code> item has the following characteristics:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name_english</span></code> (<em>string</em>) – name of the item, may not be unique.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemdefid</span></code> (<em>positive int</em>) – the code/identifier of ItemDef must be unique within the game. It is involved in recipes, generators, and bundles.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<em>string</em>) – type of the item, possible values:</p>
-<ul>
-<li><p><em>item</em> – simple item that can be found in the user’s inventory.</p></li>
-<li><p><em>bundle</em> – bundle item. Once a user obtains a bundle through any means, it immediately unfolds into a set of new items listed in the <code class="docutils literal notranslate"><span class="pre">bundle</span></code> field.</p></li>
-<li><p><em>generator</em> – roulette item. Once a user obtains a generator, it opens up, issuing one new item randomly selected from the list of items listed in the <code class="docutils literal notranslate"><span class="pre">bundle</span></code> field.</p></li>
-<li><p><em>delayedexchange</em> – special form of bundle with a non-zero <code class="docutils literal notranslate"><span class="pre">lifetime</span></code>. Characteristics:</p>
-<ul>
-<li><p>Alongside item instances, delayed exchange instances can exist in the user’s inventory.</p></li>
-<li><p>Must have filled fields <code class="docutils literal notranslate"><span class="pre">bundle</span></code> and <code class="docutils literal notranslate"><span class="pre">exchange</span></code>.</p></li>
+<li><p>Exists as a separate instance in the user’s inventory alongside regular
+items.</p></li>
+<li><p>Must have the <a class="reference internal" href="#bundle"><code class="docutils literal notranslate"><span class="pre">bundle</span></code></a> and <a class="reference internal" href="#exchange"><code class="docutils literal notranslate"><span class="pre">exchange</span></code></a> fields
+filled in.</p></li>
 <li><p>Cannot be marketable.</p></li>
-<li><p>Must have a non-empty <code class="docutils literal notranslate"><span class="pre">lifetime</span></code> field, determining the item’s lifespan. Upon expiration, the item unfolds as a bundle.</p></li>
-<li><p>During its lifespan, it can be transformed back into the set of items from which it was created.</p></li>
+<li><p>Must have a non-empty <a class="reference internal" href="#lifetime"><code class="docutils literal notranslate"><span class="pre">lifetime</span></code></a> field. Upon expiration, it
+unfolds as a bundle.</p></li>
+<li><p>During its lifespan, can be transformed back into the set of items it
+was created from.</p></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</section>
-<section id="optional-fields">
-<h2>Optional fields<a class="headerlink" href="#optional-fields" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name_{language}</span></code> (<em>string</em>) – the localized name of the item. If not available for a specific language, the value of <code class="docutils literal notranslate"><span class="pre">name_english</span></code> is used. See available <a class="reference internal" href="#available-localization-languages">languages</a> below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description_{language}</span></code> (<em>string</em>) – the localized description of the item. See available <a class="reference internal" href="#available-localization-languages">languages</a> below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">item_quality</span></code> (<em>positive_int</em>) – the quality of the item.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deprecated</span></code> (<em>bool</em>) – if <em>true</em>, the item is not displayed to the client/market, cannot be used in crafting or obtained as a result of crafting/bundle opening, and does not participate in dependency calculations when loading configs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code> (<em>bool</em>) – is it allowed to send the description of this item to the client? It is used to hide unused or currently unprepared items.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifetime</span></code> (<em>string</em>) – the duration of an item’s lifespan after its acquisition. Specified as a number with a single-letter suffix: <code class="docutils literal notranslate"><span class="pre">s</span></code> (seconds), <code class="docutils literal notranslate"><span class="pre">m</span></code> (minutes), <code class="docutils literal notranslate"><span class="pre">h</span></code> (hours), <code class="docutils literal notranslate"><span class="pre">d</span></code> (days), <code class="docutils literal notranslate"><span class="pre">w</span></code> (weeks) respectively.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifetime_modifier</span></code> (<em>string</em>) – optional Squirrel code returning a multiplier for lifetime. The script is provided with a table <code class="docutils literal notranslate"><span class="pre">s</span></code>, containing keys in the format <code class="docutils literal notranslate"><span class="pre">count_NNN</span></code>, each of which contains the quantity of corresponding items in the player’s profile.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expireAt</span></code> – timestamp. After the specified date, the item disappears.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exchange</span></code> – crafting recipes that create this item. See <a class="reference internal" href="#exchange-format">exchange format</a> below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bundle</span></code> – defines behavior for bundles, generators, and playtime generators. See <a class="reference internal" href="#bundle-format">bundle format</a> below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required_items</span></code> – defines requirements for adding this item using the command. See <a class="reference internal" href="#exchange-format">exchange format</a> below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bundle_hidden</span></code> (<em>bool</em>) – should the list of items in the bundle be sent to the client? If the value is <em>true</em>, the client will not know the list of items contained in the chest.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">premium</span></code> – the duration of the added item’s premium account time. It is specified as a number with a single-letter suffix: <code class="docutils literal notranslate"><span class="pre">s</span></code> for seconds, <code class="docutils literal notranslate"><span class="pre">m</span></code> for minutes, <code class="docutils literal notranslate"><span class="pre">h</span></code> for hours, <code class="docutils literal notranslate"><span class="pre">d</span></code> for days, <code class="docutils literal notranslate"><span class="pre">w</span></code> for weeks, respectively.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">store_hidden</span></code> – if <em>true</em>, do not display in the store. This refers to the in-game store using the GetItemPrices / ClnPurchaseItem API, i.e., for gold without offers.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">store_tags</span></code> – a set of tags for the store, separated by semicolons.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">meta</span></code> – custom game specific information. Purch service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">granted_by_purch</span></code> – determines the purchase GUID on the purch server (purchase for real money), which leads to the issuance of this item. The same GUID can be specified for more than one itemdef, and all items will be issued. It can be attached to bundles/generators. It makes sense to also set a reasonable <code class="docutils literal notranslate"><span class="pre">tradable_delay_sec</span></code> to avoid fraudsters selling items purchased through purch on the market.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">limitOnPurchase</span></code> – this parameter sets a limit on the number of items that can be purchased. If a player already owns one such item, they can only purchase two more. If a player has three of these items, the purchase is not possible. This restriction does not apply to adding items through other means.</p></li>
-</ul>
-<p>Currently, the market is not supported on GAP.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">market_hash_name</span></code> – string identifier of the item used by the market. If not specified and the item has the marketable = <em>true</em> flag set, it is copied from the English localization. Once assigned (either by copying from localization or by direct specification in the schema), it resists changes to prevent breaking the market. In case of urgent necessity, it can be changed by transferring the item to a neighboring config with simultaneous change of <code class="docutils literal notranslate"><span class="pre">market_hash_name</span></code>. In most cases, it is unique, but if necessary, it can be shared among multiple items, which then fall into the same market listing.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">marketable</span></code> (<em>bool</em>) – the flag determines whether such items are allowed to be sold on the market.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">market_fee</span></code> (<em>float</em>) – a fractional value from 0 to 0.95, representing a portion of the transaction amount on the exchange taken as a commission. It is divided between the exchange and beneficiaries.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tradable_delay_sec</span></code> (<em>positive int</em>) – the time (in seconds) during which neither the item itself nor its derivatives obtained through crafting can be sold by the player. To increase the efficiency of caching item descriptions on the market, the effective time is always rounded up to the nearest hour, i.e., an item purchased at 11:50:02 with a 15-minute selling restriction will not be available for sale until 13:00:00.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">background_color</span></code> – the background color of item icon in the inventory and on the market. Color represents in hex color format: <code class="docutils literal notranslate"><span class="pre">RRGGBB</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name_color</span></code> – the name color of item icon in the inventory and on the market. Color represents in hex color format: <code class="docutils literal notranslate"><span class="pre">RRGGBB</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">icon_url</span></code> – the image for the inventory and market.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">icon_url_large</span></code> – similar to <code class="docutils literal notranslate"><span class="pre">icon_url</span></code>, but the recommended resolution should be larger, typically at least 800x600 pixels. Primarily intended for web use and dialogs where a large image is required. An additional agreement applies to them: controls attempting to display <code class="docutils literal notranslate"><span class="pre">icon_url_large</span></code> will show <code class="docutils literal notranslate"><span class="pre">icon_url</span></code> if <code class="docutils literal notranslate"><span class="pre">icon_url_large</span></code> is an empty string.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">price</span></code> – the price (for selling through the store) is individual for different currencies. See <a class="reference internal" href="#price-format">price format</a> below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> – tags for the market. They consist of key-value pairs separated by semicolons. Keys can contain letters, numbers, and underscores. Values can contain letters, numbers, underscores, and hyphens. Keys are unique.</p></li>
-</ul>
-</section>
+</dd>
+</dl>
+<hr class="docutils" />
+<section id="localization">
+<h4>Localization<a class="headerlink" href="#localization" title="Link to this heading"></a></h4>
+<dl class="simple myst">
+<dt><span id="name-language"><code class="docutils literal notranslate"><span class="pre">name_{language}</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="name_language" href="#name_language" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Localized name of the item. Length: 1–64 characters. If not set for a
+specific language, <code class="docutils literal notranslate"><span class="pre">name_english</span></code> is used.
+See <a class="reference internal" href="#available-localization-languages">Available Languages</a>.</p>
+</dd>
+<dt><span id="description-language"><code class="docutils literal notranslate"><span class="pre">description_{language}</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="description_language" href="#description_language" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Localized description of the item. Maximum 1024 characters.
+See <a class="reference internal" href="#available-localization-languages">Available Languages</a>.</p>
+</dd>
+</dl>
 <section id="available-localization-languages">
-<h2>Available localization languages<a class="headerlink" href="#available-localization-languages" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">english</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">brazilian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bulgarian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">czech</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">danish</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dutch</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finnish</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">french</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">german</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">greek</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hungarian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">italian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">japanese</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">koreana</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">norwegian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">polish</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">portuguese</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">romanian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">russian</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schinese</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spanish</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">swedish</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tchinese</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thai</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">turkish</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">arabic</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ukrainian</span></code></p></li>
-</ul>
+<h5>Available Localization Languages<a class="headerlink" href="#available-localization-languages" title="Link to this heading"></a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">arabic</span></code>, <code class="docutils literal notranslate"><span class="pre">brazilian</span></code>, <code class="docutils literal notranslate"><span class="pre">bulgarian</span></code>, <code class="docutils literal notranslate"><span class="pre">czech</span></code>, <code class="docutils literal notranslate"><span class="pre">danish</span></code>, <code class="docutils literal notranslate"><span class="pre">dutch</span></code>, <code class="docutils literal notranslate"><span class="pre">english</span></code>,
+<code class="docutils literal notranslate"><span class="pre">finnish</span></code>, <code class="docutils literal notranslate"><span class="pre">french</span></code>, <code class="docutils literal notranslate"><span class="pre">german</span></code>, <code class="docutils literal notranslate"><span class="pre">greek</span></code>, <code class="docutils literal notranslate"><span class="pre">hungarian</span></code>, <code class="docutils literal notranslate"><span class="pre">italian</span></code>, <code class="docutils literal notranslate"><span class="pre">japanese</span></code>,
+<code class="docutils literal notranslate"><span class="pre">koreana</span></code>, <code class="docutils literal notranslate"><span class="pre">norwegian</span></code>, <code class="docutils literal notranslate"><span class="pre">polish</span></code>, <code class="docutils literal notranslate"><span class="pre">portuguese</span></code>, <code class="docutils literal notranslate"><span class="pre">romanian</span></code>, <code class="docutils literal notranslate"><span class="pre">russian</span></code>,
+<code class="docutils literal notranslate"><span class="pre">schinese</span></code>, <code class="docutils literal notranslate"><span class="pre">spanish</span></code>, <code class="docutils literal notranslate"><span class="pre">swedish</span></code>, <code class="docutils literal notranslate"><span class="pre">tchinese</span></code>, <code class="docutils literal notranslate"><span class="pre">thai</span></code>, <code class="docutils literal notranslate"><span class="pre">turkish</span></code>, <code class="docutils literal notranslate"><span class="pre">ukrainian</span></code></p>
 </section>
+</section>
+<hr class="docutils" />
+<section id="inventory-behavior">
+<h4>Inventory Behavior<a class="headerlink" href="#inventory-behavior" title="Link to this heading"></a></h4>
+<dl class="simple myst">
+<dt><span id="deprecated"><code class="docutils literal notranslate"><span class="pre">deprecated</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="deprecated" href="#deprecated" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the item is hidden from the client and market, cannot be used in
+or obtained from crafting or bundle opening, and is excluded from dependency
+calculations when loading configs. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="hidden"><code class="docutils literal notranslate"><span class="pre">hidden</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="hidden" href="#hidden" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the item description is not sent to the client. Use this to hide
+unused or unfinished items. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="item-quality"><code class="docutils literal notranslate"><span class="pre">item_quality</span></code></span> positive int <span class="bdg bdg-s bdg-grey">optional</span> <a id="item_quality" href="#item_quality" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Quality level of the item.</p>
+</dd>
+<dt><span id="lifetime"><code class="docutils literal notranslate"><span class="pre">lifetime</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="lifetime" href="#lifetime" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Duration of the item’s lifespan after acquisition. Specified as a number
+followed by a unit suffix: <code class="docutils literal notranslate"><span class="pre">s</span></code> (seconds), <code class="docutils literal notranslate"><span class="pre">m</span></code> (minutes), <code class="docutils literal notranslate"><span class="pre">h</span></code> (hours),
+<code class="docutils literal notranslate"><span class="pre">d</span></code> (days), <code class="docutils literal notranslate"><span class="pre">w</span></code> (weeks). Maximum 16 characters. Example: <code class="docutils literal notranslate"><span class="pre">7d</span></code>.</p>
+</dd>
+<dt><span id="lifetime-modifier"><code class="docutils literal notranslate"><span class="pre">lifetime_modifier</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="lifetime_modifier" href="#lifetime_modifier" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Optional Squirrel expression returning a multiplier for
+<a class="reference internal" href="#lifetime"><code class="docutils literal notranslate"><span class="pre">lifetime</span></code></a>. The script receives a table <code class="docutils literal notranslate"><span class="pre">s</span></code> with keys in the
+format <code class="docutils literal notranslate"><span class="pre">count_NNN</span></code>, each containing the quantity of the corresponding item in
+the player’s profile. Maximum 512 characters.</p>
+</dd>
+<dt><span id="expireat"><code class="docutils literal notranslate"><span class="pre">expireAt</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="expireAt" href="#expireAt" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Timestamp. After this date, the item is removed from the player’s inventory.</p>
+</dd>
+<dt><span id="premium"><code class="docutils literal notranslate"><span class="pre">premium</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="premium" href="#premium" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Duration of premium account time granted when the item is obtained. Uses the
+same format as <a class="reference internal" href="#lifetime"><code class="docutils literal notranslate"><span class="pre">lifetime</span></code></a>: a number with a unit suffix (<code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>,
+<code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code>).</p>
+</dd>
+<dt><span id="bundle-hidden"><code class="docutils literal notranslate"><span class="pre">bundle_hidden</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="bundle_hidden" href="#bundle_hidden" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the list of items in the bundle is not sent to the client.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary JSON data attached to the item. Use this to pass custom
+game-specific information to the client. Maximum 32768 characters.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="crafting">
+<h4>Crafting<a class="headerlink" href="#crafting" title="Link to this heading"></a></h4>
+<dl class="simple myst">
+<dt><span id="bundle"><code class="docutils literal notranslate"><span class="pre">bundle</span></code></span> array <span class="bdg bdg-s bdg-grey">optional</span> <a id="bundle" href="#bundle" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Defines the items issued when this item is obtained. Used for <code class="docutils literal notranslate"><span class="pre">bundle</span></code>,
+<code class="docutils literal notranslate"><span class="pre">generator</span></code>, and <code class="docutils literal notranslate"><span class="pre">delayedexchange</span></code> <a class="reference internal" href="#type">types</a>.
+See <a class="reference internal" href="#bundle-format">Bundle Format</a>.</p>
+</dd>
+<dt><span id="exchange"><code class="docutils literal notranslate"><span class="pre">exchange</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="exchange" href="#exchange" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Crafting recipes that produce this item. Maximum 4096 characters.
+See <a class="reference internal" href="#exchange-format">Exchange Format</a>.</p>
+</dd>
+<dt><span id="required-items"><code class="docutils literal notranslate"><span class="pre">required_items</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="required_items" href="#required_items" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Requirements for adding this item via the <code class="docutils literal notranslate"><span class="pre">AddItem</span></code> command. Maximum 512
+characters. See <a class="reference internal" href="#required-items-format">Required Items Format</a>.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="store">
+<h4>Store<a class="headerlink" href="#store" title="Link to this heading"></a></h4>
+<dl class="simple myst">
+<dt><span id="store-hidden"><code class="docutils literal notranslate"><span class="pre">store_hidden</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="store_hidden" href="#store_hidden" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the item is not displayed in the in-game store
+(GetItemPrices / ClnPurchaseItem API). Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="store-tags"><code class="docutils literal notranslate"><span class="pre">store_tags</span></code></span> object <span class="bdg bdg-s bdg-grey">optional</span> <a id="store_tags" href="#store_tags" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Key-value tags for the store. Keys and values may contain letters, numbers,
+underscores, and hyphens. Keys must be unique.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;store_tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;weapon&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rarity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rare&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><span id="price"><code class="docutils literal notranslate"><span class="pre">price</span></code></span> array <span class="bdg bdg-s bdg-grey">optional</span> <a id="price" href="#price" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Price for selling the item through the store, per currency. Maximum 16 price
+elements. See <a class="reference internal" href="#price-format">Price Format</a>.</p>
+</dd>
+<dt><span id="limitonpurchase"><code class="docutils literal notranslate"><span class="pre">limitOnPurchase</span></code></span> non-negative int <span class="bdg bdg-s bdg-grey">optional</span> <a id="limitOnPurchase" href="#limitOnPurchase" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Maximum number of this item a player can purchase through the store. Does not
+apply to items obtained through other means.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="purchases">
+<h4>Purchases<a class="headerlink" href="#purchases" title="Link to this heading"></a></h4>
+<dl class="simple myst">
+<dt><span id="granted-by-purch"><code class="docutils literal notranslate"><span class="pre">granted_by_purch</span></code></span> string (GUID) <span class="bdg bdg-s bdg-grey">optional</span> <a id="granted_by_purch" href="#granted_by_purch" class="headerlink" title="Link to this parameter"></a></dt><dd><p>GUID of the purchase on the purch server (real-money purchase) that triggers
+the issuance of this item. Multiple items can share the same GUID – all of
+them will be issued. Consider setting a reasonable
+<a class="reference internal" href="#tradable-delay-sec"><code class="docutils literal notranslate"><span class="pre">tradable_delay_sec</span></code></a> to prevent fraudulent resale of
+purchased items.</p>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="market">
+<h4>Market<a class="headerlink" href="#market" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The market is not currently supported on GAP.</p>
+</div>
+<dl class="simple myst">
+<dt><span id="marketable"><code class="docutils literal notranslate"><span class="pre">marketable</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="marketable" href="#marketable" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the item can be sold on the market. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="market-hash-name"><code class="docutils literal notranslate"><span class="pre">market_hash_name</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="market_hash_name" href="#market_hash_name" class="headerlink" title="Link to this parameter"></a></dt><dd><p>String identifier used by the market. Maximum 128 characters. Allowed
+characters: letters, numbers, underscores, hyphens, and spaces.</p>
+<p>If not set and <a class="reference internal" href="#marketable"><code class="docutils literal notranslate"><span class="pre">marketable</span></code></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, copied from
+<code class="docutils literal notranslate"><span class="pre">name_english</span></code>. Once assigned, resists changes to avoid breaking market
+listings. If a change is necessary, transfer the item to a new config and
+update <code class="docutils literal notranslate"><span class="pre">market_hash_name</span></code> simultaneously. Multiple items can share the same
+<code class="docutils literal notranslate"><span class="pre">market_hash_name</span></code>, in which case they appear in the same market listing.</p>
+</dd>
+<dt><span id="market-fee"><code class="docutils literal notranslate"><span class="pre">market_fee</span></code></span> float <span class="bdg bdg-s bdg-grey">optional</span> <a id="market_fee" href="#market_fee" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Commission fraction taken from the transaction on the exchange. Must be
+non-negative. Split between the exchange and beneficiaries.</p>
+</dd>
+<dt><span id="tradable-delay-sec"><code class="docutils literal notranslate"><span class="pre">tradable_delay_sec</span></code></span> non-negative int <span class="bdg bdg-s bdg-grey">optional</span> <a id="tradable_delay_sec" href="#tradable_delay_sec" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Time in seconds during which the item and any derivatives obtained through
+crafting cannot be sold by the player. The effective restriction is always
+rounded up to the nearest hour.</p>
+<p>Example: an item purchased at 11:50 with a 15-minute delay cannot be sold
+until 13:00.</p>
+</dd>
+<dt><span id="tags"><code class="docutils literal notranslate"><span class="pre">tags</span></code></span> object <span class="bdg bdg-s bdg-grey">optional</span> <a id="tags" href="#tags" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Key-value tags for the market. Keys and values may contain letters, numbers,
+underscores, and hyphens. Keys must be unique.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;decal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;quality&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;common&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="visuals">
+<h4>Visuals<a class="headerlink" href="#visuals" title="Link to this heading"></a></h4>
+<dl class="simple myst">
+<dt><span id="background-color"><code class="docutils literal notranslate"><span class="pre">background_color</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="background_color" href="#background_color" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Background color of the item icon in the inventory and on the market.
+6-character hex format without <code class="docutils literal notranslate"><span class="pre">#</span></code>: <code class="docutils literal notranslate"><span class="pre">RRGGBB</span></code>. Example: <code class="docutils literal notranslate"><span class="pre">ff0000</span></code>.</p>
+</dd>
+<dt><span id="name-color"><code class="docutils literal notranslate"><span class="pre">name_color</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="name_color" href="#name_color" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Name color of the item icon in the inventory and on the market.
+6-character hex format without <code class="docutils literal notranslate"><span class="pre">#</span></code>: <code class="docutils literal notranslate"><span class="pre">RRGGBB</span></code>. Example: <code class="docutils literal notranslate"><span class="pre">ffffff</span></code>.</p>
+</dd>
+<dt><span id="icon-url"><code class="docutils literal notranslate"><span class="pre">icon_url</span></code></span> string (URL) <span class="bdg bdg-s bdg-grey">optional</span> <a id="icon_url" href="#icon_url" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Image used in the inventory and on the market.</p>
+</dd>
+<dt><span id="icon-url-large"><code class="docutils literal notranslate"><span class="pre">icon_url_large</span></code></span> string (URL) <span class="bdg bdg-s bdg-grey">optional</span> <a id="icon_url_large" href="#icon_url_large" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Higher-resolution image, typically at least 800×600 pixels. Intended for web
+use and large-image dialogs. If set to an empty string,
+<a class="reference internal" href="#icon-url"><code class="docutils literal notranslate"><span class="pre">icon_url</span></code></a> is used as a fallback.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<hr class="docutils" />
 <section id="exchange-format">
-<h2>Exchange format<a class="headerlink" href="#exchange-format" title="Link to this heading"></a></h2>
-<p>The crafting recipes are listed separated by semicolons: <em>recipe</em>;<em>recipe</em>
-Each recipe consists of one or more ingredients listed separated by commas: <em>ingredient</em>,<em>ingredient</em>.</p>
-<p>An ingredient can be an itemdef or contain multiple choices [itemdef1, itemdef2]. If multiple items are to be used, it’s followed by ‘x’ and a number. In the case of multiple choices, itemdefid can be spent in any combination.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;[&quot;, premium&quot;] [&quot;, unfiltered&quot;] [&quot;, auxiliary&quot;] [&quot;,require=&quot; requirement_0] [&quot;, req_items=&quot; _itemdefid {&quot;+&quot; itemdefid}] [&quot;, req_unlocks=&quot; _unlock_name {&quot;+&quot; unlock_name}
-</pre></div>
-</div>
-<p>Requirements are described as ItemDefId and an optional quantity indicated by ‘x’:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>itemdefid: itemdefid [ &quot;x&quot; quantity ]
-</pre></div>
-</div>
-<p>Having the <code class="docutils literal notranslate"><span class="pre">premium</span></code> flag requires an active premium for crafting. See the <code class="docutils literal notranslate"><span class="pre">premium</span></code> field in <a class="reference internal" href="#optional-fields">Optional fields</a>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">unfiltered</span></code> flag allows issuing items from crafting even if the requirement specified in the <code class="docutils literal notranslate"><span class="pre">required_items</span></code> field of their descriptions is not met.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">auxiliary</span></code> flag marks the recipe as auxiliary, preventing it from being used to generate drop descriptions for itemdefid ingredients.</p>
-<p>In the absence of a requirement, the game client can call the ExchangeItems API with the desired resulting item’s ItemDefId and a list of items chosen as ingredients. The server will compare the recipes and perform the exchange if a suitable one is found.</p>
-<p>Having a requirement means that this recipe can only be used by a trusted server via the ExchangeItemsTrusted API call. By sending a request including this recipe and the requirement, the trusted server confirms that the requirement is met for the client. The mechanism of the client’s interaction with the trusted server and the requirement verification is not regulated.</p>
-<p>An additional list of ingredients, <code class="docutils literal notranslate"><span class="pre">req_items</span></code>, describes the items necessary for using this recipe. The items themselves are not consumed. The <code class="docutils literal notranslate"><span class="pre">+</span></code> sign is used as a separator for the list of ingredients.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">req_unlocks</span></code> list specifies the unlocks required for this recipe. Unlocks are requested from the user state. The following comparison conditions for unlock stages are allowed: &lt;, &lt;=, ==, !=, &gt;=, &gt;.</p>
-<p>For example, unlock_name &gt; 5 means that if the unlock stage is greater than 5, the condition for using the recipe is met. The sign and value may not be specified, only the unlock name. Such a notation is equivalent to: unlock_name &gt;= 1.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> sign is used as a separator for unlocks.</p>
-<p>The list of recipes can be specified for regular items as well as for bundles or generators, allowing for the creation of equivalents to our chests.</p>
+<h2>Exchange Format<a class="headerlink" href="#exchange-format" title="Link to this heading"></a></h2>
+<p>This section describes the format of the <a class="reference internal" href="#exchange"><code class="docutils literal notranslate"><span class="pre">exchange</span></code></a> field.</p>
+<p>Crafting recipes are listed separated by semicolons: <code class="docutils literal notranslate"><span class="pre">recipe;recipe</span></code>.
+Each recipe consists of one or more ingredients separated by commas:
+<code class="docutils literal notranslate"><span class="pre">ingredient,ingredient</span></code>.</p>
+<p>An ingredient can be a single <a class="reference internal" href="#itemdefid"><code class="docutils literal notranslate"><span class="pre">itemdefid</span></code></a>, or a choice between
+multiple items <code class="docutils literal notranslate"><span class="pre">[itemdefid1,</span> <span class="pre">itemdefid2]</span></code>. To require multiple instances, append
+<code class="docutils literal notranslate"><span class="pre">x</span></code> and a quantity. When multiple choices are specified, items can be spent in
+any combination.</p>
+<p>Recipes support the following optional flags:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">premium</span></code> – Requires an active premium account to craft.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unfiltered</span></code> – Issues items from crafting even if the
+<a class="reference internal" href="#required-items"><code class="docutils literal notranslate"><span class="pre">required_items</span></code></a> condition is not met.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auxiliary</span></code> – Marks the recipe as auxiliary, it will not be used to generate
+drop descriptions for its ingredients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">require=&lt;requirement&gt;</span></code> – Restricts this recipe to trusted server use only via
+ExchangeItemsTrusted API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">req_items=&lt;itemdefid+...&gt;</span></code> – Additional items required to use this recipe.
+Items are checked but not consumed. Separator: <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">req_unlocks=&lt;unlock+...&gt;</span></code> – Unlocks required for this recipe. Supported
+comparisons: <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. Separator: <code class="docutils literal notranslate"><span class="pre">+</span></code>. If no
+comparison is specified, <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">1</span></code> is assumed.</p></li>
+</ul>
 <p><strong>Example:</strong></p>
-<p>Suppose there’s an item we issue, typically a generator or a bundle.</p>
-<p>There are items that serve as ingredients, which people, for some reason, distinguish between keys and chests, even though logically they only differ by their image.
-In the issued item, you need to describe the crafting formula, for example:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>exchange:&quot;123,124,125;222,123&quot;
-</pre></div>
-</div>
-<p>These are two crafting formulas separated by <code class="docutils literal notranslate"><span class="pre">;</span></code>, with ingredients for each separated by <code class="docutils literal notranslate"><span class="pre">,</span></code>. They signify that this item can be created from three ingredients: 123 (chest), 124 (match), and 125 (dynamite), or from two: 222 (key) and 123 (chest).</p>
-<p><strong>More complex example:</strong></p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;[40110,40111]x3,40207,premium,unfiltered;100101,10001,require=SomeRequirement;40973,auxiliary;200132,req_items=40291x3+40295,req_unlocks=killer&gt;=3+loser&quot;
 </pre></div>
 </div>
+<p>This defines four recipes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[40110</span> <span class="pre">or</span> <span class="pre">40111]</span> <span class="pre">x3</span></code> + <code class="docutils literal notranslate"><span class="pre">40207</span></code>, with premium required, unfiltered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">100101</span></code> + <code class="docutils literal notranslate"><span class="pre">10001</span></code>, trusted server only with requirement <code class="docutils literal notranslate"><span class="pre">SomeRequirement</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">40973</span></code>, auxiliary recipe</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">200132</span></code>, requires items <code class="docutils literal notranslate"><span class="pre">40291</span> <span class="pre">x3</span></code> and <code class="docutils literal notranslate"><span class="pre">40295</span></code>, and unlocks <code class="docutils literal notranslate"><span class="pre">killer</span> <span class="pre">&gt;=</span> <span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">loser</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code></p></li>
+</ul>
 </section>
+<hr class="docutils" />
 <section id="bundle-format">
-<h2>Bundle format<a class="headerlink" href="#bundle-format" title="Link to this heading"></a></h2>
-<p>In the case of a bundle (<code class="docutils literal notranslate"><span class="pre">'type':'bundle'</span></code> or <code class="docutils literal notranslate"><span class="pre">'type':'delayedexchange'</span></code>), it specifies a list of items to be issued, along with their type and quantity.</p>
-<p>For example, ‘40110x3;40207;40973’ instructs to issue three instances of item 40110 and one each of items 40207 and 40973.</p>
-<p>In the case of a generator (<code class="docutils literal notranslate"><span class="pre">'type':'generator'</span></code>, it specifies a list of items that this generator can issue with relative weights.</p>
-<p>For example, ‘40110x3;40207;40973x16’ means that item 40110 will drop with a probability of 15%, item 40207 with a probability of 5%, and item 40973 with a probability of 80%.</p>
-<p>Sometimes it may be convenient to specify weights directly in percentages, such as ‘40110x15;40207x5;40973x80’, but in this case, one must ensure that the sum totals 100%.</p>
-<section id="issuing-with-shuffling">
-<h3>Issuing with shuffling<a class="headerlink" href="#issuing-with-shuffling" title="Link to this heading"></a></h3>
-<p>Using the postfix <code class="docutils literal notranslate"><span class="pre">S</span></code> ensures that the item will be issued using shuffling.</p>
-<p>For example, ‘40110x3;4020x20;40973x2S’ means that items 40110 and 4020 will be issued with fair randomness, and item 40973x2S will be issued with an 8% chance using shuffling.</p>
-<p>Shuffle guarantees the mandatory issuance of an item (100%) for no more than N * IntervalsPercent / 100 generations, where N is the number of attempts between drops with uniform distribution (ceil((3+2+20)/2) = 13), and IntervalsPercent is set in the config ‘maxIntervalsPercent’: {‘10’: 160, ‘100’: 400, ‘20’: 200} – the first number is the drop probability, and the second is the multiplier.</p>
-<p>Since 8% &lt; 10, IntervalsPercent = 160. The maximum number of generations before 100% issuance is ceil(13*160/100) = 21. With shuffling, multiple items can be issued, e.g., ‘40110x3S;4020x20;40973x2S’.</p>
-<p>Shuffle is recommended for items with low drop probabilities (up to 10%).</p>
+<h2>Bundle Format<a class="headerlink" href="#bundle-format" title="Link to this heading"></a></h2>
+<section id="bundles-and-delayed-exchanges">
+<h3>Bundles and Delayed Exchanges<a class="headerlink" href="#bundles-and-delayed-exchanges" title="Link to this heading"></a></h3>
+<p>For <code class="docutils literal notranslate"><span class="pre">bundle</span></code> and <code class="docutils literal notranslate"><span class="pre">delayedexchange</span></code> <a class="reference internal" href="#type">types</a>, the <a class="reference internal" href="#bundle"><code class="docutils literal notranslate"><span class="pre">bundle</span></code></a> field
+lists items to issue with their quantities.</p>
+<p>Format: <code class="docutils literal notranslate"><span class="pre">itemdefid[xN];itemdefid[xN];...</span></code></p>
+<p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">40110x3;40207;40973</span></code> issues three instances of item <code class="docutils literal notranslate"><span class="pre">40110</span></code> and
+one each of <code class="docutils literal notranslate"><span class="pre">40207</span></code> and <code class="docutils literal notranslate"><span class="pre">40973</span></code>.</p>
 </section>
-<section id="issuing-with-a-limited-number-of-times">
-<h3>Issuing with a limited number of times<a class="headerlink" href="#issuing-with-a-limited-number-of-times" title="Link to this heading"></a></h3>
-<p>Using the postfixes <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">L</span></code> ensures that items are issued a limited number of times. These postfixes are incompatible with each other and with shuffling for one item, i.e., you can use either <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>, or <code class="docutils literal notranslate"><span class="pre">L</span></code>. In a bundle, for different items, you can combine items with and without any postfix. Items with limitations are issued similarly to regular items without postfixes in random order.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">D</span></code> means limiting the issuance of the item by the generator to a certain number of times (disposable).</p></li>
-</ul>
-<p>For example, ‘4020x20D3;4021x10D;’ means that item 4020 will be issued only 3 times with a ‘probability’ of 20. Item 4021 will be issued only once with a probability of 10. If these items are the only ones in the bundle, the generator will stop issuing items after 4 attempts.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">L</span></code> means that after these items have been issued a certain number of times, they will start being issued again (looped).</p></li>
-</ul>
-<p>For example, ‘4022x20L2;4023x20L’. In this case, item 4022 will be issued twice (in random order) and item 4023 once. Then these items will start being issued again.</p>
+<hr class="docutils" />
+<section id="generators">
+<h3>Generators<a class="headerlink" href="#generators" title="Link to this heading"></a></h3>
+<p>For the <code class="docutils literal notranslate"><span class="pre">generator</span></code> <a class="reference internal" href="#type">type</a>, the <a class="reference internal" href="#bundle"><code class="docutils literal notranslate"><span class="pre">bundle</span></code></a> field lists items
+with relative weights. Probability is calculated as <code class="docutils literal notranslate"><span class="pre">weight</span> <span class="pre">/</span> <span class="pre">total_weight</span></code>.</p>
+<p><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">40110x3;40207;40973x16</span></code> — total weight is 20:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Weight</p></th>
+<th class="head"><p>Probability</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40110</p></td>
+<td><p>3</p></td>
+<td><p>15%</p></td>
+</tr>
+<tr class="row-odd"><td><p>40207</p></td>
+<td><p>1</p></td>
+<td><p>5%</p></td>
+</tr>
+<tr class="row-even"><td><p>40973</p></td>
+<td><p>16</p></td>
+<td><p>80%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Weights can be specified directly as percentages. In that case, ensure they sum
+to 100%.</p>
 </section>
-<section id="issuing-with-item-existence-check">
-<h3>Issuing with item existence check<a class="headerlink" href="#issuing-with-item-existence-check" title="Link to this heading"></a></h3>
-<p>Using the postfix <code class="docutils literal notranslate"><span class="pre">U</span></code> (unique) ensures that the item will be issued only if the player does not already possess it. The postfix is not compatible with the postfixes <code class="docutils literal notranslate"><span class="pre">L</span></code> and <code class="docutils literal notranslate"><span class="pre">D</span></code> but compatible with <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
-<p>If the player does not have such an item, the generator will issue it according to the specified probabilities, but only once (as long as the player has the item).</p>
-<p>It is possible to specify one or several additional items for the <code class="docutils literal notranslate"><span class="pre">U</span></code> postfix. In this case, the presence of the main and all additional items will be checked. If at least one of them is present, the item will not be issued.</p>
-<p><strong>Examples</strong> of specifying additional items:</p>
-<p>2347U111 – one additional item 111. When generating, both item 2347 and 111 will be checked, if one of them is present, item 2347 will not be issued.</p>
-<p>4021U[111, 112] – an array of additional items. Items 4021, 111, and 112 will be checked.</p>
-<p><strong>Example</strong> of using <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code> together:</p>
-<p>2347x1SU.</p>
-<p>When using <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code>, the item will also be issued only once, but the deck will not be reshuffled, the unique item will simply be skipped, and the next one from the deck will be issued.</p>
-<p>!!!warning
-The order of prefixes is important, first <code class="docutils literal notranslate"><span class="pre">S</span></code> then <code class="docutils literal notranslate"><span class="pre">U</span></code>!</p>
-<p><strong>Example:</strong></p>
-<p>2347x1SU; 1234x 99 – generator with a unique shuffled item 2345 and a regular item 1234.</p>
-<p>It should be noted that by using postfixes, you can create a generator that cannot issue anything – for example, by using the <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code> postfixes.</p>
-<p>When issuing items with <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code>, the shuffled items do not change their probability. The deck is considered the same size, cards with <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code> postfixes are not removed from it. If an unshuffled card is drawn, <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code> are taken into account. Thus, you can use all the postfixes in one bundle, but you need to take into account the features described above.</p>
-<p><strong>Examples</strong>:</p>
-<p>“40110x3;40207x96;40973”</p>
-<p>“40110x3;4020x20;40973x2S”</p>
-<p>“40110x3;4020x20D3;4021x10D;40973x2S;4022x20L2;4023x20L”</p>
-<p>“1123U; 2347U111; 4021U[111, 112]; 1212x3”</p>
-<p>“1123x1SU; 1212x3”</p>
-</section>
-</section>
-<section id="required-items-format">
-<h2>Required items format<a class="headerlink" href="#required-items-format" title="Link to this heading"></a></h2>
-<p>Defines requirements for issuing this item using the AddItem command, dropping it from bundles obtained through crafting, and directly crafting it. For the issuance to be successful or the craft to occur, the condition specified here must be met. This does not affect obtaining the item by purchasing it on the market or in the store.</p>
-<p>In format, this field resembles a bundle, but in addition to <code class="docutils literal notranslate"><span class="pre">;</span></code> (logical “and”), <code class="docutils literal notranslate"><span class="pre">,</span></code> (or), <code class="docutils literal notranslate"><span class="pre">!</span></code> (not), and parentheses are also permitted. “Or” operations have higher precedence than “and,” i.e., “1;2,3” is equivalent to “1;(2,3)”. Spaces are allowed anywhere except within itemdefid.</p>
-<p><strong>Examples:</strong></p>
-<p>“40110x3;40207x2;40973”</p>
-<p>“(!5; 6 x 2; 3), ( 7x3; ( (3;!(5,4)), (5;4;!3) ) )”</p>
-</section>
-<section id="price-format">
-<h2>Price format<a class="headerlink" href="#price-format" title="Link to this heading"></a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Price: version;pricelist
-Version: &quot;1&quot;
-pricelist: originalprice;price
-originalprice: currency integer,currency integer
-price: daterange currency integer currency integer
-currency: 3 letters, for example, &quot;USD&quot;
-integer: 1 to 6 digits
-daterange: YYYYMMDDTHHMMSSZ-YYYYMMDDTHHMMSSZ
-</pre></div>
+<hr class="docutils" />
+<section id="item-postfixes">
+<h3>Item Postfixes<a class="headerlink" href="#item-postfixes" title="Link to this heading"></a></h3>
+<p>Each item in a bundle can have an optional postfix controlling its issuance
+behavior.</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Postfix</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">S</span></code></p></td>
+<td><p>Shuffle</p></td>
+<td><p>Issues the item using shuffling, guaranteeing issuance within a bounded number of attempts.</p>
+<p>Recommended for items with drop probability up to 10%.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">D</span></code></p></td>
+<td><p>Disposable</p></td>
+<td><p>Issues the item a limited number of times.</p>
+<p>Format: <code class="docutils literal notranslate"><span class="pre">itemdefidxWeightDLimit</span></code>.</p>
+<p>If no limit is specified, the item is issued once.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">L</span></code></p></td>
+<td><p>Looped</p></td>
+<td><p>After issuing the item a set number of times, starts issuing it again from the beginning.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">U</span></code></p></td>
+<td><p>Unique</p></td>
+<td><p>Issues the item only if the player does not already own it. Compatible with <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SU</span></code></p></td>
+<td><p>Shuffle + Unique</p></td>
+<td><p>Combines shuffle and unique behavior.</p>
+<p>Order matters: <code class="docutils literal notranslate"><span class="pre">S</span></code> must come before <code class="docutils literal notranslate"><span class="pre">U</span></code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Postfixes <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>, and <code class="docutils literal notranslate"><span class="pre">L</span></code> are mutually exclusive for a single item. Within a
+bundle, different items can use different postfixes.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">U</span></code> postfix accepts optional additional items to check: <code class="docutils literal notranslate"><span class="pre">itemdefidU[111,112]</span></code>.
+If the player owns any of the listed items, the item will not be issued.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is possible to construct a generator that can never issue anything – for
+example, by combining <code class="docutils literal notranslate"><span class="pre">D</span></code> and <code class="docutils literal notranslate"><span class="pre">U</span></code> postfixes without fallback items.</p>
 </div>
 <p><strong>Examples:</strong></p>
-<p>“1;USD100” – $1.00</p>
-<p>“1;USD100,EUR080;20130606T080000Z-20130609T080000ZUSD50,EUR40” – <span class="math notranslate nohighlight">\(1.00 or 0.80 euros, but from 2013-06-06 to 2013-06-09 the price is reduced to \)</span>0.50 or 0.40 euro.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>40110x3;40207x96;40973
+40110x3;4020x20;40973x2S
+40110x3;4020x20D3;4021x10D;40973x2S;4022x20L2;4023x20L
+1123U;2347U111;4021U[111,112];1212x3
+1123x1SU;1212x3
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="shuffle-calculation">
+<h3>Shuffle Calculation<a class="headerlink" href="#shuffle-calculation" title="Link to this heading"></a></h3>
+<p>Shuffle guarantees issuance within <code class="docutils literal notranslate"><span class="pre">ceil(N</span> <span class="pre">×</span> <span class="pre">IntervalsPercent</span> <span class="pre">/</span> <span class="pre">100)</span></code>
+generations, where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code> = average attempts between drops with uniform distribution =
+<code class="docutils literal notranslate"><span class="pre">ceil(total_weight</span> <span class="pre">/</span> <span class="pre">item_weight)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IntervalsPercent</span></code> = multiplier from config based on drop probability:
+<code class="docutils literal notranslate"><span class="pre">{'10':</span> <span class="pre">160,</span> <span class="pre">'100':</span> <span class="pre">400,</span> <span class="pre">'20':</span> <span class="pre">200}</span></code> (key = probability %, value = multiplier)</p></li>
+</ul>
+<p><strong>Example:</strong> item with weight 2 in a bundle of total weight 25 (8% drop).
+Since 8% &lt; 10%, <code class="docutils literal notranslate"><span class="pre">IntervalsPercent</span> <span class="pre">=</span> <span class="pre">160</span></code>. <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">ceil(25/2)</span> <span class="pre">=</span> <span class="pre">13</span></code>.
+Maximum generations before guaranteed issuance: <code class="docutils literal notranslate"><span class="pre">ceil(13</span> <span class="pre">×</span> <span class="pre">160</span> <span class="pre">/</span> <span class="pre">100)</span> <span class="pre">=</span> <span class="pre">21</span></code>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="required-items-format">
+<h2>Required Items Format<a class="headerlink" href="#required-items-format" title="Link to this heading"></a></h2>
+<p>Defines requirements for issuing this item via the <code class="docutils literal notranslate"><span class="pre">AddItem</span></code> command, dropping
+it from bundles obtained through crafting, or crafting it directly. Does not
+apply to market or store purchases.</p>
+<p>The format resembles a bundle, with additional logical operators:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">;</span></code></p></td>
+<td><p>AND</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">,</span></code></p></td>
+<td><p>OR</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">!</span></code></p></td>
+<td><p>NOT</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></td>
+<td><p>Grouping</p></td>
+</tr>
+</tbody>
+</table>
+<p>OR has higher precedence than AND: <code class="docutils literal notranslate"><span class="pre">1;2,3</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">1;(2,3)</span></code>.
+Spaces are allowed anywhere except within an <a class="reference internal" href="#itemdefid"><code class="docutils literal notranslate"><span class="pre">itemdefid</span></code></a>.</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>40110x3;40207x2;40973
+(!5;6x2;3),(7x3;((3;!(5,4)),(5;4;!3)))
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="price-format">
+<h2>Price Format<a class="headerlink" href="#price-format" title="Link to this heading"></a></h2>
+<p>The <a class="reference internal" href="#price"><code class="docutils literal notranslate"><span class="pre">price</span></code></a> field is an array of price elements. Each element defines
+either a base price or a time-limited price.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;USD&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;EUR&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2013-06-06T08:00:00Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2013-06-09T08:00:00Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;USD&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;EUR&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Each price element can contain:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">start</span></code></p></td>
+<td><p>string (ISO 8601 UTC)</p></td>
+<td><p>Start of the discounted period.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">end</span></code></p></td>
+<td><p>string (ISO 8601 UTC)</p></td>
+<td><p>End of the discounted period.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;CURRENCY&gt;</span></code></p></td>
+<td><p>non-negative int</p></td>
+<td><p>Price in the given currency. Currency code must match the configured currencies.</p>
+<p>Value is in the smallest unit (e.g. cents for USD): <code class="docutils literal notranslate"><span class="pre">100</span></code> = $1.00.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The first element without <code class="docutils literal notranslate"><span class="pre">start</span></code>/<code class="docutils literal notranslate"><span class="pre">end</span></code> defines the base price. Subsequent
+elements with <code class="docutils literal notranslate"><span class="pre">start</span></code>/<code class="docutils literal notranslate"><span class="pre">end</span></code> define time-limited prices.</p>
+<p><strong>Examples:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">[{&quot;USD&quot;:</span> <span class="pre">100}]</span></code> – $1.00.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[{&quot;USD&quot;:</span> <span class="pre">100,</span> <span class="pre">&quot;EUR&quot;:</span> <span class="pre">80},</span> <span class="pre">{&quot;start&quot;:</span> <span class="pre">&quot;2013-06-06T08:00:00Z&quot;,</span> <span class="pre">&quot;end&quot;:</span> <span class="pre">&quot;2013-06-09T08:00:00Z&quot;,</span> <span class="pre">&quot;USD&quot;:</span> <span class="pre">50,</span> <span class="pre">&quot;EUR&quot;:</span> <span class="pre">40}]</span></code>
+– $1.00 or €0.80, reduced to $0.50 or €0.40 from
+2013-06-06 to 2013-06-09.</p>
 </section>
 </section>
 
@@ -346,12 +623,12 @@ daterange: YYYYMMDDTHHMMSSZ-YYYYMMDDTHHMMSSZ
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="contacts-config-format.html" class="btn btn-neutral float-left" title="Contacts config format" accesskey="p" rel="prev">
+      <a href="contacts-config-format.html" class="btn btn-neutral float-left" title="Contacts Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="modes-config-format.html" class="btn btn-neutral float-right" title="Modes config format" accesskey="n" rel="next">
+      <a href="modes-config-format.html" class="btn btn-neutral float-right" title="Modes Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -362,7 +639,7 @@ daterange: YYYYMMDDTHHMMSSZ-YYYYMMDDTHHMMSSZ
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -380,12 +657,12 @@ daterange: YYYYMMDDTHHMMSSZ-YYYYMMDDTHHMMSSZ
   <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="contacts-config-format.html" class="btn btn-neutral float-left" title="Contacts config format" accesskey="p" rel="prev">
+      <a href="contacts-config-format.html" class="btn btn-neutral float-left" title="Contacts Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="modes-config-format.html" class="btn btn-neutral float-right" title="Modes config format" accesskey="n" rel="next">
+      <a href="modes-config-format.html" class="btn btn-neutral float-right" title="Modes Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -396,7 +673,7 @@ daterange: YYYYMMDDTHHMMSSZ-YYYYMMDDTHHMMSSZ
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

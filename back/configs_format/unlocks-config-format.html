@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unlocks config format</title>
+  <title>Unlocks Config Format</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Changelog" href="../../changelog.html" />
-    <link rel="prev" title="Tables config format" href="tables-config-format.html" /> 
+    <link rel="prev" title="Tables Config Format" href="tables-config-format.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,52 +74,46 @@
 <li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Scripts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables config format</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Unlocks config format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#player-achievements">Player Achievements</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#unlocks-format">Unlocks format</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#unlock-description-format">Unlock description format</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#required-fields">Required fields</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#optional-fields">Optional fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Profile Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-scripts.html">Profile Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Unlocks Config Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-unlocks-config">Adding Unlocks Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unlock-description-format">Unlock Description Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
 </ul>
 </li>
-<li class="toctree-l5"><a class="reference internal" href="#stages-format">Stages format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stage-format">Stage Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unlock-examples">Unlock Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-unlocks">Simple Unlocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hidden-unlocks">Hidden Unlocks</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#win-limit-helper">Win Limit Helper</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#premium-helper">Premium Helper</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#periodic-unlocks">Periodic Unlocks</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#simple-player-level">Simple Player Level</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#progressive-player-level">Progressive Player Level</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#unlocks-examples">Unlocks examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#simple-unlocks">Simple unlocks</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#hidden-unlocks">Hidden unlocks</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#win-limit-helper">Win Limit helper</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#premium-helper">Premium helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auto-rewarding-unlocks">Auto Rewarding Unlocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sessional-unlocks">Sessional Unlocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multisessional-unlocks">Multisessional Unlocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-unlocks">Dynamic Unlocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-progress">Dynamic Progress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dynamic-rewards">Dynamic Rewards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unlocks-with-requirement">Unlocks with Requirement</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#grenade-killer">Grenade Killer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#premium-killer">Premium Killer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#premium-grenade-killer">Premium Grenade Killer</a></li>
 </ul>
 </li>
-<li class="toctree-l5"><a class="reference internal" href="#periodic-unlocks">Periodic unlocks</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#simple-player-level">Simple player level</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#progressive-player-level">Progressive player level</a></li>
-</ul>
-</li>
-<li class="toctree-l5"><a class="reference internal" href="#auto-rewarding-unlocks">Auto rewarding unlocks</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#sessional-unlocks">Sessional unlocks</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#multisessional-unlocks">Multisessional unlocks</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#dynamic-unlocks">Dynamic unlocks</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#dynamic-progress">Dynamic progress</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#dynamic-rewards">Dynamic rewards</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#unlocks-with-requirement">Unlocks with requirement</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#grenade-killer">Grenade killer</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#premium-killer">Premium killer</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#premium-grenade-killer">Premium grenade killer</a></li>
-</ul>
-</li>
-<li class="toctree-l5"><a class="reference internal" href="#using-meta">Using meta</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#using-meta">Using Meta</a></li>
 </ul>
 </li>
 </ul>
@@ -144,7 +138,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
-      <li class="breadcrumb-item active">Unlocks config format</li>
+      <li class="breadcrumb-item active">Unlocks Config Format</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -164,150 +158,214 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="unlocks-config-format">
-<h1>Unlocks config format<a class="headerlink" href="#unlocks-config-format" title="Link to this heading"></a></h1>
-<section id="player-achievements">
-<h2>Player Achievements<a class="headerlink" href="#player-achievements" title="Link to this heading"></a></h2>
-<p>Most modern game use players achievements. The achievement can be simple, like killing 10 zombies, or more complex, tracking changes of player level, player abilities, battle pass level, etc.</p>
-<p>In our services, player achievements are implemented as <em>unlocks</em>.
-<a class="reference internal" href="stats-config-format.html"><span class="std std-doc">Player statistics</span></a> are used to open unlocks.</p>
-<p>This article describes the format of unlocks config and provides examples of simple and complex unlocks. You can read about using unlocks in your game here:
+<h1>Unlocks Config Format<a class="headerlink" href="#unlocks-config-format" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Unlocks are the way player achievements are implemented in our services.
+An unlock can be simple, like killing 10 zombies, or complex, like tracking
+changes in player level, abilities, or battle pass progress.</p>
+<p>Unlock progress is calculated from <a class="reference internal" href="stats-config-format.html"><span class="std std-doc">player statistics</span></a>.</p>
+<p>To learn how to use unlocks in your game, see the
 .</p>
-<section id="unlocks-format">
-<h3>Unlocks format<a class="headerlink" href="#unlocks-format" title="Link to this heading"></a></h3>
-<p>To use and store an unlock you need to add its description to
-<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">unlock config</span></a>,
-and
-<a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">deploy configs</span></a>
-to services.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-unlocks-config">
+<h2>Adding Unlocks Config<a class="headerlink" href="#adding-unlocks-config" title="Link to this heading"></a></h2>
+<p>To use unlocks, you need to:</p>
+<ol class="arabic simple">
+<li><p>Add unlock descriptions to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">unlocks config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+<p>The config supports up to 1,000 unlocks.</p>
+</section>
+<hr class="docutils" />
 <section id="unlock-description-format">
-<h4>Unlock description format<a class="headerlink" href="#unlock-description-format" title="Link to this heading"></a></h4>
+<h2>Unlock Description Format<a class="headerlink" href="#unlock-description-format" title="Link to this heading"></a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pistol_master&quot;</span><span class="p">,</span><span class="w">           </span><span class="c1">// required</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span><span class="w">                  </span><span class="c1">// required</span>
-<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span><span class="w">                 </span><span class="c1">// required</span>
-<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.pistol_kills&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// required</span>
-<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">}],</span><span class="w">      </span><span class="c1">// required</span>
-
-<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w">                 </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;hidden&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">                   </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;periodic&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">                 </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;startStageLoop&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">               </span><span class="c1">// optional, default = 0</span>
-<span class="w">  </span><span class="nt">&quot;autoRewarding&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">            </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;dynamicUnlock&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">            </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;dynamicProgress&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">          </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;dynamicRewards&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">           </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;showForAll&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">               </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">                 </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;meta&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">                         </span><span class="c1">// optional</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pistol_master&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.pistol_kills&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hidden&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;periodic&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;startStageLoop&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;autoRewarding&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;dynamicUnlock&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;dynamicProgress&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;dynamicRewards&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;showForAll&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;winLimitHelper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;iconUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com/icons/pistol_master.png&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;meta&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="required-fields">
-<h5>Required fields<a class="headerlink" href="#required-fields" title="Link to this heading"></a></h5>
+<hr class="docutils" />
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<dl class="simple myst">
+<dt><span id="name"><code class="docutils literal notranslate"><span class="pre">name</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="name" href="#name" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Name of the unlock. Must be unique.</p>
+</dd>
+<dt><span id="type"><code class="docutils literal notranslate"><span class="pre">type</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="type" href="#type" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of the unlock. Possible values:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<em>string</em>) – name of the unlock, must be unique.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<em>string</em>) – type of the unlock, possible values:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">NORMAL</span></code> – a standard unlock. <a class="reference internal" href="#simple-unlocks">Example</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SESSIONAL</span></code> – progress is calculated from a single session’s statistics.
+Can be opened only once. <a class="reference internal" href="#sessional-unlocks">Example</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MULTISESSIONAL</span></code> – works like <code class="docutils literal notranslate"><span class="pre">SESSIONAL</span></code> but can be opened in every
+session. <a class="reference internal" href="#multisessional-unlocks">Example</a>.</p></li>
+</ul>
+</dd>
+<dt><span id="table"><code class="docutils literal notranslate"><span class="pre">table</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="table" href="#table" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Name of the table used to calculate the unlock condition.
+See <a class="reference internal" href="tables-config-format.html"><span class="std std-doc">Statistics Tables</span></a>.</p>
+</dd>
+<dt><span id="condition"><code class="docutils literal notranslate"><span class="pre">condition</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="condition" href="#condition" class="headerlink" title="Link to this parameter"></a></dt><dd><p>A <a class="reference external" href="https://quirrel.io/doc/index.html">quirrel</a> expression used to calculate
+unlock progress. Uses the same format as
+<a class="reference internal" href="stats-config-format.html#condition-format"><span class="std std-ref">stats condition</span></a>.
+Maximum 512 characters.</p>
+</dd>
+<dt><span id="stages"><code class="docutils literal notranslate"><span class="pre">stages</span></code></span> array <span class="bdg bdg-s bdg-yellow">required</span> <a id="stages" href="#stages" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Array of unlock stages. Must have at least one stage, maximum 1,000 stages.
+See <a class="reference internal" href="#stage-format">Stage Format</a>.</p>
+</dd>
+<dt><span id="mode"><code class="docutils literal notranslate"><span class="pre">mode</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="mode" href="#mode" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Name of the game mode used to calculate the unlock condition.
+See <a class="reference internal" href="modes-config-format.html"><span class="std std-doc">Statistics Modes</span></a>.</p>
+</dd>
+<dt><span id="hidden"><code class="docutils literal notranslate"><span class="pre">hidden</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="hidden" href="#hidden" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the unlock is hidden from the user. Use this for helper unlocks
+that implement complex mechanics. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+<a class="reference internal" href="#hidden-unlocks">Examples</a>.</p>
+</dd>
+<dt><span id="periodic"><code class="docutils literal notranslate"><span class="pre">periodic</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="periodic" href="#periodic" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, unlock stages are cyclic – they repeat after the last stage is
+reached. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. <a class="reference internal" href="#periodic-unlocks">Example</a>.</p>
+</dd>
+<dt><span id="startstageloop"><code class="docutils literal notranslate"><span class="pre">startStageLoop</span></code></span> positive int <span class="bdg bdg-s bdg-grey">optional</span> <a id="startStageLoop" href="#startStageLoop" class="headerlink" title="Link to this parameter"></a></dt><dd><p>The stage number at which the cycle begins. Only applies when <a class="reference internal" href="#periodic"><code class="docutils literal notranslate"><span class="pre">periodic</span></code></a>
+is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  If not set, the cycle starts from stage 1.
+<a class="reference internal" href="#progressive-player-level">Example</a>.</p>
+</dd>
+<dt><span id="autorewarding"><code class="docutils literal notranslate"><span class="pre">autoRewarding</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="autoRewarding" href="#autoRewarding" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, stage rewards are granted automatically when the stage opens.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. If <code class="docutils literal notranslate"><span class="pre">false</span></code>, use the
+
+action to grant rewards manually. <a class="reference internal" href="#auto-rewarding-unlocks">Example</a>.</p>
+</dd>
+<dt><span id="dynamicunlock"><code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="dynamicUnlock" href="#dynamicUnlock" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, both the unlock progress and stage decrease when the condition
+expression result decreases. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+<a class="reference internal" href="#dynamic-unlocks">Example</a>.</p>
+</dd>
+<dt><span id="dynamicprogress"><code class="docutils literal notranslate"><span class="pre">dynamicProgress</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="dynamicProgress" href="#dynamicProgress" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, only the unlock progress decreases when the condition result
+decreases – the stage remains unchanged. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+<a class="reference internal" href="#dynamic-progress">Example</a>.</p>
+</dd>
+<dt><span id="dynamicrewards"><code class="docutils literal notranslate"><span class="pre">dynamicRewards</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="dynamicRewards" href="#dynamicRewards" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, rewards are granted every time a stage is opened, including
+after the stage has been decreased and re-opened. Only applies when
+<a class="reference internal" href="#dynamicunlock"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code></span></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
+<a class="reference internal" href="#dynamic-rewards">Example</a>.</p>
+</dd>
+<dt><span id="showforall"><code class="docutils literal notranslate"><span class="pre">showForAll</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="showForAll" href="#showForAll" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the unlock is visible to other users. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. To
+request another user’s unlocks, use the
+
+action.</p>
+</dd>
+<dt><span id="requirement"><code class="docutils literal notranslate"><span class="pre">requirement</span></code></span> string or list of strings <span class="bdg bdg-s bdg-grey">optional</span> <a id="requirement" href="#requirement" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Other unlocks that must be opened before this unlock’s rewards can be
+granted. If the required unlocks are not open, rewards are withheld.</p>
+<p>Can be specified as a string using <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> as separator, or as a list:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unlock1 &amp; unlock2&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;unlock1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;unlock2&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Allowed characters: letters, digits, underscores, hyphens, spaces, and <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>.</p>
+</dd>
+<dt><span id="iconurl"><code class="docutils literal notranslate"><span class="pre">iconUrl</span></code></span> string (URL) <span class="bdg bdg-s bdg-grey">optional</span> <a id="iconUrl" href="#iconUrl" class="headerlink" title="Link to this parameter"></a></dt><dd><p>URL of the icon displayed for this unlock on the client.</p>
+</dd>
+<dt><span id="meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary JSON data attached to the unlock. Use this to pass custom
+game-specific information to the client. Maximum 32,768 characters.
+<a class="reference internal" href="#using-meta">Example</a>.</p>
+</dd>
+<dt><span id="namespace"><code class="docutils literal notranslate"><span class="pre">namespace</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="namespace" href="#namespace" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Namespace of the unlock. Used to organize unlocks across different
+configurations.</p>
+</dd>
+<dt><span id="personal"><code class="docutils literal notranslate"><span class="pre">personal</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="personal" href="#personal" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of the personal unlock generator this unlock belongs to. Must match the
+<code class="docutils literal notranslate"><span class="pre">type</span></code> field of a <code class="docutils literal notranslate"><span class="pre">personalUnlockGenerators</span></code> entry in the
+<a class="reference internal" href="tables-config-format.html"><span class="std std-doc">tables config</span></a>. Defaults to <code class="docutils literal notranslate"><span class="pre">common</span></code>.</p>
+</dd>
+<dt><span id="newbie"><code class="docutils literal notranslate"><span class="pre">newbie</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="newbie" href="#newbie" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this unlock is included in the newbie pool of its personal unlock
+generator. Newbie players receive unlocks from this pool instead of the
+general pool. Only applies when <a class="reference internal" href="#personal"><code class="docutils literal notranslate"><span class="pre">personal</span></code></a> is set.</p>
+</dd>
+<dt><span id="steamachievement"><code class="docutils literal notranslate"><span class="pre">steamAchievement</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="steamAchievement" href="#steamAchievement" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the unlock is sent to Steam as a completed achievement when it is
+fully opened. Only applies to Steam accounts. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="showbyachvservice"><code class="docutils literal notranslate"><span class="pre">showByAchvService</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="showByAchvService" href="#showByAchvService" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the unlock is visible in the achievement service. Sent to the
+client as part of the unlock description. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+</dl>
+</section>
+</section>
+<hr class="docutils" />
+<section id="stage-format">
+<h2>Stage Format<a class="headerlink" href="#stage-format" title="Link to this heading"></a></h2>
+<p>Each stage is opened when the condition expression result reaches or exceeds
+the stage’s <a class="reference internal" href="#progress"><code class="docutils literal notranslate"><span class="pre">progress</span></code></a> value.</p>
+<dl class="simple myst">
+<dt><span id="progress"><code class="docutils literal notranslate"><span class="pre">progress</span></code></span> positive int <span class="bdg bdg-s bdg-yellow">required</span> <a id="progress" href="#progress" class="headerlink" title="Link to this parameter"></a></dt><dd><p>The threshold value at which this stage opens.</p>
+</dd>
+<dt><span id="updstats"><code class="docutils literal notranslate"><span class="pre">updStats</span></code></span> array <span class="bdg bdg-s bdg-grey">optional</span> <a id="updStats" href="#updStats" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Stats to update as a reward when this stage opens. Each entry has:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> – the game mode in which the stat is updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> – the name of the stat to update.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> – the value to apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> – how the value is applied:</p>
 <ul>
-<li><p>“NORMAL” – simple unlock. <a class="reference internal" href="#simple-unlocks">Example</a>.</p></li>
-<li><p>“SESSIONAL” – unlock progress is calculated using statistics of a single session. This type of unlock opens only <em>once</em>. <a class="reference internal" href="#sessional-unlocks">Example</a>.</p></li>
-<li><p>“MULTISESSIONAL” – unlock works as SESSIONAL but it can be opened <em>multiple</em> times.
-<a class="reference internal" href="#multisessional-unlocks">Example</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ADD</span></code> – adds the value to the current stat: <code class="docutils literal notranslate"><span class="pre">stat</span> <span class="pre">+=</span> <span class="pre">value</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SET</span></code> – sets the stat to the value directly.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table</span></code> (<em>string</em>) – The name of the table for calculating the unlock condition.
-See <a class="reference internal" href="tables-config-format.html"><span class="std std-doc">Statistic tables</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<em>string</em>) – a <a class="reference external" href="https://quirrel.io/doc/index.html">quirrel</a> language expression used to calculate the unlock progress. The format is equivalent to <a class="reference internal" href="stats-config-format.html#condition-format"><span class="std std-ref">stats condition</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stages</span></code> (<em>json array</em>) – array of unlock stages. An unlock must have at least one stage but may have more. See <a class="reference internal" href="#stages-format">stage description format</a>.</p></li>
 </ul>
-</section>
-<section id="optional-fields">
-<h5>Optional fields<a class="headerlink" href="#optional-fields" title="Link to this heading"></a></h5>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> – the name of the game mode for calculating the unlock condition. See <a class="reference internal" href="modes-config-format.html"><span class="std std-doc">Statistic modes</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code> (<em>bool</em>) – if = <em>true</em>, hide unlock from user. Hidden unlocks used like helper to implement some complex mechanics. <a class="reference internal" href="#hidden-unlocks">Examples</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodic</span></code> (<em>bool</em>) – if = <em>true</em>, the unlock stages are considered cyclic. <a class="reference internal" href="#periodic-unlocks">Example</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startStageLoop</span></code> (<em>int</em>) – the number of the stage at which the cycle will begin. Works only if periodic field value is set to <em>true</em>. <a class="reference internal" href="#progressive-player-level">Example</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoRewarding</span></code> – if = <em>true</em>, the rewards of the unlock stage will be received automatically when the unlock stage opens. <a class="reference internal" href="#auto-rewarding-unlocks">Example</a>. Otherwise you need to use
-
-action to reward unlock.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code> (<em>bool</em>) – if = <em>true</em>, the unlock progress and stage will be decreased when the result of condition expression decreases. <a class="reference internal" href="#dynamic-unlocks">Example</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dynamicProgress</span></code> (<em>bool</em>) – if = <em>true</em>, only the unlock progress will be decreased when the result of condition expression decreases, the unlock stage remains unchanged. <a class="reference internal" href="#dynamic-progress">Example</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dynamicRewards</span></code> (<em>bool</em>) – if = <em>true</em>, the unlock awards will be given at each opening of the unlock stage. Works only if <code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code> is <em>true</em>. If the unlock stage was awarded, then decreased and then increased again, and that stage has to be rewarded again, set this flag to <em>true</em>. <a class="reference internal" href="#dynamic-rewards">Example</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">showForAll</span></code> (<em>bool</em>) – determines whether the unlock should be visible to another user. To request another user unlocks use
-
-action.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requirement</span></code> (<em>string</em>) – the unlocks necessary for given unlock awards. If the player does not open the required unlocks, the rewards will not be given. <a class="reference internal" href="#unlocks-with-requirement">Examples</a>.
-Requirement format: <code class="docutils literal notranslate"><span class="pre">&quot;unlock1</span> <span class="pre">&amp;</span> <span class="pre">unlock2&quot;</span></code> if player does not open unlock1 and unlock2, the rewards will not be given.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">meta</span></code> (<em>json object</em>) – field for custom game data. Can be used to pass arbitrary data to the game client. The value must be a json object. <a class="reference internal" href="#using-meta">Example</a>.</p></li>
-</ul>
-</section>
-</section>
-<section id="stages-format">
-<h4>Stages format<a class="headerlink" href="#stages-format" title="Link to this heading"></a></h4>
-<p>Each stage has:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">progress</span></code> (<em>int</em>) – if the condition expression result is equal to or greater than the progress value, the stage is considered open.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updStats</span></code> (<em>json array</em>) – when a stage is opened, the player can get stage rewards, like extra statistics.</p></li>
-</ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;stages&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="p">[</span>
+</dd>
+<dt><span id="itemrewards"><code class="docutils literal notranslate"><span class="pre">itemRewards</span></code></span> object <span class="bdg bdg-s bdg-grey">optional</span> <a id="itemRewards" href="#itemRewards" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Items to grant as a reward when this stage opens. Specified as a mapping of
+item identifiers to quantities.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;itemRewards&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;1001&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;1002&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Example with multiple stages:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">},</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;progress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;progress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;updStats&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">    </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rating&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;helper_stat&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SET&quot;</span>
-<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rating&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;helper_stat&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SET&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;progress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;updStats&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">    </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;penalty&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;penalty&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 </pre></div>
 </div>
-<p>The unlock in the example above has 3 stages:</p>
-<p><strong>Stage 1</strong> will be opened when the progress is equal or greater than 10. Stage 1 does not contain rewards.</p>
-<p><strong>Stage 2</strong> will be opened when the progress is equal or greater than 20. Stage 2 updates two stats as a reward:</p>
 <ul class="simple">
-<li><p>increase the <em>rating</em> stat value by 3 for <em>default</em> mode.
-If type is “ADD” then the new stat value calculated as <code class="docutils literal notranslate"><span class="pre">stat_value</span> <span class="pre">+=</span> <span class="pre">unlock_award_value</span></code>.</p></li>
-<li><p>set <em>helper_stat</em> value to 1 for <em>default</em> mode. If type is “SET”, sets the specified stat value directly.</p></li>
-</ul>
-<p><strong>Stage 3</strong> will be opened when the progress is equal or greater than 20. Stage 3 updates one stat as a reward:</p>
-<ul class="simple">
-<li><p><em>penalty</em> value is decreased by 2 for <em>default</em> mode.</p></li>
+<li><p><strong>Stage 1</strong> opens at progress ≥ 10. No rewards.</p></li>
+<li><p><strong>Stage 2</strong> opens at progress ≥ 20. Increases <code class="docutils literal notranslate"><span class="pre">rating</span></code> by 3 and sets
+<code class="docutils literal notranslate"><span class="pre">helper_stat</span></code> to 1 in <code class="docutils literal notranslate"><span class="pre">default</span></code> mode.</p></li>
+<li><p><strong>Stage 3</strong> opens at progress ≥ 30. Decreases <code class="docutils literal notranslate"><span class="pre">penalty</span></code> by 2 in <code class="docutils literal notranslate"><span class="pre">default</span></code>
+mode.</p></li>
 </ul>
 </section>
-</section>
-</section>
-<section id="unlocks-examples">
-<h2>Unlocks examples<a class="headerlink" href="#unlocks-examples" title="Link to this heading"></a></h2>
+<hr class="docutils" />
+<section id="unlock-examples">
+<h2>Unlock Examples<a class="headerlink" href="#unlock-examples" title="Link to this heading"></a></h2>
 <section id="simple-unlocks">
-<h3>Simple unlocks<a class="headerlink" href="#simple-unlocks" title="Link to this heading"></a></h3>
-<p>A simple unlock can be used for some simple player achievements.</p>
-<p><strong>firstSoloKill</strong> – player achievement for the first kill in <em>solo</em> mode. The unlock opens when player make the first kill in <em>solo</em> mode.</p>
+<h3>Simple Unlocks<a class="headerlink" href="#simple-unlocks" title="Link to this heading"></a></h3>
+<p>Simple unlocks track straightforward player achievements.</p>
+<p><strong>firstSoloKill</strong> – opens when the player makes their first kill in <em>solo</em> mode.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;firstKill&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -318,13 +376,17 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Also you can use simple unlocks as a helper for more complex unlocks to split some logic.</p>
+<p>Simple unlocks can also serve as helpers to split complex logic across multiple
+unlocks.</p>
+</section>
+<hr class="docutils" />
 <section id="hidden-unlocks">
-<h4>Hidden unlocks<a class="headerlink" href="#hidden-unlocks" title="Link to this heading"></a></h4>
+<h3>Hidden Unlocks<a class="headerlink" href="#hidden-unlocks" title="Link to this heading"></a></h3>
 <section id="win-limit-helper">
-<h5>Win Limit helper<a class="headerlink" href="#win-limit-helper" title="Link to this heading"></a></h5>
-<p><strong>winLimitHelper</strong> – unlock opens when player wins 10 battles in <em>squad</em> mode. Unlock is hidden from user.</p>
-<p>Can be used as a helper, for example to block other unlock rewards. See <a class="reference internal" href="#grenade-killer">grenadeKiller</a> example.</p>
+<h4>Win Limit Helper<a class="headerlink" href="#win-limit-helper" title="Link to this heading"></a></h4>
+<p><strong>winLimitHelper</strong> – opens when the player wins 10 battles in <em>squad</em> mode.
+Hidden from the user. Used as a helper to block other unlock rewards.
+See <a class="reference internal" href="#grenade-killer">grenadeKiller</a>.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;winLimitHelper&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -338,10 +400,11 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 </div>
 </section>
 <section id="premium-helper">
-<h5>Premium helper<a class="headerlink" href="#premium-helper" title="Link to this heading"></a></h5>
-<p><strong>premiumHelper</strong> – unlock opens if player has the premium stat. Unlock is hidden from user.</p>
-<p>Premium stat can be incremented and decremented, so <code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code> is used to open and close unlock when premium stat value changes.</p>
-<p>Can be used as a helper to block other unlocks rewards. See <a class="reference internal" href="#premium-killer">premiumKiller</a> example.</p>
+<h4>Premium Helper<a class="headerlink" href="#premium-helper" title="Link to this heading"></a></h4>
+<p><strong>premiumHelper</strong> – opens when the player has an active premium. Hidden from
+the user. Uses <a class="reference internal" href="#dynamicunlock"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code></span></a> because the premium stat can
+increase and decrease. Used as a helper to block other unlock rewards.
+See <a class="reference internal" href="#premium-killer">premiumKiller</a>.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumHelper&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -356,37 +419,26 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 </div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="periodic-unlocks">
-<h4>Periodic unlocks<a class="headerlink" href="#periodic-unlocks" title="Link to this heading"></a></h4>
-<p>Each unlock stage opens when condition expression value &gt;= stage progress. The following shows how to calculate the progress of an arbitrary stage of a periodic unlock.</p>
-<p>The progress of an arbitrary stage of a periodic unlock is equal to sum of progress difference of previous stages. We can split this sum into the following parts:</p>
+<h3>Periodic Unlocks<a class="headerlink" href="#periodic-unlocks" title="Link to this heading"></a></h3>
+<p>Periodic unlocks repeat their stages cyclically. Each stage opens when the
+condition result reaches or exceeds the stage’s calculated progress.</p>
+<p>The progress of any arbitrary stage is calculated as:</p>
+<p><code class="docutils literal notranslate"><span class="pre">arbitraryStageProgress</span> <span class="pre">=</span> <span class="pre">cycles_count</span> <span class="pre">×</span> <span class="pre">cycle_delta</span> <span class="pre">+</span> <span class="pre">stageIdx_progress</span></code></p>
+<p>Where:</p>
 <ul class="simple">
-<li><p>the progress of the stages preceding the start of the cycle stage, let’s call it <code class="docutils literal notranslate"><span class="pre">progressPrevCycleStartStage</span></code>;</p></li>
-<li><p>the sum of full cycle progress difference is equal to <code class="docutils literal notranslate"><span class="pre">cycles_count*cycle_delta</span></code>.
-<code class="docutils literal notranslate"><span class="pre">cycles_count</span> <span class="pre">=</span> <span class="pre">(stage</span> <span class="pre">-</span> <span class="pre">startStageLoop</span> <span class="pre">+</span> <span class="pre">1)/</span> <span class="pre">(last_stage</span> <span class="pre">-</span> <span class="pre">startStageLoop</span> <span class="pre">+</span> <span class="pre">1)</span></code>:</p>
-<ul>
-<li><p><em>stage</em> – the arbitrary stage number;</p></li>
-<li><p><em>last_stage</em> – the number of the last stage specified in the unlock description;</p></li>
-<li><p><em>startStageLoop</em> – value of startStageLoop unlock field;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cycle_delta</span> <span class="pre">=</span> <span class="pre">lastStageProgress</span> <span class="pre">-</span> <span class="pre">progressPrevCycleStartStage</span></code>;</p></li>
-<li><p><em>lastStageProgress</em> – the progress of the last stage specified in the unlock description;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cycle_delta</span> <span class="pre">=</span> <span class="pre">lastStageProgress</span> <span class="pre">-</span> <span class="pre">progressPrevCycleStartStage</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cycles_count</span> <span class="pre">=</span> <span class="pre">floor((stage</span> <span class="pre">-</span> <span class="pre">startStageLoop)</span> <span class="pre">/</span> <span class="pre">(last_stage</span> <span class="pre">-</span> <span class="pre">startStageLoop</span> <span class="pre">+</span> <span class="pre">1))</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stageIdx</span> <span class="pre">=</span> <span class="pre">(stage</span> <span class="pre">-</span> <span class="pre">startStageLoop)</span> <span class="pre">mod</span> <span class="pre">(last_stage</span> <span class="pre">-</span> <span class="pre">startStageLoop</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">+</span> <span class="pre">startStageLoop</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stageIdx_progress</span></code> – the progress of stage <code class="docutils literal notranslate"><span class="pre">stageIdx</span></code> from the unlock
+description</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">progressPrevCycleStartStage</span></code> – the progress of the stage just before
+<code class="docutils literal notranslate"><span class="pre">startStageLoop</span></code></p></li>
 </ul>
-</li>
-<li><p>the progress of the unfinished cyclical stage: <code class="docutils literal notranslate"><span class="pre">stageIdx_progress</span> <span class="pre">-</span> <span class="pre">progressPrevCycleStartStage</span></code>:</p>
-<ul>
-<li><p><em>stageIdx_progress</em> – the stage progress from the unlock description, when</p></li>
-<li><p><em>stageIdx</em> calculate as: <code class="docutils literal notranslate"><span class="pre">stageIdx</span> <span class="pre">=</span> <span class="pre">(stage</span> <span class="pre">-</span> <span class="pre">startStageLoop</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">mod</span> <span class="pre">(last_stage</span> <span class="pre">-</span> <span class="pre">startStageLoop</span> <span class="pre">+</span> <span class="pre">1)</span></code>.</p></li>
-</ul>
-</li>
-</ul>
-<p>So, the formula for calculating the arbitrary stage progress is as follows:</p>
-<p><code class="docutils literal notranslate"><span class="pre">arbitraryStageProgress</span> <span class="pre">=</span> <span class="pre">progressPrevCycleStartStage</span> <span class="pre">+</span> <span class="pre">cycles_count*cycle_delta</span> <span class="pre">+</span> <span class="pre">stageIdx_progress</span> <span class="pre">-</span> <span class="pre">progressPrevCycleStartStage</span></code></p>
-<p>or simplifying:</p>
-<p><code class="docutils literal notranslate"><span class="pre">arbitraryStageProgress</span> <span class="pre">=</span> <span class="pre">cycles_count*cycle_delta</span> <span class="pre">+</span> <span class="pre">stageIdx_progress</span></code></p>
-<p>Let’s look at the examples:</p>
 <section id="simple-player-level">
-<h5>Simple player level<a class="headerlink" href="#simple-player-level" title="Link to this heading"></a></h5>
-<p>Periodic unlocking with 1 cyclic stage:</p>
+<h4>Simple Player Level<a class="headerlink" href="#simple-player-level" title="Link to this heading"></a></h4>
+<p>One cyclic stage, repeating indefinitely:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simplePlayerLevel&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -394,26 +446,25 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 <span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;periodic&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.playerExp&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="c1">//stage 1, 2, 3 ...</span>
+<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">}]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">cycle_delta</span> <span class="pre">=</span> <span class="pre">10</span></code></p>
-<p>Stages will open repeatedly when condition result &gt;= stage*progress:</p>
+<p>Since there is only one stage and the cycle starts at stage 1,
+<code class="docutils literal notranslate"><span class="pre">progressPrevCycleStartStage</span> <span class="pre">=</span> <span class="pre">0</span></code>, so <code class="docutils literal notranslate"><span class="pre">cycle_delta</span> <span class="pre">=</span> <span class="pre">10</span> <span class="pre">-</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">10</span></code>.
+Each stage opens at <code class="docutils literal notranslate"><span class="pre">stage_num</span> <span class="pre">×</span> <span class="pre">10</span></code>:</p>
 <ul class="simple">
-<li><p><strong>stage 1</strong> - stageIdx = 1, cycles_count = 0. progress = 10</p></li>
-<li><p><strong>stage 2</strong> - stageIdx = 1, cycles_count = 1. progress = 20</p></li>
-<li><p><strong>stage 3</strong> - stageIdx = 1, cycles_count = 2. progress = 30</p></li>
+<li><p><strong>Stage 1</strong> — progress = 10</p></li>
+<li><p><strong>Stage 2</strong> — progress = 20</p></li>
+<li><p><strong>Stage 3</strong> — progress = 30</p></li>
 <li><p>…</p></li>
 </ul>
-<p>For this example, you can also use a simpler formula:</p>
-<p><code class="docutils literal notranslate"><span class="pre">arbitraryStageProgress</span> <span class="pre">=</span> <span class="pre">stage_num*progress</span></code></p>
 </section>
 <section id="progressive-player-level">
-<h5>Progressive player level<a class="headerlink" href="#progressive-player-level" title="Link to this heading"></a></h5>
-<p>Periodic unlocking with 5 stages, the cycle starts at the 4th stage:</p>
+<h4>Progressive Player Level<a class="headerlink" href="#progressive-player-level" title="Link to this heading"></a></h4>
+<p>Five stages, cycle starts at stage 4 (<code class="docutils literal notranslate"><span class="pre">startStageLoop:</span> <span class="pre">4</span></code>):</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simplePlayerLevel&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;progressivePlayerLevel&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
@@ -421,36 +472,35 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 <span class="w">  </span><span class="nt">&quot;startStageLoop&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.playerExp&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">//stage 1</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">//stage 2</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">//stage 3</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">//stage 4, 6, 8 ...</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//stage 5, 7, 9 ...</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">cycle_delta</span> <span class="pre">=</span> <span class="pre">stage_5_progress</span> <span class="pre">-</span> <span class="pre">stage_3_progress</span> <span class="pre">=</span> <span class="pre">70</span></code></p>
-<p>Calculate arbitrary stage progress using formula:</p>
-<p><code class="docutils literal notranslate"><span class="pre">arbitraryStageProgress</span> <span class="pre">=</span> <span class="pre">cycles_count*70</span> <span class="pre">+</span> <span class="pre">stageIdx_progress</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">progressPrevCycleStartStage</span></code> = progress of stage 3 = 30, so
+<code class="docutils literal notranslate"><span class="pre">cycle_delta</span> <span class="pre">=</span> <span class="pre">100</span> <span class="pre">-</span> <span class="pre">30</span> <span class="pre">=</span> <span class="pre">70</span></code>. Stage progress:</p>
 <ul class="simple">
-<li><p><strong>stage 1</strong> - stageIdx = 1, cycles*count = 0. progress = 5</p></li>
-<li><p><strong>stage 2</strong> - stageIdx = 2, cycles*count = 0. progress = 15</p></li>
-<li><p><strong>stage 3</strong> - stageIdx = 3, cycles*count = 0. progress = 30</p></li>
-<li><p><strong>stage 4</strong> - stageIdx = 4, cycles*count = 0. progress = 50</p></li>
-<li><p><strong>stage 5</strong> - stageIdx = 5, cycles*count = 0. progress = 100</p></li>
-<li><p><strong>stage 6</strong> - stageIdx = 4, cycles*count = 1. progress = 120</p></li>
-<li><p><strong>stage 7</strong> - stageIdx = 5, cycles*count = 1. progress = 170</p></li>
-<li><p><strong>stage 8</strong> - stageIdx = 4, cycles_count = 2. progress = 190</p></li>
+<li><p><strong>Stage 1</strong> — 5</p></li>
+<li><p><strong>Stage 2</strong> — 15</p></li>
+<li><p><strong>Stage 3</strong> — 30</p></li>
+<li><p><strong>Stage 4</strong> — 50</p></li>
+<li><p><strong>Stage 5</strong> — 100</p></li>
+<li><p><strong>Stage 6</strong> — 120 (= 1 × 70 + 50)</p></li>
+<li><p><strong>Stage 7</strong> — 170 (= 1 × 70 + 100)</p></li>
+<li><p><strong>Stage 8</strong> — 190 (= 2 × 70 + 50)</p></li>
 <li><p>…</p></li>
 </ul>
 </section>
 </section>
+<hr class="docutils" />
 <section id="auto-rewarding-unlocks">
-<h4>Auto rewarding unlocks<a class="headerlink" href="#auto-rewarding-unlocks" title="Link to this heading"></a></h4>
-<p>You can use the auto rewarding unlocks to reward the user immediately after opening the unlock stage.</p>
-<p>For example for some extra experience:</p>
-<p><strong>expForLoot</strong> – immediately add extra experience points when player has looted 100 items:</p>
+<h3>Auto Rewarding Unlocks<a class="headerlink" href="#auto-rewarding-unlocks" title="Link to this heading"></a></h3>
+<p><strong>expForLoot</strong> – automatically grants 15 experience points when the player
+loots 100 items.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;expForLoot&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -462,12 +512,7 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playerExp&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playerExp&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -475,12 +520,14 @@ If type is “ADD” then the new stat value calculated as <code class="docutils
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="sessional-unlocks">
-<h4>Sessional unlocks<a class="headerlink" href="#sessional-unlocks" title="Link to this heading"></a></h4>
-<p>Sessional unlocks calculate condition result using statistics from a single session. See
-.
-Sessional unlocks can be opened only once.</p>
-<p><strong>battleKiller</strong> – kill 10 enemies in one battle. Increment <em>sessionalUnlocksCount</em> stat as rewards. Open only once.</p>
+<h3>Sessional Unlocks<a class="headerlink" href="#sessional-unlocks" title="Link to this heading"></a></h3>
+<p>Progress is calculated from a single session’s statistics. Can be opened only
+once. See
+.</p>
+<p><strong>battleKiller</strong> – kill 10 enemies in one battle. Grants 1
+<code class="docutils literal notranslate"><span class="pre">sessionalUnlocksCount</span></code> as a reward.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;battleKiller&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SESSIONAL&quot;</span><span class="p">,</span>
@@ -491,12 +538,7 @@ Sessional unlocks can be opened only once.</p>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sessionalUnlocksCount&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sessionalUnlocksCount&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -504,12 +546,14 @@ Sessional unlocks can be opened only once.</p>
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="multisessional-unlocks">
-<h4>Multisessional unlocks<a class="headerlink" href="#multisessional-unlocks" title="Link to this heading"></a></h4>
-<p>Multisessional unlocks work like sessional ones but can be opened in each session.</p>
-<p><strong>battleBonus</strong> – opens in each battle (session) in which players rating &gt;= 5 and rewards 10 extra <em>playerExp</em> points.</p>
+<h3>Multisessional Unlocks<a class="headerlink" href="#multisessional-unlocks" title="Link to this heading"></a></h3>
+<p>Works like sessional unlocks but can be opened in every session.</p>
+<p><strong>battleBonus</strong> – opens in each session where the player’s rating is ≥ 5.
+Grants 10 <code class="docutils literal notranslate"><span class="pre">playerExp</span></code> points.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;battleKiller&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;battleBonus&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MULTISESSIONAL&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
@@ -518,12 +562,7 @@ Sessional unlocks can be opened only once.</p>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playerExp&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playerExp&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -531,10 +570,11 @@ Sessional unlocks can be opened only once.</p>
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="dynamic-unlocks">
-<h4>Dynamic unlocks<a class="headerlink" href="#dynamic-unlocks" title="Link to this heading"></a></h4>
-<p>The unlock progress and stage will be decreased when the result of condition expression is decreased, example:</p>
-<p><strong>karmaLevel</strong> – unlock with 3 stages that can be increased and decreased according to karma statistics.</p>
+<h3>Dynamic Unlocks<a class="headerlink" href="#dynamic-unlocks" title="Link to this heading"></a></h3>
+<p>The unlock stage decreases when the condition result decreases.</p>
+<p><strong>karmaLevel</strong> – 3 stages that increase and decrease with the <code class="docutils literal notranslate"><span class="pre">karma</span></code> stat.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;karmaLevel&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -546,20 +586,21 @@ Sessional unlocks can be opened only once.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If the karma stat increases to 5 then the <em>karmaLevel</em> stage = 1.</p>
-<p>If then the karma stat decreases then <em>karmaLevel</em> stage is also decreased and will be equal to 0.</p>
-<p>Similarly with stages 2 and 3. Unlock progress and stage change dynamically when the condition expression value is changed:</p>
+<p>Stage boundaries:</p>
 <ul class="simple">
-<li><p><strong>stage 0</strong> – karma &lt; 5</p></li>
-<li><p><strong>stage 1</strong> – karma &gt;= 5 and karma &lt; 20</p></li>
-<li><p><strong>stage 2</strong> – karma &gt;= 20 and karma &lt; 70</p></li>
-<li><p><strong>stage 3</strong> – karma &gt;= 70</p></li>
+<li><p><strong>Stage 0</strong> — karma &lt; 5</p></li>
+<li><p><strong>Stage 1</strong> — karma ≥ 5 and &lt; 20</p></li>
+<li><p><strong>Stage 2</strong> — karma ≥ 20 and &lt; 70</p></li>
+<li><p><strong>Stage 3</strong> — karma ≥ 70</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="dynamic-progress">
-<h4>Dynamic progress<a class="headerlink" href="#dynamic-progress" title="Link to this heading"></a></h4>
-<p>The unlock progress will be decreased when the result of condition expression is decreased, but stage cannot decrease, example:</p>
-<p><strong>ratingLevel</strong> – unlock with 5 stage. Once unlock stage is opened, it can’t decrease anymore.</p>
+<h3>Dynamic Progress<a class="headerlink" href="#dynamic-progress" title="Link to this heading"></a></h3>
+<p>The unlock progress decreases with the condition, but the stage never
+decreases.</p>
+<p><strong>ratingLevel</strong> – once a stage is opened, it stays open regardless of how
+<code class="docutils literal notranslate"><span class="pre">playerRating</span></code> changes.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ratingLevel&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -571,18 +612,21 @@ Sessional unlocks can be opened only once.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>When the progress decreases the unlock stage remains the same. Consider the following scenario:</p>
+<p>Example scenario:</p>
 <ol class="arabic simple">
-<li><p>In the beginning <em>playerRating</em> stat = 22, unlock stage will be = 2.</p></li>
-<li><p>Then the <em>playerRating</em> stat decreases to 12, but the unlock stage stays = 2.</p></li>
-<li><p>Then the <em>playerRating</em> stat increases to 25, but unlock stage remains = 2, because 25 &gt;= 20 and 25 &lt; 30.</p></li>
-<li><p>Only when <em>playerRating</em> is increased to 30 or more, unlock stage changes to 3 and stays equal to 3 forever.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playerRating</span></code> = 22 → stage = 2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playerRating</span></code> drops to 12 → stage stays = 2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playerRating</span></code> rises to 25 → stage stays = 2 (25 &lt; 30).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playerRating</span></code> reaches 30 → stage = 3, permanently.</p></li>
 </ol>
 </section>
+<hr class="docutils" />
 <section id="dynamic-rewards">
-<h4>Dynamic rewards<a class="headerlink" href="#dynamic-rewards" title="Link to this heading"></a></h4>
-<p>Works only with <a class="reference internal" href="#dynamic-unlocks">dynamicUnlocks</a>. Allows the unlock to give out awards more than once, each time an unlock stage is opened.</p>
-<p><strong>winSequence</strong> – reward player by extra <em>playerExp</em> stat each time when player wins a sequence of 5 battles.</p>
+<h3>Dynamic Rewards<a class="headerlink" href="#dynamic-rewards" title="Link to this heading"></a></h3>
+<p>Works only with <a class="reference internal" href="#dynamicunlock"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">dynamicUnlock</span></code></span></a>. Grants rewards every time a
+stage is opened, including after it has been decreased and re-opened.</p>
+<p><strong>winSequence</strong> – grants 10 <code class="docutils literal notranslate"><span class="pre">playerExp</span></code> each time the player wins 5 consecutive
+battles. Resets <code class="docutils literal notranslate"><span class="pre">consecutiveWins</span></code> after each reward.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;winSequence&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -595,50 +639,34 @@ Sessional unlocks can be opened only once.</p>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playerExp&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;consecutiveWins&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SET&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;playerExp&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;consecutiveWins&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SET&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Also when unlock is rewarded, <em>consecutiveWins</em> stat resets to 0. It’s needed to start next sequence.</p>
 </section>
+<hr class="docutils" />
 <section id="unlocks-with-requirement">
-<h4>Unlocks with requirement<a class="headerlink" href="#unlocks-with-requirement" title="Link to this heading"></a></h4>
+<h3>Unlocks with Requirement<a class="headerlink" href="#unlocks-with-requirement" title="Link to this heading"></a></h3>
 <section id="grenade-killer">
-<h5>Grenade killer<a class="headerlink" href="#grenade-killer" title="Link to this heading"></a></h5>
-<p><strong>grenadeKiller</strong> – unlock opens when player kills 5 enemies with grenades. But the player cannot receive rewards until <a class="reference internal" href="#win-limit-helper">winLimitHelper</a> is opened too.</p>
+<h4>Grenade Killer<a class="headerlink" href="#grenade-killer" title="Link to this heading"></a></h4>
+<p><strong>grenadeKiller</strong> – opens when the player kills 5 enemies with grenades. Rewards
+are only granted if <a class="reference internal" href="#win-limit-helper">winLimitHelper</a> is also open.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;grenadeKiller&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.grenadeKill&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;winLimitHelper&quot;</span>
-<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">  </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;grenadeKiller&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.grenadeKill&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;winLimitHelper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">      </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;level&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;level&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -647,27 +675,21 @@ Sessional unlocks can be opened only once.</p>
 </div>
 </section>
 <section id="premium-killer">
-<h5>Premium killer<a class="headerlink" href="#premium-killer" title="Link to this heading"></a></h5>
-<p><strong>premiumKiller</strong> – unlock opens when player kills 100 enemies. But the player cannot receive rewards until <a class="reference internal" href="#premium-helper">premiumHelper</a> is opened too.</p>
+<h4>Premium Killer<a class="headerlink" href="#premium-killer" title="Link to this heading"></a></h4>
+<p><strong>premiumKiller</strong> – opens when the player kills 100 enemies. Rewards are only
+granted if <a class="reference internal" href="#premium-helper">premiumHelper</a> is also open.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumKiller&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.kill&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;premiumHelper&quot;</span>
-<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">  </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumKiller&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.kill&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumHelper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">      </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumLevel&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumLevel&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -676,28 +698,22 @@ Sessional unlocks can be opened only once.</p>
 </div>
 </section>
 <section id="premium-grenade-killer">
-<h5>Premium grenade killer<a class="headerlink" href="#premium-grenade-killer" title="Link to this heading"></a></h5>
-<p>Unlock may require 2 or more other unlocks, for example:</p>
-<p><strong>premiumGrenadeKiller</strong> – unlock opens after player kills 20 enemies with grenades. But the player cannot receive rewards until <a class="reference internal" href="#win-limit-helper">winLimitHelper</a> and <a class="reference internal" href="#premium-helper">premiumHelper</a> are opened too.</p>
+<h4>Premium Grenade Killer<a class="headerlink" href="#premium-grenade-killer" title="Link to this heading"></a></h4>
+<p><strong>premiumGrenadeKiller</strong> – opens when the player kills 20 enemies with grenades.
+Requires both <a class="reference internal" href="#win-limit-helper">winLimitHelper</a> and
+<a class="reference internal" href="#premium-helper">premiumHelper</a> to be open.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;grenadeKiller&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.grenadeKill&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;winLimitHelper &amp; premiumHelper&quot;</span>
-<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">  </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumGrenadeKiller&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;table&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.grenadeKill&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;requirement&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;winLimitHelper &amp; premiumHelper&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="w"> </span><span class="p">:</span>
-<span class="w">      </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumLevel&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">&quot;progress&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updStats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;premiumLevel&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADD&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -706,9 +722,11 @@ Sessional unlocks can be opened only once.</p>
 </div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="using-meta">
-<h4>Using meta<a class="headerlink" href="#using-meta" title="Link to this heading"></a></h4>
-<p>You can use the <code class="docutils literal notranslate"><span class="pre">meta</span></code> field to pass some game-specific data to the client. For example the image file name to display unlock on the client:</p>
+<h3>Using Meta<a class="headerlink" href="#using-meta" title="Link to this heading"></a></h3>
+<p>Use the <a class="reference internal" href="#meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></a> field to pass game-specific data to the client, for
+example an image path to display for the unlock:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pistolKiller&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">,</span>
@@ -720,8 +738,6 @@ Sessional unlocks can be opened only once.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">Meta</span></code> field value must be <em>json object</em>.</p>
-</section>
 </section>
 </section>
 </section>
@@ -732,7 +748,7 @@ Sessional unlocks can be opened only once.</p>
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="tables-config-format.html" class="btn btn-neutral float-left" title="Tables config format" accesskey="p" rel="prev">
+      <a href="tables-config-format.html" class="btn btn-neutral float-left" title="Tables Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
@@ -748,7 +764,7 @@ Sessional unlocks can be opened only once.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -766,7 +782,7 @@ Sessional unlocks can be opened only once.</p>
   <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="tables-config-format.html" class="btn btn-neutral float-left" title="Tables config format" accesskey="p" rel="prev">
+      <a href="tables-config-format.html" class="btn btn-neutral float-left" title="Tables Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
@@ -782,7 +798,7 @@ Sessional unlocks can be opened only once.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

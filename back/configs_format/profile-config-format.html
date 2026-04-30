@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scripts config format</title>
+  <title>Profile Config Format</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,8 +41,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Stats config format" href="stats-config-format.html" />
-    <link rel="prev" title="Modes config format" href="modes-config-format.html" /> 
+    <link rel="next" title="Profile Scripts" href="profile-scripts.html" />
+    <link rel="prev" title="Modes Config Format" href="modes-config-format.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,16 +74,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes config format</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Scripts config format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#player-scripts-profile">Player scripts profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes Config Format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Profile Config Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-profile-config">Adding Profile Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-modes">Config Modes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#profile-mode">Profile Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#profile-leaderboard-mode">Profile + Leaderboard Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#leaderboard-only-mode">Leaderboard Only Mode</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks config format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="profile-scripts.html">Profile Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks Config Format</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -104,7 +112,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
-      <li class="breadcrumb-item active">Scripts config format</li>
+      <li class="breadcrumb-item active">Profile Config Format</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -123,11 +131,216 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="scripts-config-format">
-<h1>Scripts config format<a class="headerlink" href="#scripts-config-format" title="Link to this heading"></a></h1>
-<section id="player-scripts-profile">
-<h2>Player scripts profile<a class="headerlink" href="#player-scripts-profile" title="Link to this heading"></a></h2>
-<p>WIP</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="profile-config-format">
+<h1>Profile Config Format<a class="headerlink" href="#profile-config-format" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Profile config is a free-form JSON object passed to the Profile server and made
+available to game scripts at runtime. Unlike other configs, it has no fixed
+schema, the structure is defined entirely by the game.</p>
+<p>Scripts read the config using <code class="docutils literal notranslate"><span class="pre">load_server_config</span></code>. See the
+
+for details on how to use it in scripts.</p>
+<p>The config format depends on the leaderboard source configured for the project.
+See <a class="reference internal" href="#config-modes">Config Modes</a> below.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-profile-config">
+<h2>Adding Profile Config<a class="headerlink" href="#adding-profile-config" title="Link to this heading"></a></h2>
+<p>To use profile config, you need to:</p>
+<ol class="arabic simple">
+<li><p>Add the profile config description to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#single-configurations"><span class="std std-ref">profile config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="config-modes">
+<h2>Config Modes<a class="headerlink" href="#config-modes" title="Link to this heading"></a></h2>
+<p>Config modes are relevant only if you use the Profile service together with
+the Leaderboard service. The mode determines which leaderboard source
+(<code class="docutils literal notranslate"><span class="pre">LbConfigSource</span></code>) is configured for the project and whether the config
+requires an additional <code class="docutils literal notranslate"><span class="pre">userstats</span></code> section.</p>
+<p>If you use the Profile service without leaderboards, the config is always
+free-form, see <a class="reference internal" href="#profile-mode">Profile Mode</a>.</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>LbConfigSource</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#profile-mode"><span class="std std-ref">Profile mode</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">USERSTAT_SERVICE</span></code></p></td>
+<td><p>Free-form JSON config.</p>
+<p>Statistics and leaderboards are managed by the UserStat service.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#profile-leaderboard-mode"><span class="std std-ref">Profile + Leaderboard mode</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PROFILE_SERVICE</span></code></p></td>
+<td><p>Free-form JSON config with an additional required <a class="reference internal" href="#userstats"><span class="std std-ref">userstats</span></a> section.</p>
+<p>Statistics and leaderboards are managed by the Profile service.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#leaderboard-only-mode"><span class="std std-ref">Leaderboard only mode</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PROFILE_SERVICE_ONLY_LB</span></code></p></td>
+<td><p>Config consists only of the <a class="reference internal" href="#userstats"><span class="std std-ref">userstats</span></a> section.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<section id="profile-mode">
+<h3>Profile Mode<a class="headerlink" href="#profile-mode" title="Link to this heading"></a></h3>
+<p>Used when <code class="docutils literal notranslate"><span class="pre">LbConfigSource</span> <span class="pre">=</span> <span class="pre">USERSTAT_SERVICE</span></code>.</p>
+<p>The config is a free-form JSON object. There are no required fields, the
+structure is fully defined by the game. The config must not exceed the maximum
+allowed size.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;maxLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;levelUpXp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;welcomeMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Welcome!&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Scripts read this config using <code class="docutils literal notranslate"><span class="pre">load_server_config</span></code>:</p>
+<div class="highlight-das notranslate"><div class="highlight"><pre><span></span><span class="k">options</span> <span class="n">gen2</span>
+<span class="k">module</span> <span class="n">config</span> <span class="k">public</span>
+<span class="k">require</span> <span class="n">jsonrpc</span>
+
+<span class="k">struct</span> <span class="n">Config</span> <span class="nt">{</span>
+  <span class="nv">maxLevel</span><span class="p"> : </span><span class="kt">int</span>
+  <span class="nv">levelUpXp</span><span class="p"> : </span><span class="kt">int64</span>
+  <span class="nv">welcomeMessage</span><span class="p"> : </span><span class="kt">string</span>
+<span class="nt">}</span>
+
+<span class="k">let</span> <span class="k">shared</span> <span class="n">config</span> <span class="se">&lt;-</span> <span class="n">load_server_config</span><span class="nt">(</span><span class="n">Config</span><span class="nt">())</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fields not present in the config are initialized with their default values
+from the daScript struct definition.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="profile-leaderboard-mode">
+<h3>Profile + Leaderboard Mode<a class="headerlink" href="#profile-leaderboard-mode" title="Link to this heading"></a></h3>
+<p>Used when <code class="docutils literal notranslate"><span class="pre">LbConfigSource</span> <span class="pre">=</span> <span class="pre">PROFILE_SERVICE</span></code>.</p>
+<p>In addition to the free-form game config, this mode requires a
+<a class="reference internal" href="#userstats"><code class="docutils literal notranslate"><span class="pre">userstats</span></code></a> section that defines statistics, modes, and tables
+used for leaderboards.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;maxLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;userstats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;stats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kills&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLOAT&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;modes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;solo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;tables&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;global&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-01T00:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2030-01-01T00:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;indexOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="simple myst">
+<dt><span id="userstats"><code class="docutils literal notranslate"><span class="pre">userstats</span></code></span> object <span class="bdg bdg-s bdg-yellow">required</span> <a id="userstats" href="#userstats" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Defines the statistics configuration used by the Profile service for
+leaderboards.</p>
+<p>Contains the following sections:</p>
+<dl class="simple myst">
+<dt><span id="stats"><code class="docutils literal notranslate"><span class="pre">stats</span></code></span> object <span class="bdg bdg-s bdg-yellow">required</span> <a id="stats" href="#stats" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Statistics definitions. Each key is a stat name, and the value defines the
+stat.</p>
+<p>Fields:</p>
+<dl class="simple myst">
+<dt><span id="type"><code class="docutils literal notranslate"><span class="pre">type</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="type" href="#type" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of the stat: <code class="docutils literal notranslate"><span class="pre">INT</span></code> or <code class="docutils literal notranslate"><span class="pre">FLOAT</span></code>.</p>
+</dd>
+<dt><span id="stats-leaderboard"><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="leaderboard" href="#leaderboard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the stat is included in the leaderboard. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
+Stats with <code class="docutils literal notranslate"><span class="pre">leaderboard:</span> <span class="pre">false</span></code> are not allowed in this mode.</p>
+</dd>
+<dt><span id="stats-meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary data attached to the stat.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
+<dt><span id="modes"><code class="docutils literal notranslate"><span class="pre">modes</span></code></span> object <span class="bdg bdg-s bdg-yellow">required</span> <a id="modes" href="#modes" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Mode definitions. Each key is a mode name, and the value defines the mode.</p>
+<p>Fields:</p>
+<dl class="simple myst">
+<dt><span id="modes-leaderboard"><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="leaderboard" href="#leaderboard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of leaderboard for this mode. Defaults to <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>. Only <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code> is
+supported in this mode.</p>
+</dd>
+<dt><span id="premium"><code class="docutils literal notranslate"><span class="pre">premium</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="premium" href="#premium" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, marks this mode as premium. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="modes-meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary data attached to the mode.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
+<dt><span id="tables"><code class="docutils literal notranslate"><span class="pre">tables</span></code></span> object <span class="bdg bdg-s bdg-yellow">required</span> <a id="tables" href="#tables" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Table definitions. Each key is a table name, and the value defines the table.</p>
+<p>Fields:</p>
+<dl class="simple myst">
+<dt><span id="start"><code class="docutils literal notranslate"><span class="pre">start</span></code></span> string (ISO 8601 UTC) <span class="bdg bdg-s bdg-yellow">required</span> <a id="start" href="#start" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Start date of the table period.</p>
+</dd>
+<dt><span id="tables-leaderboard"><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="leaderboard" href="#leaderboard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of leaderboard for this table. Defaults to <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code>. Only <code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code> is
+supported in this mode.</p>
+</dd>
+<dt><span id="end"><code class="docutils literal notranslate"><span class="pre">end</span></code></span> string (ISO 8601 UTC) <span class="bdg bdg-s bdg-grey">optional</span> <a id="end" href="#end" class="headerlink" title="Link to this parameter"></a></dt><dd><p>End date of the table period. If not set, the table exists indefinitely.</p>
+</dd>
+<dt><span id="period"><code class="docutils literal notranslate"><span class="pre">period</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="period" href="#period" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Repeating period of the table.</p>
+<p>Format: a number (1–16 digits) followed by a unit suffix: <code class="docutils literal notranslate"><span class="pre">h</span></code> (hours), <code class="docutils literal notranslate"><span class="pre">d</span></code>
+(days), <code class="docutils literal notranslate"><span class="pre">w</span></code> (weeks). Example: <code class="docutils literal notranslate"><span class="pre">1w</span></code>, <code class="docutils literal notranslate"><span class="pre">12h</span></code>.</p>
+</dd>
+<dt><span id="indexoffset"><code class="docutils literal notranslate"><span class="pre">indexOffset</span></code></span> non-negative int <span class="bdg bdg-s bdg-grey">optional</span> <a id="indexOffset" href="#indexOffset" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Index offset. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</dd>
+<dt><span id="tables-meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary data attached to the table.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<hr class="docutils" />
+<section id="leaderboard-only-mode">
+<h3>Leaderboard Only Mode<a class="headerlink" href="#leaderboard-only-mode" title="Link to this heading"></a></h3>
+<p>Used when <code class="docutils literal notranslate"><span class="pre">LbConfigSource</span> <span class="pre">=</span> <span class="pre">PROFILE_SERVICE_ONLY_LB</span></code>.</p>
+<p>The config consists only of the <a class="reference internal" href="#userstats"><code class="docutils literal notranslate"><span class="pre">userstats</span></code></a> section, no free-form
+game fields are allowed. The structure of <a class="reference internal" href="#userstats"><code class="docutils literal notranslate"><span class="pre">userstats</span></code></a> is the same
+as in <a class="reference internal" href="#profile-leaderboard-mode">Profile + Leaderboard mode</a>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;userstats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;stats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;kills&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;modes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;solo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;tables&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;global&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-01T00:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2030-01-01T00:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;indexOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -137,12 +350,12 @@
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="modes-config-format.html" class="btn btn-neutral float-left" title="Modes config format" accesskey="p" rel="prev">
+      <a href="modes-config-format.html" class="btn btn-neutral float-left" title="Modes Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="stats-config-format.html" class="btn btn-neutral float-right" title="Stats config format" accesskey="n" rel="next">
+      <a href="profile-scripts.html" class="btn btn-neutral float-right" title="Profile Scripts" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -153,7 +366,7 @@
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -171,12 +384,12 @@
   <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="modes-config-format.html" class="btn btn-neutral float-left" title="Modes config format" accesskey="p" rel="prev">
+      <a href="modes-config-format.html" class="btn btn-neutral float-left" title="Modes Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="stats-config-format.html" class="btn btn-neutral float-right" title="Stats config format" accesskey="n" rel="next">
+      <a href="profile-scripts.html" class="btn btn-neutral float-right" title="Profile Scripts" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -187,7 +400,7 @@
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

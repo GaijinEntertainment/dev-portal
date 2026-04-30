@@ -75,21 +75,17 @@
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html#navigate-to-an-include-from-a-config">Navigate to an Include from a Config</a></li>
 <li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Logs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#log-viewer">Log Viewer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#export-logs">Export Logs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#column-management">Column Management</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filters-management">Filters Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#top-toolbar">Top toolbar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#export-logs-1">Export Logs (1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-2-and-upload-3-filters">Copy (2) and Upload (3) filters</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#time-range">Time Range</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#filters">Filters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#add-new-filter">Add New Filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#disable-filter">Disable Filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delete-filter">Delete Filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filter-groups">Filter Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filters-management">Filters management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-3-and-editing-a-filter">Adding (3) and editing a filter</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#log-viewer-chart">Log Viewer Chart</a></li>
@@ -107,6 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html#navigate-to-documentation">Navigate to Documentation.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
@@ -164,123 +161,62 @@ viewing, and exporting log data.</p>
 <li><p><strong>Environment logs</strong></p></li>
 <li><p><strong>Common logs</strong></p></li>
 </ul>
-<section id="log-viewer">
-<h2>Log Viewer<a class="headerlink" href="#log-viewer" title="Link to this heading"></a></h2>
-<p>The <strong>Log Viewer</strong> displays log records and provides controls for managing
-columns, filters, and data export.</p>
 <a class="reference internal image-reference" href="../../_images/log_viewer.png"><img alt="Log Viewer" class="align-center" src="../../_images/log_viewer.png" style="width: 60em;" />
 </a>
-<section id="export-logs">
-<h3>Export Logs<a class="headerlink" href="#export-logs" title="Link to this heading"></a></h3>
-<p>To export log data to a CSV file, click the <strong>Export</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv.png"><img alt="Log Viewer export" class="align-center" src="../../_images/log_viewer_export_csv.png" style="width: 60em;" />
+<section id="top-toolbar">
+<h2>Top toolbar<a class="headerlink" href="#top-toolbar" title="Link to this heading"></a></h2>
+<p>The toolbar provides the following controls:</p>
+<ul class="simple">
+<li><p><strong>Export</strong> (1) — exports log data to a CSV file. In the modal window, you can add or remove columns and drag them to reorder.</p></li>
+<li><p><strong>Copy</strong> (2) — copies the current filters as a JSON string, useful for sharing filter configurations.</p></li>
+<li><p><strong>Upload</strong> (3) — pastes and applies filters from a JSON string.</p></li>
+<li><p><strong>Reload</strong> (4) — reloads logs and fetches the latest data.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/log_viewer_top_buttons.png"><img alt="Log Viewer top buttons" class="align-center" src="../../_images/log_viewer_top_buttons.png" style="width: 60em;" />
 </a>
-</section>
-<section id="column-management">
-<h3>Column Management<a class="headerlink" href="#column-management" title="Link to this heading"></a></h3>
-<p>To change the column order, open the column settings window and drag columns to
-the required position.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_order.png"><img alt="Log Viewer export order columns" class="align-center" src="../../_images/log_viewer_export_csv_order.png" style="width: 60em;" />
+<section id="export-logs-1">
+<h3>Export Logs (1)<a class="headerlink" href="#export-logs-1" title="Link to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_modal.png"><img alt="Log Viewer CSV export modal" class="align-center" src="../../_images/log_viewer_export_csv_modal.png" style="width: 60em;" />
 </a>
-<p>To add a column, click the <strong>+ Column</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_add_column.png"><img alt="Log Viewer export add column" class="align-center" src="../../_images/log_viewer_export_csv_add_column.png" style="width: 60em;" />
-</a>
-<p>Select the required column names from the list.</p>
+<p>To add a column, click the <strong>+ Column</strong> button. Select the required column names from the list. Remove columns in the same list or inside modal window.</p>
 <a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_add_column_list.png"><img alt="Log Viewer export add column list" class="align-center" src="../../_images/log_viewer_export_csv_add_column_list.png" style="width: 25em;" />
 </a>
-<p>To remove a column, click the <strong>Cross</strong> icon next to the column name.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_delete_column.png"><img alt="Log Viewer export delete column" class="align-center" src="../../_images/log_viewer_export_csv_delete_column.png" style="width: 60em;" />
-</a>
-<p>To export log data to a CSV file, click the <strong>Export</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_export_csv_export_button.png"><img alt="Log Viewer export button" class="align-center" src="../../_images/log_viewer_export_csv_export_button.png" style="width: 60em;" />
-</a>
+<p>To confirm, click the <strong>Export</strong> button inside modal window.</p>
 </section>
-<section id="filters-management">
-<h3>Filters Management<a class="headerlink" href="#filters-management" title="Link to this heading"></a></h3>
-<p>To copy the current filters, click the <strong>Copy</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_copy_filters.png"><img alt="Log Viewer copy filters" class="align-center" src="../../_images/log_viewer_copy_filters.png" style="width: 60em;" />
-</a>
-<p>To upload filters from a JSON file, click the <strong>Upload</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_upload_filters.png"><img alt="Log Viewer upload filters" class="align-center" src="../../_images/log_viewer_upload_filters.png" style="width: 60em;" />
-</a>
-<p>Set JSON filters and click the <strong>Load</strong> button.</p>
+<section id="copy-2-and-upload-3-filters">
+<h3>Copy (2) and Upload (3) filters<a class="headerlink" href="#copy-2-and-upload-3-filters" title="Link to this heading"></a></h3>
+<p>To copy the current filters, click the <strong>Copy</strong> (2). To apply filters from JSON, click the <strong>Upload</strong> (3) and paste filters in the editor inside modal window. Click <strong>Load</strong> to confirm.</p>
 <a class="reference internal image-reference" href="../../_images/log_viewer_upload_filters_modal.png"><img alt="Log Viewer upload filters modal" class="align-center" src="../../_images/log_viewer_upload_filters_modal.png" style="width: 50em;" />
-</a>
-<p>To reload logs and fetch the latest data, click <strong>Reload</strong>.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_reload_logs.png"><img alt="Log Viewer reload logs" class="align-center" src="../../_images/log_viewer_reload_logs.png" style="width: 60em;" />
 </a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Filters can be restored from a URL. If the address bar contains data after the
+<p>Filters and environments can be restored from a URL. If the browser address bar contains data after the
 <code class="docutils literal notranslate"><span class="pre">resource</span></code> parameter, filter values are automatically restored from it.</p>
 </div>
 </section>
 </section>
-<section id="time-range">
-<h2>Time Range<a class="headerlink" href="#time-range" title="Link to this heading"></a></h2>
-<p>The <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a> section allows you to define the time interval for log
-queries.</p>
-<p>To select a time range, open the date range menu.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_date_range.png"><img alt="Log Viewer date range" class="align-center" src="../../_images/log_viewer_date_range.png" style="width: 60em;" />
-</a>
-<p>If data cannot be loaded for the selected time range, an error message is
-displayed.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_time_range_error.png"><img alt="Log Viewer time range error" class="align-center" src="../../_images/log_viewer_time_range_error.png" style="width: 50em;" />
-</a>
-</section>
-<section id="filters">
-<h2>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h2>
+<section id="filters-management">
+<h2>Filters management<a class="headerlink" href="#filters-management" title="Link to this heading"></a></h2>
 <p>Filters allow you to narrow down log records based on specific criteria.</p>
-<section id="add-new-filter">
-<h3>Add New Filter<a class="headerlink" href="#add-new-filter" title="Link to this heading"></a></h3>
-<p>To add a new filter, click <strong>Add filter</strong>.</p>
+<ul class="simple">
+<li><p><strong>Filters accordion</strong> (1) — collapses or expands the filters section.</p></li>
+<li><p><strong>+ Add new group</strong> (2) — adds a filter group. Groups are combined with OR logic: <em>Group 1 OR Group 2 OR Group 3</em>, etc.</p></li>
+<li><p><strong>+ Add filter</strong> (3) — adds a filter to the current group.</p></li>
+<li><p><strong>Switch</strong> (4) — enables or disables a filter or an entire group. When a group is disabled, none of its filters are applied regardless of their individual state.</p></li>
+<li><p><strong>Remove</strong> (5) — removes a filter or a group. The first group cannot be deleted; only its filters are cleared.</p></li>
+<li><p><strong>Time Range</strong> (6) — defines the time interval for log queries. See <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a> for details.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/log_viewer_filters_management.png"><img alt="Log Viewer filters management" class="align-center" src="../../_images/log_viewer_filters_management.png" style="width: 60em;" />
+</a>
+<section id="adding-3-and-editing-a-filter">
+<h3>Adding (3) and editing a filter<a class="headerlink" href="#adding-3-and-editing-a-filter" title="Link to this heading"></a></h3>
+<p>To add a new filter, click <strong>+ Add filter</strong> (3). To edit an existing filter, click on it. In the modal window, configure the field, operator, and value if needed. Some operators support multiple values — enter each one inside <strong>Value</strong> using <strong>Enter</strong> to separate them. Confirm your changes by clicking the <strong>Save</strong> button.</p>
 <a class="reference internal image-reference" href="../../_images/log_viewer_add_filter.png"><img alt="Log Viewer add filter" class="align-center" src="../../_images/log_viewer_add_filter.png" style="width: 15em;" />
 </a>
-<p>Select a filter name from the list.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_field_list.png"><img alt="Log Viewer add filter modal field list" class="align-center" src="../../_images/log_viewer_add_filter_field_list.png" style="width: 15em;" />
-</a>
-<p>Select an operator from the list.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_operator_list.png"><img alt="Log Viewer add filter modal operator list" class="align-center" src="../../_images/log_viewer_add_filter_operator_list.png" style="width: 15em;" />
-</a>
-<p>Enter a value in the <strong>Value</strong> field.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_value.png"><img alt="Log Viewer add filter modal value" class="align-center" src="../../_images/log_viewer_add_filter_value.png" style="width: 15em;" />
-</a>
-<p>Click <strong>Save</strong> to add the filter.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_add_filter_button.png"><img alt="Log Viewer add filter button" class="align-center" src="../../_images/log_viewer_add_filter_button.png" style="width: 15em;" />
-</a>
-</section>
-<section id="disable-filter">
-<h3>Disable Filter<a class="headerlink" href="#disable-filter" title="Link to this heading"></a></h3>
-<p>To disable a filter, use the toggle switch.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_switch.png"><img alt="Log Viewer switch" class="align-center" src="../../_images/log_viewer_switch.png" style="width: 30em;" />
-</a>
-</section>
-<section id="delete-filter">
-<h3>Delete Filter<a class="headerlink" href="#delete-filter" title="Link to this heading"></a></h3>
-<p>To remove a filter, click the <strong>Delete</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_delete_filter.png"><img alt="Log Viewer delete filter" class="align-center" src="../../_images/log_viewer_delete_filter.png" style="width: 30em;" />
-</a>
-</section>
-<section id="filter-groups">
-<h3>Filter Groups<a class="headerlink" href="#filter-groups" title="Link to this heading"></a></h3>
-<p>Filters can be grouped and enabled or disabled as a group.</p>
-<p>To create a new group, click <strong>Add new group</strong>.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_groups.png"><img alt="Log Viewer groups filters" class="align-center" src="../../_images/log_viewer_groups.png" style="width: 30em;" />
-</a>
-<p>Enable or disable a group using the toggle switch.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_toggle_group.png"><img alt="Log Viewer groups toggle" class="align-center" src="../../_images/log_viewer_toggle_group.png" style="width: 30em;" />
-</a>
-<p>To add a filter to a group, click <strong>Add filter</strong> within the group.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_add_group_filter.png"><img alt="Log Viewer add group filter" class="align-center" src="../../_images/log_viewer_add_group_filter.png" style="width: 30em;" />
-</a>
-<p>Filters can also be added directly from a log row using the filter icon.</p>
+<p>Filter can also be added directly from a log row using the filter icon.</p>
 <a class="reference internal image-reference" href="../../_images/log_viewer_add_filters_from_table.png"><img alt="Log Viewer add filter from table" class="align-center" src="../../_images/log_viewer_add_filters_from_table.png" style="width: 60em;" />
 </a>
-<a class="reference internal image-reference" href="../../_images/log_viewer_add_filters_from_table_details.png"><img alt="Log Viewer add filter from table details" class="align-center" src="../../_images/log_viewer_add_filters_from_table_details.png" style="width: 60em;" />
-</a>
 <p>Values that match active filters are highlighted in the log table.</p>
-<a class="reference internal image-reference" href="../../_images/log_viewer_highlighted_values.png"><img alt="Log Viewer highlighted values" class="align-center" src="../../_images/log_viewer_highlighted_values.png" style="width: 60em;" />
-</a>
 </section>
 </section>
 <section id="log-viewer-chart">
@@ -379,7 +315,7 @@ width.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -413,7 +349,7 @@ width.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

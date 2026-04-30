@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stats config format</title>
+  <title>Stats Config Format</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,8 +41,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tables config format" href="tables-config-format.html" />
-    <link rel="prev" title="Scripts config format" href="profile-config-format.html" /> 
+    <link rel="next" title="Tables Config Format" href="tables-config-format.html" />
+    <link rel="prev" title="Profile Scripts" href="profile-scripts.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,43 +74,40 @@
 <li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Scripts config format</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Stats config format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#player-statistics">Player statistics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#stat-format">Stat format</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#stat-description-format">Stat description format</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#required-fields">Required fields:</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#optional-fields">Optional fields:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Profile Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-scripts.html">Profile Scripts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Stats Config Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-stats">Adding Stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stat-description-format">Stat Description Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
 </ul>
 </li>
-<li class="toctree-l5"><a class="reference internal" href="#condition-format">Condition format</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#condition-examples">Condition examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#condition-format">Condition Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#stat-examples">Stat Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-stats">Simple Stats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moving-average-stats">Moving Average Stats</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#moving-average-calculation">Moving Average Calculation</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#stat-examples">Stat examples</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#simple-stats">Simple stats</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#moving-average">Moving average</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#moving-average-calculation">Moving average calculation</a></li>
-</ul>
-</li>
-<li class="toctree-l5"><a class="reference internal" href="#calculable-stats">Calculable stats</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#special-stats">Special stats</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#leaderboard-group">Leaderboard group</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#calculable-stats">Calculable Stats</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#win-rate">Win Rate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#average-score-per-life">Average Score per Life</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#special-stats">Special Stats</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks Config Format</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -131,7 +128,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
-      <li class="breadcrumb-item active">Stats config format</li>
+      <li class="breadcrumb-item active">Stats Config Format</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -151,126 +148,154 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="stats-config-format">
-<h1>Stats config format<a class="headerlink" href="#stats-config-format" title="Link to this heading"></a></h1>
-<section id="player-statistics">
-<h2>Player statistics<a class="headerlink" href="#player-statistics" title="Link to this heading"></a></h2>
-<p>Player statistics are an important part of all modern games. Most game mechanics, such as character leveling and abilities, achievements, leaderboards, player rewarding, etc., use player statistics.</p>
-<p>This article describes the format of stats config, also provides examples of different stats.</p>
-<p>You can read about the interaction between the game and the statistics server here:
+<h1>Stats Config Format<a class="headerlink" href="#stats-config-format" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Player statistics are a core part of modern game design. They power mechanics
+such as character leveling, abilities, achievements, leaderboards, and player
+rewards.</p>
+<p>This article describes the stats config format and provides examples of common
+stat types. For details on how the game interacts with the statistics server,
+see the:
 .</p>
-<section id="stat-format">
-<h3>Stat format<a class="headerlink" href="#stat-format" title="Link to this heading"></a></h3>
-<p>To use and store statistics, you need to add stats description to
-<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">stats config</span></a>,
-and
-<a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">deploy configs</span></a>
-to services.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-stats">
+<h2>Adding Stats<a class="headerlink" href="#adding-stats" title="Link to this heading"></a></h2>
+<p>To use and store statistics, you need to:</p>
+<ol class="arabic simple">
+<li><p>Add stat descriptions to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">stats config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
 <section id="stat-description-format">
-<h4>Stat description format<a class="headerlink" href="#stat-description-format" title="Link to this heading"></a></h4>
+<h2>Stat Description Format<a class="headerlink" href="#stat-description-format" title="Link to this heading"></a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kills_death_rating&quot;</span><span class="p">,</span><span class="w">                 </span><span class="c1">// required</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLOAT&quot;</span><span class="p">,</span><span class="w">                              </span><span class="c1">// required</span>
-
-<span class="w">  </span><span class="nt">&quot;minValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">                                </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;maxValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">                                </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;defValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">                                </span><span class="c1">// optional, default = 0</span>
-<span class="w">  </span><span class="nt">&quot;window&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">                                 </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">                        </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">                          </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;showForAll&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">                           </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;allowChangeFromClient&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">               </span><span class="c1">// optional, default = false</span>
-<span class="w">  </span><span class="nt">&quot;meta&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">                                   </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.death ? s.kills/s.death : 0&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;gameModesEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;solo&quot;</span><span class="p">],</span><span class="w">                 </span><span class="c1">// optional</span>
-<span class="w">  </span><span class="nt">&quot;gameModesDisabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;duo&quot;</span><span class="p">]</span><span class="w">                  </span><span class="c1">// optional</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kills_death_rating&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLOAT&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;minValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;maxValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;defValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;window&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;showForAll&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;allowChangeFromClient&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;meta&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s.death ? s.kills/s.death : 0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;gameModesEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;solo&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;gameModesDisabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;duo&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="required-fields">
-<h5>Required fields:<a class="headerlink" href="#required-fields" title="Link to this heading"></a></h5>
+<hr class="docutils" />
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<dl class="simple myst">
+<dt><span id="name"><code class="docutils literal notranslate"><span class="pre">name</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="name" href="#name" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Name of the stat. Must be unique across all stats.</p>
+</dd>
+<dt><span id="type"><code class="docutils literal notranslate"><span class="pre">type</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="type" href="#type" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of the stat. Possible values:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<em>string</em>) – name of the stat, must be unique.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<em>string</em>) – type of the stat, possible values:</p>
-<ul>
-<li><p>“INT” – stat with integer value.</p></li>
-<li><p>“FLOAT” – stat with float value.</p></li>
-<li><p>“AVGRATE” – stats calculate as moving average.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">INT</span></code> – Integer stat</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FLOAT</span></code> – Floating-point stat</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AVGRATE</span></code> – Stat calculated as a moving average</p></li>
 </ul>
-</li>
-</ul>
-</section>
-<section id="optional-fields">
-<h5>Optional fields:<a class="headerlink" href="#optional-fields" title="Link to this heading"></a></h5>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">minValue</span></code> (<em>int</em> or <em>float</em>) – if set, restrict the minimal value of the stat.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxValue</span></code> (<em>int</em> or <em>float</em>) – if set, restrict the maximum value of the stat.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defValue</span></code> (<em>int</em> or <em>float</em>) – initial value of the stat.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> (<em>float</em>) – coefficient for calculation the moving average, must be &gt; 0. Works only for <code class="docutils literal notranslate"><span class="pre">type</span></code> = “AVGRATE”. See <a class="reference internal" href="#moving-average">moving average calculation</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onlyIncrement</span></code> (<em>bool</em>) – if = <em>true</em>, the value of the stat can’t decrease.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code> (<em>bool</em>) – determines whether the stat should be displayed in the leaderboard.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">showForAll</span></code> (<em>bool</em>) – determines whether the stat should be visible to another user.</p>
+</dd>
+<dt><span id="minvalue"><code class="docutils literal notranslate"><span class="pre">minValue</span></code></span> int <em>or</em> float <span class="bdg bdg-s bdg-grey">optional</span> <a id="minValue" href="#minValue" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Minimum allowed value of the stat. The stat value will never fall below this.</p>
+</dd>
+<dt><span id="maxvalue"><code class="docutils literal notranslate"><span class="pre">maxValue</span></code></span> int <em>or</em> float <span class="bdg bdg-s bdg-grey">optional</span> <a id="maxValue" href="#maxValue" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Maximum allowed value of the stat. The stat value will never exceed this.</p>
+</dd>
+<dt><span id="defvalue"><code class="docutils literal notranslate"><span class="pre">defValue</span></code></span> int <em>or</em> float <span class="bdg bdg-s bdg-grey">optional</span> <a id="defValue" href="#defValue" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Initial value of the stat. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code> if not set.</p>
+</dd>
+<dt><span id="window"><code class="docutils literal notranslate"><span class="pre">window</span></code></span> float <span class="bdg bdg-s bdg-grey">optional</span> <a id="window" href="#window" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Coefficient used to calculate the moving average. Must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+Only applies when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AVGRATE</span></code>.
+See <a class="reference internal" href="#moving-average-calculation">moving average calculation</a>.</p>
+</dd>
+<dt><span id="onlyincrement"><code class="docutils literal notranslate"><span class="pre">onlyIncrement</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="onlyIncrement" href="#onlyIncrement" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the stat value can only increase – it can never be decreased.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="leaderboard"><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="leaderboard" href="#leaderboard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the stat is included in the leaderboard. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="showforall"><code class="docutils literal notranslate"><span class="pre">showForAll</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="showForAll" href="#showForAll" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the stat is visible to other users. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To request another user statistics use
+<p>To request another user’s statistics, use the
 
 action.
-Stats will be returned only for <strong>public</strong>
-<a class="reference internal" href="tables-config-format.html#table-format"><span class="std std-ref">tables</span></a> and
-[modes](./modes-config-format.md#mode-format.</p>
+Stats are returned only for <strong>public</strong>
+<a class="reference internal" href="tables-config-format.html#table-description-format"><span class="std std-ref">tables</span></a> and
+<a class="reference internal" href="modes-config-format.html#mode-description-format"><span class="std std-ref">modes</span></a>.</p>
 </div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowChangeFromClient</span></code> (<em>bool</em>) – determines the possibility of changing stat by the client.</p>
+</dd>
+<dt><span id="allowchangefromclient"><code class="docutils literal notranslate"><span class="pre">allowChangeFromClient</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="allowChangeFromClient" href="#allowChangeFromClient" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, allows the client to modify this stat directly. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Use this flag only for non-important statistics or at your own risk, as the client is not protected from hacking, so statistics can be cheated by the user himself. To change the stat by the client use
+<p>Use this only for non-critical statistics. The client is not protected against
+tampering, so players can manipulate stats set this way.
+To change a stat from the client, use the
 
 action.</p>
 </div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">meta</span></code> (<em>json object</em>) – field for custom game data. Can be used to pass arbitrary data to the game client. The value must be a json object.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> (<em>string</em>) – if set, the stat value calculate from other stats specified in condition. Calculable stats can’t be set or change outside, if you try change, stat will remain unchanged.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gameModesEnabled</span></code> (<em>array of string</em>) – if set, the stat will be created and changed only for the specified modes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gameModesDisabled</span></code> (<em>array of string</em>) – if set, the stat will not be created and changed for the specified modes. Works only if <code class="docutils literal notranslate"><span class="pre">gameModesEnabled</span></code> is not set or empty.</p></li>
-</ul>
+</dd>
+<dt><span id="meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> json object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary data attached to the stat. Use this to pass custom information to
+the game client – for example, display settings or UI hints.</p>
+</dd>
+<dt><span id="condition"><code class="docutils literal notranslate"><span class="pre">condition</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="condition" href="#condition" class="headerlink" title="Link to this parameter"></a></dt><dd><p>An expression that calculates the stat’s value from other stats. When set, the
+stat becomes read-only – external updates to it are silently ignored.
+See <a class="reference internal" href="#condition-format">Condition Format</a> for syntax and examples.</p>
+</dd>
+<dt><span id="gamemodesenabled"><code class="docutils literal notranslate"><span class="pre">gameModesEnabled</span></code></span> array of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="gameModesEnabled" href="#gameModesEnabled" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If set, the stat is only tracked in the listed game modes.</p>
+</dd>
+<dt><span id="gamemodesdisabled"><code class="docutils literal notranslate"><span class="pre">gameModesDisabled</span></code></span> array of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="gameModesDisabled" href="#gameModesDisabled" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If set, the stat is not tracked in the listed game modes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">gameModesDisabled</span></code> is only applied when <code class="docutils literal notranslate"><span class="pre">gameModesEnabled</span></code> is empty or not
+set. If both fields are present, <code class="docutils literal notranslate"><span class="pre">gameModesEnabled</span></code> takes precedence.</p>
+</div>
+</dd>
+</dl>
 </section>
 </section>
+<hr class="docutils" />
 <section id="condition-format">
-<h4>Condition format<a class="headerlink" href="#condition-format" title="Link to this heading"></a></h4>
-<p>Condition is a <a class="reference external" href="https://quirrel.io/doc/index.html">quirrel</a> language expression. The type of the return value must be compatible with the declared type of the stat.
-Stats in the condition are written as: <code class="docutils literal notranslate"><span class="pre">s.stat_name</span></code>. See <a class="reference internal" href="#calculable-stats">calculable stat example</a>.</p>
-<section id="condition-examples">
-<h5>Condition examples<a class="headerlink" href="#condition-examples" title="Link to this heading"></a></h5>
-<ul class="simple">
-<li><p>kill/death rating calculation:</p></li>
-</ul>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;condition: s.death ? s.kills/s.death.tofloat() : 0&quot;
+<h2>Condition Format<a class="headerlink" href="#condition-format" title="Link to this heading"></a></h2>
+<p>Condition is a <a class="reference external" href="https://quirrel.io/doc/index.html">quirrel</a> language expression.
+The expression must return a value compatible with the stat’s declared <code class="docutils literal notranslate"><span class="pre">type</span></code>.
+Reference other stats using <code class="docutils literal notranslate"><span class="pre">s.stat_name</span></code> syntax.</p>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<p><strong>Kill/death ratio:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>condition: s.death ? s.kills/s.death.tofloat() : 0
 </pre></div>
 </div>
-<p><em>death</em> and <em>kills</em> – stat names.</p>
-<ul class="simple">
-<li><p>some arbitrary rating calculation:</p></li>
-</ul>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;condition: s.battles_count &gt; 10 ? s.battles_count*s.score : 100&quot;
+<p><strong>Score-weighted rating (requires at least 10 battles):</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>condition: s.battles_count &gt; 10 ? s.battles_count*s.score : 100
 </pre></div>
 </div>
-<p><em>battles_count</em> and <em>score</em> – stat names.</p>
 </section>
 </section>
-</section>
+<hr class="docutils" />
 <section id="stat-examples">
-<h3>Stat examples<a class="headerlink" href="#stat-examples" title="Link to this heading"></a></h3>
+<h2>Stat Examples<a class="headerlink" href="#stat-examples" title="Link to this heading"></a></h2>
 <section id="simple-stats">
-<h4>Simple stats<a class="headerlink" href="#simple-stats" title="Link to this heading"></a></h4>
-<p>Simple stat used to store a player game statistics. Can be used to calculate other stats and
-<a class="reference internal" href="unlocks-config-format.html"><span class="std std-doc">unlocks</span></a>.</p>
-<p><em>battle_level</em> – player level in the battle, type int, can be decrease, not written to leaderboard.</p>
+<h3>Simple Stats<a class="headerlink" href="#simple-stats" title="Link to this heading"></a></h3>
+<p>Simple stats store raw player data. They can be used as inputs for calculated
+stats and <a class="reference internal" href="unlocks-config-format.html"><span class="std std-doc">unlocks</span></a>.</p>
+<dl class="simple myst">
+<dt><span id="battle-level"><code class="docutils literal notranslate"><span class="pre">battle_level</span></code></span> <a id="battle_level" href="#battle_level" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Player’s level in battle. Type: <code class="docutils literal notranslate"><span class="pre">INT</span></code>. Can be decreased. Not shown in
+leaderboard.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;battle_level&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><em>kills</em> – player kills count, type int, can’t be decrease, written to leaderboard.</p>
+</dd>
+<dt><span id="kills"><code class="docutils literal notranslate"><span class="pre">kills</span></code></span> <a id="kills" href="#kills" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Total number of player kills. Type: <code class="docutils literal notranslate"><span class="pre">INT</span></code>. Can only increase. Shown in
+leaderboard.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kills&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span>
@@ -279,62 +304,92 @@ Stats in the condition are written as: <code class="docutils literal notranslate
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><em>accuracy</em> – player shooting accuracy, type float, can be decrease, not written to leaderboard, restrict by minimum and maximum value, has a default value.</p>
+</dd>
+<dt><span id="accuracy"><code class="docutils literal notranslate"><span class="pre">accuracy</span></code></span> <a id="accuracy" href="#accuracy" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Player’s shooting accuracy. Type: <code class="docutils literal notranslate"><span class="pre">FLOAT</span></code>. Clamped between <code class="docutils literal notranslate"><span class="pre">0.2</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.
+Not shown in leaderboard.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;accuracy&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLOAT&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;minValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;maxValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;defVal&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span>
+<span class="w">  </span><span class="nt">&quot;defValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </section>
-<section id="moving-average">
-<h4>Moving average<a class="headerlink" href="#moving-average" title="Link to this heading"></a></h4>
-<p><em>relativePlayerPlace</em> – moving average player place, write to leaderboard.</p>
+<hr class="docutils" />
+<section id="moving-average-stats">
+<h3>Moving Average Stats<a class="headerlink" href="#moving-average-stats" title="Link to this heading"></a></h3>
+<dl class="simple myst">
+<dt><span id="relativeplayerplace"><code class="docutils literal notranslate"><span class="pre">relativePlayerPlace</span></code></span> <a id="relativePlayerPlace" href="#relativePlayerPlace" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Player’s average finishing place, weighted over recent sessions. Type:
+<code class="docutils literal notranslate"><span class="pre">AVGRATE</span></code>. Shown in leaderboard.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;relativePlayerPlace&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AVGRATE&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;window&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
-<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;window&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 <section id="moving-average-calculation">
-<h5>Moving average calculation<a class="headerlink" href="#moving-average-calculation" title="Link to this heading"></a></h5>
-<p>To calculate moving average using old value of the stat (<em>oldVal</em>), new value of the stat (<em>val</em>), duration (<em>len</em>), and the <em>window</em> determined in the stat configuration. The <em>val</em> and <em>len</em> are set in the request to
-.</p>
-<p>Formula for calculation the moving average:</p>
-<p><code class="docutils literal notranslate"><span class="pre">newVal</span> <span class="pre">=</span> <span class="pre">len/window</span> <span class="pre">&lt;</span> <span class="pre">1</span> <span class="pre">?</span> <span class="pre">val/window</span> <span class="pre">+</span> <span class="pre">oldVal(1-</span> <span class="pre">len/window):</span> <span class="pre">val/len</span></code></p>
-<p><em>window</em> – determines weight of new and old value in calculating.
-If <em>len</em> &gt; <em>window</em> – ignoring the <em>oldVal</em> when calculation result.
-If <em>window</em> more greater than <em>len</em> – <em>val</em> almost does not change result.</p>
-</section>
-</section>
-<section id="calculable-stats">
-<h4>Calculable stats<a class="headerlink" href="#calculable-stats" title="Link to this heading"></a></h4>
-<p>Calculable stats using to compute and store complex statistics.
-At most, these are various ratings and average values. See
-<a class="reference internal" href="#condition-format">Condition format</a>.</p>
+<h4>Moving Average Calculation<a class="headerlink" href="#moving-average-calculation" title="Link to this heading"></a></h4>
+<p>The moving average is calculated using:</p>
 <ul class="simple">
-<li><p><em>win_rate</em> – stat shows player battle wins rating.</p></li>
-<li><p><em>battle_count</em> and <em>battle_wins</em> stats using for calculation.</p></li>
-<li><p><em>battle_count</em> – total number of player battles.</p></li>
-<li><p><em>battle_wins</em> – total number of player wins in battles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oldVal</span></code> — the current stored value of the stat</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">val</span></code> — the new incoming value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">len</span></code> — the duration, set in the
+</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">window</span></code> — the coefficient defined in the stat config</p></li>
 </ul>
-<p>Below are the descriptions of the stats: <em>battle_count</em>, <em>battle_wins</em> and calculable stat <em>win_rate</em>.</p>
+<p><strong>Formula:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>newVal = len/window &lt; 1 ? val/window + oldVal(1- len/window): val/len
+</pre></div>
+</div>
+<p><strong>Behavior:</strong></p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">len</span> <span class="pre">&gt;=</span> <span class="pre">window</span></code>: <code class="docutils literal notranslate"><span class="pre">oldVal</span></code> is ignored; the result equals <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">/</span> <span class="pre">len</span></code>.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">len</span> <span class="pre">&lt;</span> <span class="pre">window</span></code>: <code class="docutils literal notranslate"><span class="pre">oldVal</span></code> has significant weight; the result changes
+gradually.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="calculable-stats">
+<h3>Calculable Stats<a class="headerlink" href="#calculable-stats" title="Link to this heading"></a></h3>
+<p>Calculable stats derive their value from other stats using a <code class="docutils literal notranslate"><span class="pre">condition</span></code>
+expression. They are typically used for ratings and averages.</p>
+<section id="win-rate">
+<h4>Win Rate<a class="headerlink" href="#win-rate" title="Link to this heading"></a></h4>
+<p>Tracks the ratio of wins to total battles.</p>
+<p>Supporting stats:</p>
+<dl class="simple myst">
+<dt><span id="battle-count"><code class="docutils literal notranslate"><span class="pre">battle_count</span></code></span> <a id="battle_count" href="#battle_count" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Total number of player’s battles. Type: <code class="docutils literal notranslate"><span class="pre">INT</span></code>. Used for calculation.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;battle_count&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="p">},</span>
-<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><span id="battle-wins"><code class="docutils literal notranslate"><span class="pre">battle_wins</span></code></span> <a id="battle_wins" href="#battle_wins" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Total number of player’s wins in battles. Type: <code class="docutils literal notranslate"><span class="pre">INT</span></code>. Used for calculation.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;battle_wins&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="p">},</span>
-<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>Calculable stat:</p>
+<dl class="simple myst">
+<dt><span id="id1"><code class="docutils literal notranslate"><span class="pre">win_rate</span></code></span> <a id="win_rate" href="#win_rate" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Player’s battle win rating. Type: <code class="docutils literal notranslate"><span class="pre">FLOAT</span></code>. Shown in leaderboard.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;win_rate&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLOAT&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -342,24 +397,37 @@ At most, these are various ratings and average values. See
 <span class="p">}</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p><em>avg_score</em> – stat shows the average player score for one life.</p></li>
-<li><p><em>lifes_count</em> and <em>total_score</em> stats using for calculation.</p></li>
-<li><p><em>lifes_count</em> – total number of lives spent by the player.</p></li>
-<li><p><em>total_score</em> – total game score.</p></li>
-</ul>
-<p>Below are the descriptions of the stats: <em>lifes_count</em>, <em>total_score</em> and calculable stat <em>avg_score</em>.</p>
+</dd>
+</dl>
+</section>
+<section id="average-score-per-life">
+<h4>Average Score per Life<a class="headerlink" href="#average-score-per-life" title="Link to this heading"></a></h4>
+<p>Tracks the player’s average score per life spent.</p>
+<p>Supporting stats:</p>
+<dl class="simple myst">
+<dt><span id="lifes-count"><code class="docutils literal notranslate"><span class="pre">lifes_count</span></code></span> <a id="lifes_count" href="#lifes_count" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Total number of lives spent by the player. Type: <code class="docutils literal notranslate"><span class="pre">INT</span></code>. Used for calculation.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lifes_count&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="p">},</span>
-<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><span id="total-score"><code class="docutils literal notranslate"><span class="pre">total_score</span></code></span> <a id="total_score" href="#total_score" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Total game score. Type: <code class="docutils literal notranslate"><span class="pre">INT</span></code>. Used for calculation.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;total_score&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="p">},</span>
-<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;onlyIncrement&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>Calculable stat:</p>
+<dl class="simple myst">
+<dt><span id="avg-score"><code class="docutils literal notranslate"><span class="pre">avg_score</span></code></span> <a id="avg_score" href="#avg_score" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Average player score per life. Type: <code class="docutils literal notranslate"><span class="pre">FLOAT</span></code>. Shown in leaderboard.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;avg_score&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLOAT&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -367,16 +435,23 @@ At most, these are various ratings and average values. See
 <span class="p">}</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </section>
+</section>
+</section>
+<hr class="docutils" />
 <section id="special-stats">
-<h4>Special stats<a class="headerlink" href="#special-stats" title="Link to this heading"></a></h4>
-<p>All special stats starts with <code class="docutils literal notranslate"><span class="pre">__</span></code>, please don’t use this prefix for game specific stats.</p>
-<section id="leaderboard-group">
-<h5>Leaderboard group<a class="headerlink" href="#leaderboard-group" title="Link to this heading"></a></h5>
-<p><code class="docutils literal notranslate"><span class="pre">__leaderboardGroup</span></code> – WIP</p>
-</section>
-</section>
-</section>
+<h2>Special Stats<a class="headerlink" href="#special-stats" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">__</span></code> prefix is reserved for special stats.
+Do not use it for game-specific stats.</p>
+</div>
+<dl class="simple myst">
+<dt><span id="leaderboardgroup"><code class="docutils literal notranslate"><span class="pre">__leaderboardGroup</span></code></span> <a id="__leaderboardGroup" href="#__leaderboardGroup" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Groups players into leaderboard segments. Documentation will be added soon.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -386,12 +461,12 @@ At most, these are various ratings and average values. See
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="profile-config-format.html" class="btn btn-neutral float-left" title="Scripts config format" accesskey="p" rel="prev">
+      <a href="profile-scripts.html" class="btn btn-neutral float-left" title="Profile Scripts" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="tables-config-format.html" class="btn btn-neutral float-right" title="Tables config format" accesskey="n" rel="next">
+      <a href="tables-config-format.html" class="btn btn-neutral float-right" title="Tables Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -402,7 +477,7 @@ At most, these are various ratings and average values. See
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -420,12 +495,12 @@ At most, these are various ratings and average values. See
   <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="profile-config-format.html" class="btn btn-neutral float-left" title="Scripts config format" accesskey="p" rel="prev">
+      <a href="profile-scripts.html" class="btn btn-neutral float-left" title="Profile Scripts" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="tables-config-format.html" class="btn btn-neutral float-right" title="Tables config format" accesskey="n" rel="next">
+      <a href="tables-config-format.html" class="btn btn-neutral float-right" title="Tables Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -436,7 +511,7 @@ At most, these are various ratings and average values. See
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

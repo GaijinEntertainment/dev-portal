@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacts config format</title>
+  <title>Contacts Config Format</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,7 +41,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Items config format" href="items-config-format.html" />
+    <link rel="next" title="Items Config Format" href="items-config-format.html" />
     <link rel="prev" title="Dev Portal Configs Reference" href="index.html" /> 
 </head>
 
@@ -74,25 +74,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Contacts config format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#player-contacts">Player Contacts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#contacts-config">Contacts config</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#contacts-description-format">Contacts description format</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#required-fields">Required fields</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contacts Config Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-contacts-config">Adding Contacts Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contacts-description-format">Contacts Description Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Scripts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Profile Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-scripts.html">Profile Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks Config Format</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -113,7 +110,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
-      <li class="breadcrumb-item active">Contacts config format</li>
+      <li class="breadcrumb-item active">Contacts Config Format</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -133,48 +130,174 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="contacts-config-format">
-<h1>Contacts config format<a class="headerlink" href="#contacts-config-format" title="Link to this heading"></a></h1>
-<section id="player-contacts">
-<h2>Player Contacts<a class="headerlink" href="#player-contacts" title="Link to this heading"></a></h2>
-<p>Friends are an essential part of all modern games. On our service, friends are
-implemented more flexible, as contacts.</p>
-<section id="contacts-config">
-<h3>Contacts config<a class="headerlink" href="#contacts-config" title="Link to this heading"></a></h3>
-<p>To use contacts you need to add the description to
-<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#single-configurations"><span class="std std-ref">contacts config</span></a>,
-and
-<a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">deploy configs</span></a>
-to services.</p>
+<h1>Contacts Config Format<a class="headerlink" href="#contacts-config-format" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Contacts are a flexible alternative to the traditional friends system. Unlike a
+simple friends list, contacts can be split into named groups, allowing you to
+manage social connections differently across game modes or features.</p>
+<p>To learn how to work with contacts and groups in your game, see the
+.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-contacts-config">
+<h2>Adding Contacts Config<a class="headerlink" href="#adding-contacts-config" title="Link to this heading"></a></h2>
+<p>To use contacts, you need to:</p>
+<ol class="arabic simple">
+<li><p>Add the contacts description to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#single-configurations"><span class="std std-ref">contacts config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
 <section id="contacts-description-format">
-<h4>Contacts description format<a class="headerlink" href="#contacts-description-format" title="Link to this heading"></a></h4>
+<h2>Contacts Description Format<a class="headerlink" href="#contacts-description-format" title="Link to this heading"></a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Arkanoid&quot;</span><span class="p">]</span><span class="w">  </span><span class="c1">// required</span>
+<span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Arkanoid&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="required-fields">
-<h5>Required fields<a class="headerlink" href="#required-fields" title="Link to this heading"></a></h5>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code> (<em>list of string</em>) – contacts group allowed in the game.</p></li>
-</ul>
-<p>All contacts in game can be split into groups.
-You can use only one group in your game, e.g. named as a game:</p>
+<hr class="docutils" />
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<dl class="simple myst">
+<dt><span id="allowedgroups"><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code></span> list of string <span class="bdg bdg-s bdg-yellow">required</span> <a id="allowedGroups" href="#allowedGroups" class="headerlink" title="Link to this parameter"></a></dt><dd><p>A list of contact group names allowed in the game. Maximum 20 groups.</p>
+<p>All contacts in the game are split into groups. Depending on your needs, you
+can use a single group or multiple groups.</p>
+<p><strong>Single group</strong> — suitable for most games:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DungeonGame&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>or different ones, for example, to have different friends in different game modes:</p>
+<p><strong>Multiple groups</strong> — useful when different game modes need separate contact
+lists:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DungeonGame_solo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DungeonGame_duo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DungeonGame_squad&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Read about
-
-to understand how to use groups in your game.</p>
-</section>
-</section>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
+<dt><span id="matching"><code class="docutils literal notranslate"><span class="pre">matching</span></code></span> object <span class="bdg bdg-s bdg-grey">optional</span> <a id="matching" href="#matching" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Configures contact update notifications. If not set, notifications are
+disabled.</p>
+<p>Each notification has the following fields:</p>
+<dl class="simple myst">
+<dt><span id="notificationenabled"><code class="docutils literal notranslate"><span class="pre">notificationEnabled</span></code></span> bool <span class="bdg bdg-s bdg-yellow">required</span> <a id="notificationEnabled" href="#notificationEnabled" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, enables notifications when a contact’s status changes.</p>
+</dd>
+<dt><span id="notificationkey"><code class="docutils literal notranslate"><span class="pre">notificationKey</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span><a id="notificationKey" href="#notificationKey" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Notification key sent with the update event. Defaults to
+<code class="docutils literal notranslate"><span class="pre">&quot;notify_contacts_update&quot;</span></code>.</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;matching&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;notificationEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;notificationKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notify_contacts_update&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
+<dt><span id="limitedaccess"><code class="docutils literal notranslate"><span class="pre">limitedAccess</span></code></span> array of objects <span class="bdg bdg-s bdg-grey">optional</span> <a id="limitedAccess" href="#limitedAccess" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Defines access rules controlling which players can use contacts. Maximum 20
+rules. Rules with <code class="docutils literal notranslate"><span class="pre">disabled:</span> <span class="pre">true</span></code> are ignored. If no enabled rules are
+present, access is allowed for all players.</p>
+<p>Each rule has the following fields:</p>
+<dl class="simple myst">
+<dt><span id="allow"><code class="docutils literal notranslate"><span class="pre">allow</span></code></span> bool <span class="bdg bdg-s bdg-yellow">required</span> <a id="allow" href="#allow" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, players matching this rule are allowed access. If <code class="docutils literal notranslate"><span class="pre">false</span></code>, they
+are denied.</p>
+</dd>
+<dt><span id="disabled"><code class="docutils literal notranslate"><span class="pre">disabled</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="disabled" href="#disabled" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this rule is ignored. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="purchased"><code class="docutils literal notranslate"><span class="pre">purchased</span></code></span> list of string (GUID) <span class="bdg bdg-s bdg-grey">optional</span> <a id="purchased" href="#purchased" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player has purchased any of the listed items. Maximum 100
+entries.</p>
+</dd>
+<dt><span id="notpurchased"><code class="docutils literal notranslate"><span class="pre">notPurchased</span></code></span> list of string (GUID) <span class="bdg bdg-s bdg-grey">optional</span> <a id="notPurchased" href="#notPurchased" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player has not purchased any of the listed items. Maximum 100
+entries.</p>
+</dd>
+<dt><span id="authtag"><code class="docutils literal notranslate"><span class="pre">authTag</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="authTag" href="#authTag" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s auth tag matches any of the listed values. Maximum 100
+entries.</p>
+</dd>
+<dt><span id="notauthtag"><code class="docutils literal notranslate"><span class="pre">notAuthTag</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="notAuthTag" href="#notAuthTag" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s auth tag does not match any of the listed values.
+Maximum 100 entries.</p>
+</dd>
+<dt><span id="authtype"><code class="docutils literal notranslate"><span class="pre">authType</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="authType" href="#authType" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s auth type matches any of the listed values. Maximum
+100 entries.</p>
+</dd>
+<dt><span id="notauthtype"><code class="docutils literal notranslate"><span class="pre">notAuthType</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="notAuthType" href="#notAuthType" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s auth type does not match any of the listed values.
+Maximum 100 entries.</p>
+</dd>
+<dt><span id="platform"><code class="docutils literal notranslate"><span class="pre">platform</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="platform" href="#platform" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s platform matches any of the listed values. Maximum 100
+entries.</p>
+</dd>
+<dt><span id="notplatform"><code class="docutils literal notranslate"><span class="pre">notPlatform</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="notPlatform" href="#notPlatform" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s platform does not match any of the listed values.
+Maximum 100 entries.</p>
+</dd>
+<dt><span id="loginwildcard"><code class="docutils literal notranslate"><span class="pre">loginWildcard</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="loginWildcard" href="#loginWildcard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s login matches any of the listed wildcard patterns.
+Maximum 100 entries.</p>
+</dd>
+<dt><span id="notloginwildcard"><code class="docutils literal notranslate"><span class="pre">notLoginWildcard</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="notLoginWildcard" href="#notLoginWildcard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Allow if the player’s login does not match any of the listed wildcard
+patterns. Maximum 100 entries.</p>
+</dd>
+<dt><span id="limitedaccess-comment"><code class="docutils literal notranslate"><span class="pre">comment</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="comment" href="#comment" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Internal comment for this rule. Maximum 512 characters.</p>
+</dd>
+<dt><span id="errormessage"><code class="docutils literal notranslate"><span class="pre">errorMessage</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="errorMessage" href="#errorMessage" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Error message returned to the client when access is denied. Maximum 512
+characters.</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;limitedAccess&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;console&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;errorMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Contacts are not available on this platform.&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
+<dt><span id="loginchecks"><code class="docutils literal notranslate"><span class="pre">loginChecks</span></code></span> array of objects <span class="bdg bdg-s bdg-grey">optional</span> <a id="loginChecks" href="#loginChecks" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Defines additional checks performed during login. Maximum 20 checks.</p>
+<p>Each check has the following fields:</p>
+<dl class="simple myst">
+<dt><span id="needtoken"><code class="docutils literal notranslate"><span class="pre">needToken</span></code></span> bool <span class="bdg bdg-s bdg-yellow">required</span> <a id="needToken" href="#needToken" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, an auth token is required to perform this check.</p>
+</dd>
+<dt><span id="type"><code class="docutils literal notranslate"><span class="pre">type</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="type" href="#type" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of the check. Possible values: <code class="docutils literal notranslate"><span class="pre">GENERIC</span></code> (default), <code class="docutils literal notranslate"><span class="pre">CURRENCY</span></code>.</p>
+</dd>
+<dt><span id="requesturls"><code class="docutils literal notranslate"><span class="pre">requestUrls</span></code></span> list of string (URL) <span class="bdg bdg-s bdg-grey">optional</span> <a id="requestUrls" href="#requestUrls" class="headerlink" title="Link to this parameter"></a></dt><dd><p>URLs to call during the check. Maximum 100 entries.</p>
+</dd>
+<dt><span id="action"><code class="docutils literal notranslate"><span class="pre">action</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="action" href="#action" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Action name to perform. Maximum 512 characters.</p>
+</dd>
+<dt><span id="loginchecks-comment"><code class="docutils literal notranslate"><span class="pre">comment</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="comment" href="#comment" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Internal comment. Maximum 4096 characters.</p>
+</dd>
+<dt><span id="erroroverride"><code class="docutils literal notranslate"><span class="pre">errorOverride</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="errorOverride" href="#errorOverride" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Custom error message to return on failure. Maximum 512 characters.</p>
+</dd>
+<dt><span id="knownerrors"><code class="docutils literal notranslate"><span class="pre">knownErrors</span></code></span> list of string <span class="bdg bdg-s bdg-grey">optional</span> <a id="knownErrors" href="#knownErrors" class="headerlink" title="Link to this parameter"></a></dt><dd><p>List of known error messages that are handled gracefully. Maximum
+100 entries.</p>
+</dd>
+<dt><span id="timeoutsec"><code class="docutils literal notranslate"><span class="pre">timeoutSec</span></code></span> int <span class="bdg bdg-s bdg-grey">optional</span> <a id="timeoutSec" href="#timeoutSec" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Timeout in seconds for the check request. Range: 0–86400. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</dd>
+<dt><span id="denyloginonreqfailure"><code class="docutils literal notranslate"><span class="pre">denyLoginOnReqFailure</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="denyLoginOnReqFailure" href="#denyLoginOnReqFailure" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, login is denied when the check request fails. Defaults to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;loginChecks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GENERIC&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;needToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;requestUrls&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;https://auth.example.com/check&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;timeoutSec&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;denyLoginOnReqFailure&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
 </section>
 </section>
 </section>
@@ -190,7 +313,7 @@ to understand how to use groups in your game.</p>
       </a>
     
     
-      <a href="items-config-format.html" class="btn btn-neutral float-right" title="Items config format" accesskey="n" rel="next">
+      <a href="items-config-format.html" class="btn btn-neutral float-right" title="Items Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -201,7 +324,7 @@ to understand how to use groups in your game.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -224,7 +347,7 @@ to understand how to use groups in your game.</p>
       </a>
     
     
-      <a href="items-config-format.html" class="btn btn-neutral float-right" title="Items config format" accesskey="n" rel="next">
+      <a href="items-config-format.html" class="btn btn-neutral float-right" title="Items Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -235,7 +358,7 @@ to understand how to use groups in your game.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

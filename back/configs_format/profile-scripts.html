@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Scripts</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/hoverxref.js"></script>
+      <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+      <script src="../../_static/js/micromodal.min.js"></script>
+      <script src="../../_static/js/versionwarning.js?v=d4224a34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Stats Config Format" href="stats-config-format.html" />
+    <link rel="prev" title="Profile Config Format" href="profile-config-format.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Dev Portal Documentation
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modes-config-format.html">Modes Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Profile Config Format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Profile Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-profile-scripts">Adding Profile Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-scripts-work">How Scripts Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#script-structure">Script Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#defining-profile-state">Defining Profile State</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-config">Reading Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#writing-actions">Writing Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#json-rpc-actions">JSON-RPC Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#profilelib-modules">ProfileLib Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks Config Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dev Portal Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
+      <li class="breadcrumb-item active">Profile Scripts</li>
+  
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  <li class="wy-breadcrumbs-aside.github-icon">
+    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
+      <img src="../../_static/_images/to_gap_docs.png"
+           alt="GitHub"
+           title="Open GAP Documentation"
+           style="height: 1.5em; vertical-align: text-bottom; " />
+    </a>
+  </li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="profile-scripts">
+<h1>Profile Scripts<a class="headerlink" href="#profile-scripts" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Profile scripts contain the game logic executed by the Profile server. Scripts
+are written in <a class="reference external" href="https://dascript.org">daScript</a> and run in response to
+JSON-RPC requests from the game client or other services.</p>
+<p>For a full introduction to writing scripts, see the
+.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-profile-scripts">
+<h2>Adding Profile Scripts<a class="headerlink" href="#adding-profile-scripts" title="Link to this heading"></a></h2>
+<p>To use profile scripts, you need to:</p>
+<ol class="arabic simple">
+<li><p>Upload a scripts archive to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#single-configurations"><span class="std std-ref">profile scripts config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="how-scripts-work">
+<h2>How Scripts Work<a class="headerlink" href="#how-scripts-work" title="Link to this heading"></a></h2>
+<p>The Profile server executes actions – functions defined in daScript that run
+in response to JSON-RPC requests from the game client or other services.
+Actions for the same profile are always executed sequentially.</p>
+<p>The player profile is stored in MongoDB but cached in memory for performance.
+On the first action for a profile, it is loaded from the database into memory.
+While the profile remains cached, subsequent actions run against the in-memory
+state without a database round-trip. The profile is eventually persisted back
+to the database and evicted from the cache. If a new action arrives after
+eviction, the load cycle repeats.</p>
+</section>
+<hr class="docutils" />
+<section id="script-structure">
+<h2>Script Structure<a class="headerlink" href="#script-structure" title="Link to this heading"></a></h2>
+<p>A typical scripts setup consists of:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">profile.das</span></code></strong> – defines the <code class="docutils literal notranslate"><span class="pre">persist</span></code> struct that holds the player’s
+profile state.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">config.das</span></code></strong> – reads the <a class="reference internal" href="profile-config-format.html"><span class="std std-doc">profile config</span></a>
+using <code class="docutils literal notranslate"><span class="pre">load_server_config</span></code> and exposes it as a typed constant.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">actions/</span></code></strong> – one or more files containing JSON-RPC action definitions.</p></li>
+</ul>
+<section id="defining-profile-state">
+<h3>Defining Profile State<a class="headerlink" href="#defining-profile-state" title="Link to this heading"></a></h3>
+<div class="highlight-das notranslate"><div class="highlight"><pre><span></span><span class="k">options</span> <span class="n">gen2</span>
+<span class="k">require</span> <span class="n">jsonrpc</span>
+
+<span class="k">struct</span> <span class="n">PlayerProfile</span> <span class="nt">{</span>
+  <span class="nv">level</span><span class="p"> : </span><span class="kt">int</span>
+  <span class="nv">xp</span><span class="p"> : </span><span class="kt">int64</span>
+<span class="nt">}</span>
+
+<span class="k">var</span> <span class="nv">persist</span><span class="p"> : </span><span class="kt">PlayerProfile</span>
+</pre></div>
+</div>
+</section>
+<section id="reading-config">
+<h3>Reading Config<a class="headerlink" href="#reading-config" title="Link to this heading"></a></h3>
+<div class="highlight-das notranslate"><div class="highlight"><pre><span></span><span class="k">options</span> <span class="n">gen2</span>
+<span class="k">module</span> <span class="n">config</span> <span class="k">public</span>
+<span class="k">require</span> <span class="n">jsonrpc</span>
+
+<span class="k">struct</span> <span class="n">Config</span> <span class="nt">{</span>
+  <span class="nv">maxLevel</span><span class="p"> : </span><span class="kt">int</span>
+  <span class="nv">levelUpXp</span><span class="p"> : </span><span class="kt">int64</span>
+<span class="nt">}</span>
+
+<span class="k">let</span> <span class="k">shared</span> <span class="n">config</span> <span class="se">&lt;-</span> <span class="n">load_server_config</span><span class="nt">(</span><span class="n">Config</span><span class="nt">())</span>
+</pre></div>
+</div>
+</section>
+<section id="writing-actions">
+<h3>Writing Actions<a class="headerlink" href="#writing-actions" title="Link to this heading"></a></h3>
+<div class="highlight-das notranslate"><div class="highlight"><pre><span></span><span class="k">options</span> <span class="n">gen2</span>
+<span class="k">require</span> <span class="n">jsonrpc</span>
+<span class="k">require</span> <span class="n">profile</span>
+<span class="k">require</span> <span class="n">config</span>
+
+<span class="nf">[jsonrpc_method]</span>
+<span class="k">def</span> <span class="nf">add_xp</span><span class="nt">(</span><span class="nv">delta</span><span class="p"> : </span><span class="kt">int64</span><span class="nt">)</span> <span class="nt">{</span>
+  <span class="k">if</span> <span class="n">delta</span> <span class="se">&lt;=</span> <span class="mi">0</span> <span class="nt">{</span>
+    <span class="n">send_error</span><span class="nt">(</span><span class="s">&quot;delta must be positive&quot;</span><span class="nt">)</span>
+    <span class="k">return</span>
+  <span class="nt">}</span>
+  <span class="n">persist</span><span class="nt">.</span><span class="n">xp</span> <span class="se">+=</span> <span class="n">delta</span>
+  <span class="k">while</span> <span class="n">persist</span><span class="nt">.</span><span class="n">level</span> <span class="se">&lt;</span> <span class="n">config</span><span class="nt">.</span><span class="n">maxLevel</span> <span class="se">&amp;&amp;</span> <span class="n">persist</span><span class="nt">.</span><span class="n">xp</span> <span class="se">&gt;=</span> <span class="n">config</span><span class="nt">.</span><span class="n">levelUpXp</span> <span class="nt">{</span>
+    <span class="n">persist</span><span class="nt">.</span><span class="n">level</span> <span class="se">+=</span> <span class="mi">1</span>
+    <span class="n">persist</span><span class="nt">.</span><span class="n">xp</span> <span class="se">-=</span> <span class="n">config</span><span class="nt">.</span><span class="n">levelUpXp</span>
+  <span class="nt">}</span>
+  <span class="n">send_result</span><span class="nt">(</span><span class="n">persist</span><span class="nt">)</span>
+<span class="nt">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="json-rpc-actions">
+<h2>JSON-RPC Actions<a class="headerlink" href="#json-rpc-actions" title="Link to this heading"></a></h2>
+<p>Actions are functions annotated with <code class="docutils literal notranslate"><span class="pre">[jsonrpc_method]</span></code>. By default, an action
+is a <strong>profile action</strong>: the player profile is loaded and locked for the
+duration of execution.</p>
+<p>See the 
+for the full list of available annotations and built-in functions.</p>
+</section>
+<hr class="docutils" />
+<section id="profilelib-modules">
+<h2>ProfileLib Modules<a class="headerlink" href="#profilelib-modules" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">profilelib</span></code> library provides reusable helpers for common patterns:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.jsonschema</span></code></p></td>
+<td><p>Generates JSON Schema builders for daScript structs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.jsonschema_jsonrpc</span></code></p></td>
+<td><p>Automatically exposes schema endpoints for JSON-RPC methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.profile_schema</span></code></p></td>
+<td><p>Splits profile state into typed parts with <code class="docutils literal notranslate"><span class="pre">[profile_schema]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.rollback_on_error</span></code></p></td>
+<td><p>Rolls back <code class="docutils literal notranslate"><span class="pre">persist</span></code> mutations when an action sends an error.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.unique_transaction</span></code></p></td>
+<td><p>Makes actions idempotent by deduplicating transaction IDs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.static_data_json</span></code></p></td>
+<td><p>Loads and deserializes JSON files into typed daScript structs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">profilelib.macros</span></code></p></td>
+<td><p>Base AST helpers for writing custom function annotations.</p></td>
+</tr>
+</tbody>
+</table>
+<p>See the 
+for full documentation on each module.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="profile-config-format.html" class="btn btn-neutral float-left" title="Profile Config Format" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="stats-config-format.html" class="btn btn-neutral float-right" title="Stats Config Format" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  <footer>
+  <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+    
+      <a href="profile-config-format.html" class="btn btn-neutral float-left" title="Profile Config Format" accesskey="p" rel="prev">
+        <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
+      </a>
+    
+    
+      <a href="stats-config-format.html" class="btn btn-neutral float-right" title="Stats Config Format" accesskey="n" rel="next">
+        Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
+      </a>
+    
+  </div>
+
+  <hr>
+
+  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+    <div class="footer-left">
+      <span>© Copyright Gaijin Entertainment 2026.
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
+      </span>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

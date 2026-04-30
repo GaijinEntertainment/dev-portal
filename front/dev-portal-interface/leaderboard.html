@@ -75,6 +75,7 @@
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html#navigate-to-an-include-from-a-config">Navigate to an Include from a Config</a></li>
 <li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
@@ -82,6 +83,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#open-leaderboard">Open Leaderboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#get-leaderboard-data">Get Leaderboard Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pagination">Pagination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filters">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-screen-button">Full screen button</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#export-data">Export Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#search-by-user-id">Search by User ID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#save-leaderboards-between-requests">Save Leaderboards Between Requests</a></li>
@@ -92,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html#navigate-to-documentation">Navigate to Documentation.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
@@ -158,9 +162,9 @@ data based on configurable parameters.</p>
 <li><p><strong>table</strong> — Displays the leaderboard for a specific table.
 <a class="reference internal" href="../../back/configs_format/tables-config-format.html#tables-config-format"><span class="std std-ref">(more info)</span></a>.</p></li>
 <li><p><strong>mode</strong> — Displays the leaderboard for a specific mode.
-<a class="reference internal" href="../../back/configs_format/modes-config-format.html#mode-format"><span class="std std-ref">(more info)</span></a>.</p></li>
+<a class="reference internal" href="../../back/configs_format/modes-config-format.html#mode-description-format"><span class="std std-ref">(more info)</span></a>.</p></li>
 <li><p><strong>group</strong> — Uses the special statistic value <code class="docutils literal notranslate"><span class="pre">__leaderboard</span></code>.
-<a class="reference internal" href="../../back/configs_format/stats-config-format.html#leaderboard-group"><span class="std std-ref">(more info)</span></a>.</p>
+<a class="reference internal" href="../../back/configs_format/stats-config-format.html#leaderboardgroup"><span class="std std-ref">(more info)</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Leave this field empty if a leaderboard group is not used.</p>
@@ -193,6 +197,20 @@ data based on configurable parameters.</p>
 <h2>Pagination<a class="headerlink" href="#pagination" title="Link to this heading"></a></h2>
 <p>Use the pagination controls to navigate between leaderboard pages.</p>
 <a class="reference internal image-reference" href="../../_images/leaderboard_pagination.png"><img alt="Leaderboard pagination" class="align-center" src="../../_images/leaderboard_pagination.png" style="width: 60em;" />
+</a>
+</section>
+<section id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h2>
+<p>To collapse the filters block, click the button.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_collapse_button.png"><img alt="Leaderboard pagination" class="align-center" src="../../_images/leaderboard_collapse_button.png" style="width: 60em;" />
+</a>
+<a class="reference internal image-reference" href="../../_images/leaderboard_collapsed.png"><img alt="Leaderboard pagination" class="align-center" src="../../_images/leaderboard_collapsed.png" style="width: 60em;" />
+</a>
+</section>
+<section id="full-screen-button">
+<h2>Full screen button<a class="headerlink" href="#full-screen-button" title="Link to this heading"></a></h2>
+<p>To open the <code class="docutils literal notranslate"><span class="pre">Leaderboard</span></code> page in full screen mode, click the button.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_fullscreen.png"><img alt="Leaderboard pagination" class="align-center" src="../../_images/leaderboard_fullscreen.png" style="width: 60em;" />
 </a>
 </section>
 <section id="export-data">
@@ -272,7 +290,7 @@ and save the leaderboard.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -306,7 +324,7 @@ and save the leaderboard.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

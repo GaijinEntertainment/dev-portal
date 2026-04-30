@@ -76,29 +76,24 @@
 <li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Workspace Configs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#multi-element-configurations">Multi-Element Configurations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#add-new-configuration">Add New Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delete-configuration">Delete Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#edit-configuration">Edit Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#show-differences">Show differences</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bulk-edit-configuration">Bulk Edit Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#upload-configurations">Upload Configurations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#download-configurations">Download Configurations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#filter-configurations">Filter Configurations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#view-namespaces">View Namespaces</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#add-namespace">Add Namespace</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#single-configurations">Single Configurations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Edit Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-configuration">Edit Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#upload-configuration">Upload Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#download-configuration">Download Configuration</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#includes">Includes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#namespace-includes">Namespace Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#navigate-to-an-include-from-a-config">Navigate to an Include from a Config</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#script-configurations">Script Configurations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#scripts-upload-download-and-validation">Scripts Upload, Download, and Validation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#scripts-archive">Scripts Archive</a><ul>
@@ -123,6 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html#navigate-to-documentation">Navigate to Documentation.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
@@ -183,7 +179,7 @@ described in this documentation as <strong>configurations</strong>.</p>
 </div>
 <p>Workspace configurations are grouped into the following sections:</p>
 <ul class="simple">
-<li><p><strong>userstst</strong></p></li>
+<li><p><strong>userstat</strong></p></li>
 <li><p><strong>profile</strong></p></li>
 <li><p><strong>contacts</strong></p></li>
 <li><p><strong>currency</strong></p></li>
@@ -221,86 +217,28 @@ editing workflow.</p>
 </div>
 <p>The element configuration management described below uses the <strong>userstat &gt;
 stats</strong> configuration as an example.</p>
-<section id="add-new-configuration">
-<h3>Add New Configuration<a class="headerlink" href="#add-new-configuration" title="Link to this heading"></a></h3>
-<p>To add a new configuration element:</p>
+<a class="reference internal image-reference" href="../../_images/conf_editing.png"><img alt="Editing configs" class="align-center" src="../../_images/conf_editing.png" style="width: 60em;" />
+</a>
 <ol class="arabic simple">
-<li><p>Click the <strong>Add stat</strong> button.</p></li>
+<li><p>Add a new configuration element. This element is created with default values. Name must be unique.</p></li>
+<li><p>Upload configurations from a local file system.</p></li>
+<li><p>Download configurations in JSON format. Choose whether to group configurations by namespace in the modal window.</p></li>
+<li><p>Save all modified configurations.</p></li>
+<li><p>Toggle the filter panel. Click the <strong>Info</strong> icon to see hints for specifying the filter. After entering the value, click <strong>Filter</strong> button to apply your filter.</p></li>
+<li><p>Set checkboxes to edit multiple configs at once. The number of chosen configs and available actions will be displayed.</p></li>
+<li><p>Toggle the config accordion panel.</p></li>
+<li><p>Open the modal to change multiple chosen configs. To preview differences between the current and result data, click the <strong>Show
+diff</strong> / <strong>Hide diff</strong> button.</p></li>
 </ol>
-<a class="reference internal image-reference" href="../../_images/conf_add_element.png"><img alt="Add element" class="align-center" src="../../_images/conf_add_element.png" style="width: 60em;" />
+<a class="reference internal image-reference" href="../../_images/conf_editing_multiple.png"><img alt="Add element" class="align-center" src="../../_images/conf_editing_multiple.png" style="width: 60em;" />
 </a>
-<ol class="arabic simple" start="2">
-<li><p>A new element will be created with default values.</p></li>
+<ol class="arabic simple" start="9">
+<li><p>Delete multiple chosen configurations. Confirmation is required.</p></li>
+<li><p>Save changes in the modified configuration.</p></li>
+<li><p>Delete configuration. Confirmation is required.</p></li>
+<li><p>If a configuration cannot be saved (name is not unique, or there are no required fields, etc.), hover over the disabled Save button (10) to see the reason.</p></li>
+<li><p><a class="reference internal" href="code_editor.html"><span class="std std-doc">Code Editor</span></a> - edit configuration here.</p></li>
 </ol>
-<a class="reference internal image-reference" href="../../_images/conf_added_element.png"><img alt="Added element" class="align-center" src="../../_images/conf_added_element.png" style="width: 60em;" />
-</a>
-<ol class="arabic simple" start="3">
-<li><p>Fill in the required fields.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_add_element_save.png"><img alt="Add element name" class="align-center" src="../../_images/conf_add_element_save.png" style="width: 60em;" />
-</a>
-<ol class="arabic simple" start="4">
-<li><p>Click the <strong>Save</strong> button to persist the changes.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/leave_page_modal.png"><img alt="Leave page modal" class="align-center" src="../../_images/leave_page_modal.png" style="width: 20em;" />
-</a>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Changes are not saved automatically.
-If the page is reloaded before clicking <strong>Save</strong>, all unsaved changes will be
-lost.</p>
-</div>
-</section>
-<section id="delete-configuration">
-<h3>Delete Configuration<a class="headerlink" href="#delete-configuration" title="Link to this heading"></a></h3>
-<p>To delete a single configuration element:</p>
-<ol class="arabic simple">
-<li><p>Click the <strong>Remove</strong> button in the corresponding row.</p></li>
-<li><p>Confirm the action in the modal dialog.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_remove_element.png"><img alt="Remove element" class="align-center" src="../../_images/conf_remove_element.png" style="width: 60em;" />
-</a>
-<p>To delete multiple elements:</p>
-<ol class="arabic simple">
-<li><p>Select the required elements using checkboxes.</p></li>
-<li><p>Click the <strong>Delete selected</strong> button.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_remove_elements.png"><img alt="Remove several elements" class="align-center" src="../../_images/conf_remove_elements.png" style="width: 60em;" />
-</a>
-<ol class="arabic simple" start="3">
-<li><p>Confirm the deletion in the modal dialog.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_remove_elements_confirm.png"><img alt="Confirm the action" class="align-center" src="../../_images/conf_remove_elements_confirm.png" style="width: 20em;" />
-</a>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Deletion must be explicitly confirmed in the confirmation dialog.</p>
-</div>
-</section>
-<section id="edit-configuration">
-<h3>Edit Configuration<a class="headerlink" href="#edit-configuration" title="Link to this heading"></a></h3>
-<p>To edit config element, use <a class="reference internal" href="code_editor.html"><span class="std std-doc">Code Editor</span></a>.</p>
-<a class="reference internal image-reference" href="../../_images/conf_edit_element.png"><img alt="Edit element" class="align-center" src="../../_images/conf_edit_element.png" style="width: 60em;" />
-</a>
-<p>To open the Code Editor, click the <strong>arrow</strong> icon (a chevron located at the left
-side of each row).</p>
-<a class="reference internal image-reference" href="../../_images/conf_edit_element_open.png"><img alt="Edit element open" class="align-center" src="../../_images/conf_edit_element_open.png" style="width: 60em;" />
-</a>
-<p>The editor supports syntax highlighting, code completion, error markers, and
-change markers.</p>
-<p>Changes can be saved in two ways:</p>
-<ul class="simple">
-<li><p>Click the <strong>Save</strong> button in the row to save the current configuration</p></li>
-</ul>
-<a class="reference internal image-reference" href="../../_images/conf_save.png"><img alt="Edit element open" class="align-center" src="../../_images/conf_save.png" style="width: 60em;" />
-</a>
-<ul class="simple">
-<li><p>Click the <strong>Save All</strong> button at the top of the table to save all modified
-configurations</p></li>
-</ul>
-<a class="reference internal image-reference" href="../../_images/conf_save_all.png"><img alt="Edit element open" class="align-center" src="../../_images/conf_save_all.png" style="width: 60em;" />
-</a>
-</section>
 <section id="show-differences">
 <h3>Show differences<a class="headerlink" href="#show-differences" title="Link to this heading"></a></h3>
 <p>To see differences choose checkbox in the <code class="docutils literal notranslate"><span class="pre">UI</span> <span class="pre">Settings</span></code> menu.</p>
@@ -310,88 +248,13 @@ configurations</p></li>
 <a class="reference internal image-reference" href="../../_images/conf_diff_block.png"><img alt="Show diff block displayed" class="align-center" src="../../_images/conf_diff_block.png" style="width: 60em;" />
 </a>
 </section>
-<section id="bulk-edit-configuration">
-<h3>Bulk Edit Configuration<a class="headerlink" href="#bulk-edit-configuration" title="Link to this heading"></a></h3>
-<p>To edit multiple configurations at once:</p>
-<ol class="arabic simple">
-<li><p>Select configurations in the table.</p></li>
-<li><p>Click the <strong>Change selected</strong> button.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_checked_for_edit.png"><img alt="Checked configs for edit" class="align-center" src="../../_images/conf_checked_for_edit.png" style="width: 60em;" />
-</a>
-<p>To preview differences between the current and original data click the <strong>Show
-diff</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/conf_change_checked_configs_modal.png"><img alt="Change checked configs modal" class="align-center" src="../../_images/conf_change_checked_configs_modal.png" style="width: 60em;" />
-</a>
-<p>To apply changes click the <strong>Save</strong> button.</p>
-<a class="reference internal image-reference" href="../../_images/conf_change_checked_configs_diff.png"><img alt="Change checked configs diff" class="align-center" src="../../_images/conf_change_checked_configs_diff.png" style="width: 60em;" />
-</a>
-</section>
-<section id="upload-configurations">
-<h3>Upload Configurations<a class="headerlink" href="#upload-configurations" title="Link to this heading"></a></h3>
-<p>To upload configurations from a local file:</p>
-<ol class="arabic simple">
-<li><p>Click the <strong>Upload config</strong> button.</p></li>
-<li><p>Select the file from your local filesystem.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_upload.png"><img alt="Upload config" class="align-center" src="../../_images/conf_upload.png" style="width: 60em;" />
-</a>
-</section>
-<section id="download-configurations">
-<h3>Download Configurations<a class="headerlink" href="#download-configurations" title="Link to this heading"></a></h3>
-<p>To download configurations:</p>
-<ol class="arabic simple">
-<li><p>Click the <strong>Download config</strong> button.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_download.png"><img alt="Download config" class="align-center" src="../../_images/conf_download.png" style="width: 60em;" />
-</a>
-<ol class="arabic simple" start="2">
-<li><p>(Optional) Choose whether to group configurations by namespace.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_download_modal.png"><img alt="Download config modal" class="align-center" src="../../_images/conf_download_modal.png" style="width: 30em;" />
-</a>
-<ol class="arabic simple" start="3">
-<li><p>Confirm the download.</p></li>
-</ol>
-</section>
-<section id="filter-configurations">
-<h3>Filter Configurations<a class="headerlink" href="#filter-configurations" title="Link to this heading"></a></h3>
-<p>To filter configurations:</p>
-<ol class="arabic simple">
-<li><p>Click the <strong>Filter</strong> button to open the filter panel.</p></li>
-<li><p>Specify filter parameters.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_open_filter.png"><img alt="Open filter block" class="align-center" src="../../_images/conf_open_filter.png" style="width: 60em;" />
-</a>
-<p>Hover over the <strong>Info</strong> icon to see hints for filling in filter fields.</p>
-<a class="reference internal image-reference" href="../../_images/conf_open_filter_hint.png"><img alt="Open filter block hint" class="align-center" src="../../_images/conf_open_filter_hint.png" style="width: 60em;" />
-</a>
-</section>
 <section id="namespaces">
 <h3>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h3>
 <p>Configurations are logically grouped by <strong>namespaces</strong>.</p>
 <section id="view-namespaces">
 <h4>View Namespaces<a class="headerlink" href="#view-namespaces" title="Link to this heading"></a></h4>
-<p>To open the namespace list, click the <strong>Current namespace:</strong> dropdown.</p>
+<p>To open the namespace list, click the <strong>Current namespace:</strong> dropdown. Select a namespace to display only configurations that belong to it. Create new namespace by clicking <strong>Add namespace</strong>.</p>
 <a class="reference internal image-reference" href="../../_images/conf_namespaces_list.png"><img alt="Namespaces list" class="align-center" src="../../_images/conf_namespaces_list.png" style="width: 60em;" />
-</a>
-<p>Select a namespace to display only configurations that belong to it.</p>
-<a class="reference internal image-reference" href="../../_images/conf_select_namespace.png"><img alt="Select namespace" class="align-center" src="../../_images/conf_select_namespace.png" style="width: 60em;" />
-</a>
-</section>
-<section id="add-namespace">
-<h4>Add Namespace<a class="headerlink" href="#add-namespace" title="Link to this heading"></a></h4>
-<p>To create a new namespace:</p>
-<ol class="arabic simple">
-<li><p>Click <strong>Add Namespace</strong>.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_add_namespace_button.png"><img alt="Add namespace button" class="align-center" src="../../_images/conf_add_namespace_button.png" style="width: 15em;" />
-</a>
-<ol class="arabic simple" start="2">
-<li><p>Enter the namespace name.</p></li>
-<li><p>Click <strong>OK</strong> to confirm.</p></li>
-</ol>
-<a class="reference internal image-reference" href="../../_images/conf_add_namespace_confirm.png"><img alt="Add namespace confirm" class="align-center" src="../../_images/conf_add_namespace_confirm.png" style="width: 30em;" />
 </a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -413,8 +276,8 @@ Editor</span></a>.</p>
 <li><p>Tribunal (coming soon)</p></li>
 <li><p>Cloud (see format)</p></li>
 </ul>
-<section id="id1">
-<h3>Edit Configuration<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="edit-configuration">
+<h3>Edit Configuration<a class="headerlink" href="#edit-configuration" title="Link to this heading"></a></h3>
 <a class="reference internal image-reference" href="../../_images/conf_single_edit.png"><img alt="Single config edit" class="align-center" src="../../_images/conf_single_edit.png" style="width: 60em;" />
 </a>
 <p>To save the changes, click the <strong>Save</strong> button.</p>
@@ -450,13 +313,16 @@ across all relevant elements instead of being duplicated.</p>
 </a>
 <p>After an include is defined, it can be referenced in a stat element by its name.
 The resulting element, validated against the schema, can be viewed by enabling
-the <strong>UI settings / Show resolved block</strong> option.</p>
+the <strong>UI settings / Show resolved #includes</strong> option.</p>
 <a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_02.png"><img alt="Stat element with includes" class="align-center" src="../../_images/conf_man_includes_ex_02.png" style="width: 75em;" />
 </a>
 <p>Include templates can be created either for entire elements or for specific
 fields. This is done by selecting the appropriate schema in the <code class="docutils literal notranslate"><span class="pre">schemaPath</span></code>
 values. To view the list of available schemas, start typing or press
 <span class="sd-sphinx-override sd-badge sd-outline-dark sd-text-dark">Ctrl</span>+<span class="sd-sphinx-override sd-badge sd-outline-dark sd-text-dark">Space</span>.</p>
+<p>To replace the config value with the resolved block value, click the button.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_includes_replace.png"><img alt="Nested includes" class="align-center" src="../../_images/conf_man_includes_replace.png" style="width: 75em;" />
+</a>
 <p>An include may reference another include; however, the nesting depth is limited.</p>
 <a class="reference internal image-reference" href="../../_images/conf_man_includes_ex_03.png"><img alt="Nested includes" class="align-center" src="../../_images/conf_man_includes_ex_03.png" style="width: 75em;" />
 </a>
@@ -512,12 +378,23 @@ the namespaces to be included:</p>
 <a class="reference internal image-reference" href="../../_images/conf_man_ns_includes_ex_05.png"><img alt="Namespace includes example 5" class="align-center" src="../../_images/conf_man_ns_includes_ex_05.png" style="width: 75em;" />
 </a>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="navigate-to-an-include-from-a-config">
+<h1>Navigate to an Include from a Config<a class="headerlink" href="#navigate-to-an-include-from-a-config" title="Link to this heading"></a></h1>
+<p>You can navigate to a specific include from a config by clicking the link in its name.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Left-clicking the link opens the config on the same page.
+Ctrl + left-click opens the config in a new browser window.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/conf_man_include_link.png"><img alt="Include link" class="align-center" src="../../_images/conf_man_include_link.png" style="width: 75em;" />
+</a>
 <section id="script-configurations">
 <h2>Script Configurations<a class="headerlink" href="#script-configurations" title="Link to this heading"></a></h2>
 <p>Script configurations are used to manage executable logic associated with player
 profiles.</p>
 <ul class="simple">
-<li><p>Scripts <a class="reference internal" href="../../back/configs_format/profile-config-format.html#player-scripts-profile"><span class="std std-ref">(see format)</span></a></p></li>
+<li><p>Scripts <a class="reference internal" href="../../back/configs_format/profile-scripts.html#script-structure"><span class="std std-ref">(see format)</span></a></p></li>
 </ul>
 <p>The profile server uses script configurations written in the
 <a class="reference external" href="https://dascript.org/">daScript</a> language.</p>
@@ -617,7 +494,7 @@ button.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -651,7 +528,7 @@ button.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

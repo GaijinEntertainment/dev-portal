@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modes config format</title>
+  <title>Modes Config Format</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,8 +41,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Scripts config format" href="profile-config-format.html" />
-    <link rel="prev" title="Items config format" href="items-config-format.html" /> 
+    <link rel="next" title="Profile Config Format" href="profile-config-format.html" />
+    <link rel="prev" title="Items Config Format" href="items-config-format.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,26 +74,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../../front/dev-portal-interface/index.html">Dev Portal Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../front/getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Configs Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items config format</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Modes config format</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#statistic-modes">Statistic modes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#mode-format">Mode format</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#mode-description-format">Mode description format</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#required-fields">Required fields</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#optional-fields">Optional fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contacts-config-format.html">Contacts Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="items-config-format.html">Items Config Format</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Modes Config Format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-modes-config">Adding Modes Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mode-description-format">Mode Description Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Scripts config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables config format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks config format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-config-format.html">Profile Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profile-scripts.html">Profile Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stats-config-format.html">Stats Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables-config-format.html">Tables Config Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlocks-config-format.html">Unlocks Config Format</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
@@ -114,7 +110,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Configs Reference</a></li>
-      <li class="breadcrumb-item active">Modes config format</li>
+      <li class="breadcrumb-item active">Modes Config Format</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -134,71 +130,69 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="modes-config-format">
-<h1>Modes config format<a class="headerlink" href="#modes-config-format" title="Link to this heading"></a></h1>
-<section id="statistic-modes">
-<h2>Statistic modes<a class="headerlink" href="#statistic-modes" title="Link to this heading"></a></h2>
-<p>Modes makes work with <a class="reference internal" href="stats-config-format.html"><span class="std std-doc">user statistic</span></a> more flexible.
-Modes is an abstract like a container for statistics, for example:</p>
+<h1>Modes Config Format<a class="headerlink" href="#modes-config-format" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Modes make work with <a class="reference internal" href="stats-config-format.html"><span class="std std-doc">user statistics</span></a> more flexible
+by acting as named containers for stats. Each mode stores its own independent
+copy of all user statistics. For example, a player can have 4 kills in <em>solo</em>
+mode and 10 kills in <em>squad</em> mode.</p>
+<p>Typical uses:</p>
 <ul class="simple">
-<li><p>different game types: <em>solo</em>, <em>squad</em>, etc.</p></li>
-<li><p>different countries: <em>USSR</em>, <em>Germany</em>, etc.</p></li>
-<li><p>different locations: <em>Moscow</em>, <em>Berlin</em>, etc.</p></li>
-<li><p>etc (everything you want in your game).</p></li>
+<li><p>game types: <em>solo</em>, <em>squad</em>, <em>duo</em></p></li>
+<li><p>countries: <em>USSR</em>, <em>Germany</em></p></li>
+<li><p>locations: <em>Moscow</em>, <em>Berlin</em></p></li>
 </ul>
-<p>Each mode contains all user statistics and it can be different for each modes.
-For example: user can have 4 kills in <em>solo</em> mode and 10 kills in <em>squad</em> mode.</p>
-<p>You can read about the interaction between the game and the statistics server
-here:
+<p>To learn how the game interacts with the statistics server, see the
 .</p>
-<section id="mode-format">
-<h3>Mode format<a class="headerlink" href="#mode-format" title="Link to this heading"></a></h3>
-<p>To use and store statistics, you need to add modes description to
-<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">modes config</span></a>,
-and
-<a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">deploy configs</span></a>
-to services.</p>
+</section>
+<hr class="docutils" />
+<section id="adding-modes-config">
+<h2>Adding Modes Config<a class="headerlink" href="#adding-modes-config" title="Link to this heading"></a></h2>
+<p>To use modes, you need to:</p>
+<ol class="arabic simple">
+<li><p>Add mode descriptions to the
+<a class="reference internal" href="../../front/dev-portal-interface/workspace_configs.html#multi-element-configurations"><span class="std std-ref">modes config</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../front/dev-portal-interface/deploy.html#deploy-configs"><span class="std std-ref">Deploy configs</span></a>
+to services.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
 <section id="mode-description-format">
-<h4>Mode description format<a class="headerlink" href="#mode-description-format" title="Link to this heading"></a></h4>
+<h2>Mode Description Format<a class="headerlink" href="#mode-description-format" title="Link to this heading"></a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solo&quot;</span><span class="p">,</span><span class="w">             </span><span class="c1">// required</span>
-
-<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1">// optional, default = &quot;NONE&quot;</span>
-<span class="w">  </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">             </span><span class="c1">// optional, default = false</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solo&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;leaderboard&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;public&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="required-fields">
-<h5>Required fields<a class="headerlink" href="#required-fields" title="Link to this heading"></a></h5>
+<hr class="docutils" />
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
+<dl class="simple myst">
+<dt><span id="name"><code class="docutils literal notranslate"><span class="pre">name</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="name" href="#name" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Name of the mode. Must be unique.</p>
+</dd>
+<dt><span id="leaderboard"><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code></span> string <span class="bdg bdg-s bdg-grey">optional</span> <a id="leaderboard" href="#leaderboard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Type of leaderboard generated for this mode. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;NONE&quot;</span></code>.</p>
+<p>Possible values:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<em>string</em>) – name of the mode, must be unique.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NONE</span></code> – No leaderboard is generated for this mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SIMPLE</span></code> – Generates a flat leaderboard without groups.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GROUPING</span></code> – Generates a leaderboard with groups. Use this to implement
+leagues or buckets. See <a class="reference internal" href="stats-config-format.html#leaderboardgroup"><span class="std std-ref">Leaderboard Group</span></a>.</p></li>
 </ul>
-</section>
-<section id="optional-fields">
-<h5>Optional fields<a class="headerlink" href="#optional-fields" title="Link to this heading"></a></h5>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code> (<em>string</em>) – type of the leaderboard creating for this mode,
-possible values:</p>
-<ul class="simple">
-<li><p>“NONE” – leaderboard will not be generated for this mode.</p></li>
-<li><p>“SIMPLE” – generate leaderboard without <em>groups</em> for this mode.</p></li>
-<li><p>“GROUPING” – generate groups leaderboard for this mode. Group can be used
-to implement leagues or buckets in leaderboard.
-See <a class="reference internal" href="stats-config-format.html#leaderboard-group"><span class="std std-ref">Leaderboard group</span></a>.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<em>bool</em>) – determines whether the stats for this mode should be
-visible to another user.</p>
+</dd>
+<dt><span id="public"><code class="docutils literal notranslate"><span class="pre">public</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="public" href="#public" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, makes stats for this mode visible to other users. Defaults to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This works only for stats with <code class="docutils literal notranslate"><span class="pre">showForAll</span> <span class="pre">=</span> <span class="pre">true</span></code>.
-To request another user statistics, use
+<p>This only applies to stats with <code class="docutils literal notranslate"><span class="pre">showForAll</span> <span class="pre">=</span> <span class="pre">true</span></code>.
+To request another user’s statistics, use the
 
 action.</p>
 </div>
-</li>
-</ul>
-</section>
-</section>
+</dd>
+</dl>
 </section>
 </section>
 </section>
@@ -209,12 +203,12 @@ action.</p>
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="items-config-format.html" class="btn btn-neutral float-left" title="Items config format" accesskey="p" rel="prev">
+      <a href="items-config-format.html" class="btn btn-neutral float-left" title="Items Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="profile-config-format.html" class="btn btn-neutral float-right" title="Scripts config format" accesskey="n" rel="next">
+      <a href="profile-config-format.html" class="btn btn-neutral float-right" title="Profile Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -225,7 +219,7 @@ action.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -243,12 +237,12 @@ action.</p>
   <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="items-config-format.html" class="btn btn-neutral float-left" title="Items config format" accesskey="p" rel="prev">
+      <a href="items-config-format.html" class="btn btn-neutral float-left" title="Items Config Format" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="profile-config-format.html" class="btn btn-neutral float-right" title="Scripts config format" accesskey="n" rel="next">
+      <a href="profile-config-format.html" class="btn btn-neutral float-right" title="Profile Config Format" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -259,7 +253,7 @@ action.</p>
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

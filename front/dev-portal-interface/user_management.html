@@ -75,6 +75,7 @@
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html#navigate-to-an-include-from-a-config">Navigate to an Include from a Config</a></li>
 <li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">User Management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#single-user">Single User</a><ul>
@@ -95,6 +96,8 @@
 <li class="toctree-l5"><a class="reference internal" href="#actions">Actions</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="#admin-actions">Admin Actions</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#important-actions">Important Actions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#safe-actions">Safe Actions</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#actions-description">Actions Description</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#id1">Favorite Actions</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#profile-admin-actions">Profile Admin Actions</a></li>
 </ul>
@@ -176,6 +179,7 @@
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html#navigate-to-documentation">Navigate to Documentation.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
@@ -458,7 +462,19 @@ fields.</p>
 <h5>Important Actions<a class="headerlink" href="#important-actions" title="Link to this heading"></a></h5>
 <p>Administrative actions that may lead to irreversible changes or have a high
 operational impact are visually marked in <strong>red</strong>:</p>
-<a class="reference internal image-reference" href="../../_images/user_man_single_important_actions.png"><img alt="Important actions" class="align-center" src="../../_images/user_man_single_important_actions.png" style="width: 30em;" />
+<a class="reference internal image-reference" href="../../_images/user_man_single_important_actions.png"><img alt="Important actions" class="align-center" src="../../_images/user_man_single_important_actions.png" style="width: 75em;" />
+</a>
+</section>
+<section id="safe-actions">
+<h5>Safe Actions<a class="headerlink" href="#safe-actions" title="Link to this heading"></a></h5>
+<p>Safe actions are marked in <strong>green</strong></p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_safe_actions.png"><img alt="Safe actions" class="align-center" src="../../_images/user_man_single_safe_actions.png" style="width: 75em;" />
+</a>
+</section>
+<section id="actions-description">
+<h5>Actions Description<a class="headerlink" href="#actions-description" title="Link to this heading"></a></h5>
+<p>To view an action’s description, click the button</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_actions_descriptions.png"><img alt="Safe actions" class="align-center" src="../../_images/user_man_single_actions_descriptions.png" style="width: 75em;" />
 </a>
 </section>
 <section id="id1">
@@ -472,7 +488,7 @@ next to the action:</p>
 <p>Pinned actions appear in the first panel of the <strong>Admin Actions</strong> section.</p>
 <p>To <strong>remove</strong> an action from favorites, click the <strong>Remove from Favorites</strong>
 icon:</p>
-<a class="reference internal image-reference" href="../../_images/user_man_single_remove_from_favorite_actions.png"><img alt="Favorite actions" class="align-center" src="../../_images/user_man_single_remove_from_favorite_actions.png" style="width: 20em;" />
+<a class="reference internal image-reference" href="../../_images/user_man_single_remove_from_favorite_actions.png"><img alt="Favorite actions" class="align-center" src="../../_images/user_man_single_remove_from_favorite_actions.png" style="width: 75em;" />
 </a>
 </section>
 <section id="profile-admin-actions">
@@ -482,7 +498,7 @@ daScript must include the <code class="docutils literal notranslate"><span class
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>For more information, see:
-<a class="reference internal" href="../../back/configs_format/profile-config-format.html#scripts-config-format"><span class="std std-ref">Action declaration on daScript</span></a>.</p>
+<a class="reference internal" href="../../back/configs_format/profile-scripts.html#script-structure"><span class="std std-ref">Action declaration on daScript</span></a>.</p>
 </div>
 <p>To execute a profile action:</p>
 <ol class="arabic simple">
@@ -588,6 +604,13 @@ tabs for each category:</p>
 <ol class="arabic simple">
 <li><p>Select the desired <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a>.</p></li>
 <li><p>Enter any <strong>filter values</strong>.</p></li>
+<li><p>Choose whether to ignore the ban end date.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Penalty <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">till</span></code> dates must be within the selected range. When the <code class="docutils literal notranslate"><span class="pre">infinite</span> <span class="pre">penalties</span></code> filter is enabled, the <code class="docutils literal notranslate"><span class="pre">till</span></code> date is ignored.</p>
+</div>
+<ol class="arabic simple" start="4">
 <li><p>Click the <strong>Load</strong> button.</p></li>
 </ol>
 <a class="reference internal image-reference" href="../../_images/user_man_single_bans_load.png"><img alt="Load bans data with filters" class="align-center" src="../../_images/user_man_single_bans_load.png" style="width: 75em;" />
@@ -902,16 +925,6 @@ multiple user identifiers:</p>
 <p class="admonition-title">Note</p>
 <p>The number of user IDs must be greater than 0 and must not exceed 10000.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Specific User ID for Action Retrieval</p>
-<p>If a specific user ID is required to retrieve the list of available actions,
-enter it into the <strong>Id for getting action</strong> field and click the <strong>Get API</strong>
-button:</p>
-<a class="reference internal image-reference" href="../../_images/user_man_multi_user_get_API_button.png"><img alt="Multiple users get API button" class="align-center" src="../../_images/user_man_multi_user_get_API_button.png" style="width: 75em;" />
-</a>
-<p>If this field is left empty, action metadata will be requested using the first
-identifier in the list.</p>
-</div>
 <p>After the identifiers are provided, all selected actions will be applied to
 every user included in the list.</p>
 <section id="load-ids-from-csv-file">
@@ -1062,7 +1075,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     
@@ -1096,7 +1109,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Mar 02, 2026.</span>
+        <span class="lastupdated">Last updated on Apr 30, 2026.</span>
       </span>
     </div>
     

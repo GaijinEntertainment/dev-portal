@@ -20,7 +20,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_rtd_theme.css?v=3234e928" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=46347209" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d2ff5d79" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
@@ -67,10 +67,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Home</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/">GAP Documentation</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gaijinentertainment.github.io/gaijin-application-platform/">GAP Documentation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
@@ -81,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_actions.html">Services Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Code Editor</a><ul>
@@ -92,16 +94,16 @@
 <li class="toctree-l4"><a class="reference internal" href="#import-from-csv">Import from CSV</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#navigate-to-documentation">Navigate to Documentation.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collapse-unchanged-lines">Collapse unchanged lines</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#navigate-to-documentation">Navigate to Documentation.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
@@ -125,14 +127,9 @@
   
       <li class="wy-breadcrumbs-aside">
       </li>
-  <li class="wy-breadcrumbs-aside.github-icon">
-    <a href="https://gaijinentertainment.github.io/GaijinApplicationPlatform/" target="_blank" rel="noopener">
-      <img src="../../_static/_images/to_gap_docs.png"
-           alt="GitHub"
-           title="Open GAP Documentation"
-           style="height: 1.5em; vertical-align: text-bottom; " />
-    </a>
-  </li>
+
+  
+
 
   </ul>
   <hr/>
@@ -192,12 +189,27 @@ revert changes.</p>
 </a>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="navigate-to-documentation">
-<h1>Navigate to Documentation.<a class="headerlink" href="#navigate-to-documentation" title="Link to this heading"></a></h1>
+<section id="navigate-to-documentation">
+<h2>Navigate to Documentation.<a class="headerlink" href="#navigate-to-documentation" title="Link to this heading"></a></h2>
 <p>If the schema contains a parameter with a link to documentation for a specific parameter, a button will appear. Clicking the button will open the documentation.</p>
 <a class="reference internal image-reference" href="../../_images/conf_man_doc_link.png"><img alt="Navigate to documentation" class="align-center" src="../../_images/conf_man_doc_link.png" style="width: 25em;" />
 </a>
+</section>
+<section id="collapse-unchanged-lines">
+<h2>Collapse unchanged lines<a class="headerlink" href="#collapse-unchanged-lines" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature is only available for certain configurations.</p>
+</div>
+<p>In diff mode, unchanged lines can be collapsed, showing only modified lines and a configurable number of surrounding context lines.</p>
+<p>To change the number of context lines, select a value from the <strong>Context</strong> dropdown below the editor.</p>
+<a class="reference internal image-reference" href="../../_images/conf_man_collapse_unchanged_lines.png"><img alt="Collapse unchanged lines" class="align-center" src="../../_images/conf_man_collapse_unchanged_lines.png" style="width: 60em;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default value is <strong>Infinity</strong> (all lines are shown).</p>
+</div>
+</section>
 </section>
 
 
@@ -219,10 +231,10 @@ revert changes.</p>
 
   <hr>
 
-  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+  <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on May 21, 2026.</span>
+        <span class="lastupdated">Last updated on Jun 04, 2026.</span>
       </span>
     </div>
     
@@ -237,7 +249,7 @@ revert changes.</p>
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-  <footer>
+<footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
       <a href="matchmaking.html" class="btn btn-neutral float-left" title="Matchmaking" accesskey="p" rel="prev">
@@ -253,10 +265,10 @@ revert changes.</p>
 
   <hr>
 
-  <div class="footer-meta" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: 1em; color: grey; ">
+  <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on May 21, 2026.</span>
+        <span class="lastupdated">Last updated on Jun 04, 2026.</span>
       </span>
     </div>
     

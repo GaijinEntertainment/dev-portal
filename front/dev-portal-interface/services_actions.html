@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign In</title>
+  <title>Services Actions</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,8 +41,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Interface Quick Tour" href="overview.html" />
-    <link rel="prev" title="Getting Started" href="index.html" /> 
+    <link rel="next" title="Token Management" href="token_management.html" />
+    <link rel="prev" title="Services Info" href="services_info.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -71,16 +71,35 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Sign In</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#account-setup">Account Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configure-roles-and-services">Configure Roles and Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Dev Portal Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Workspaces: Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Workspaces: Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html">Workspace Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workspace_configs.html#navigate-to-an-include-from-a-config">Navigate to an Include from a Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy.html">Deploy Configs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_management.html">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Services Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#view-services-actions-information">View Services Actions Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#view-available-actions">View Available Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#send-action">Send Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reset-action-data">Reset Action Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="overview.html">Interface Quick Tour</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../dev-portal-interface/index.html">Dev Portal Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timerange.html">Time range</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../back/configs_format/index.html">Dev Portal Configs Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
@@ -99,8 +118,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
-      <li class="breadcrumb-item active">Sign In</li>
+          <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
+      <li class="breadcrumb-item active">Services Actions</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -114,27 +133,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="sign-in">
-<h1>Sign In<a class="headerlink" href="#sign-in" title="Link to this heading"></a></h1>
-<p>To begin using the Dev Portal, log in using an account with the required
-<a class="reference external" href="https://gaijinentertainment.github.io/gaijin-application-platform/glossary.html#term-role" title="(in Gaijin Application Platform Documentation)"><span class="xref std std-term">roles</span></a> assigned within the Dev Portal
-<a class="reference external" href="https://gaijinentertainment.github.io/gaijin-application-platform/glossary.html#term-service" title="(in Gaijin Application Platform Documentation)"><span class="xref std std-term">service</span></a>.</p>
-<a class="reference internal image-reference" href="../../_images/sign_in.png"><img alt="Sign in" class="align-center" src="../../_images/sign_in.png" style="width: 40em;" />
+  <section class="tex2jax_ignore mathjax_ignore" id="services-actions">
+<h1>Services Actions<a class="headerlink" href="#services-actions" title="Link to this heading"></a></h1>
+<p>The <strong>Services Actions</strong> section allows you to send operational commands to service configurations.</p>
+<section id="view-services-actions-information">
+<h2>View Services Actions Information<a class="headerlink" href="#view-services-actions-information" title="Link to this heading"></a></h2>
+<p>To view Services Actions, select the corresponding item from the list.</p>
+<a class="reference internal image-reference" href="../../_images/services_actions.png"><img alt="Services Actions" class="align-center" src="../../_images/services_actions.png" style="width: 20em;" />
 </a>
-<section id="account-setup">
-<h2>Account Setup<a class="headerlink" href="#account-setup" title="Link to this heading"></a></h2>
-<p>If you do not have an account, create one as described in
-<a class="reference external" href="https://gaijinentertainment.github.io/gaijin-application-platform/quick-start/getting_started.html#requirements" title="(in Gaijin Application Platform Documentation)"><span class="xref std std-ref">Create a new account</span></a>.</p>
+<p>The page displays sections with operational commands grouped by service type.</p>
+<a class="reference internal image-reference" href="../../_images/services_actions_page.png"><img alt="Services Actions page" class="align-center" src="../../_images/services_actions_page.png" style="width: 60em;" />
+</a>
+<section id="view-available-actions">
+<h3>View Available Actions<a class="headerlink" href="#view-available-actions" title="Link to this heading"></a></h3>
+<p>Open the section to see the list of available actions.</p>
+<a class="reference internal image-reference" href="../../_images/services_action_arrow.png"><img alt="Services actions arrow" class="align-center" src="../../_images/services_action_arrow.png" style="width: 60em;" />
+</a>
 </section>
-<section id="configure-roles-and-services">
-<h2>Configure Roles and Services<a class="headerlink" href="#configure-roles-and-services" title="Link to this heading"></a></h2>
-<p>Before accessing the Dev Portal, ensure that the service is connected to your
-project and that the appropriate user roles are assigned.</p>
-<p>For detailed instructions, see:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://gaijinentertainment.github.io/gaijin-application-platform/central/services.html#connect-service-to-project" title="(in Gaijin Application Platform Documentation)"><span class="xref std std-ref">Connect Service to Project</span></a></p></li>
-<li><p><a class="reference external" href="https://gaijinentertainment.github.io/gaijin-application-platform/central/services.html#connect-users-to-service" title="(in Gaijin Application Platform Documentation)"><span class="xref std std-ref">Connect Users to Project</span></a></p></li>
-</ul>
+<section id="send-action">
+<h3>Send Action<a class="headerlink" href="#send-action" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the required action from the list.</p></li>
+<li><p>Enter the necessary input data in the text field.</p></li>
+<li><p>Click <strong>Send action</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/services_actions_send_action.png"><img alt="Services actions send action" class="align-center" src="../../_images/services_actions_send_action.png" style="width: 60em;" />
+</a>
+</section>
+<section id="reset-action-data">
+<h3>Reset Action Data<a class="headerlink" href="#reset-action-data" title="Link to this heading"></a></h3>
+<p>To clear all input fields and restore default values, click the <strong>Reset to default</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/services_actions_reset_to_default.png"><img alt="Services actions reset to default" class="align-center" src="../../_images/services_actions_reset_to_default.png" style="width: 60em;" />
+</a>
+</section>
 </section>
 </section>
 
@@ -144,12 +175,12 @@ project and that the appropriate user roles are assigned.</p>
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="index.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev">
+      <a href="services_info.html" class="btn btn-neutral float-left" title="Services Info" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="overview.html" class="btn btn-neutral float-right" title="Interface Quick Tour" accesskey="n" rel="next">
+      <a href="token_management.html" class="btn btn-neutral float-right" title="Token Management" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -178,12 +209,12 @@ project and that the appropriate user roles are assigned.</p>
 <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="index.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev">
+      <a href="services_info.html" class="btn btn-neutral float-left" title="Services Info" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="overview.html" class="btn btn-neutral float-right" title="Interface Quick Tour" accesskey="n" rel="next">
+      <a href="token_management.html" class="btn btn-neutral float-right" title="Token Management" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     

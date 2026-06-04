@@ -222,7 +222,7 @@ p {
     align-items: center; /* Vertically center the items */
 }
 
-.wy-breadcrumbs-aside.github-icon img {
+.github-icon img {
     height: 1.5em; /* Set the icon size */
     vertical-align: middle; /* Align icon with surrounding text */
 }
@@ -260,7 +260,6 @@ details.sd-dropdown summary.sd-summary-title {
 
 /* Base badge appearance */
 .sd-badge {
-    /* display: inline-block; */
     padding: .25em .55em;
     font-size: .8em;
     font-weight: 700;
@@ -316,7 +315,9 @@ details.sd-dropdown summary.sd-summary-title {
 .bdg-blue    { background-color: #289ed9; }
 .bdg-green   { background-color: #28a745; }
 .bdg-grey    { background-color: #6c757d; }
+.bdg-magenta { background-color: #b3008a; }
 .bdg-orange  { background-color: #ff5a00; }
+.bdg-pink    { background-color: #e84393; }
 .bdg-purple  { background-color: #6f42c1; }
 .bdg-red     { background-color: #dc3545; }
 .bdg-yellow  { background-color: #ffde31; color: black; }
@@ -409,4 +410,39 @@ details.sd-dropdown summary.sd-summary-title {
 .rst-content a:hover,
 .rst-content a:focus {
     text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   17. Mermaid Diagram Overrides
+   Purpose: Adjust the size and scaling of Mermaid-generated SVGs
+   -------------------------------------------------------------------------- */
+
+/* Override default height and preserve aspect ratio */
+.mermaid-container > pre > svg {
+    height: 1000px !important;     /* Set desired SVG height */
+    width: auto !important;        /* Maintain proportional width */
+    max-width: 100%;               /* Prevent overflowing container */
+    display: block;                /* Ensure proper block layout */
+    margin: auto;                  /* Center the SVG horizontally */
+}
+
+/* --------------------------------------------------------------------------
+   18. Card Title Icons
+   -------------------------------------------------------------------------- */
+
+.sd-card-title .sd-octicon {
+    margin-right: 0.4em;
+}
+
+/* --------------------------------------------------------------------------
+   19. Footer
+   -------------------------------------------------------------------------- */
+
+.footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1em;
+    color: grey;
 }

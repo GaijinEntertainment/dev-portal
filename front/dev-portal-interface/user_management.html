@@ -143,6 +143,12 @@
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="#complaints-submitted">Complaints (Submitted)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#appeals">Appeals</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#filter-appeals">Filter Appeals</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#expand-appeals">Expand Appeals</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#reject-or-accept-appeal">Reject or Accept Appeal</a></li>
+</ul>
+</li>
 <li class="toctree-l5"><a class="reference internal" href="#notes">Notes</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="#add-note">Add Note</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#delete-note">Delete Note</a></li>
@@ -166,6 +172,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#banhammer">Banhammer</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#load-offenders">Load Offenders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#load-ban-list">Load Ban List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-appeals-list">Load Appeals List</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#moderator-summaries">Moderator Summaries</a><ul>
@@ -582,6 +589,7 @@ tabs for each category:</p>
 <li><p><strong>Bans</strong>: Active and historical bans.</p></li>
 <li><p><strong>Complaints (offender)</strong>: Complaints filed against the user.</p></li>
 <li><p><strong>Complaints (submitted)</strong>: Complaints submitted by the user.</p></li>
+<li><p><strong>Appeals</strong>: Appeals submitted by the user.</p></li>
 <li><p><strong>Notes</strong>: Administrative notes regarding the user.</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/user_man_single_bans_tables.png"><img alt="Bans panel with separate tabs" class="align-center" src="../../_images/user_man_single_bans_tables.png" style="width: 45em;" />
@@ -853,10 +861,34 @@ icon:</p>
 </section>
 <section id="complaints-submitted">
 <h4>Complaints (Submitted)<a class="headerlink" href="#complaints-submitted" title="Link to this heading"></a></h4>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section is under development. Content will be added in a future update.</p>
-</div>
+<p>The <strong>Complaints (Submitted)</strong> tab provides the same functionality as the <a class="reference internal" href="#complaints-offender">Complaints (Offender)</a> section.</p>
+</section>
+<section id="appeals">
+<h4>Appeals<a class="headerlink" href="#appeals" title="Link to this heading"></a></h4>
+<section id="filter-appeals">
+<h5>Filter Appeals<a class="headerlink" href="#filter-appeals" title="Link to this heading"></a></h5>
+<p>To filter appeals, open the <strong>Filters</strong> panel. The following filters are available:</p>
+<p>(1) <strong>Date</strong> — filter appeals by date range.
+(2) <strong>Status</strong> — filter appeals by their current status.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_appeals_filters.png"><img alt="Filter Appeals" class="align-center" src="../../_images/user_man_appeals_filters.png" style="width: 75em;" />
+</a>
+</section>
+<section id="expand-appeals">
+<h5>Expand Appeals<a class="headerlink" href="#expand-appeals" title="Link to this heading"></a></h5>
+<p>To view detailed information about an appeal, click the
+<strong>Expand Row</strong> icon:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_appeals_expanded_data.png"><img alt="Expanded appeal row with details" class="align-center" src="../../_images/user_man_single_appeals_expanded_data.png" style="width: 75em;" />
+</a>
+</section>
+<section id="reject-or-accept-appeal">
+<h5>Reject or Accept Appeal<a class="headerlink" href="#reject-or-accept-appeal" title="Link to this heading"></a></h5>
+<p>To reject or accept an appeal, click the (1)<strong>Reject</strong> or (2)<strong>Accept</strong> button.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_appeals_reject_accept.png"><img alt="Reject or Accept Appeal" class="align-center" src="../../_images/user_man_single_appeals_reject_accept.png" style="width: 75em;" />
+</a>
+<p>A modal window will appear with fields for adding a comment.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_single_appeals_modal.png"><img alt="Appeals modal" class="align-center" src="../../_images/user_man_single_appeals_modal.png" style="width: 25em;" />
+</a>
+</section>
 </section>
 <section id="notes">
 <h4>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h4>
@@ -864,7 +896,7 @@ icon:</p>
 <h5>Add Note<a class="headerlink" href="#add-note" title="Link to this heading"></a></h5>
 <p>To add a new note, click the <strong>Add note</strong> button and fill in the required
 fields:</p>
-<a class="reference internal image-reference" href="../../_images/user_man_single_add_new_note.png"><img alt="Add new note button" class="align-center" src="../../_images/user_man_single_add_new_note.png" style="width: 35em;" />
+<a class="reference internal image-reference" href="../../_images/user_man_single_add_new_note.png"><img alt="Add new note button" class="align-center" src="../../_images/user_man_single_add_new_note.png" style="width: 60em;" />
 </a>
 <a class="reference internal image-reference" href="../../_images/user_man_single_add_new_note_modal.png"><img alt="Add new note modal" class="align-center" src="../../_images/user_man_single_add_new_note_modal.png" style="width: 25em;" />
 </a>
@@ -980,6 +1012,7 @@ users. Data is organized into separate tabs for each category:</p>
 <ul class="simple">
 <li><p><strong>Offenders</strong>: List of offenders</p></li>
 <li><p><strong>Ban list</strong>: All bans</p></li>
+<li><p><strong>Appeals</strong>: List of appeals</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/user_man_banhammer_sections.png"><img alt="Banhammer section" class="align-center" src="../../_images/user_man_banhammer_sections.png" style="width: 17em;" />
 </a>
@@ -1016,6 +1049,14 @@ the <strong>Single User</strong> section displaying this user’s data.</p>
 <p>To view user information, click the <strong>View</strong> button. You will be redirected to
 the <strong>Single User</strong> section displaying this user’s data.</p>
 <a class="reference internal image-reference" href="../../_images/user_man_banhammer_ban_list_view_user_data.png"><img alt="View user data in ban list" class="align-center" src="../../_images/user_man_banhammer_ban_list_view_user_data.png" style="width: 60em;" />
+</a>
+</section>
+<section id="load-appeals-list">
+<h3>Load Appeals List<a class="headerlink" href="#load-appeals-list" title="Link to this heading"></a></h3>
+<p>The appeal list provides the same functionality as the <a class="reference internal" href="#appeals">Appeals</a> section.</p>
+<p>To view user information, click the <strong>View</strong> button. You will be redirected to
+the <strong>Single User</strong> section displaying this user’s data.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_appeals_view_user_data.png"><img alt="View user data in appeals" class="align-center" src="../../_images/user_man_banhammer_appeals_view_user_data.png" style="width: 60em;" />
 </a>
 </section>
 </section>
@@ -1070,7 +1111,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Jun 04, 2026.</span>
+        <span class="lastupdated">Last updated on Jun 23, 2026.</span>
       </span>
     </div>
     
@@ -1104,7 +1145,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Jun 04, 2026.</span>
+        <span class="lastupdated">Last updated on Jun 23, 2026.</span>
       </span>
     </div>
     

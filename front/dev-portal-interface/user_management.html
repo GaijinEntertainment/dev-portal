@@ -140,6 +140,7 @@
 </li>
 <li class="toctree-l6"><a class="reference internal" href="#add-ban-on-complaint">Add Ban on Complaint</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#reject-complaint">Reject Complaint</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#chat-log">Chat log</a></li>
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="#complaints-submitted">Complaints (Submitted)</a></li>
@@ -184,9 +185,8 @@
 <li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="services_actions.html">Services Actions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services_management.html">Services management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
@@ -858,6 +858,13 @@ icon:</p>
 <a class="reference internal image-reference" href="../../_images/user_man_single_reject_remaining_compl_button.png"><img alt="Reject all remaining complaints" class="align-center" src="../../_images/user_man_single_reject_remaining_compl_button.png" style="width: 25em;" />
 </a>
 </section>
+<section id="chat-log">
+<h5>Chat log<a class="headerlink" href="#chat-log" title="Link to this heading"></a></h5>
+<p>To open the chat log, click button <strong>(1)</strong> or <strong>(2)</strong>.
+To hide complaint details and open the chat log at full width, click <strong>(3)</strong> or use checkbox <strong>(4)</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_chat_log.png"><img alt="Chat log" class="align-center" src="../../_images/user_man_chat_log.png" style="width: 55em;" />
+</a>
+</section>
 </section>
 <section id="complaints-submitted">
 <h4>Complaints (Submitted)<a class="headerlink" href="#complaints-submitted" title="Link to this heading"></a></h4>
@@ -954,6 +961,14 @@ multiple user identifiers:</p>
 </div>
 <p>After the identifiers are provided, all selected actions will be applied to
 every user included in the list.</p>
+<p>After executing actions for the provided user IDs, a results window will appear
+displaying the execution status for each user individually.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_multi_user_results.png"><img alt="Multiple users actions results" class="align-center" src="../../_images/user_man_multi_user_results.png" style="width: 25em;" />
+</a>
+<ul class="simple">
+<li><p><strong>(1)</strong> — button to copy the results to the clipboard</p></li>
+<li><p><strong>(2)</strong> — action execution results</p></li>
+</ul>
 <section id="load-ids-from-csv-file">
 <h4>Load IDs from CSV File<a class="headerlink" href="#load-ids-from-csv-file" title="Link to this heading"></a></h4>
 <p>To load multiple user IDs from a CSV file, click the <strong>Load from CSV</strong> button
@@ -1038,25 +1053,51 @@ users. Data is organized into separate tabs for each category:</p>
 <p>The visibility and ordering of columns follow the settings defined in
 <a class="reference internal" href="tables.html#table-settings"><span class="std std-ref">Table Settings</span></a>.</p>
 </div>
-<p>To view user information, click the <strong>View</strong> button. You will be redirected to
-the <strong>Single User</strong> section displaying this user’s data.</p>
+<p id="banhammer-view-user-data">To open the full user profile in the <strong>Single User</strong> section, click <strong>(1)</strong>.
+To view user details in a modal window, click <strong>(2)</strong>.</p>
 <a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_user_data.png"><img alt="View user data" class="align-center" src="../../_images/user_man_banhammer_view_user_data.png" style="width: 55em;" />
 </a>
+<p>The user details modal window looks as follows:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_modal.png"><img alt="View user data modal" class="align-center" src="../../_images/user_man_banhammer_view_modal.png" style="width: 55em;" />
+</a>
+<p>To view the submitted complaints for the selected complainer, click the <strong>View</strong>
+button. The complaints will open in the same modal window.</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_submitted.png"><img alt="View submitted complaints" class="align-center" src="../../_images/user_man_banhammer_view_submitted.png" style="width: 55em;" />
+</a>
+<p>The result view contains the following elements:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_submitted_result.png"><img alt="View submitted complaints result" class="align-center" src="../../_images/user_man_banhammer_view_submitted_result.png" style="width: 55em;" />
+</a>
+<ul class="simple">
+<li><p><strong>(1)</strong> — complainer ID</p></li>
+<li><p><strong>(2)</strong> — available sections for user details</p></li>
+<li><p><strong>(3)</strong> — button to go to offender complaints</p></li>
+<li><p><strong>(4)</strong> — offender ID</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information about chat logs, see <a class="reference internal" href="#chat-log">Chat log</a>.</p>
+</div>
 </section>
 <section id="load-ban-list">
 <h3>Load Ban List<a class="headerlink" href="#load-ban-list" title="Link to this heading"></a></h3>
 <p>The ban list provides the same functionality as the <a class="reference internal" href="#bans">Bans</a> section.</p>
-<p>To view user information, click the <strong>View</strong> button. You will be redirected to
-the <strong>Single User</strong> section displaying this user’s data.</p>
-<a class="reference internal image-reference" href="../../_images/user_man_banhammer_ban_list_view_user_data.png"><img alt="View user data in ban list" class="align-center" src="../../_images/user_man_banhammer_ban_list_view_user_data.png" style="width: 60em;" />
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For information about viewing user data, see <a class="reference internal" href="#banhammer-view-user-data">Viewing user data</a>.</p>
+</div>
+<p>The user details modal window looks as follows:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_modal_ban.png"><img alt="View user data modal in ban list" class="align-center" src="../../_images/user_man_banhammer_view_modal_ban.png" style="width: 55em;" />
 </a>
 </section>
 <section id="load-appeals-list">
 <h3>Load Appeals List<a class="headerlink" href="#load-appeals-list" title="Link to this heading"></a></h3>
 <p>The appeal list provides the same functionality as the <a class="reference internal" href="#appeals">Appeals</a> section.</p>
-<p>To view user information, click the <strong>View</strong> button. You will be redirected to
-the <strong>Single User</strong> section displaying this user’s data.</p>
-<a class="reference internal image-reference" href="../../_images/user_man_banhammer_appeals_view_user_data.png"><img alt="View user data in appeals" class="align-center" src="../../_images/user_man_banhammer_appeals_view_user_data.png" style="width: 60em;" />
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For information about viewing user data, see <a class="reference internal" href="#banhammer-view-user-data">Viewing user data</a>.</p>
+</div>
+<p>The user details modal window looks as follows:</p>
+<a class="reference internal image-reference" href="../../_images/user_man_banhammer_view_modal_appeals.png"><img alt="View user data modal in appeals" class="align-center" src="../../_images/user_man_banhammer_view_modal_appeals.png" style="width: 55em;" />
 </a>
 </section>
 </section>
@@ -1111,7 +1152,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Jul 27, 2026.</span>
+        <span class="lastupdated">Last updated on Aug 05, 2026.</span>
       </span>
     </div>
     
@@ -1145,7 +1186,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Jul 27, 2026.</span>
+        <span class="lastupdated">Last updated on Aug 05, 2026.</span>
       </span>
     </div>
     

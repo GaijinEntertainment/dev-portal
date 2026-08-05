@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services Actions</title>
+  <title>Services management</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=55b73dce" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
@@ -41,8 +41,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Token Management" href="token_management.html" />
-    <link rel="prev" title="Services Info" href="services_info.html" /> 
+    <link rel="next" title="Code Editor" href="code_editor.html" />
+    <link rel="prev" title="Token Management" href="token_management.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -82,17 +82,20 @@
 <li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leaderboard.html">Leaderboard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="services_info.html">Services Info</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Services Actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#view-services-actions-information">View Services Actions Information</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#view-available-actions">View Available Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#send-action">Send Action</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reset-action-data">Reset Action Data</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="token_management.html">Token Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Services management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#matching">Matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#matchmaking-actions">Matchmaking actions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#send-action">Send Action</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reset-action-data">Reset Action Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#leaderboard-actions">Leaderboard actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contacts-actions">Contacts actions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="code_editor.html">Code Editor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compare.html">Compare</a></li>
 <li class="toctree-l2"><a class="reference internal" href="console.html">Console</a></li>
@@ -119,7 +122,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Dev Portal Interface</a></li>
-      <li class="breadcrumb-item active">Services Actions</li>
+      <li class="breadcrumb-item active">Services management</li>
   
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -133,25 +136,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="services-actions">
-<h1>Services Actions<a class="headerlink" href="#services-actions" title="Link to this heading"></a></h1>
-<p>The <strong>Services Actions</strong> section allows you to send operational commands to service configurations.</p>
-<section id="view-services-actions-information">
-<h2>View Services Actions Information<a class="headerlink" href="#view-services-actions-information" title="Link to this heading"></a></h2>
-<p>To view Services Actions, select the corresponding item from the list.</p>
-<a class="reference internal image-reference" href="../../_images/services_actions.png"><img alt="Services Actions" class="align-center" src="../../_images/services_actions.png" style="width: 20em;" />
+  <section class="tex2jax_ignore mathjax_ignore" id="services-management">
+<h1>Services management<a class="headerlink" href="#services-management" title="Link to this heading"></a></h1>
+<p>The <strong>Services management</strong> section allows authorized users to view, configure, and
+manage services behavior.</p>
+<p>To open the services management settings, select the corresponding menu item.</p>
+<a class="reference internal image-reference" href="../../_images/services_management_menu.png"><img alt="Services management menu" class="align-center" src="../../_images/services_management_menu.png" style="width: 15em;" />
 </a>
-<p>The page displays sections with operational commands grouped by service type.</p>
-<a class="reference internal image-reference" href="../../_images/services_actions_page.png"><img alt="Services Actions page" class="align-center" src="../../_images/services_actions_page.png" style="width: 60em;" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Access to services management settings requires the appropriate permissions.</p>
+</div>
+<section id="matching">
+<h2>Matching<a class="headerlink" href="#matching" title="Link to this heading"></a></h2>
+<p>The <strong>Matching</strong> section allows authorized users to view, configure, and manage matchmaking behavior.</p>
+<a class="reference internal image-reference" href="../../_images/matchmaking_table.png"><img alt="Matching table" class="align-center" src="../../_images/matchmaking_table.png" style="width: 60em;" />
 </a>
-<section id="view-available-actions">
-<h3>View Available Actions<a class="headerlink" href="#view-available-actions" title="Link to this heading"></a></h3>
-<p>Open the section to see the list of available actions.</p>
-<a class="reference internal image-reference" href="../../_images/services_action_arrow.png"><img alt="Services actions arrow" class="align-center" src="../../_images/services_action_arrow.png" style="width: 60em;" />
+<ul class="simple">
+<li><p><strong>(1)</strong> — switch to enable or disable maintenance mode for matchmaking.</p></li>
+<li><p><strong>(2)</strong> — button to open matchmaking actions.</p></li>
+<li><p><strong>(3)</strong> — button to reload the current matchmaking data.</p></li>
+</ul>
+<section id="matchmaking-actions">
+<h3>Matchmaking actions<a class="headerlink" href="#matchmaking-actions" title="Link to this heading"></a></h3>
+<p>The <strong>Matchmaking actions</strong> section displays a list of available actions for managing matchmaking.</p>
+<a class="reference internal image-reference" href="../../_images/matchmaking_actions.png"><img alt="Matchmaking actions" class="align-center" src="../../_images/matchmaking_actions.png" style="width: 60em;" />
 </a>
-</section>
 <section id="send-action">
-<h3>Send Action<a class="headerlink" href="#send-action" title="Link to this heading"></a></h3>
+<h4>Send Action<a class="headerlink" href="#send-action" title="Link to this heading"></a></h4>
 <ol class="arabic simple">
 <li><p>Select the required action from the list.</p></li>
 <li><p>Enter the necessary input data in the text field.</p></li>
@@ -161,11 +173,26 @@
 </a>
 </section>
 <section id="reset-action-data">
-<h3>Reset Action Data<a class="headerlink" href="#reset-action-data" title="Link to this heading"></a></h3>
+<h4>Reset Action Data<a class="headerlink" href="#reset-action-data" title="Link to this heading"></a></h4>
 <p>To clear all input fields and restore default values, click the <strong>Reset to default</strong> button.</p>
 <a class="reference internal image-reference" href="../../_images/services_actions_reset_to_default.png"><img alt="Services actions reset to default" class="align-center" src="../../_images/services_actions_reset_to_default.png" style="width: 60em;" />
 </a>
 </section>
+</section>
+</section>
+<section id="leaderboard-actions">
+<h2>Leaderboard actions<a class="headerlink" href="#leaderboard-actions" title="Link to this heading"></a></h2>
+<p>The <strong>Leaderboard actions</strong> section provides actions for managing leaderboards.</p>
+<a class="reference internal image-reference" href="../../_images/leaderboard_actions.png"><img alt="Leaderboard actions" class="align-center" src="../../_images/leaderboard_actions.png" style="width: 60em;" />
+</a>
+<p>To send an action or reset action data, see <a class="reference internal" href="#matchmaking-actions">Matchmaking actions</a>.</p>
+</section>
+<section id="contacts-actions">
+<h2>Contacts actions<a class="headerlink" href="#contacts-actions" title="Link to this heading"></a></h2>
+<p>The <strong>Contacts actions</strong> section provides actions for managing contacts.</p>
+<a class="reference internal image-reference" href="../../_images/contacts_actions.png"><img alt="Contacts actions" class="align-center" src="../../_images/contacts_actions.png" style="width: 60em;" />
+</a>
+<p>To send an action or reset action data, see <a class="reference internal" href="#matchmaking-actions">Matchmaking actions</a>.</p>
 </section>
 </section>
 
@@ -175,12 +202,12 @@
           <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="services_info.html" class="btn btn-neutral float-left" title="Services Info" accesskey="p" rel="prev">
+      <a href="token_management.html" class="btn btn-neutral float-left" title="Token Management" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="token_management.html" class="btn btn-neutral float-right" title="Token Management" accesskey="n" rel="next">
+      <a href="code_editor.html" class="btn btn-neutral float-right" title="Code Editor" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -191,7 +218,7 @@
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Jul 27, 2026.</span>
+        <span class="lastupdated">Last updated on Aug 05, 2026.</span>
       </span>
     </div>
     
@@ -209,12 +236,12 @@
 <footer>
   <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
     
-      <a href="services_info.html" class="btn btn-neutral float-left" title="Services Info" accesskey="p" rel="prev">
+      <a href="token_management.html" class="btn btn-neutral float-left" title="Token Management" accesskey="p" rel="prev">
         <span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous
       </a>
     
     
-      <a href="token_management.html" class="btn btn-neutral float-right" title="Token Management" accesskey="n" rel="next">
+      <a href="code_editor.html" class="btn btn-neutral float-right" title="Code Editor" accesskey="n" rel="next">
         Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span>
       </a>
     
@@ -225,7 +252,7 @@
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Jul 27, 2026.</span>
+        <span class="lastupdated">Last updated on Aug 05, 2026.</span>
       </span>
     </div>
     

@@ -262,6 +262,15 @@ stat.</p>
 <dt><span id="stats-leaderboard"><code class="docutils literal notranslate"><span class="pre">leaderboard</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="leaderboard" href="#leaderboard" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the stat is included in the leaderboard. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 Stats with <code class="docutils literal notranslate"><span class="pre">leaderboard:</span> <span class="pre">false</span></code> are not allowed in this mode.</p>
 </dd>
+<dt><span id="includemodes"><code class="docutils literal notranslate"><span class="pre">includeModes</span></code></span> array of strings <span class="bdg bdg-s bdg-grey">optional</span> <a id="includeModes" href="#includeModes" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Names of the modes the stat is limited to (1–100 unique items). In the
+leaderboard config the stat is added only to the listed modes. If not set,
+the stat is added to every mode.</p>
+<p>Cannot be used together with <a class="reference internal" href="#excludemodes"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">excludeModes</span></code></span></a>.</p>
+</dd>
+<dt><span id="excludemodes"><code class="docutils literal notranslate"><span class="pre">excludeModes</span></code></span> array of strings <span class="bdg bdg-s bdg-grey">optional</span> <a id="excludeModes" href="#excludeModes" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Names of the modes the stat is skipped in (1–100 unique items). In the
+leaderboard config the stat is added to every mode except the listed ones.</p>
+<p>Cannot be used together with <a class="reference internal" href="#includemodes"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">includeModes</span></code></span></a>.</p>
+</dd>
 <dt><span id="stats-meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary data attached to the stat.</p>
 </dd>
 </dl>
@@ -276,6 +285,14 @@ Stats with <code class="docutils literal notranslate"><span class="pre">leaderbo
 supported in this mode.</p>
 </dd>
 <dt><span id="premium"><code class="docutils literal notranslate"><span class="pre">premium</span></code></span> bool <span class="bdg bdg-s bdg-grey">optional</span> <a id="premium" href="#premium" class="headerlink" title="Link to this parameter"></a></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, marks this mode as premium. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><span id="lblimits"><code class="docutils literal notranslate"><span class="pre">lbLimits</span></code></span> object <span class="bdg bdg-s bdg-grey">optional</span> <a id="lbLimits" href="#lbLimits" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Conditions a player’s stats must satisfy to appear in this mode’s
+leaderboard (1–100 entries). Each key is a stat name, and the value is a
+comparison operator — one of <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code> — followed by
+an integer, with no space in between.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;lbLimits&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;battles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&gt;=10&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rating&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;!=0&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
 </dd>
 <dt><span id="modes-meta"><code class="docutils literal notranslate"><span class="pre">meta</span></code></span> JSON object <span class="bdg bdg-s bdg-grey">optional</span> <a id="meta" href="#meta" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Arbitrary data attached to the mode.</p>
 </dd>
@@ -361,7 +378,7 @@ as in <a class="reference internal" href="#profile-leaderboard-mode">Profile + L
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     
@@ -395,7 +412,7 @@ as in <a class="reference internal" href="#profile-leaderboard-mode">Profile + L
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     

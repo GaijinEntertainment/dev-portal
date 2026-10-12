@@ -157,6 +157,12 @@ manage services behavior.</p>
 <li><p><strong>(2)</strong> — button to open matchmaking actions.</p></li>
 <li><p><strong>(3)</strong> — button to reload the current matchmaking data.</p></li>
 </ul>
+<p>When the cluster exposes the <code class="docutils literal notranslate"><span class="pre">mlogin</span></code> service’s <code class="docutils literal notranslate"><span class="pre">permissions</span></code> config and you hold the matching server’s
+<code class="docutils literal notranslate"><span class="pre">service.can_view_configs</span></code> permission, the table also shows a <strong>Restricted Login On</strong> switch next to the
+maintenance one (the screenshot above predates it). While it is on, only players with circuit access (uids and
+platforms granted in that config, or access resolved from the SSO and character-service tracks where enabled)
+can log in; everyone else is refused with <code class="docutils literal notranslate"><span class="pre">SERVER_ERROR_ACCESS_DENIED</span></code>. Changing it needs the portal’s
+<code class="docutils literal notranslate"><span class="pre">can_call_matchmaking_api</span></code> permission and the matching server’s <code class="docutils literal notranslate"><span class="pre">service.can_change_configs</span></code>.</p>
 <section id="matchmaking-actions">
 <h3>Matchmaking actions<a class="headerlink" href="#matchmaking-actions" title="Link to this heading"></a></h3>
 <p>The <strong>Matchmaking actions</strong> section displays a list of available actions for managing matchmaking.</p>
@@ -218,7 +224,7 @@ manage services behavior.</p>
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     
@@ -252,7 +258,7 @@ manage services behavior.</p>
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     

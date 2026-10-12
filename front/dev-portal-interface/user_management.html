@@ -181,6 +181,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#load-data">Load Data</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#action-history">Action History</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Load Data</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="logs.html">Logs</a></li>
@@ -246,6 +250,9 @@ restrictions, including issuing bans, lifting bans, and reviewing ban history.</
 <li><p><a class="reference internal" href="#moderator-summaries"><strong>Moderator Summaries</strong></a>: Displays aggregated
 moderation data, including reports, actions taken by moderators, and summary
 statistics.</p></li>
+<li><p><a class="reference internal" href="#action-history"><strong>Action History</strong></a>: Displays the history of service API
+calls made from the admin panel, with filters for category, status, service,
+action, user, and admin, and a time range.</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/user_man_menu.png"><img alt="User Management" class="align-center" src="../../_images/user_man_menu.png" style="width: 15em;" />
 </a>
@@ -667,12 +674,12 @@ tabs for each category:</p>
 <td>Last update time (penalty created, revoked, etc.) (displayed in UTC)</td>
 </tr>
 <tr>
-<td><strong>Duration (sec)</strong></td>
-<td>Total duration of the penalty, in seconds</td>
+<td><strong>Duration</strong></td>
+<td>Total duration of the penalty, in seconds (displayed as a human-readable duration)</td>
 </tr>
 <tr>
-<td><strong>Left (sec)</strong></td>
-<td>Remaining time before the penalty expires, or an infinite placeholder value if <code>Start On Login</code> is enabled and the user hasn't logged in yet, in seconds</td>
+<td><strong>Left</strong></td>
+<td>Remaining time before the penalty expires, or an infinite placeholder value if <code>Start On Login</code> is enabled and the user hasn't logged in yet, in seconds (displayed as a human-readable duration, <code>Infinity</code> for the infinite placeholder)</td>
 </tr>
 <tr>
 <td><strong>Start On Login</strong></td>
@@ -769,6 +776,10 @@ tabs for each category:</p>
 <li><p><strong>(1)</strong> — visibility settings for the penalty, duration, and category fields</p>
 <a class="reference internal image-reference" href="../../_images/user_man_single_add_ban_visibility_settings.png"><img alt="Add ban modal visibility settings" class="align-center" src="../../_images/user_man_single_add_ban_visibility_settings.png" style="width: 25em;" />
 </a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To reorder the options, drag them with the mouse to the desired positions.</p>
+</div>
 </li>
 <li><p><strong>(2)</strong> — toggle between the duration display modes: presets and custom value input</p></li>
 <li><p><strong>(3)</strong> — button to open presets</p></li>
@@ -1132,6 +1143,35 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
 </a>
 </section>
 </section>
+<section id="action-history">
+<h2>Action History<a class="headerlink" href="#action-history" title="Link to this heading"></a></h2>
+<p>The <strong>Action History</strong> section shows the history of service API calls made from
+the admin panel. Access requires the <code class="docutils literal notranslate"><span class="pre">can_read_service_api_history</span></code> permission.</p>
+<section id="id7">
+<h3>Load Data<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<p>To load the history:</p>
+<ol class="arabic simple">
+<li><p>Set the desired filters (see below).</p></li>
+<li><p>Select the desired <a class="reference internal" href="timerange.html"><span class="std std-doc">Time Range</span></a>.</p></li>
+<li><p>Click the <strong>Load</strong> button.</p></li>
+</ol>
+<p>The following filters are available:</p>
+<ul class="simple">
+<li><p><strong>Category</strong>: limits records to a single action category — <em>User profile</em> or
+<em>Service actions</em> — or shows all categories.</p></li>
+<li><p><strong>Status</strong>: limits records to <em>Success</em> or <em>Fail</em>, or shows all statuses.</p></li>
+<li><p><strong>Service</strong>: limits records to a single service. The available services depend
+on the selected category; when no category is selected, both lists are merged.</p></li>
+<li><p><strong>Action</strong>: the service action name.</p></li>
+<li><p><strong>User ID</strong>: the target user. It is not available for the <em>Service actions</em>
+category.</p></li>
+<li><p><strong>Search admin by</strong>: switches the admin lookup between <strong>Admin User ID</strong> and
+<strong>Admin Nick</strong>; the adjacent field filters by the selected one.</p></li>
+</ul>
+<p>The results are shown in a table. The <strong>Action Params</strong> column renders the raw
+call payload as a collapsible JSON tree.</p>
+</section>
+</section>
 </section>
 
 
@@ -1156,7 +1196,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     
@@ -1190,7 +1230,7 @@ When hovering over the chart <span class="cnum">7</span>, additional chart data 
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     

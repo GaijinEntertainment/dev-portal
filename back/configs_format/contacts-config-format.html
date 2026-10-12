@@ -149,7 +149,9 @@ to services.</p></li>
 <section id="contacts-description-format">
 <h2>Contacts Description Format<a class="headerlink" href="#contacts-description-format" title="Link to this heading"></a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Arkanoid&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="nt">&quot;allowedGroupsDict&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Arkanoid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -157,17 +159,72 @@ to services.</p></li>
 <section id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h3>
 <dl class="simple myst">
-<dt><span id="allowedgroups"><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code></span> list of string <span class="bdg bdg-s bdg-yellow">required</span> <a id="allowedGroups" href="#allowedGroups" class="headerlink" title="Link to this parameter"></a></dt><dd><p>A list of contact group names allowed in the game. Maximum 20 groups.</p>
+<dt><span id="allowedgroupsdict"><code class="docutils literal notranslate"><span class="pre">allowedGroupsDict</span></code></span> object <span class="bdg bdg-s bdg-yellow">required</span> <a id="allowedGroupsDict" href="#allowedGroupsDict" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Contact groups allowed in the game: a group name to the group’s settings.
+Maximum 20 groups. Cannot be used together with the deprecated
+<a class="reference internal" href="#allowedgroups"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code></span></a> — exactly one of the two must be set.</p>
 <p>All contacts in the game are split into groups. Depending on your needs, you
 can use a single group or multiple groups.</p>
+<p>Each group has the following fields:</p>
+<dl class="simple myst">
+<dt><span id="allowedplatforms"><code class="docutils literal notranslate"><span class="pre">allowedPlatforms</span></code></span> array of objects <span class="bdg bdg-s bdg-grey">optional</span> <a id="allowedPlatforms" href="#allowedPlatforms" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Pairs of platforms allowed to become contacts within this group. Maximum 100
+pairs. If not set, platforms are not checked and any two players are allowed
+to become contacts.</p>
+<p>A pair is not directional: <code class="docutils literal notranslate"><span class="pre">{&quot;platform1&quot;:</span> <span class="pre">&quot;PSN&quot;,</span> <span class="pre">&quot;platform2&quot;:</span> <span class="pre">&quot;LIVE&quot;}</span></code> also
+allows a <code class="docutils literal notranslate"><span class="pre">LIVE</span></code> player to add a <code class="docutils literal notranslate"><span class="pre">PSN</span></code> one.</p>
+<dl class="simple myst">
+<dt><span id="platform1"><code class="docutils literal notranslate"><span class="pre">platform1</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="platform1" href="#platform1" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Platform of the first player. Possible values: <code class="docutils literal notranslate"><span class="pre">OTHER</span></code> (most often a PC),
+<code class="docutils literal notranslate"><span class="pre">PSN</span></code> (PlayStation 4/5), <code class="docutils literal notranslate"><span class="pre">LIVE</span></code> (Xbox One, Xbox Series X/S), <code class="docutils literal notranslate"><span class="pre">NINTENDO</span></code>
+(Nintendo Switch), <code class="docutils literal notranslate"><span class="pre">GAMECENTER</span></code> (Apple TV, Mac, iPhone, iPad).</p>
+</dd>
+<dt><span id="platform2"><code class="docutils literal notranslate"><span class="pre">platform2</span></code></span> string <span class="bdg bdg-s bdg-yellow">required</span> <a id="platform2" href="#platform2" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Platform of the second player. Possible values are the same as for
+<a class="reference internal" href="#platform1"><code class="docutils literal notranslate"><span class="pre">platform1</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <p><strong>Single group</strong> — suitable for most games:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DungeonGame&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="nt">&quot;allowedGroupsDict&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;DungeonGame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Multiple groups</strong> — useful when different game modes need separate contact
 lists:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;allowedGroupsDict&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;DungeonGame_solo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nt">&quot;DungeonGame_duo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nt">&quot;DungeonGame_squad&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Platform restrictions</strong> — a group where console players can only be contacts
+with players from the same console family:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;allowedGroupsDict&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;DungeonGame&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nt">&quot;DungeonGame_consoles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;allowedPlatforms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;platform1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PSN&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;platform2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PSN&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;platform1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PSN&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;platform2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LIVE&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;platform1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LIVE&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;platform2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LIVE&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
+<dt><span id="allowedgroups"><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code></span> list of string <span class="bdg bdg-s bdg-red">deprecated</span> <a id="allowedGroups" href="#allowedGroups" class="headerlink" title="Link to this parameter"></a></dt><dd><p>A list of contact group names allowed in the game. Maximum 20 groups.</p>
+<p>Use <a class="reference internal" href="#allowedgroupsdict"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">allowedGroupsDict</span></code></span></a> instead: it supports the same
+groups and additionally allows platform restrictions per group. The two fields
+cannot be used together — exactly one of them must be set.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;allowedGroups&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DungeonGame_solo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DungeonGame_duo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DungeonGame_squad&quot;</span><span class="p">]</span>
 <span class="p">}</span>
@@ -256,6 +313,30 @@ characters.</p>
 </dl>
 <hr class="docutils" />
 <dl class="simple myst">
+<dt><span id="shrinkconfig"><code class="docutils literal notranslate"><span class="pre">shrinkConfig</span></code></span> object <span class="bdg bdg-s bdg-grey">optional</span> <a id="shrinkConfig" href="#shrinkConfig" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Limits the number of contacts kept in a group. If not set, groups are not
+shrunk.</p>
+<p>When a group exceeds the limit, the oldest contacts are removed until the
+group fits back into it.</p>
+<p>It has the following fields:</p>
+<dl class="simple myst">
+<dt><span id="maxusersingroup"><code class="docutils literal notranslate"><span class="pre">maxUsersInGroup</span></code></span> int <span class="bdg bdg-s bdg-grey">optional</span> <a id="maxUsersInGroup" href="#maxUsersInGroup" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Maximum number of contacts in a single group. Range: 0–100000. <code class="docutils literal notranslate"><span class="pre">0</span></code> (default)
+means unlimited — no shrinking is performed.</p>
+</dd>
+<dt><span id="maxdocumentstoupdatedb"><code class="docutils literal notranslate"><span class="pre">maxDocumentsToUpdateDB</span></code></span> int <span class="bdg bdg-s bdg-grey">optional</span> <a id="maxDocumentsToUpdateDB" href="#maxDocumentsToUpdateDB" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Maximum number of documents updated in the database per shrink. Range:
+0–100000. <code class="docutils literal notranslate"><span class="pre">0</span></code> (default) disables shrinking in the database — the group is
+only shrunk in memory.</p>
+</dd>
+</dl>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;shrinkConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;maxUsersInGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;maxDocumentsToUpdateDB&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple myst">
 <dt><span id="loginchecks"><code class="docutils literal notranslate"><span class="pre">loginChecks</span></code></span> array of objects <span class="bdg bdg-s bdg-grey">optional</span> <a id="loginChecks" href="#loginChecks" class="headerlink" title="Link to this parameter"></a></dt><dd><p>Defines additional checks performed during login. Maximum 20 checks.</p>
 <p>Each check has the following fields:</p>
 <dl class="simple myst">
@@ -319,7 +400,7 @@ characters.</p>
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     
@@ -353,7 +434,7 @@ characters.</p>
   <div class="footer-meta">
     <div class="footer-left">
       <span>© Copyright Gaijin Entertainment 2026.
-        <span class="lastupdated">Last updated on Aug 26, 2026.</span>
+        <span class="lastupdated">Last updated on Oct 12, 2026.</span>
       </span>
     </div>
     
